@@ -14,7 +14,7 @@
     "@nuxtjs/eslint-config": "latest",
     "babel-eslint": "latest",
     "babel-jest": "latest",
-    "codecov": "latest",
+    "codecov": "^3.5.0",
     "core-js": "2",
     "eslint": "latest",
     "eslint-config-standard": "latest",
@@ -25,6 +25,6 @@
     "eslint-plugin-standard": "latest",
     "eslint-plugin-vue": "latest",
     "jest": "^24.8.0",
-    "nuxt-edge": "^2.7.0-25953129.a88e8b60"
+    "nuxt-edge": "^2.7.2-25971849.7084b3a1"
   }
 }
