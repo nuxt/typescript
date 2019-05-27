@@ -9,9 +9,9 @@
   ],
   "main": "lib/index.js",
   "dependencies": {
-    "consola": "^2.6.2",
+    "consola": "^2.7.1",
     "fs-extra": "^8.0.1",
-    "ts-node": "^8.1.0",
+    "ts-node": "^8.2.0",
     "typescript": "^3.4.5"
   },
   "publishConfig": {
