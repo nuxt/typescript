@@ -6,6 +6,7 @@
   "files": [
     "lib"
   ],
+  "main": "lib/module.js",
   "dependencies": {
     "@types/babel__core": "^7.1.2",
     "@types/chokidar": "^2.1.3",
