@@ -14,29 +14,26 @@ function tsModule(_moduleOptions) {
     _moduleOptions
   )
 
+  // Allow TypeScript extension for severMiddlewares (`nuxt.resolver.resolvePath` uses `options.extensions`)
   this.options.extensions.push('ts')
 
-  /*
-    TODO: Extend Builder supportedExtensions to watch .ts/.tsx files | https://github.com/nuxt/nuxt.js/blob/dev/packages/builder/src/builder.js#L47
-    HOW: Refactor core so it can be extended by modules
-  */
+  // Extend Builder to handle .ts/.tsx files as routes and watch them
+  this.options.build.customSupportedExtensions = ['ts', 'tsx']
 
-  /*
-    TODO: Extend createRoutes supportedExtensions to handle .ts/.tsx files as routes | https://github.com/nuxt/nuxt.js/blob/dev/packages/utils/src/route.js#L135
-    HOW: Refactor core so it can be extended by modules
-  */
+  if (moduleOptions.ignoreNotFoundWarnings) {
+    this.options.build.warningFixFilters.push(warn =>
+      warn.name === 'ModuleDependencyWarning' && /export .* was not found in /.test(warn.message)
+    )
+  }
 
-  this.extendBuild((config, { isClient, isModern }) => {
+  this.extendBuild((config, { babelLoader, isClient, isModern }) => {
     config.resolve.extensions.push('.ts', '.tsx')
 
     config.module.rules.push(...['ts', 'tsx'].map(ext =>
       ({
         test: new RegExp(`\\.${ext}$`, 'i'),
         use: [
-          /*
-            TODO: Add babel-loader here | https://github.com/nuxt/nuxt.js/blob/dev/packages/webpack/src/config/base.js#L217
-            HOW: Find a way get babelLoader object (already filled with correct babel options)
-          */
+          babelLoader,
           {
             loader: 'ts-loader',
             options: {
@@ -55,14 +52,9 @@ function tsModule(_moduleOptions) {
         tsconfig: path.resolve(this.options.rootDir, 'tsconfig.json'),
         tslint: false, // We recommend using ESLint so we set this option to `false` by default
         formatter: 'codeframe',
-        logger: consola
+        logger: consola.withScope('nuxt:typescript')
       }, moduleOptions.typeCheck)))
     }
-
-    /*
-      TODO: ignoreNotFoundWarnings | https://github.com/nuxt/nuxt.js/blob/dev/packages/webpack/src/config/base.js#L432
-      HOW: Refactor core so we can extend filters of the WarnFixPlugin
-    */
   })
 }
 
