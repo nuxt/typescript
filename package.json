@@ -6,7 +6,7 @@
   "scripts": {
     "nuxt-ts": "node ./packages/nuxt-ts/bin/nuxt-ts.js",
     "lint": "eslint packages",
-    "test": "yarn lint"
+    "test": "yarn lint && jest"
   },
   "devDependencies": {
     "@babel/core": "latest",

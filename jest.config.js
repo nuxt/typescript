@@ -1,32 +1,18 @@
 module.exports = {
   testEnvironment: 'node',
-
-  expand: true,
-
-  forceExit: true,
-
-  setupFilesAfterEnv: ['./test/utils/setup'],
-
+  collectCoverage: true,
   coverageDirectory: './coverage',
-
   collectCoverageFrom: [
-    '**/packages/*/src/**/*.js'
+    'packages/*/{src,lib}/**/*.js',
+    '!packages/nuxt-ts/**'
   ],
-
-  transformIgnorePatterns: [
-    'node_modules/(?!(@nuxt|nuxt))'
-  ],
-
-  transform: {
-    '^.+\\.ts$': 'ts-jest',
-    '^.+\\.js$': 'babel-jest',
-    '^.+\\.vue$': 'vue-jest'
+  moduleNameMapper: {
+    '^~/(.*)$': '<rootDir>/lib/$1',
+    '^~~$': '<rootDir>',
+    '^@@$': '<rootDir>',
+    '^@/(.*)$': '<rootDir>/lib/$1'
   },
-
-  moduleFileExtensions: [
-    'ts',
-    'js',
-    'json'
-  ]
+  transform: {
+    '^.+\\.js$': 'babel-jest'
+  }
 }
-#!/usr/bin/env node
