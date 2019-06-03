@@ -21,13 +21,16 @@ function tsModule(_moduleOptions) {
   this.options.build.customSupportedExtensions = ['ts', 'tsx']
 
   if (moduleOptions.ignoreNotFoundWarnings) {
-    this.options.build.warningFixFilters.push(warn =>
+    this.options.build.warningIgnoreFilters.push(warn =>
       warn.name === 'ModuleDependencyWarning' && /export .* was not found in /.test(warn.message)
     )
   }
 
-  this.extendBuild((config, { babelLoader, isClient, isModern }) => {
+  this.extendBuild((config, { isClient, isModern }) => {
     config.resolve.extensions.push('.ts', '.tsx')
+
+    const jsxRule = config.module.rules.find(r => r.test.test('.jsx'))
+    const babelLoader = jsxRule.use[jsxRule.use.length - 1]
 
     config.module.rules.push(...['ts', 'tsx'].map(ext =>
       ({
