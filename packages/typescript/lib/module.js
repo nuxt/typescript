@@ -3,7 +3,7 @@ const consola = require('consola')
 
 const defaults = {
   typeCheck: true,
-  ignoreNotFoundWarnings: true
+  ignoreNotFoundWarnings: false
 }
 
 function tsModule(_moduleOptions) {
