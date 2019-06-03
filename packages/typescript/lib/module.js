@@ -18,7 +18,7 @@ function tsModule(_moduleOptions) {
   this.options.extensions.push('ts')
 
   // Extend Builder to handle .ts/.tsx files as routes and watch them
-  this.options.build.customSupportedExtensions = ['ts', 'tsx']
+  this.options.build.additionalExtensions = ['ts', 'tsx']
 
   if (moduleOptions.ignoreNotFoundWarnings) {
     this.options.build.warningIgnoreFilters.push(warn =>
