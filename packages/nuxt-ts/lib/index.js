@@ -1,5 +1,6 @@
 module.exports = {
-  ...require('./utils'),
+  ...require('./resolve'),
+  ...require('./args'),
   registerTSNode: require('./register'),
   setupTSConfig: require('./setup')
 }
