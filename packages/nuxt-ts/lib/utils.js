@@ -1,18 +1,17 @@
 const path = require('path')
 
-function getNuxtBin() {
-  const binPath = [
-    'nuxt-edge/bin/nuxt.js',
-    'nuxt/bin/nuxt.js',
-    'nuxt-start-edge/bin/nuxt.js',
-    'nuxt-start/bin/nuxt.js'
-  ]
+function resolveNuxtFile(filePath, packages) {
+  packages.push(...packages.map(p => p + '-edge'))
 
-  for (const bin of binPath) {
+  for (const p of packages) {
     try {
-      return require.resolve(bin)
-    } catch {}
+      return require.resolve(path.join(p, filePath))
+    } catch { }
   }
+}
+
+function resolveNuxtBin() {
+  return resolveNuxtFile('bin/nuxt.js', [ 'nuxt', 'nuxt-start' ])
 }
 
 function getRootdirFromArgv() {
@@ -30,6 +29,7 @@ function getRootdirFromArgv() {
 }
 
 module.exports = {
-  getNuxtBin,
+  resolveNuxtFile,
+  resolveNuxtBin,
   getRootdirFromArgv
 }

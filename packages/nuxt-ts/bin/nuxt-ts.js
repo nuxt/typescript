@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const path = require('path')
-const { getNuxtBin, getRootdirFromArgv, registerTSNode, setupTSConfig } = require('..')
+const { resolveNuxtBin, getRootdirFromArgv, registerTSNode, setupTSConfig } = require('..')
 
 async function main() {
   const rootDir = getRootdirFromArgv()
@@ -11,7 +11,7 @@ async function main() {
 
   registerTSNode(tsConfigPath)
 
-  require(getNuxtBin())
+  require(resolveNuxtBin())
 }
 
 main().catch((error) => {
