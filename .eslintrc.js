@@ -1,10 +1,12 @@
 module.exports = {
-  root: true,
+  plugins: ['@typescript-eslint'],
   parserOptions: {
-    parser: 'babel-eslint',
-    sourceType: 'module'
+    parser: '@typescript-eslint/parser'
   },
   extends: [
     '@nuxtjs'
-  ]
+  ],
+  rules: {
+    '@typescript-eslint/no-unused-vars': 'error'
+  }
 }

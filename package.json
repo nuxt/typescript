@@ -4,14 +4,18 @@
     "packages/*"
   ],
   "scripts": {
-    "nuxt-ts": "node ./packages/nuxt-ts/bin/nuxt-ts.js",
-    "lint": "eslint packages",
-    "test": "yarn lint && jest"
+    "nuxt": "node ./packages/nuxt-ts/bin/nuxt-ts.js",
+    "lint": "eslint --ext .ts,.js packages",
+    "test": "yarn lint && yarn test:unit && yarn test:types",
+    "test:types": "tsc -p test/types",
+    "test:unit": "jest"
   },
   "devDependencies": {
     "@babel/core": "latest",
     "@babel/preset-env": "latest",
     "@nuxtjs/eslint-config": "latest",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
     "babel-eslint": "latest",
     "babel-jest": "latest",
     "codecov": "latest",
@@ -25,6 +29,7 @@
     "eslint-plugin-standard": "latest",
     "eslint-plugin-vue": "latest",
     "jest": "latest",
-    "nuxt-edge": "^2.8.0-25981929.1f74362d"
+    "nuxt-edge": "^2.9.0-26006411.835611f7",
+    "typescript": "latest"
   }
 }
