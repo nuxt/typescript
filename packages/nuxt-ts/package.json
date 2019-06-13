@@ -7,6 +7,10 @@
     "bin",
     "lib"
   ],
+  "bin": {
+    "nuxt-ts": "bin/nuxt-ts.js",
+    "nuxts": "bin/nuxt-ts.js"
+  },
   "main": "lib/index.js",
   "dependencies": {
     "consola": "^2.7.1",
