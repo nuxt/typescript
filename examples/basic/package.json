@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "nuxt": "latest",
+    "nuxt-ts": "latest"
+  },
+  "scripts": {
+    "dev": "nuxts",
+    "build": "nuxts build",
+    "start": "nuxts start",
+    "generate": "nuxts generate",
+    "post-update": "yarn upgrade --latest"
+  },
+  "devDependencies": {
+    "@nuxt/typescript": "latest"
+  }
+}
