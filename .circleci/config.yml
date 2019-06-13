@@ -28,9 +28,9 @@ jobs:
           command: yarn lint
 
       # Tests
-      # - run:
-      #     name: Tests
-      #     command: yarn jest
+      - run:
+          name: Tests
+          command: yarn test
 
       # Coverage
       - run:
