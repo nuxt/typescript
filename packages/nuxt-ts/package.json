@@ -15,8 +15,8 @@
   "dependencies": {
     "consola": "^2.7.1",
     "fs-extra": "^8.0.1",
-    "ts-node": "^8.2.0",
-    "typescript": "^3.5.1"
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.2"
   },
   "publishConfig": {
     "access": "public"
