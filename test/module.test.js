@@ -4,7 +4,7 @@ import { Nuxt } from '../../core/packages/core/src/index'
 import { Builder } from '../../core/packages/builder/src/index'
 import { BundleBuilder } from '../../core/packages/webpack/src/index'
 
-import tsModule from '../packages/typescript/lib/module'
+import tsModule from '../packages/typescript-build/lib/module'
 
 jest.setTimeout(60000)
 jest.mock('fork-ts-checker-webpack-plugin')
