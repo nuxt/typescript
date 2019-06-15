@@ -4,7 +4,6 @@
     "packages/*"
   ],
   "scripts": {
-    "nuxt": "node ./packages/nuxt-ts/bin/nuxt-ts.js",
     "lint": "eslint --ext .ts,.js packages",
     "test": "yarn lint && yarn test:unit && yarn test:types",
     "test:types": "tsc -p packages/types/test",
@@ -29,6 +28,7 @@
     "eslint-plugin-standard": "latest",
     "eslint-plugin-vue": "latest",
     "jest": "latest",
+    "lerna": "^3.15.0",
     "nuxt-edge": "^2.9.0-26007852.835611f7",
     "typescript": "latest"
   }
