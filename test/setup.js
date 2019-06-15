@@ -1,8 +1,6 @@
 import consola from 'consola'
 import exit from 'exit'
 
-jest.setTimeout(60000)
-
 consola.mockTypes(() => jest.fn())
 
 function errorTrap(error) {

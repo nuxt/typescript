@@ -1,10 +1,10 @@
 
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin'
-import { Nuxt } from '../../core/packages/core/src/index'
-import { Builder } from '../../core/packages/builder/src/index'
-import { BundleBuilder } from '../../core/packages/webpack/src/index'
+import { Nuxt } from '../../../../core/packages/core/src/index'
+import { Builder } from '../../../../core/packages/builder/src/index'
+import { BundleBuilder } from '../../../../core/packages/webpack/src/index'
 
-import tsModule from '../packages/typescript-build/lib/module'
+import tsModule from '..'
 
 jest.setTimeout(60000)
 jest.mock('fork-ts-checker-webpack-plugin')

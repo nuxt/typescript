@@ -4,7 +4,7 @@
  */
 
 import Vue, { ComponentOptions } from 'vue'
-import { Middleware } from '../../packages/types'
+import { Middleware } from '..'
 
 const options: ComponentOptions<Vue> = {}
 

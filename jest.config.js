@@ -3,8 +3,7 @@ module.exports = {
   collectCoverage: true,
   coverageDirectory: './coverage',
   collectCoverageFrom: [
-    'packages/*/{src,lib}/**/*.js',
-    '!packages/nuxt-ts/**'
+    'packages/*/lib/**/*.js'
   ],
   moduleNameMapper: {
     '^~/(.*)$': '<rootDir>/lib/$1',

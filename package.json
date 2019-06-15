@@ -7,7 +7,7 @@
     "nuxt": "node ./packages/nuxt-ts/bin/nuxt-ts.js",
     "lint": "eslint --ext .ts,.js packages",
     "test": "yarn lint && yarn test:unit && yarn test:types",
-    "test:types": "tsc -p test/types",
+    "test:types": "tsc -p packages/types/test",
     "test:unit": "jest"
   },
   "devDependencies": {
