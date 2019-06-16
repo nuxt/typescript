@@ -1,10 +1,10 @@
 {
   "name": "@nuxt/types",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "repository": "nuxt/typescript",
   "license": "MIT",
   "files": [
-    "*/**.d.ts"
+    "**/*.d.ts"
   ],
   "types": "index",
   "dependencies": {

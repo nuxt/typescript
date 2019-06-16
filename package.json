@@ -4,6 +4,7 @@
     "packages/*"
   ],
   "scripts": {
+    "dev": "nuxt-ts",
     "lint": "eslint --ext .ts,.js packages",
     "test": "yarn lint && yarn test:unit && yarn test:types",
     "test:types": "tsc -p packages/types/test",

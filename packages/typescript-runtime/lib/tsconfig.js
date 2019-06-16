@@ -25,8 +25,7 @@ module.exports = {
       ]
     },
     types: [
-      '@types/node',
-      '@nuxt/vue-app'
+      '@nuxt/types'
     ]
   }
 }
