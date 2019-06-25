@@ -1,22 +1,24 @@
 <template>
-  <div>{{ test.attributes.message }}</div>
+  <div>{{ test.attributes.text }}</div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+import Vue from 'vue'
 
 interface Test {
   attributes: {
-    message: string
+    text: string
   }
 }
 
-@Component
-export default class Interface extends Vue {
-  test: Test = {
-    attributes: {
-      message: 'Interface Page'
+export default Vue.extend({
+  data() {
+    const test: Test = {
+      attributes: {
+        text: 'Interface Page'
+      }
     }
+    return { test }
   }
-}
+})
 </script>

@@ -1,12 +1,14 @@
 <template>
-  <div>{{ message }}</div>
+  <div>{{ text }}</div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+import Vue from 'vue'
 
-@Component
-export default class Index extends Vue {
-  message: string = 'Index Page'
-}
+export default Vue.extend({
+  data() {
+    const text: string = 'Index Page'
+    return { text }
+  }
+})
 </script>
