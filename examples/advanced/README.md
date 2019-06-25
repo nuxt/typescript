@@ -1,1 +1,0 @@
-# Nuxt TypeScript Advanced Example

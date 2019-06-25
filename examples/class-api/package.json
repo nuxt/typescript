@@ -2,8 +2,9 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
+    "@nuxt/typescript-runtime": "latest",
     "nuxt": "latest",
-    "@nuxt/typescript-runtime": "latest"
+    "vue-property-decorator": "latest"
   },
   "scripts": {
     "dev": "nuxts",

@@ -2,8 +2,8 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "nuxt": "latest",
-    "@nuxt/typescript-runtime": "latest"
+    "@nuxt/typescript-runtime": "latest",
+    "nuxt": "latest"
   },
   "scripts": {
     "dev": "nuxts",
