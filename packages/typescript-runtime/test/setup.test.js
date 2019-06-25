@@ -1,6 +1,6 @@
 import { resolve } from 'path'
 import { readJSON, remove, writeJSON } from 'fs-extra'
-import { setupTSConfig } from '..'
+import setupTSConfig from '../lib/setup'
 import defaultTsJsonConfig from '../lib/tsconfig'
 
 describe('setupTSConfig', () => {

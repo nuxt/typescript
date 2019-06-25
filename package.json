@@ -14,7 +14,7 @@
     "@babel/core": "latest",
     "@babel/preset-env": "latest",
     "@nuxtjs/eslint-config": "latest",
-    "@types/jest": "^24.0.14",
+    "@types/jest": "latest",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
     "babel-eslint": "latest",
@@ -32,7 +32,7 @@
     "fs-extra": "^8.0.1",
     "jest": "latest",
     "lerna": "^3.15.0",
-    "nuxt-edge": "^2.9.0-26007852.835611f7",
+    "nuxt-edge": "^2.9.0-26023689.1b634779",
     "typescript": "latest"
   }
 }
