@@ -29,10 +29,10 @@
     "eslint-plugin-promise": "latest",
     "eslint-plugin-standard": "latest",
     "eslint-plugin-vue": "latest",
-    "fs-extra": "^8.0.1",
+    "fs-extra": "latest",
     "jest": "latest",
-    "lerna": "^3.15.0",
-    "nuxt-edge": "^2.9.0-26023689.1b634779",
+    "lerna": "latest",
+    "nuxt-edge": "latest",
     "typescript": "latest"
   }
 }
