@@ -1,15 +1,15 @@
 {
+  "name": "example-object-api-minimal",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@nuxt/typescript-runtime": "latest",
     "nuxt": "latest"
   },
   "scripts": {
-    "dev": "nuxts",
-    "build": "nuxts build",
-    "start": "nuxts start",
-    "generate": "nuxts generate",
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
     "post-update": "yarn upgrade --latest"
   },
   "devDependencies": {

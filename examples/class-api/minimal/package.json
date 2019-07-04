@@ -1,0 +1,19 @@
+{
+  "name": "example-class-api-minimal",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "nuxt": "latest",
+    "vue-property-decorator": "latest"
+  },
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "post-update": "yarn upgrade --latest"
+  },
+  "devDependencies": {
+    "@nuxt/typescript-build": "latest"
+  }
+}
