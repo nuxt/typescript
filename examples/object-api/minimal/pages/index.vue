@@ -9,8 +9,10 @@ import Vue from 'vue'
 
 export default Vue.extend({
   data() {
+    const message: string = 'This is a message'
+
     return {
-      message: 'This is a message'
+      message
     }
   }
 })
