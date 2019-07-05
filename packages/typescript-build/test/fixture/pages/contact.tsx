@@ -6,7 +6,7 @@ export default Vue.extend({
     const text: string = 'Contact Page'
     return { text }
   },
-  render () {
+  render() {
     return <div>{ this.text }</div>
   }
 })
