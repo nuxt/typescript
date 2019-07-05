@@ -1,1 +1,1 @@
-# Nuxt TypeScript with Function API Example
+# Nuxt TypeScript with Function API Example (minimal)

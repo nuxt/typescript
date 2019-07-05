@@ -1,1 +1,1 @@
-# Nuxt TypeScript with Class API Example
+# Nuxt TypeScript with Class API Example (minimal)
