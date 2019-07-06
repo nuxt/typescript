@@ -1,1 +1,3 @@
-# Nuxt TypeScript with Class API Example (minimal)
+# Nuxt TypeScript with Class API (minimal)
+
+https://typescript.nuxtjs.org/examples/class-api/minimal

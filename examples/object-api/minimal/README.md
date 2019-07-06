@@ -1,1 +1,3 @@
-# Nuxt TypeScript with Object API Example (minimal)
+# Nuxt TypeScript with Object API (minimal)
+
+https://typescript.nuxtjs.org/examples/object-api/minimal
