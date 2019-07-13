@@ -2,7 +2,7 @@ const { exists, readJSON, writeJSON } = require('fs-extra')
 const consola = require('consola')
 const defaultTsJsonConfig = require('./tsconfig')
 
-async function setupTSConfig(tsConfigPath) {
+async function setupTSConfig (tsConfigPath) {
   let contents = ''
 
   if (await exists(tsConfigPath)) {

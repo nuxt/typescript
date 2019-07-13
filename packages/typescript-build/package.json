@@ -1,6 +1,7 @@
 {
   "name": "@nuxt/typescript-build",
   "version": "0.0.1",
+  "description": "Nuxt.js TypeScript support",
   "repository": "nuxt/typescript",
   "license": "MIT",
   "files": [

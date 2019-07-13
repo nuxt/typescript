@@ -97,10 +97,10 @@ options.watchQuery = ['foo', 'bar']
 
 const vm = new Vue(options)
 
-if (vm.$nuxt.$loading.fail) vm.$nuxt.$loading.fail()
+if (vm.$nuxt.$loading.fail) { vm.$nuxt.$loading.fail() }
 vm.$nuxt.$loading.finish()
-if (vm.$nuxt.$loading.increase) vm.$nuxt.$loading.increase(1)
-if (vm.$nuxt.$loading.pause) vm.$nuxt.$loading.pause()
+if (vm.$nuxt.$loading.increase) { vm.$nuxt.$loading.increase(1) }
+if (vm.$nuxt.$loading.pause) { vm.$nuxt.$loading.pause() }
 vm.$nuxt.$loading.start()
 
 vm.$nuxt.isOffline = true

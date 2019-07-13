@@ -9,7 +9,7 @@ const optionsWithValue = [
   '--unix-socket', '-n'
 ]
 
-function getRootdirFromArgv() {
+function getRootdirFromArgv () {
   const args = process.argv.slice(2)
 
   let rootDir = '.'

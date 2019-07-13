@@ -7,7 +7,7 @@ const defaults = {
   ignoreNotFoundWarnings: false
 }
 
-function tsModule(_moduleOptions) {
+function tsModule (_moduleOptions) {
   // Combine options
   const moduleOptions = Object.assign(
     defaults,

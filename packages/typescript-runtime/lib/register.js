@@ -1,6 +1,6 @@
 const { register } = require('ts-node')
 
-function registerTSNode(tsconfigPath) {
+function registerTSNode (tsconfigPath) {
   // https://github.com/TypeStrong/ts-node
   register({
     project: tsconfigPath,

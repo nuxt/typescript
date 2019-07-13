@@ -3,7 +3,7 @@
 const path = require('path')
 const { resolveNuxtBin, getRootdirFromArgv, registerTSNode, setupTSConfig } = require('..')
 
-async function main() {
+async function main () {
   const rootDir = getRootdirFromArgv()
   const tsConfigPath = path.resolve(rootDir, 'tsconfig.json')
 

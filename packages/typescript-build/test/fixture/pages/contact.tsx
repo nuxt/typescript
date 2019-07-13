@@ -2,11 +2,11 @@ import Vue from 'vue'
 
 export default Vue.extend({
   name: 'Contact',
-  data() {
+  data () {
     const text: string = 'Contact Page'
     return { text }
   },
-  render() {
+  render () {
     return <div>{ this.text }</div>
   }
 })
