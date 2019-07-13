@@ -3,7 +3,7 @@ import exit from 'exit'
 
 consola.mockTypes(() => jest.fn())
 
-function errorTrap(error) {
+function errorTrap (error) {
   process.stderr.write('\n' + error.stack + '\n')
   exit(1)
 }
