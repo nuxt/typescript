@@ -12,15 +12,8 @@
     "test:unit": "jest"
   },
   "devDependencies": {
-    "@babel/core": "latest",
-    "@babel/preset-env": "latest",
-    "@nuxtjs/eslint-config": "latest",
     "@types/jest": "latest",
-    "@typescript-eslint/eslint-plugin": "latest",
-    "@typescript-eslint/parser": "latest",
-    "babel-jest": "latest",
     "codecov": "latest",
-    "core-js": "2",
     "eslint": "latest",
     "fs-extra": "latest",
     "jest": "latest",
