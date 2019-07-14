@@ -2,6 +2,8 @@
 next: false
 ---
 
-# Nuxt TypeScript with Function API (advanced)
+# Function API example (advanced)
 
-<Example name="function-api/advanced" />
+### Coming Soon ...
+
+<!-- <Example name="function-api/advanced" /> -->

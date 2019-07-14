@@ -2,6 +2,8 @@
 next: false
 ---
 
-# Nuxt TypeScript with Object API (advanced)
+# Object API example (advanced)
 
-<Example name="object-api/advanced" />
+### Coming Soon ...
+
+<!-- <Example name="object-api/advanced" /> -->

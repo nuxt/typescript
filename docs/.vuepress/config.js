@@ -8,8 +8,8 @@ module.exports = {
     editLinkText: 'Edit this page on GitHub',
     displayAllHeaders: true,
     sidebar: {
-      '/guide': getGuideSidebar(),
-      '/examples': getExamplesSidebar()
+      '/examples': getExamplesSidebar(),
+      '/': getMainSidebar(),
     },
     nav: [
       {
@@ -24,8 +24,31 @@ module.exports = {
   }
 }
 
-function getGuideSidebar() {
-  return ['']
+function getMainSidebar() {
+  return [
+    {
+      title: 'Guide',
+      collapsable: false,
+      children: [
+        '/guide/',
+        '/guide/setup',
+        '/guide/lint',
+        '/guide/deployment'
+      ]
+    },
+    {
+      title: 'Cookbook',
+      collapsable: false,
+      children: [
+        '/cookbook/components',
+        '/cookbook/middlewares',
+        '/cookbook/plugins',
+        '/cookbook/configuration',
+        '/cookbook/modules',
+        '/cookbook/server-middlewares'
+      ]
+    }
+  ]
 }
 
 function getExamplesSidebar () {
@@ -35,9 +58,8 @@ function getExamplesSidebar () {
   return apiNames.map(apiName =>
     ({
       title: `${apiName[0].toUpperCase() + apiName.slice(1)} API`,
-      path: `/examples/${apiName}-api/minimal`,
       collapsable: false,
-      children: exampleNames.map(exampleName => ([`examples/${apiName}-api/${exampleName}`, exampleName[0].toUpperCase() + exampleName.slice(1)]))
+      children: exampleNames.map(exampleName => ([`/examples/${apiName}-api/${exampleName}`, exampleName[0].toUpperCase() + exampleName.slice(1)]))
     })
   )
 }

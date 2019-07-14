@@ -1,3 +1,5 @@
-# Nuxt TypeScript with Function API (basic)
+# Function API example (basic)
 
-<Example name="function-api/basic" />
+### Coming Soon ...
+
+<!-- <Example name="function-api/basic" /> -->

@@ -2,6 +2,6 @@
 prev: false
 ---
 
-# Nuxt TypeScript with Function API (minimal)
+# Function API example (minimal)
 
 <Example name="function-api/minimal" />

@@ -2,6 +2,6 @@
 prev: false
 ---
 
-# Nuxt TypeScript with Object API (minimal)
+# Object API example (minimal)
 
 <Example name="object-api/minimal" />

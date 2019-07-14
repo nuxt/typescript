@@ -1,3 +1,5 @@
-# Nuxt TypeScript with Class API (basic)
+# Class API example (basic)
 
-<Example name="class-api/basic" />
+### Coming Soon ...
+
+<!-- <Example name="class-api/basic" /> -->

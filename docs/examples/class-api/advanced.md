@@ -2,6 +2,8 @@
 next: false
 ---
 
-# Nuxt TypeScript with Class API (advanced)
+# Class API example (advanced)
 
-<Example name="class-api/advanced" />
+### Coming Soon ...
+
+<!-- <Example name="class-api/advanced" /> -->

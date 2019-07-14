@@ -1,3 +1,5 @@
-# Nuxt TypeScript with Object API (basic)
+# Object API example (basic)
 
-<Example name="object-api/basic" />
+### Coming Soon ...
+
+<!-- <Example name="object-api/basic" /> -->
