@@ -1,6 +1,6 @@
 import { IncomingMessage, ServerResponse } from 'http'
 import Vue, { ComponentOptions } from 'vue'
-import VueRouter, { Route } from 'vue-router'
+import VueRouter, { Location, Route } from 'vue-router'
 import { Store } from 'vuex'
 
 // augment typings of Vue.js
@@ -39,6 +39,7 @@ export interface Context {
   res: ServerResponse
   redirect(status: number, path: string, query?: Route['query']): void
   redirect(path: string, query?: Route['query']): void
+  redirect(location: Location): void
   error(params: NuxtError): void
   nuxtState: NuxtState
   beforeNuxtRender(fn: (params: { Components: VueRouter['getMatchedComponents'], nuxtState: NuxtState }) => void): void
