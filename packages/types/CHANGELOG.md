@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.3](https://github.com/nuxt/typescript/compare/@nuxt/types@0.0.2...@nuxt/types@0.0.3) (2019-07-22)
+
+
+### Bug Fixes
+
+* **types:** implements nuxt[#6095](https://github.com/nuxt/typescript/issues/6095) & nuxt[#6078](https://github.com/nuxt/typescript/issues/6078) ([2abdc8b](https://github.com/nuxt/typescript/commit/2abdc8b))
+
+
+
+
+
 ## [0.0.2](https://github.com/nuxt/typescript/compare/@nuxt/types@0.0.1...@nuxt/types@0.0.2) (2019-07-22)
 
 **Note:** Version bump only for package @nuxt/types
