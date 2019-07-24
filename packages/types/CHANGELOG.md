@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.4](https://github.com/nuxt/typescript/compare/@nuxt/types@0.0.3...@nuxt/types@0.0.4) (2019-07-24)
+
+
+### Bug Fixes
+
+* add missing configuration `dir` typings ([c8b37d0](https://github.com/nuxt/typescript/commit/c8b37d0))
+
+
+
+
+
 ## [0.0.3](https://github.com/nuxt/typescript/compare/@nuxt/types@0.0.2...@nuxt/types@0.0.3) (2019-07-22)
 
 

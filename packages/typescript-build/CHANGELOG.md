@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.2](https://github.com/nuxt/typescript/compare/@nuxt/typescript-build@0.1.1...@nuxt/typescript-build@0.1.2) (2019-07-24)
+
+
+### Bug Fixes
+
+* lint vue files ([1ea2998](https://github.com/nuxt/typescript/commit/1ea2998))
+* unskip test to have 100% coverage back ([1e2b194](https://github.com/nuxt/typescript/commit/1e2b194))
+
+
+
+
+
 ## [0.1.1](https://github.com/nuxt/typescript/compare/@nuxt/typescript-build@0.1.0...@nuxt/typescript-build@0.1.1) (2019-07-22)
 
 **Note:** Version bump only for package @nuxt/typescript-build
