@@ -31,7 +31,7 @@ describe('module', () => {
     ForkTsCheckerWebpackPlugin.mockClear()
   })
 
-  test.skip('with default options', async () => {
+  test('with default options', async () => {
     const nuxt = await buildWithTsModule()
 
     expect(nuxt.options.extensions).toHaveLength(3)
