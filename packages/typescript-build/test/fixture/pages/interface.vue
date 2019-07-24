@@ -12,7 +12,7 @@ interface Test {
 }
 
 export default Vue.extend({
-  data() {
+  data () {
     const test: Test = {
       attributes: {
         text: 'Interface Page'
