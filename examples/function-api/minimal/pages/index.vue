@@ -8,7 +8,7 @@
 import { createComponent, value } from 'vue-function-api'
 
 export default createComponent({
-  setup() {
+  setup () {
     const message = value('This is a message')
 
     return {
