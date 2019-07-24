@@ -17,7 +17,7 @@
     "consola": "^2.9.0",
     "fs-extra": "^8.1.0",
     "ts-node": "^8.3.0",
-    "typescript": "^3.5.2"
+    "typescript": "^3.5.3"
   },
   "publishConfig": {
     "access": "public"
