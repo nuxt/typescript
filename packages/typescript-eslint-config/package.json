@@ -8,7 +8,7 @@
     "index.js"
   ],
   "peerDependencies": {
-    "eslint": ">=5.16.0"
+    "eslint": ">=6.1.0"
   },
   "dependencies": {
     "@nuxtjs/eslint-config": "^1.0.1",
