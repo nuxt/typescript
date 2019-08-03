@@ -5,6 +5,7 @@
     "build": "vuepress build"
   },
   "devDependencies": {
+    "fs-extra": "^8.1.0",
     "vuepress": "^1.0.3"
   }
 }
