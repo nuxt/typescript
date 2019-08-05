@@ -1,4 +1,4 @@
 import './process'
 
-export { Context, Middleware, Transition } from './app'
+export { Context, Middleware, Plugin, Transition } from './app'
 export { Configuration } from './config'
