@@ -10,7 +10,7 @@
   "main": "lib/module.js",
   "dependencies": {
     "@nuxt/types": "0.0.4",
-    "consola": "^2.9.0",
+    "consola": "^2.10.0",
     "fork-ts-checker-webpack-plugin": "^1.5.0",
     "fs-extra": "^8.1.0",
     "ts-loader": "^6.0.4",

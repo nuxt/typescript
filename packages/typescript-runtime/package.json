@@ -14,7 +14,7 @@
   },
   "main": "lib/index.js",
   "dependencies": {
-    "consola": "^2.9.0",
+    "consola": "^2.10.0",
     "fs-extra": "^8.1.0",
     "ts-node": "^8.3.0",
     "typescript": "^3.5.3"
