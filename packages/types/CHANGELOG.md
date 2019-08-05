@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0](https://github.com/nuxt/typescript/compare/@nuxt/types@0.0.4...@nuxt/types@0.1.0) (2019-08-05)
+
+
+### Features
+
+* **types:** plugin type ([f409b26](https://github.com/nuxt/typescript/commit/f409b26))
+
+
+
+
+
 ## [0.0.4](https://github.com/nuxt/typescript/compare/@nuxt/types@0.0.3...@nuxt/types@0.0.4) (2019-07-24)
 
 
