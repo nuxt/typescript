@@ -39,7 +39,7 @@ function getMainSidebar () {
       ]
     },
     {
-      title: 'Cookbook (soon)',
+      title: 'Cookbook',
       collapsable: false,
       children: [
         '/cookbook/components',
