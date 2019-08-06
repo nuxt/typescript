@@ -2,7 +2,6 @@ const path = require('path')
 const consola = require('consola')
 
 const defaults = {
-  tsConfig: undefined,
   typeCheck: {},
   ignoreNotFoundWarnings: false
 }
@@ -53,7 +52,7 @@ function tsModule (_moduleOptions) {
       const ForkTsCheckerWebpackPlugin = require(this.nuxt.resolver.resolveModule('fork-ts-checker-webpack-plugin'))
       config.plugins.push(new ForkTsCheckerWebpackPlugin(Object.assign({
         vue: true,
-        tsconfig: moduleOptions.tsConfig || path.resolve(this.options.rootDir, 'tsconfig.json'),
+        tsconfig: path.resolve(this.options.rootDir, 'tsconfig.json'),
         tslint: false, // We recommend using ESLint so we set this option to `false` by default
         formatter: 'codeframe',
         logger: consola.withScope('nuxt:typescript')
