@@ -2,8 +2,8 @@ const path = require('path')
 const consola = require('consola')
 
 const defaults = {
-  typeCheck: {},
-  ignoreNotFoundWarnings: false
+  ignoreNotFoundWarnings: false,
+  typeCheck: true
 }
 
 function tsModule (_moduleOptions) {
