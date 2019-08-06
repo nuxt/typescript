@@ -1,8 +1,8 @@
 const fs = require('fs-extra')
 
 module.exports = {
-  title: 'TypeScript Module',
-  description: 'TypeScript Support Module for Nuxt',
+  title: 'Nuxt TypeScript',
+  description: 'TypeScript Support for Nuxt',
   themeConfig: {
     repo: 'nuxt/typescript',
     docsDir: 'docs',
