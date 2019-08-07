@@ -2,6 +2,8 @@
 
 ## I. Inject into Vue instances
 
+### Plugin
+
 ```ts
 declare module 'vue/types/vue' {
   interface Vue {
@@ -35,6 +37,8 @@ export default Vue.extend({
 
 ## II. Inject into context
 
+### Plugin
+
 ```ts
 import { Plugin } from '@nuxt/types'
 
@@ -66,6 +70,8 @@ export default Vue.extend({
 ```
 
 ## III. Combined Inject
+
+### Plugin
 
 ```ts
 import { Context } from '@nuxt/types'
@@ -106,4 +112,6 @@ export default Vue.extend({
 </script>
 ```
 
-> Please note that `inject` doesn't inject in `context` but in `context.app`. 
+::: tip
+Please note that `inject` doesn't inject in `context` but in `context.app`. 
+:::

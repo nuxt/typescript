@@ -8,7 +8,7 @@ module.exports = {
     docsDir: 'docs',
     editLinks: true,
     editLinkText: 'Edit this page on GitHub',
-    displayAllHeaders: true,
+    lastUpdated: 'Last Updated',
     sidebar: {
       '/examples': getExamplesSidebar(),
       '/': getMainSidebar()
@@ -34,8 +34,8 @@ function getMainSidebar () {
       children: [
         '/guide/',
         '/guide/setup',
-        '/guide/lint',
-        '/guide/deployment'
+        '/guide/runtime',
+        '/guide/lint'
       ]
     },
     {
@@ -49,7 +49,8 @@ function getMainSidebar () {
         '/cookbook/modules',
         '/cookbook/server-middlewares'
       ]
-    }
+    },
+    '/migration'
   ]
 }
 
@@ -62,15 +63,16 @@ function getExamplesSidebar () {
       title: `${apiName[0].toUpperCase() + apiName.slice(1)} API`,
       collapsable: false,
       children: levels.map((level, index) => {
-        generateExampleMarkdown(apiName, level, index === 0 ? { prev: false } : index === levels.length - 1 ? { next: false } : {})
-        return [`/examples/${apiName}-api/${level}`, level[0].toUpperCase() + level.slice(1)]
+        const hasGenerated = generateExampleMarkdown(apiName, level, index === 0 ? { prev: false } : index === levels.length - 1 ? { next: false } : {})
+        const title = level[0].toUpperCase() + level.slice(1)
+        return [`/examples/${apiName}-api/${level}`, hasGenerated ? title : `${title} (soon)`]
       })
     }
   })
 }
 
 function generateExampleMarkdown (apiName, level, options = {}) {
-  const comingSoon = !fs.existsSync(`../examples/${apiName}-api/${level}`)
+  const exampleExists = fs.existsSync(`../examples/${apiName}-api/${level}`)
   let content = ''
 
   if (Object.keys(options).length > 0) {
@@ -83,7 +85,7 @@ function generateExampleMarkdown (apiName, level, options = {}) {
 
   content += `# ${apiName[0].toUpperCase()}${apiName.slice(1)} API example (${level})\n\n`
 
-  if (comingSoon) {
+  if (!exampleExists) {
     content += '### Coming Soon ...\n\n'
     content += `<!-- <Example name="${apiName}-api/${level}" /> -->\n`
   } else {
@@ -91,4 +93,6 @@ function generateExampleMarkdown (apiName, level, options = {}) {
   }
 
   fs.outputFileSync(`./examples/${apiName}-api/${level}.md`, content)
+
+  return exampleExists
 }
