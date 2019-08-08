@@ -1,6 +1,6 @@
 # Setup
 
-Nuxt TypeScript Support mainly commes through a Nuxt module, **@nuxt/typescript-build**.
+Nuxt TypeScript Support mainly comes through a Nuxt module, **@nuxt/typescript-build**.
 
 Here are the guidelines to install & configure it.
 
