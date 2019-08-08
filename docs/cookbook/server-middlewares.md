@@ -1,3 +1,7 @@
+---
+next: false
+---
+
 # Server Middlewares (Runtime)
 
 ```ts

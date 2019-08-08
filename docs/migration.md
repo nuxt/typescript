@@ -1,3 +1,7 @@
+---
+prev: false
+---
+
 # Migration from Nuxt 2.8
 
 TypeScript support has been externalized in dedicated packages and have been removed from core starting **Nuxt 2.9**. Here are the guidelines to migrate your existing Nuxt TypeScript project to the last specifications.
