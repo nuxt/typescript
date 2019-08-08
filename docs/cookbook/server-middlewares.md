@@ -7,7 +7,7 @@ next: false
 ```ts
 import { ServerMiddleware } from '@nuxt/types'
 
-const myServerMiddleware: ServerMiddleware = (req, res, next) {
+const myServerMiddleware: ServerMiddleware = function (req, res, next) {
   // Use req, res, next
 }
 
