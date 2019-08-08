@@ -6,6 +6,9 @@
   },
   "devDependencies": {
     "fs-extra": "^8.1.0",
-    "vuepress": "^1.0.3"
-  }
+    "vue-tabs-component": "^1.5.0",
+    "vuepress": "^1.0.3",
+    "vuepress-plugin-tabs": "^0.2.2"
+  },
+  "dependencies": {}
 }

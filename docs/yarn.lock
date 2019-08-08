@@ -6996,6 +6996,11 @@ vue-style-loader@^4.1.0:
     hash-sum "^1.0.2"
     loader-utils "^1.0.2"
 
+vue-tabs-component@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/vue-tabs-component/-/vue-tabs-component-1.5.0.tgz#9b2f02adbc9bb58395729d68c4906a795a20d728"
+  integrity sha512-ld4p+hv49Fimw+zv/7GQqMhbjAHjpbWF3UiJtmMaSnvLKbsB1ysfs9dQH0SZ8NvdYpqqKay/VLIqR9yXgse1Sg==
+
 vue-template-compiler@^2.5.16:
   version "2.6.10"
   resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.6.10.tgz#323b4f3495f04faa3503337a82f5d6507799c9cc"
@@ -7033,6 +7038,11 @@ vuepress-plugin-container@^2.0.0:
   integrity sha512-SrGYYT7lkie7xlIlAVhn+9sDW42MytNCoxWL/2uDr+q9wZA4h1uYlQvfc2DVjy+FsM9PPPSslkeo/zCpYVY82g==
   dependencies:
     markdown-it-container "^2.0.0"
+
+vuepress-plugin-tabs@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-tabs/-/vuepress-plugin-tabs-0.2.2.tgz#b217cc2070fc3b182fd78dbe8638c20f1eaba304"
+  integrity sha512-PqC1/Qf84klDTlfDr5Hb3WRsS/NJAicYroYxqdhi8uVwhiCiHXeK/ehs+glYaQd9NRSG7z2AT5mKHCxRVzKayA==
 
 vuepress@^1.0.3:
   version "1.0.3"
