@@ -7,12 +7,12 @@ import { NuxtConfigurationHead } from './head'
 import { NuxtConfigurationHooks } from './hooks'
 import { NuxtConfigurationGlobals } from './globals'
 import { NuxtConfigurationLoading, NuxtConfigurationLoadingIndicator } from './loading'
-import { NuxtConfigurationModule } from './module'
+import { NuxtConfigurationModule, Module } from './module'
 import { NuxtConfigurationPlugin } from './plugin'
 import { NuxtConfigurationRender } from './render'
 import { NuxtConfigurationRouter } from './router'
 import { NuxtConfigurationServer } from './server'
-import { NuxtConfigurationServerMiddleware } from './server-middleware'
+import { NuxtConfigurationServerMiddleware, ServerMiddleware } from './server-middleware'
 import { NuxtConfigurationVueConfiguration } from './vue-configuration'
 import { NuxtConfigurationWatchers } from './watchers'
 
@@ -52,4 +52,9 @@ export interface Configuration extends ExtendableConfiguration {
   'vue.config'?: NuxtConfigurationVueConfiguration
   watch?: string[]
   watchers?: NuxtConfigurationWatchers
+}
+
+export {
+  Module,
+  ServerMiddleware
 }

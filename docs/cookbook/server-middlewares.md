@@ -5,9 +5,9 @@ next: false
 # Server Middlewares (Runtime)
 
 ```ts
-import { RequestHandler } from 'express'
+import { ServerMiddleware } from '@nuxt/types'
 
-const myServerMiddleware: RequestHandler = (req, res, next) {
+const myServerMiddleware: ServerMiddleware = (req, res, next) {
   // Use req, res, next
 }
 
