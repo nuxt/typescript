@@ -18,7 +18,6 @@
     "@typescript-eslint/parser": "^1.13.0",
     "codecov": "latest",
     "eslint": "latest",
-    "fs-extra": "latest",
     "jest": "latest",
     "lerna": "latest",
     "nuxt-edge": "latest",
