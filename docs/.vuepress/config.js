@@ -44,7 +44,7 @@ function getMainSidebar () {
       title: 'Cookbook',
       collapsable: false,
       children: [
-        '/cookbook/components',
+        '/cookbook/components/',
         '/cookbook/middlewares',
         '/cookbook/plugins',
         '/cookbook/configuration',
