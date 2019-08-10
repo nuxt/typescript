@@ -1859,10 +1859,19 @@
     webpack-node-externals "^1.7.2"
     webpackbar "^4.0.0"
 
-"@nuxtjs/eslint-config@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/eslint-config/-/eslint-config-1.1.1.tgz#952d33b802eb3c0808b37713d9dab05d26965163"
-  integrity sha512-6K+9eq5qffRYYPE2laIpmZvm2GNozCQaLjlIffXQYPIlUAHOglyZ7aGLRoBZW9AwqGW5uT1uHX+wGAk3FgIHdw==
+"@nuxtjs/eslint-config-typescript@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/eslint-config-typescript/-/eslint-config-typescript-0.1.2.tgz#3fc8da779d76d4f2b73a4a252ef2069075384f71"
+  integrity sha512-X9fclYEN6cXWPgN/pY8/9QrJGntu4fUVgMOajVTXSu+tVMi8GGTt/kHbYvJB1/bxJh0mpW15WATo/PuxW7C2RA==
+  dependencies:
+    "@nuxtjs/eslint-config" "1.1.2"
+    "@typescript-eslint/eslint-plugin" "^1.13.0"
+    "@typescript-eslint/parser" "^1.13.0"
+
+"@nuxtjs/eslint-config@1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/eslint-config/-/eslint-config-1.1.2.tgz#cde4c950014a781bcc34abbfef9c62546d8fc34c"
+  integrity sha512-uKBdza1/Poz32gEodQ9MSW8M9CU4RPdvEiSLX5LWyavrbjhXW9iIbzJzSDlgMhD1QfQ5WrWv1iqL3Bh/ArbIgw==
   dependencies:
     eslint-config-standard "^12.0.0"
     eslint-plugin-import "^2.18.0"
@@ -9776,7 +9785,7 @@ redent@^2.0.0:
     indent-string "^3.0.0"
     strip-indent "^2.0.0"
 
-regenerate-unicode-properties@^8.0.2:
+regenerate-unicode-properties@^8.1.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/regenerate-unicode-properties/-/regenerate-unicode-properties-8.1.0.tgz#ef51e0f0ea4ad424b77bf7cb41f3e015c70a3f0e"
   integrity sha512-LGZzkgtLY79GeXLm8Dp0BVLdQlWICzBnJz/ipWUgo59qBaZ+BHtq51P2q1uVZlppMuUAT37SDk39qUbjTWB7bA==
@@ -9824,12 +9833,12 @@ regexpp@^2.0.1:
   integrity sha512-lv0M6+TkDVniA3aD1Eg0DVpfU/booSu7Eev3TDO/mZKHBfVjgCGTV4t4buppESEYDtkArYFOxTJWv6S5C+iaNw==
 
 regexpu-core@^4.5.4:
-  version "4.5.4"
-  resolved "https://registry.yarnpkg.com/regexpu-core/-/regexpu-core-4.5.4.tgz#080d9d02289aa87fe1667a4f5136bc98a6aebaae"
-  integrity sha512-BtizvGtFQKGPUcTy56o3nk1bGRp4SZOTYrDtGNlqCQufptV5IkkLN6Emw+yunAJjzf+C9FQFtvq7IoA3+oMYHQ==
+  version "4.5.5"
+  resolved "https://registry.yarnpkg.com/regexpu-core/-/regexpu-core-4.5.5.tgz#aaffe61c2af58269b3e516b61a73790376326411"
+  integrity sha512-FpI67+ky9J+cDizQUJlIlNZFKual/lUkFr1AG6zOCpwZ9cLrg8UUVakyUQJD7fCDIe9Z2nwTQJNPyonatNmDFQ==
   dependencies:
     regenerate "^1.4.0"
-    regenerate-unicode-properties "^8.0.2"
+    regenerate-unicode-properties "^8.1.0"
     regjsgen "^0.5.0"
     regjsparser "^0.6.0"
     unicode-match-property-ecmascript "^1.0.4"
@@ -10928,9 +10937,9 @@ time-fix-plugin@^2.0.6:
   integrity sha512-2cjjg3672ppNm/uKhHAoCFp1ItEAiH+xJOjO9WGIF8hXuxPAJ2adfYgFiyooVbsOb948c+WrRh+edxFUMxYHoQ==
 
 timers-browserify@^2.0.4:
-  version "2.0.10"
-  resolved "https://registry.yarnpkg.com/timers-browserify/-/timers-browserify-2.0.10.tgz#1d28e3d2aadf1d5a5996c4e9f95601cd053480ae"
-  integrity sha512-YvC1SV1XdOUaL6gx5CoGroT3Gu49pK9+TZ38ErPldOWW4j49GI1HKs9DV+KGq/w6y+LZ72W1c8cKz2vzY+qpzg==
+  version "2.0.11"
+  resolved "https://registry.yarnpkg.com/timers-browserify/-/timers-browserify-2.0.11.tgz#800b1f3eee272e5bc53ee465a04d0e804c31211f"
+  integrity sha512-60aV6sgJ5YEbzUdn9c8kYGIqOubPoUdqQCul3SBAsRCZ40s6Y5cMcrW4dt3/k/EsbLVJNl9n6Vz3fTc+k2GeKQ==
   dependencies:
     setimmediate "^1.0.4"
 

@@ -12,10 +12,8 @@
     "test:unit": "jest"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config": "^1.1.1",
+    "@nuxtjs/eslint-config-typescript": "^0.1.2",
     "@types/jest": "latest",
-    "@typescript-eslint/eslint-plugin": "^1.13.0",
-    "@typescript-eslint/parser": "^1.13.0",
     "codecov": "latest",
     "eslint": "latest",
     "jest": "latest",
