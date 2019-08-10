@@ -1,5 +1,6 @@
 ---
 home: true
+heroImage: assets/logo.svg
 actionText: Get Started →
 actionLink: /guide/
 footer: MIT Licensed | Copyright © 2019-present Nuxt.js Team

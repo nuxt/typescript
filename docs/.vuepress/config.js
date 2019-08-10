@@ -2,7 +2,7 @@ const fs = require('fs-extra')
 
 module.exports = {
   title: 'Nuxt TypeScript',
-  description: 'TypeScript Support for Nuxt',
+  description: 'TypeScript Support for Nuxt.js',
   plugins: ['tabs'],
   themeConfig: {
     repo: 'nuxt/typescript',
@@ -10,6 +10,7 @@ module.exports = {
     editLinks: true,
     editLinkText: 'Edit this page on GitHub',
     lastUpdated: 'Last Updated',
+    logo: '/assets/logo.svg',
     sidebar: {
       '/examples': getExamplesSidebar(),
       '/': getMainSidebar()
