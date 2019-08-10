@@ -4,5 +4,8 @@
   ],
   "lockFileMaintenance": {
     "enabled": true
-  }
+  },
+  "labels": [
+    "dependencies"
+  ]
 }
