@@ -1,9 +1,26 @@
 import { resolve } from 'path'
 import { getRootdirFromArgv } from '..'
 
-const setupArgs = commandLine => process.argv.push(...commandLine.split(' '))
+jest.mock('@nuxt/cli-edge', () => ({
+  options: {
+    ...jest.requireActual('@nuxt/cli-edge').options,
+    custom: {
+      withoutAlias: {
+        type: 'string'
+      }
+    }
+  }
+}))
+
+const argv = process.argv
 
 describe('getRootdirFromArgv', () => {
+  let setupArgs
+
+  beforeEach(() => {
+    setupArgs = (commandLine) => { process.argv = [...argv, ...commandLine.split(' ')] }
+  })
+
   test('nuxt-ts', () => {
     expect(getRootdirFromArgv()).toEqual(process.cwd())
   })
@@ -21,6 +38,10 @@ describe('getRootdirFromArgv', () => {
   })
   test('nuxt-ts dev -p 3001 --analyze project', () => {
     setupArgs('dev -p 30001 --analyze project')
+    expect(getRootdirFromArgv()).toEqual(resolve(process.cwd(), 'project'))
+  })
+  test('nuxt-ts dev --withoutAlias test project', () => {
+    setupArgs('dev --withoutAlias test project')
     expect(getRootdirFromArgv()).toEqual(resolve(process.cwd(), 'project'))
   })
 })
