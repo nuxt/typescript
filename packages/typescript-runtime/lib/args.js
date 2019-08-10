@@ -1,27 +1,33 @@
 const path = require('path')
+const { tryResolve } = require('./resolve')
 
-// TODO: Import non-booleans from @nuxt/config
-const optionsWithValue = [
-  '--config-file', '-c',
-  '--modern', '-m',
-  '--port', '-p',
-  '--hostname', '-H',
-  '--unix-socket', '-n'
-]
+function getCliOptions () {
+  const cli = ['@nuxt/cli', '@nuxt/cli-edge'].find(cli => tryResolve(cli))
+  return Object.entries(require(cli).options)
+    .reduce((options, [_key, value]) => {
+      return { ...options, ...value }
+    }, {})
+}
+
+function getCliOptionsWithValue () {
+  return Object.entries(getCliOptions())
+    .filter(([_name, { type }]) => type !== 'boolean')
+    .reduce((optionsWithValue, [name, { alias }]) => {
+      return [...optionsWithValue, `--${name}`, ...alias ? [`-${alias}`] : []]
+    }, [])
+}
 
 function getRootdirFromArgv () {
   const args = process.argv.slice(2)
+  const optionsWithValue = getCliOptionsWithValue()
 
-  let rootDir = '.'
-  for (let i = 0; i < args.length; i++) {
-    if (args[i][0] === '-') {
-      if (optionsWithValue.includes(args[i])) {
-        i++
-      }
-      continue
-    }
-    rootDir = args[i]
+  const isCliOption = (previousArg, currentArg) => {
+    return ['dev', 'build', 'start'].includes(currentArg) ||
+      currentArg[0] === '-' ||
+      (previousArg && previousArg[0] === '-' && optionsWithValue.includes(previousArg))
   }
+
+  const rootDir = args.find((arg, i) => !isCliOption(args[i - 1], arg)) || '.'
 
   return path.resolve(process.cwd(), rootDir)
 }

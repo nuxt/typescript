@@ -1,20 +1,31 @@
 const path = require('path')
 
-function resolveNuxtFile (filePath, packages) {
-  packages.push(...packages.map(p => p + '-edge'))
+function tryResolve (path) {
+  try {
+    return require.resolve(path)
+  } catch {
+    return null
+  }
+}
 
-  for (const p of packages) {
-    try {
-      return require.resolve(path.join(p, filePath))
-    } catch { }
+function resolveNuxtFile (filePath, packages = ['nuxt', 'nuxt-start']) {
+  packages.push(...packages.map(pkg => pkg + '-edge'))
+
+  for (const pkg of packages) {
+    const resolvedFile = tryResolve(path.join(pkg, filePath))
+
+    if (resolvedFile) {
+      return resolvedFile
+    }
   }
 }
 
 function resolveNuxtBin () {
-  return resolveNuxtFile('bin/nuxt.js', ['nuxt', 'nuxt-start'])
+  return resolveNuxtFile('bin/nuxt.js')
 }
 
 module.exports = {
   resolveNuxtFile,
-  resolveNuxtBin
+  resolveNuxtBin,
+  tryResolve
 }
