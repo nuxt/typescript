@@ -1859,10 +1859,10 @@
     webpack-node-externals "^1.7.2"
     webpackbar "^4.0.0"
 
-"@nuxtjs/eslint-config@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/eslint-config/-/eslint-config-1.1.1.tgz#952d33b802eb3c0808b37713d9dab05d26965163"
-  integrity sha512-6K+9eq5qffRYYPE2laIpmZvm2GNozCQaLjlIffXQYPIlUAHOglyZ7aGLRoBZW9AwqGW5uT1uHX+wGAk3FgIHdw==
+"@nuxtjs/eslint-config@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/eslint-config/-/eslint-config-1.1.2.tgz#cde4c950014a781bcc34abbfef9c62546d8fc34c"
+  integrity sha512-uKBdza1/Poz32gEodQ9MSW8M9CU4RPdvEiSLX5LWyavrbjhXW9iIbzJzSDlgMhD1QfQ5WrWv1iqL3Bh/ArbIgw==
   dependencies:
     eslint-config-standard "^12.0.0"
     eslint-plugin-import "^2.18.0"
