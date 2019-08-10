@@ -14,12 +14,12 @@ npm install --save-dev @nuxt/typescript-build
 
 ## Configuration
 
-All you will need to do is adding **`@nuxt/typescript-build`** to your **`devModules`** in your **`nuxt.config.js`**
+All you will need to do is adding **`@nuxt/typescript-build`** to your **`buildModules`** in your **`nuxt.config.js`**
 
 ```js
 // nuxt.config.js
 export default {
-  devModules: ['@nuxt/typescript-build']
+  buildModules: ['@nuxt/typescript-build']
 }
 ```
 
@@ -81,7 +81,7 @@ You can check the [**CookBook**](../cookbook/components/) section to get some Ty
 
 > Enables TypeScript type checking on a separate process.
 
-- Type: `Boolean` or `Object`  
+- Type: `Boolean` or `Object`
 - Default: `true`
 
 When enabled, Nuxt.js uses [fork-ts-checker-webpack-plugin](https://github.com/TypeStrong/fork-ts-checker-webpack-plugin) to provide type checking.
@@ -94,7 +94,7 @@ You can use an `Object` to override plugin options or set it to `false` to disab
 
 - Type: `Boolean`
 - Default: `false`
-  
+
 When enabled, you can suppress `export ... was not found ...` warnings.
 
 See also about background information [here](https://github.com/TypeStrong/ts-loader/issues/653).
