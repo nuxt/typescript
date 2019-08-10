@@ -24,7 +24,7 @@ npm install --save-dev @nuxt/typescript-build
 ```js
 // nuxt.config.js
 export default {
-  devModules: ['@nuxt/typescript-build']
+  buildModules: ['@nuxt/typescript-build']
 }
 ```
 
@@ -62,7 +62,7 @@ You can also do it this way :
 ```js
 // nuxt.config.js
 export default {
-  devModules: [
+  buildModules: [
     ['@nuxt/typescript-build', {
       typeCheck: true,
       ignoreNotFoundWarnings: true

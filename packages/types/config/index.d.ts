@@ -21,9 +21,9 @@ type ExtendableConfiguration = { [key: string]: any }
 export interface Configuration extends ExtendableConfiguration {
   build?: NuxtConfigurationBuild
   buildDir?: string
+  buildModules?: NuxtConfigurationModule[]
   css?: string[]
   dev?: boolean
-  devModules?: NuxtConfigurationModule[]
   dir: { [key in 'app' | 'assets' | 'layouts' | 'middleware' | 'pages' | 'static' | 'store']?: string }
   env?: NuxtConfigurationEnv
   fetch?: NuxtConfigurationFetch
