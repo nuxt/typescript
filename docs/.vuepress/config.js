@@ -37,7 +37,8 @@ function getMainSidebar () {
         '/guide/',
         '/guide/setup',
         '/guide/runtime',
-        '/guide/lint'
+        '/guide/lint',
+        '/guide/custom-server'
       ]
     },
     {
