@@ -1,20 +1,20 @@
 #!/usr/bin/env node
 
 const path = require('path')
-const { resolveNuxtBin, getRootdirFromArgv, registerTSNode, setupTSConfig } = require('..')
+const { resolveNuxtBin, getRootdirFromArgv, registerTSNode } = require('..')
 
-async function main () {
+function main () {
   const rootDir = getRootdirFromArgv()
   const tsConfigPath = path.resolve(rootDir, 'tsconfig.json')
-
-  await setupTSConfig(tsConfigPath)
 
   registerTSNode(tsConfigPath)
 
   require(resolveNuxtBin())
 }
 
-main().catch((error) => {
+try {
+  main()
+} catch (error) {
   require('consola').error(error)
   process.exit(1)
-})
+}
