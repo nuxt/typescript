@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/nuxt/typescript/compare/@nuxt/typescript-runtime@0.1.0...@nuxt/typescript-runtime@0.1.1) (2019-08-19)
+
+
+### Bug Fixes
+
+* remove setupTsConfig call ([#59](https://github.com/nuxt/typescript/issues/59)) ([4bbb063](https://github.com/nuxt/typescript/commit/4bbb063))
+
+
+
+
+
 # [0.1.0](https://github.com/nuxt/typescript/compare/@nuxt/typescript-runtime@0.0.4...@nuxt/typescript-runtime@0.1.0) (2019-08-10)
 
 
