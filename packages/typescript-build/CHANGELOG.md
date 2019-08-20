@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.10](https://github.com/nuxt/typescript/compare/@nuxt/typescript-build@0.1.9...@nuxt/typescript-build@0.1.10) (2019-08-20)
+
+**Note:** Version bump only for package @nuxt/typescript-build
+
+
+
+
+
 ## [0.1.9](https://github.com/nuxt/typescript/compare/@nuxt/typescript-build@0.1.8...@nuxt/typescript-build@0.1.9) (2019-08-20)
 
 **Note:** Version bump only for package @nuxt/typescript-build

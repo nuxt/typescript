@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.4](https://github.com/nuxt/typescript/compare/@nuxt/types@0.2.3...@nuxt/types@0.2.4) (2019-08-20)
+
+
+### Bug Fixes
+
+* **types:** make NuxtRouteConfig.chunkNames optional and add chunkName ([#67](https://github.com/nuxt/typescript/issues/67)) ([1e28314](https://github.com/nuxt/typescript/commit/1e28314)), closes [#66](https://github.com/nuxt/typescript/issues/66)
+* **types:** set proper type for connect instance in hooks ([#68](https://github.com/nuxt/typescript/issues/68)) ([00fede4](https://github.com/nuxt/typescript/commit/00fede4))
+
+
+
+
+
 ## [0.2.3](https://github.com/nuxt/typescript/compare/@nuxt/types@0.2.2...@nuxt/types@0.2.3) (2019-08-20)
 
 
