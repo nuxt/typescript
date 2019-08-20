@@ -8,7 +8,7 @@ Nuxt.js has created a TypeScript runtime wrapper under a dedicated package **`@n
 ## Installation
 
 ```sh
-yarn @nuxt/typescript-runtime
+yarn add @nuxt/typescript-runtime
 # OR
 npm install @nuxt/typescript-runtime
 ```
