@@ -7,14 +7,14 @@ Here are the guidelines to install & configure it.
 ## Installation
 
 ```sh
-yarn --dev @nuxt/typescript-build
+yarn add --dev @nuxt/typescript-build
 # OR
 npm install --save-dev @nuxt/typescript-build
 ```
 
 ## Configuration
 
-All you will need to do is adding **`@nuxt/typescript-build`** to your **`buildModules`** in your **`nuxt.config.js`**
+All you need to do is add **`@nuxt/typescript-build`** to your **`buildModules`** in **`nuxt.config.js`**
 
 ```js
 // nuxt.config.js
