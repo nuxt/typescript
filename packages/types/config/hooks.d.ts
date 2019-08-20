@@ -8,6 +8,8 @@
  *                https://nuxtjs.org/api/internals-generator#hooks
  */
 
+import { Server as ConnectServer } from 'connect'
+
 export interface NuxtConfigurationHooks {
   build?: {
     before?(builder: any, buildOptions: any): void
@@ -38,12 +40,12 @@ export interface NuxtConfigurationHooks {
   render?: {
     before?(renderer: any, options: any): void
     done?(renderer: any): void
-    errorMiddleware?(app: any): void
+    errorMiddleware?(app: ConnectServer): void
     resourcesLoaded?(resources: any): void
     route?(url: string, result: any, context: any): void
     routeContext?(context: any): void
     routeDone?(url: string, result: any, context: any): void
-    setupMiddleware?(app: any): void
+    setupMiddleware?(app: ConnectServer): void
   }
 }
 
