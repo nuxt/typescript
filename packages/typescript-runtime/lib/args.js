@@ -22,7 +22,7 @@ function getRootdirFromArgv () {
   const optionsWithValue = getCliOptionsWithValue()
 
   const isCliOption = (previousArg, currentArg) => {
-    return ['dev', 'build', 'start'].includes(currentArg) ||
+    return ['dev', 'build', 'start', 'generate'].includes(currentArg) ||
       currentArg[0] === '-' ||
       (previousArg && previousArg[0] === '-' && optionsWithValue.includes(previousArg))
   }
