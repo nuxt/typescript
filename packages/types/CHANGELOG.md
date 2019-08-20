@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.3](https://github.com/nuxt/typescript/compare/@nuxt/types@0.2.2...@nuxt/types@0.2.3) (2019-08-20)
+
+
+### Bug Fixes
+
+* **types:** add missing optional for `dir` typing ([#64](https://github.com/nuxt/typescript/issues/64)) ([da677bd](https://github.com/nuxt/typescript/commit/da677bd))
+
+
+
+
+
 ## [0.2.2](https://github.com/nuxt/typescript/compare/@nuxt/types@0.2.1...@nuxt/types@0.2.2) (2019-08-19)
 
 **Note:** Version bump only for package @nuxt/types

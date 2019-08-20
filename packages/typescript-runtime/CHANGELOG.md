@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.2](https://github.com/nuxt/typescript/compare/@nuxt/typescript-runtime@0.1.1...@nuxt/typescript-runtime@0.1.2) (2019-08-20)
+
+
+### Bug Fixes
+
+* **runtime:** add missing generate cli option ([#65](https://github.com/nuxt/typescript/issues/65)) ([3bb2459](https://github.com/nuxt/typescript/commit/3bb2459))
+
+
+
+
+
 ## [0.1.1](https://github.com/nuxt/typescript/compare/@nuxt/typescript-runtime@0.1.0...@nuxt/typescript-runtime@0.1.1) (2019-08-19)
 
 
