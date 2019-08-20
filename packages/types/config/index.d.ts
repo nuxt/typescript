@@ -24,7 +24,7 @@ export interface Configuration extends ExtendableConfiguration {
   buildModules?: NuxtConfigurationModule[]
   css?: string[]
   dev?: boolean
-  dir: { [key in 'app' | 'assets' | 'layouts' | 'middleware' | 'pages' | 'static' | 'store']?: string }
+  dir?: { [key in 'app' | 'assets' | 'layouts' | 'middleware' | 'pages' | 'static' | 'store']?: string }
   env?: NuxtConfigurationEnv
   fetch?: NuxtConfigurationFetch
   generate?: NuxtConfigurationGenerate
