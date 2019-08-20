@@ -9,7 +9,8 @@ import { RouterOptions, RouteConfig } from 'vue-router'
 
 export interface NuxtRouteConfig extends Pick<RouteConfig, Exclude<keyof RouteConfig, 'children' | 'component'>> {
   children?: NuxtRouteConfig[]
-  chunkNames: { [key: string]: string }
+  chunkName?: string
+  chunkNames?: { [key: string]: string }
   component?: RouteConfig['component'] | string
 }
 
