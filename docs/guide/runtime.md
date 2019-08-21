@@ -42,3 +42,18 @@ All you need to do is updating your **package.json** file:
 :::
 
 You can now use TypeScript for **nuxt.config** file, local **modules** and **serverMiddlewares**.
+
+::: tip
+If you want to specify the type for the exported **nuxt.config.ts**, then:
+
+```ts
+import { Configuration } from '@nuxt/types/config'
+
+const config: Configuration = {
+  // your config
+}
+```
+:::
+
+
+
