@@ -47,7 +47,9 @@ export interface NuxtConfigurationBuild {
       loaders: NuxtConfigurationLoaders
     }
   ): void
-  extractCSS?: boolean
+  extractCSS?: boolean | {
+    [key: string]: any
+  }
   filenames?: { [key in 'app' | 'chunk' | 'css' | 'img' | 'font' | 'video']?: (ctx: { isDev: boolean }) => string }
   friendlyErrors?: boolean
   hardSource?: boolean
