@@ -1,4 +1,5 @@
 const path = require('path')
+const arg = require('arg')
 const { tryResolve } = require('./resolve')
 
 function getCliOptions () {
@@ -17,8 +18,18 @@ function getCliOptionsWithValue () {
     }, [])
 }
 
+function getNodeArgs () {
+  return arg({
+    '--require': [String],
+    '-r': '--require'
+  }, {
+    argv: process.argv.slice(2)
+  })
+}
+
 function getRootdirFromArgv () {
-  const args = process.argv.slice(2)
+  const args = getNodeArgs()
+
   const optionsWithValue = getCliOptionsWithValue()
 
   const isCliOption = (previousArg, currentArg) => {
@@ -27,11 +38,12 @@ function getRootdirFromArgv () {
       (previousArg && previousArg[0] === '-' && optionsWithValue.includes(previousArg))
   }
 
-  const rootDir = args.find((arg, i) => !isCliOption(args[i - 1], arg)) || '.'
+  const rootDir = args._.find((arg, i) => !isCliOption(args[i - 1], arg)) || '.'
 
   return path.resolve(process.cwd(), rootDir)
 }
 
 module.exports = {
+  getNodeArgs,
   getRootdirFromArgv
 }
