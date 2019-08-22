@@ -3,7 +3,7 @@ const path = require('path')
 function tryResolve (path) {
   try {
     return require.resolve(path)
-  } catch {
+  } catch (err) {
     return null
   }
 }
