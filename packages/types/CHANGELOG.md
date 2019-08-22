@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.5](https://github.com/nuxt/typescript/compare/@nuxt/types@0.2.4...@nuxt/types@0.2.5) (2019-08-22)
+
+
+### Bug Fixes
+
+* **types:** extractCSS accepts object value ([#71](https://github.com/nuxt/typescript/issues/71)) ([ada0f73](https://github.com/nuxt/typescript/commit/ada0f73))
+* **types:** missing type for this.$nuxt.error ([255383d](https://github.com/nuxt/typescript/commit/255383d))
+
+
+
+
+
 ## [0.2.4](https://github.com/nuxt/typescript/compare/@nuxt/types@0.2.3...@nuxt/types@0.2.4) (2019-08-20)
 
 
