@@ -91,6 +91,7 @@ export interface NuxtAppOptions extends ComponentOptions<Vue> {
 export interface NuxtApp extends Vue {
   $options: NuxtAppOptions
   $loading: NuxtLoading
+  error(params: NuxtError): void
   isOffline: boolean
   isOnline: boolean
 }
