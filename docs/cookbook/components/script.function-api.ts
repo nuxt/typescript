@@ -11,7 +11,7 @@ interface YourProps {
 
 export default createComponent({
   props: {
-    user: {},
+    user: {}
   },
 
   setup ({ user }: YourProps) {
