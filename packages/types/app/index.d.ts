@@ -9,9 +9,7 @@ import './vue'
 // augment typings of Vuex
 import './vuex'
 
-type Dictionary<T> = { [key: string]: T }
-
-type NuxtState = Dictionary<any>
+type NuxtState = Record<string, any>
 
 export interface Context {
   app: NuxtAppOptions
@@ -31,7 +29,7 @@ export interface Context {
   isHMR: boolean
   route: Route
   store: Store<any>
-  env: Dictionary<any>
+  env: Record<string, any>
   params: Route['params']
   payload: any
   query: Route['query']
