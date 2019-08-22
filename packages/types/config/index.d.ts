@@ -16,9 +16,7 @@ import { NuxtConfigurationServerMiddleware, ServerMiddleware } from './server-mi
 import { NuxtConfigurationVueConfiguration } from './vue-configuration'
 import { NuxtConfigurationWatchers } from './watchers'
 
-type ExtendableConfiguration = { [key: string]: any }
-
-export interface Configuration extends ExtendableConfiguration {
+export interface Configuration extends Record<string, any> {
   build?: NuxtConfigurationBuild
   buildDir?: string
   buildModules?: NuxtConfigurationModule[]
