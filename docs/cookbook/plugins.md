@@ -74,7 +74,7 @@ export default Vue.extend({
 ### Plugin
 
 ```ts
-import { Context } from '@nuxt/types'
+import { Plugin } from '@nuxt/types'
 
 declare module 'vue/types/vue' {
   interface Vue {
