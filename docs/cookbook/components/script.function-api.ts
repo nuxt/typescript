@@ -1,5 +1,4 @@
-import Vue from 'vue'
-import { computed, value } from 'vue-function-api'
+import { createComponent, computed, value } from 'vue-function-api'
 
 interface User {
   firstName: string
@@ -10,8 +9,10 @@ interface YourProps {
   user?: User
 }
 
-export default Vue.extend({
-  name: 'YourComponent',
+export default createComponent({
+  props: {
+    user: {},
+  },
 
   setup ({ user }: YourProps) {
     const fullName = computed(() => `${user.firstName} ${user.lastName}`)
