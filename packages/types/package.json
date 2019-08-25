@@ -19,7 +19,7 @@
     "@types/optimize-css-assets-webpack-plugin": "^5.0.0",
     "@types/serve-static": "^1.13.3",
     "@types/terser-webpack-plugin": "^1.2.1",
-    "@types/webpack": "^4.39.0",
+    "@types/webpack": "^4.39.1",
     "@types/webpack-bundle-analyzer": "^2.13.2",
     "@types/webpack-dev-middleware": "^2.0.3",
     "@types/webpack-hot-middleware": "^2.16.5"
