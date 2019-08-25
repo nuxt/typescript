@@ -57,7 +57,7 @@ function getMainSidebar () {
 }
 
 function getExamplesSidebar () {
-  const apiNames = ['object', 'class', 'function']
+  const apiNames = ['options', 'class', 'composition']
   const levels = ['minimal', 'basic', 'advanced']
 
   return apiNames.map((apiName) => {

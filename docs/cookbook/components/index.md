@@ -15,8 +15,8 @@ In [**Single File Components (SFC)**](https://vuejs.org/v2/guide/single-file-com
 
 :::: tabs :options="{ useUrlFragment: false }"
 
-::: tab "Object API"
-<<< @/cookbook/components/script.object-api.ts
+::: tab "Options API"
+<<< @/cookbook/components/script.options-api.ts
 :::
 
 ::: tab "Class API"
@@ -26,9 +26,9 @@ Using [vue-class-component](https://github.com/vuejs/vue-class-component) throug
 :::
 
 
-::: tab "Function API"
-Using [vue-function-api](https://github.com/vuejs/vue-function-api)
+::: tab "Composition API"
+Using [@vue/composition-api](https://github.com/vuejs/composition-api)
 
-<<< @/cookbook/components/script.function-api.ts
+<<< @/cookbook/components/script.composition-api.ts
 :::
 
