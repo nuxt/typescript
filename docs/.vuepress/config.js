@@ -22,7 +22,7 @@ module.exports = {
       },
       {
         text: 'Examples',
-        link: '/examples/object-api/minimal'
+        link: '/examples/options-api/minimal'
       }
     ]
   }
