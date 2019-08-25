@@ -1,10 +1,9 @@
 {
-  "name": "example-function-api-minimal",
+  "name": "example-options-api-minimal",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "nuxt": "latest",
-    "vue-function-api": "latest"
+    "nuxt": "latest"
   },
   "scripts": {
     "dev": "nuxt",

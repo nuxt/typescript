@@ -5,11 +5,11 @@
 </template>
 
 <script lang="ts">
-import { createComponent, value } from 'vue-function-api'
+import { createComponent, reactive } from '@vue/composition-api'
 
 export default createComponent({
   setup () {
-    const message = value('This is a message')
+    const message = reactive('This is a message')
 
     return {
       message

@@ -1,22 +1,21 @@
-import { createComponent, computed, value } from 'vue-function-api'
+import { createComponent, computed, reactive, PropType } from '@vue/composition-api'
 
 interface User {
   firstName: string
   lastName: number
 }
 
-interface YourProps {
-  user?: User
-}
-
 export default createComponent({
   props: {
-    user: {}
+    user: {
+      type: Object as PropType<User>,
+      required: true
+    }
   },
 
-  setup ({ user }: YourProps) {
+  setup ({ user }) {
     const fullName = computed(() => `${user.firstName} ${user.lastName}`)
-    const message = value('This is a message')
+    const message = reactive('This is a message')
 
     return {
       fullName,

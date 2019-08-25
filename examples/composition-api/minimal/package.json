@@ -1,8 +1,9 @@
 {
-  "name": "example-object-api-minimal",
+  "name": "example-composition-api-minimal",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
+    "@vue/composition-api": "latest",
     "nuxt": "latest"
   },
   "scripts": {
