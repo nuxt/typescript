@@ -27,8 +27,27 @@ Using [vue-class-component](https://github.com/vuejs/vue-class-component) throug
 
 
 ::: tab "Composition API"
-Using [@vue/composition-api](https://github.com/vuejs/composition-api)
+Using [@vue/composition-api](https://github.com/vuejs/composition-api) plugin
+
+:::tip Plugin installation
+
+```js
+// plugins/composition-api.js
+import Vue from 'vue'
+import VueCompositionApi from '@vue/composition-api'
+
+Vue.use(VueCompositionApi)
+```
+
+```js
+// nuxt.config.js
+export default {
+  plugins: ['@/plugins/composition-api']
+}
+```
+
+This plugin registration is mandatory to make `setup` function works in components.
+:::
 
 <<< @/cookbook/components/script.composition-api.ts
-:::
 
