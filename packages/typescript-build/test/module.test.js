@@ -27,12 +27,14 @@ const buildWithTsModule = async (config) => {
 }
 
 describe('module', () => {
+  let nuxt
+
   beforeEach(() => {
     ForkTsCheckerWebpackPlugin.mockClear()
   })
 
   test('with default options', async () => {
-    const nuxt = await buildWithTsModule()
+    nuxt = await buildWithTsModule()
 
     expect(nuxt.options.extensions).toHaveLength(3)
     expect(nuxt.options.extensions).toEqual(['js', 'mjs', 'ts'])
@@ -41,24 +43,20 @@ describe('module', () => {
     expect(nuxt.options.build.additionalExtensions).toEqual(['ts', 'tsx'])
 
     expect(ForkTsCheckerWebpackPlugin).toHaveBeenCalledTimes(1)
-
-    await nuxt.close()
   })
 
   test('without typeCheck', async () => {
-    const nuxt = await buildWithTsModule({
+    nuxt = await buildWithTsModule({
       typescript: {
         typeCheck: false
       }
     })
 
     expect(ForkTsCheckerWebpackPlugin).not.toHaveBeenCalled()
-
-    await nuxt.close()
   })
 
   test('with ignoreNotFoundWarnings', async () => {
-    const nuxt = await buildWithTsModule({
+    nuxt = await buildWithTsModule({
       typescript: {
         ignoreNotFoundWarnings: true
       }
@@ -70,7 +68,9 @@ describe('module', () => {
       name: 'ModuleDependencyWarning',
       message: 'export x was not found in y'
     })).toEqual(true)
+  })
 
+  afterEach(async () => {
     await nuxt.close()
   })
 })
