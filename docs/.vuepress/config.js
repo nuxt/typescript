@@ -3,7 +3,16 @@ const fs = require('fs-extra')
 module.exports = {
   title: 'Nuxt TypeScript',
   description: 'TypeScript Support for Nuxt.js',
-  plugins: ['tabs'],
+  plugins: [
+    ['autometa', {
+      canonical_base: 'https://typescript.nuxtjs.org'
+    }],
+    'tabs'
+  ],
+  head: [
+    ['meta', { property: 'og:image', content:'https://typescript.nuxtjs.org/assets/logo.png' }],
+    ['meta', { name: 'twitter:image', content:'https://typescript.nuxtjs.org/assets/logo.png' }]
+  ],
   themeConfig: {
     repo: 'nuxt/typescript',
     docsDir: 'docs',
