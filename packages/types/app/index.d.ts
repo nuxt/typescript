@@ -92,5 +92,7 @@ export interface NuxtApp extends Vue {
   error(params: NuxtError): void
   isOffline: boolean
   isOnline: boolean
-  refresh(): void  
+  loadLayout(layout: string): Promise<any>  // TBD
+  refresh(): void
+  setLayout(layout: string): any  // TBD
 }
