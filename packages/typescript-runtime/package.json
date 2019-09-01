@@ -1,6 +1,6 @@
 {
   "name": "@nuxt/typescript-runtime",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Nuxt.js TypeScript Runtime support",
   "repository": "nuxt/typescript",
   "license": "MIT",

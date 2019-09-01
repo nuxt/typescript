@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.6](https://github.com/nuxt/typescript/compare/@nuxt/types@0.2.5...@nuxt/types@0.2.6) (2019-09-01)
+
+
+### Bug Fixes
+
+* **types:** add missing typings for NuxtApp interface ([#91](https://github.com/nuxt/typescript/issues/91)) ([7c57883](https://github.com/nuxt/typescript/commit/7c57883))
+* **types:** update types to match documentation examples ([#95](https://github.com/nuxt/typescript/issues/95)) ([b8064ce](https://github.com/nuxt/typescript/commit/b8064ce))
+
+
+
+
+
 ## [0.2.5](https://github.com/nuxt/typescript/compare/@nuxt/types@0.2.4...@nuxt/types@0.2.5) (2019-08-22)
 
 

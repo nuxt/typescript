@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/nuxt/typescript/compare/@nuxt/typescript-build@0.1.11...@nuxt/typescript-build@0.2.0) (2019-09-01)
+
+
+### Features
+
+* ts-loader options ([#93](https://github.com/nuxt/typescript/issues/93)) ([b80f6de](https://github.com/nuxt/typescript/commit/b80f6de))
+
+
+
+
+
 ## [0.1.11](https://github.com/nuxt/typescript/compare/@nuxt/typescript-build@0.1.10...@nuxt/typescript-build@0.1.11) (2019-08-22)
 
 **Note:** Version bump only for package @nuxt/typescript-build
