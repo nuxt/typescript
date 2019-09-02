@@ -14,9 +14,6 @@ function tsModule (_moduleOptions) {
     _moduleOptions
   )
 
-  // Allow TypeScript extension for severMiddlewares (`nuxt.resolver.resolvePath` uses `options.extensions`)
-  this.options.extensions.push('ts')
-
   // Extend Builder to handle .ts/.tsx files as routes and watch them
   this.options.build.additionalExtensions = ['ts', 'tsx']
 
