@@ -9,7 +9,7 @@
   ],
   "types": "index",
   "dependencies": {
-    "@types/babel__core": "^7.1.2",
+    "@types/babel__core": "^7.1.3",
     "@types/compression": "^1.0.1",
     "@types/connect": "^3.4.32",
     "@types/etag": "^1.8.0",
