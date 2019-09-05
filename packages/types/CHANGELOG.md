@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.7](https://github.com/nuxt/typescript/compare/@nuxt/types@0.2.6...@nuxt/types@0.2.7) (2019-09-05)
+
+
+### Bug Fixes
+
+* **types:** configuration should be used as partial ([7981072](https://github.com/nuxt/typescript/commit/7981072))
+
+
+
+
+
 ## [0.2.6](https://github.com/nuxt/typescript/compare/@nuxt/types@0.2.5...@nuxt/types@0.2.6) (2019-09-01)
 
 
