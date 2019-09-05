@@ -10,7 +10,7 @@ describe('run:before hook', () => {
   })
 
   test('registers ts-node', () => {
-    hooks['run:before']({ rootDir: 'path' })
+    hooks['run:before']({ argv: [], rootDir: 'path' })
 
     expect(register).toHaveBeenCalledWith({
       project: path.resolve('path', 'tsconfig.json'),
