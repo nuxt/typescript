@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/nuxt/typescript/compare/@nuxt/typescript-build@0.2.0...@nuxt/typescript-build@0.2.1) (2019-09-03)
+
+
+### Bug Fixes
+
+* pin typescript to 3.5.x ([d69ec27](https://github.com/nuxt/typescript/commit/d69ec27)), closes [#98](https://github.com/nuxt/typescript/issues/98)
+
+
+
+
+
 # [0.2.0](https://github.com/nuxt/typescript/compare/@nuxt/typescript-build@0.1.11...@nuxt/typescript-build@0.2.0) (2019-09-01)
 
 
