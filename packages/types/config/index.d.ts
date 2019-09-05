@@ -24,6 +24,7 @@ export interface Configuration extends Record<string, any> {
   dev: boolean
   dir: { [key in 'app' | 'assets' | 'layouts' | 'middleware' | 'pages' | 'static' | 'store']?: string }
   env: NuxtConfigurationEnv
+  extensions: string[]
   fetch: NuxtConfigurationFetch
   generate: NuxtConfigurationGenerate
   globalName: string
