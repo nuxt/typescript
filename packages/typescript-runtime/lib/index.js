@@ -2,11 +2,12 @@ const path = require('path')
 const { register } = require('ts-node')
 
 const hooks = {
-  setup ({ rootDir }) {
-    rootDir = rootDir || path.resolve(process.cwd(), process.argv[2] || '.')
+  'run:before' ({ argv, rootDir }) {
+    const customPath = argv.find((_arg, index) => index > 0 && argv[index - 1] === '--tsconfig')
+    const tsConfigPath = path.resolve(customPath || rootDir, customPath && customPath.endsWith('.json') ? '' : 'tsconfig.json')
 
     register({
-      project: path.resolve(rootDir, 'tsconfig.json'),
+      project: tsConfigPath,
       compilerOptions: {
         module: 'commonjs'
       }

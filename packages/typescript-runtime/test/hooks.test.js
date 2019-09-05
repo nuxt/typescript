@@ -4,13 +4,13 @@ import { hooks } from '..'
 
 jest.mock('ts-node')
 
-describe('setup hook', () => {
+describe('run:before hook', () => {
   beforeEach(() => {
     register.mockClear()
   })
 
-  test('registers ts-node (rootDir: given by CLI)', () => {
-    hooks.setup({ rootDir: 'path' })
+  test('registers ts-node', () => {
+    hooks['run:before']({ rootDir: 'path' })
 
     expect(register).toHaveBeenCalledWith({
       project: path.resolve('path', 'tsconfig.json'),
@@ -20,23 +20,22 @@ describe('setup hook', () => {
     })
   })
 
-  test('registers ts-node (rootDir: process.argv)', () => {
-    process.argv = ['foo', 'bar', 'path']
-    hooks.setup({})
+  test('registers ts-node (custom tsconfig.json path)', () => {
+    hooks['run:before']({ argv: ['--tsconfig', 'custom/tsconfig.json'], rootDir: 'path' })
 
     expect(register).toHaveBeenCalledWith({
-      project: path.resolve('path', 'tsconfig.json'),
+      project: path.resolve('custom/tsconfig.json'),
       compilerOptions: {
         module: 'commonjs'
       }
     })
   })
-  test("registers ts-node (rootDir: '.')", () => {
-    process.argv = ['foo', 'bar']
-    hooks.setup({})
+
+  test('registers ts-node (custom tsconfig.json dir path)', () => {
+    hooks['run:before']({ argv: ['--tsconfig', 'custom'], rootDir: 'path' })
 
     expect(register).toHaveBeenCalledWith({
-      project: path.resolve('tsconfig.json'),
+      project: path.resolve('custom/tsconfig.json'),
       compilerOptions: {
         module: 'commonjs'
       }
