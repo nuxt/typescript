@@ -4,10 +4,12 @@
  *                https://nuxtjs.org/guide/modules
  */
 
-import { Configuration } from '.'
+import { Configuration as WebpackConfiguration } from 'webpack'
+import { Configuration as NuxtConfiguration } from '.'
 
 interface ModuleThis {
-  options: Configuration
+  extendConfig(fn: (config: WebpackConfiguration) => void): void
+  options: NuxtConfiguration
   nuxt: any // TBD
   [key: string]: any // TBD
 }
