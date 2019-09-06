@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.11](https://github.com/nuxt/typescript/compare/@nuxt/types@0.2.10...@nuxt/types@0.2.11) (2019-09-06)
+
+
+### Bug Fixes
+
+* **types:** extendBuild instead of extendConfig ([e8961ff](https://github.com/nuxt/typescript/commit/e8961ff))
+
+
+
+
+
 ## [0.2.10](https://github.com/nuxt/typescript/compare/@nuxt/types@0.2.9...@nuxt/types@0.2.10) (2019-09-06)
 
 
