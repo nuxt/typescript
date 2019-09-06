@@ -31,7 +31,7 @@ interface NuxtBabelOptions extends Pick<TransformOptions, Exclude<keyof Transfor
 }
 
 export interface NuxtConfigurationBuild {
-  additionalExtensions: string[]
+  additionalExtensions?: string[]
   analyze?: BundleAnalyzerPlugin.Options | boolean
   babel?: NuxtBabelOptions
   cache?: boolean
