@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.10](https://github.com/nuxt/typescript/compare/@nuxt/types@0.2.9...@nuxt/types@0.2.10) (2019-09-06)
+
+
+### Bug Fixes
+
+* **types:** provide this.extendConfig type in modules ([91f3545](https://github.com/nuxt/typescript/commit/91f3545))
+* **types:** revert 79810725811b7ade83aa01decd3860e215785353 ([1d8b3c5](https://github.com/nuxt/typescript/commit/1d8b3c5))
+
+
+
+
+
 ## [0.2.9](https://github.com/nuxt/typescript/compare/@nuxt/types@0.2.8...@nuxt/types@0.2.9) (2019-09-06)
 
 
