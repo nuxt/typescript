@@ -3,6 +3,62 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.11](https://github.com/nuxt/typescript/compare/@nuxt/types@0.2.10...@nuxt/types@0.2.11) (2019-09-06)
+
+
+### Bug Fixes
+
+* **types:** extendBuild instead of extendConfig ([e8961ff](https://github.com/nuxt/typescript/commit/e8961ff))
+
+
+
+
+
+## [0.2.10](https://github.com/nuxt/typescript/compare/@nuxt/types@0.2.9...@nuxt/types@0.2.10) (2019-09-06)
+
+
+### Bug Fixes
+
+* **types:** provide this.extendConfig type in modules ([91f3545](https://github.com/nuxt/typescript/commit/91f3545))
+* **types:** revert 79810725811b7ade83aa01decd3860e215785353 ([1d8b3c5](https://github.com/nuxt/typescript/commit/1d8b3c5))
+
+
+
+
+
+## [0.2.9](https://github.com/nuxt/typescript/compare/@nuxt/types@0.2.8...@nuxt/types@0.2.9) (2019-09-06)
+
+
+### Bug Fixes
+
+* **types:** optional build.additionalExtensions ([60c1dc4](https://github.com/nuxt/typescript/commit/60c1dc4))
+
+
+
+
+
+## [0.2.8](https://github.com/nuxt/typescript/compare/@nuxt/types@0.2.7...@nuxt/types@0.2.8) (2019-09-06)
+
+
+### Bug Fixes
+
+* **types:** missing types regarding extensions ([e9856b7](https://github.com/nuxt/typescript/commit/e9856b7))
+
+
+
+
+
+## [0.2.7](https://github.com/nuxt/typescript/compare/@nuxt/types@0.2.6...@nuxt/types@0.2.7) (2019-09-05)
+
+
+### Bug Fixes
+
+* **types:** configuration should be used as partial ([7981072](https://github.com/nuxt/typescript/commit/7981072))
+
+
+
+
+
 ## [0.2.6](https://github.com/nuxt/typescript/compare/@nuxt/types@0.2.5...@nuxt/types@0.2.6) (2019-09-01)
 
 

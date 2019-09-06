@@ -3,6 +3,46 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.6](https://github.com/nuxt/typescript/compare/@nuxt/typescript-build@0.2.5...@nuxt/typescript-build@0.2.6) (2019-09-06)
+
+**Note:** Version bump only for package @nuxt/typescript-build
+
+
+
+
+
+## [0.2.5](https://github.com/nuxt/typescript/compare/@nuxt/typescript-build@0.2.4...@nuxt/typescript-build@0.2.5) (2019-09-06)
+
+**Note:** Version bump only for package @nuxt/typescript-build
+
+
+
+
+
+## [0.2.4](https://github.com/nuxt/typescript/compare/@nuxt/typescript-build@0.2.3...@nuxt/typescript-build@0.2.4) (2019-09-06)
+
+**Note:** Version bump only for package @nuxt/typescript-build
+
+
+
+
+
+## [0.2.3](https://github.com/nuxt/typescript/compare/@nuxt/typescript-build@0.2.2...@nuxt/typescript-build@0.2.3) (2019-09-06)
+
+**Note:** Version bump only for package @nuxt/typescript-build
+
+
+
+
+
+## [0.2.2](https://github.com/nuxt/typescript/compare/@nuxt/typescript-build@0.2.1...@nuxt/typescript-build@0.2.2) (2019-09-05)
+
+**Note:** Version bump only for package @nuxt/typescript-build
+
+
+
+
+
 ## [0.2.1](https://github.com/nuxt/typescript/compare/@nuxt/typescript-build@0.2.0...@nuxt/typescript-build@0.2.1) (2019-09-03)
 
 
