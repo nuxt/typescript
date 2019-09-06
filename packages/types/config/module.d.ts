@@ -8,7 +8,7 @@ import { Configuration as WebpackConfiguration } from 'webpack'
 import { Configuration as NuxtConfiguration } from '.'
 
 interface ModuleThis {
-  extendConfig(fn: (config: WebpackConfiguration) => void): void
+  extendBuild(fn: (config: WebpackConfiguration) => void): void
   options: NuxtConfiguration
   nuxt: any // TBD
   [key: string]: any // TBD
