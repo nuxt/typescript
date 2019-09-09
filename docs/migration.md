@@ -73,4 +73,4 @@ export default {
 
 **5. TypeScript Runtime (optional)**
 
-If your project is using TypeScript runtime (**nuxt.config.ts**, local **modules** or **serverMiddlewares**), please directly refers to the [**Runtime**](./guide/runtime) section.
+If your project is using TypeScript runtime (**nuxt.config.ts**, local **modules** or **serverMiddlewares**), please directly refer to the [**Runtime**](./guide/runtime) section.
