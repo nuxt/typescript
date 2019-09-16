@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.13](https://github.com/nuxt/typescript/compare/@nuxt/types@0.2.12...@nuxt/types@0.2.13) (2019-09-16)
+
+
+### Bug Fixes
+
+* **types:** allow no return in asyncData ([#116](https://github.com/nuxt/typescript/issues/116)) ([48fb2fc](https://github.com/nuxt/typescript/commit/48fb2fc))
+
+
+
+
+
 ## [0.2.12](https://github.com/nuxt/typescript/compare/@nuxt/types@0.2.11...@nuxt/types@0.2.12) (2019-09-16)
 
 
