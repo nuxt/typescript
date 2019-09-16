@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.12](https://github.com/nuxt/typescript/compare/@nuxt/types@0.2.11...@nuxt/types@0.2.12) (2019-09-16)
+
+
+### Bug Fixes
+
+* **types:** allow boolean at render.compressor ([#115](https://github.com/nuxt/typescript/issues/115)) ([88fa988](https://github.com/nuxt/typescript/commit/88fa988))
+* **types:** export NuxtError to be able to annotate error prop ([#114](https://github.com/nuxt/typescript/issues/114)) ([7a0e539](https://github.com/nuxt/typescript/commit/7a0e539))
+
+
+
+
+
 ## [0.2.11](https://github.com/nuxt/typescript/compare/@nuxt/types@0.2.10...@nuxt/types@0.2.11) (2019-09-06)
 
 
