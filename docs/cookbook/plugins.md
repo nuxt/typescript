@@ -88,6 +88,12 @@ declare module '@nuxt/types' {
   }
 }
 
+declare module 'vuex/types/index' {
+  interface Store<S> {
+    $myInjectedFunction(message: string): void
+  }
+}
+
 const myPlugin: Plugin = (context, inject) => {
   inject('myInjectedFunction', (message: string) => console.log(message))
 }
