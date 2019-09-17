@@ -8,7 +8,7 @@
     "dist"
   ],
   "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "yarn run clean && yarn compile",
     "clean": "rm -rf dist",
