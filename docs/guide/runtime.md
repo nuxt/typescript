@@ -19,7 +19,7 @@ Note that this package is installed as `dependency` and not `devDependency` like
 
 ## Usage
 
-All you need to do is updating your **package.json** file:
+All you need to do is update your **package.json** file:
 
 ```json{2-5}
 "scripts": {

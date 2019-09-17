@@ -15,7 +15,7 @@ import { NuxtConfigurationServerMiddleware } from './server-middleware'
 
 export interface NuxtConfigurationRender {
   bundleRenderer?: BundleRendererOptions
-  compressor?: CompressionOptions | NuxtConfigurationServerMiddleware
+  compressor?: CompressionOptions | NuxtConfigurationServerMiddleware | false
   csp?: any // TBD
   dist?: ServeStaticOptions
   etag?: EtagOptions | false

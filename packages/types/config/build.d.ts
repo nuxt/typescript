@@ -54,7 +54,7 @@ export interface NuxtConfigurationBuild {
     }
   ): void
   extractCSS?: boolean | Record<string, any>
-  filenames?: { [key in 'app' | 'chunk' | 'css' | 'img' | 'font' | 'video']?: (ctx: { isDev: boolean }) => string }
+  filenames?: { [key in 'app' | 'chunk' | 'css' | 'img' | 'font' | 'video']?: (ctx: { isDev: boolean, isModern: boolean }) => string }
   friendlyErrors?: boolean
   hardSource?: boolean
   hotMiddleware?: WebpackHotMiddlewareOptions

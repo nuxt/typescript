@@ -9,7 +9,7 @@ import { Context, Middleware, Transition, NuxtApp } from './index'
 
 declare module 'vue/types/options' {
   interface ComponentOptions<V extends Vue> {
-    asyncData?(ctx: Context): object | undefined
+    asyncData?(ctx: Context): Promise<object | void> | object | void
     fetch?(ctx: Context): Promise<void> | void
     head?: MetaInfo | (() => MetaInfo)
     key?: string | ((to: Route) => string)
