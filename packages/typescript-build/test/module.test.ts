@@ -4,12 +4,12 @@ import { Nuxt } from '@nuxt/core-edge'
 import { Builder } from '@nuxt/builder-edge'
 import { BundleBuilder } from '@nuxt/webpack-edge'
 
-import tsModule from '..'
+import tsModule from '../src'
 
 jest.setTimeout(60000)
 jest.mock('fork-ts-checker-webpack-plugin')
 
-const buildWithTsModule = async (config) => {
+const buildWithTsModule = async (config = {}) => {
   const nuxt = new Nuxt({
     build: {
       warningIgnoreFilters: []
@@ -28,6 +28,7 @@ describe('module', () => {
   let builder
 
   beforeEach(() => {
+    // @ts-ignore
     ForkTsCheckerWebpackPlugin.mockClear()
   })
 

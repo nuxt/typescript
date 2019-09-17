@@ -30,6 +30,11 @@ interface NuxtBabelOptions extends Pick<TransformOptions, Exclude<keyof Transfor
   presets?: ((env: NuxtBabelPresetEnv, defaultPreset: [string, object]) => PluginItem[] | void) | PluginItem[] | null
 }
 
+interface Warning {
+  message: string
+  name: string
+}
+
 export interface NuxtConfigurationBuild {
   additionalExtensions?: string[]
   analyze?: BundleAnalyzerPlugin.Options | boolean
@@ -74,5 +79,6 @@ export interface NuxtConfigurationBuild {
   templates?: any
   terser?: TerserPluginOptions | boolean
   transpile?: (string | RegExp)[]
+  warningIgnoreFilters?: Array<(warn: Warning) => boolean>
   watch?: string[]
 }
