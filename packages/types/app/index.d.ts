@@ -13,6 +13,7 @@ type NuxtState = Record<string, any>
 
 export interface Context {
   app: NuxtAppOptions
+  base: string
   /**
    * @deprecated Use process.client instead
   */
