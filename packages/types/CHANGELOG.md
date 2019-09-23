@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.15](https://github.com/nuxt/typescript/compare/@nuxt/types@0.2.14...@nuxt/types@0.2.15) (2019-09-23)
+
+
+### Bug Fixes
+
+* **types:** add VueRouter base in Context ([#123](https://github.com/nuxt/typescript/issues/123)) ([29b5702](https://github.com/nuxt/typescript/commit/29b5702))
+
+
+
+
+
+## [0.2.14](https://github.com/nuxt/typescript/compare/@nuxt/types@0.2.13...@nuxt/types@0.2.14) (2019-09-17)
+
+
+### Bug Fixes
+
+* **types:** add isModern type definition to build.filenames context ([#120](https://github.com/nuxt/typescript/issues/120)) ([1333259](https://github.com/nuxt/typescript/commit/1333259))
+
+
+
+
+
 ## [0.2.13](https://github.com/nuxt/typescript/compare/@nuxt/types@0.2.12...@nuxt/types@0.2.13) (2019-09-16)
 
 
