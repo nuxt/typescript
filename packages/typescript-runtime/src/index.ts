@@ -1,10 +1,11 @@
-const path = require('path')
-const { register } = require('ts-node')
+import { resolve } from 'path'
+import { register } from 'ts-node'
+import { Hooks } from '@nuxt/types/cli'
 
-const hooks = {
+const hooks: Hooks = {
   'run:before' ({ argv, rootDir }) {
     const customPath = argv.find((_arg, index) => index > 0 && argv[index - 1] === '--tsconfig')
-    const tsConfigPath = path.resolve(customPath || rootDir, customPath && customPath.endsWith('.json') ? '' : 'tsconfig.json')
+    const tsConfigPath = resolve(customPath || rootDir, customPath && customPath.endsWith('.json') ? '' : 'tsconfig.json')
 
     register({
       project: tsConfigPath,
@@ -19,6 +20,6 @@ const hooks = {
   }
 }
 
-module.exports = {
+export {
   hooks
 }

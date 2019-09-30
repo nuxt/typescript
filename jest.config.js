@@ -1,9 +1,20 @@
 module.exports = {
   testEnvironment: 'node',
+  transform: {
+    '^.+\\.ts$': 'ts-jest',
+    '^.+\\.js$': 'babel-jest'
+  },
+  globals: {
+    'ts-jest': {
+      tsConfig: 'tsconfig.test.json',
+      diagnostics: {
+        ignoreCodes: [2345]
+      }
+    }
+  },
   collectCoverage: true,
-  coverageDirectory: './coverage',
   collectCoverageFrom: [
-    'packages/*/lib/**/*.js'
+    'packages/*/src/**/*.ts'
   ],
   coverageThreshold: {
     global: {
@@ -12,8 +23,5 @@ module.exports = {
       lines: 100,
       statements: 100
     }
-  },
-  transform: {
-    '^.+\\.js$': 'babel-jest'
   }
 }

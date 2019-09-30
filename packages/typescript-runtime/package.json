@@ -6,13 +6,18 @@
   "license": "MIT",
   "files": [
     "bin",
-    "lib"
+    "dist"
   ],
   "bin": {
     "nuxt-ts": "bin/nuxt-ts.js",
     "nuxts": "bin/nuxt-ts.js"
   },
-  "main": "lib/index.js",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "yarn run clean && yarn compile",
+    "clean": "rm -rf dist",
+    "compile": "tsc"
+  },
   "dependencies": {
     "@nuxt/types": "0.2.15",
     "ts-node": "^8.4.1",
