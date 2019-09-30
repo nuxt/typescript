@@ -20,6 +20,7 @@ declare module 'vue/types/options' {
     transition?: string | Transition | ((to: Route, from: Route) => string)
     validate?(ctx: Context): Promise<boolean> | boolean
     watchQuery?: boolean | string[]
+    meta?: { [key: string]: any }
   }
 }
 
