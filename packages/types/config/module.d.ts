@@ -5,10 +5,22 @@
  */
 
 import { Configuration as WebpackConfiguration } from 'webpack'
+import { NuxtConfigurationLoaders } from './build'
 import { Configuration as NuxtConfiguration } from '.'
 
+interface ExtendFunctionContext {
+  isClient: boolean
+  isDev: boolean
+  isLegacy: boolean
+  isModern: boolean
+  isServer: boolean
+  loaders: NuxtConfigurationLoaders
+}
+
+type ExtendFunction = (config: WebpackConfiguration, ctx: ExtendFunctionContext) => void
+
 interface ModuleThis {
-  extendBuild(fn: (config: WebpackConfiguration) => void): void
+  extendBuild(fn: ExtendFunction): void
   options: NuxtConfiguration
   nuxt: any // TBD
   [key: string]: any // TBD

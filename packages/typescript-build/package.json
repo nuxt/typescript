@@ -5,9 +5,15 @@
   "repository": "nuxt/typescript",
   "license": "MIT",
   "files": [
-    "lib"
+    "dist"
   ],
-  "main": "lib/module.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "yarn run clean && yarn compile",
+    "clean": "rm -rf dist",
+    "compile": "tsc"
+  },
   "dependencies": {
     "@nuxt/types": "0.2.15",
     "consola": "^2.10.1",
