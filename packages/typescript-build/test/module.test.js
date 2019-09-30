@@ -34,9 +34,6 @@ describe('module', () => {
   test('with default options', async () => {
     builder = await buildWithTsModule()
 
-    expect(builder.nuxt.options.extensions).toHaveLength(3)
-    expect(builder.nuxt.options.extensions).toEqual(['js', 'mjs', 'ts'])
-
     expect(builder.nuxt.options.build.additionalExtensions).toHaveLength(2)
     expect(builder.nuxt.options.build.additionalExtensions).toEqual(['ts', 'tsx'])
 

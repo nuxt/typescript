@@ -14,9 +14,6 @@ function tsModule (_moduleOptions) {
     _moduleOptions
   )
 
-  // Allow TypeScript extension for severMiddlewares (`nuxt.resolver.resolvePath` uses `options.extensions`)
-  this.options.extensions.push('ts')
-
   // Change color of CLI banner
   this.options.cli.bannerColor = 'blue'
 
