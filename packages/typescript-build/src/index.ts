@@ -33,6 +33,9 @@ const tsModule: Module<Options> = function (moduleOptions) {
     moduleOptions
   )
 
+  // Change color of CLI banner
+  this.options.cli!.bannerColor = 'blue'
+
   // Extend Builder to handle .ts/.tsx files as routes and watch them
   this.options.build!.additionalExtensions = ['ts', 'tsx']
 
