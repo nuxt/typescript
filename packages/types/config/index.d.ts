@@ -1,5 +1,6 @@
 import { Transition } from '../app'
 import { NuxtConfigurationBuild } from './build'
+import { NuxtConfigurationCli } from './cli'
 import { NuxtConfigurationEnv } from './env'
 import { NuxtConfigurationFetch } from './fetch'
 import { NuxtConfigurationGenerate } from './generate'
@@ -20,6 +21,7 @@ export interface Configuration extends Record<string, any> {
   build?: NuxtConfigurationBuild
   buildDir?: string
   buildModules?: NuxtConfigurationModule[]
+  cli?: NuxtConfigurationCli
   css?: string[]
   dev?: boolean
   dir?: { [key in 'app' | 'assets' | 'layouts' | 'middleware' | 'pages' | 'static' | 'store']?: string }
