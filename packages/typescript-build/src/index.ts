@@ -73,7 +73,6 @@ const tsModule: Module<Options> = function (moduleOptions) {
       config.plugins!.push(new ForkTsCheckerWebpackPlugin(Object.assign({
         vue: true,
         tsconfig: path.resolve(this.options.rootDir!, 'tsconfig.json'),
-        tslint: false, // We recommend using ESLint so we set this option to `false` by default
         formatter: 'codeframe',
         logger: consola.withScope('nuxt:typescript')
       }, options.typeCheck)))
