@@ -12,6 +12,7 @@ export interface NuxtConfigurationGenerate {
   concurrency?: number
   devtools?: boolean
   dir?: string
+  exclude?: RegExp[]
   fallback?: string | boolean
   interval?: number
   routes?: NuxtConfigurationGenerateRoute[] | NuxtConfigurationGenerateRoutesFunction | NuxtConfigurationGenerateRoutesFunctionWithCallback
