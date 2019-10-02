@@ -16,5 +16,5 @@ It is shipped by **@nuxt/typescript-build** module.
 :::
 
 ::: warning 
-These packages are intended to only be used with **Nuxt 2.9** or **above**.
+These packages are intended to only be used with **Nuxt 2.10** or **above**.
 :::
