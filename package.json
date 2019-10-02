@@ -4,7 +4,6 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "nuxt-ts",
     "build": "lerna run build",
     "lint": "eslint --ext .ts,.tsx,.js,.vue .",
     "lint:fix": "yarn lint --fix",

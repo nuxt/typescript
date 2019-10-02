@@ -1,12 +1,12 @@
 import { Configuration } from '@nuxt/types'
-import test from './serverMiddlewares/test'
+import logger from './serverMiddlewares/logger'
 
 const config: Configuration = {
   buildModules: [
     '@nuxt/typescript-build'
   ],
   serverMiddleware: [
-    test
+    logger
   ]
 }
 
