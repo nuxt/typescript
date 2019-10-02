@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/nuxt/typescript/compare/@nuxt/types@0.2.15...@nuxt/types@0.3.0) (2019-10-02)
+
+
+### Bug Fixes
+
+* **types:** add generate.exclude type ([9c11abd](https://github.com/nuxt/typescript/commit/9c11abd)), closes [#132](https://github.com/nuxt/typescript/issues/132)
+* **types:** add typing for Routes meta ([#89](https://github.com/nuxt/typescript/issues/89)) ([19df2f9](https://github.com/nuxt/typescript/commit/19df2f9))
+* **types:** remote erroneous color ([#137](https://github.com/nuxt/typescript/issues/137)) ([011c3c1](https://github.com/nuxt/typescript/commit/011c3c1))
+
+
+### Features
+
+* add custom blue color for nuxt cli ([#133](https://github.com/nuxt/typescript/issues/133)) ([3534073](https://github.com/nuxt/typescript/commit/3534073)), closes [#6397](https://github.com/nuxt/typescript/issues/6397)
+
+
+
+
+
 ## [0.2.15](https://github.com/nuxt/typescript/compare/@nuxt/types@0.2.14...@nuxt/types@0.2.15) (2019-09-23)
 
 

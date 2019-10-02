@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/nuxt/typescript/compare/@nuxt/typescript-build@0.2.10...@nuxt/typescript-build@0.3.0) (2019-10-02)
+
+
+### Bug Fixes
+
+* **build:** fix feature [#133](https://github.com/nuxt/typescript/issues/133) after ts rewrite ([1e453e6](https://github.com/nuxt/typescript/commit/1e453e6))
+
+
+### Features
+
+* add custom blue color for nuxt cli ([#133](https://github.com/nuxt/typescript/issues/133)) ([3534073](https://github.com/nuxt/typescript/commit/3534073)), closes [#6397](https://github.com/nuxt/typescript/issues/6397)
+* use hooks ([#97](https://github.com/nuxt/typescript/issues/97)) ([f7b680a](https://github.com/nuxt/typescript/commit/f7b680a))
+
+
+
+
+
 ## [0.2.10](https://github.com/nuxt/typescript/compare/@nuxt/typescript-build@0.2.9...@nuxt/typescript-build@0.2.10) (2019-09-23)
 
 **Note:** Version bump only for package @nuxt/typescript-build

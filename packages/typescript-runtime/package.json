@@ -1,6 +1,6 @@
 {
   "name": "@nuxt/typescript-runtime",
-  "version": "0.1.7",
+  "version": "0.2.0",
   "description": "Nuxt.js TypeScript Runtime support",
   "repository": "nuxt/typescript",
   "license": "MIT",
@@ -19,7 +19,7 @@
     "compile": "tsc"
   },
   "dependencies": {
-    "@nuxt/types": "0.2.15",
+    "@nuxt/types": "0.3.0",
     "ts-node": "^8.4.1",
     "typescript": "~3.6"
   },
