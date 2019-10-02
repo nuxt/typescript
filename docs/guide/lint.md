@@ -22,6 +22,11 @@ module.exports = {
   ]
 }
 ```
+::: warning 
+As it will make ESlint use a TypeScript parser ([`@typescript-eslint/parser`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser)), please ensure `parserOptions.parser` option is not overriden either by you or by another configuration you're extending.
+
+If you were using `babel-eslint` as parser, just remove it from your `.eslintrc.js` and your dependencies.
+:::
 
 Finally, edit the `lint` script of your `package.json`:
 
