@@ -11,7 +11,7 @@ export default createComponent({
       type: Object as PropType<User>,
       required: true
     }
-  } as const,
+  },
 
   setup ({ user }) {
     const fullName = computed(() => `${user.firstName} ${user.lastName}`)
