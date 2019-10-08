@@ -14,10 +14,10 @@ declare module '@nuxt/types' {
 export interface Options {
   ignoreNotFoundWarnings?: boolean
   loaders?: {
-    ts?: TsLoaderOptions
-    tsx?: TsLoaderOptions
+    ts?: Partial<TsLoaderOptions>
+    tsx?: Partial<TsLoaderOptions>
   }
-  typeCheck?: TsCheckerOptions | boolean
+  typeCheck?: Partial<TsCheckerOptions> | boolean
 }
 
 const defaults: Options = {
@@ -35,6 +35,10 @@ const tsModule: Module<Options> = function (moduleOptions) {
 
   // Change color of CLI banner
   this.options.cli!.bannerColor = 'blue'
+
+  if (!this.options.extensions!.includes('ts')) {
+    this.options.extensions!.push('ts')
+  }
 
   // Extend Builder to handle .ts/.tsx files as routes and watch them
   this.options.build!.additionalExtensions = ['ts', 'tsx']

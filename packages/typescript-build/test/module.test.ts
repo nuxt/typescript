@@ -3,13 +3,29 @@ import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin'
 import { Nuxt } from '@nuxt/core-edge'
 import { Builder } from '@nuxt/builder-edge'
 import { BundleBuilder } from '@nuxt/webpack-edge'
+import { Configuration as WebpackConfiguration, RuleSetLoader } from 'webpack'
+import { Configuration } from '@nuxt/types'
+import { Options as TsLoaderOptions } from 'ts-loader'
 
 import tsModule from '../src'
 
 jest.setTimeout(60000)
 jest.mock('fork-ts-checker-webpack-plugin')
 
-const buildWithTsModule = async (config = {}) => {
+interface BuilderInstance {
+  nuxt: {
+    options: Configuration,
+    close(): void
+  }
+
+  bundleBuilder: {
+    getWebpackConfig(name: string): WebpackConfiguration
+  }
+
+  build(): void
+}
+
+const buildWithTsModule = async (config: Configuration = {}): Promise<BuilderInstance> => {
   const nuxt = new Nuxt({
     build: {
       warningIgnoreFilters: []
@@ -18,14 +34,14 @@ const buildWithTsModule = async (config = {}) => {
   })
 
   await nuxt.moduleContainer.addModule(tsModule)
-  const builder = new Builder(nuxt, BundleBuilder)
+  const builder: BuilderInstance = new Builder(nuxt, BundleBuilder)
   await builder.build()
 
   return builder
 }
 
 describe('module', () => {
-  let builder
+  let builder: BuilderInstance
 
   beforeEach(() => {
     // @ts-ignore
@@ -35,10 +51,20 @@ describe('module', () => {
   test('with default options', async () => {
     builder = await buildWithTsModule()
 
-    expect(builder.nuxt.options.build.additionalExtensions).toHaveLength(2)
-    expect(builder.nuxt.options.build.additionalExtensions).toEqual(['ts', 'tsx'])
+    expect(builder.nuxt.options.extensions).toContain('ts')
+
+    expect(builder.nuxt.options.build!.additionalExtensions).toHaveLength(2)
+    expect(builder.nuxt.options.build!.additionalExtensions).toEqual(['ts', 'tsx'])
 
     expect(ForkTsCheckerWebpackPlugin).toHaveBeenCalledTimes(1)
+  })
+
+  test('register ts extension once', async () => {
+    builder = await buildWithTsModule({
+      extensions: ['ts']
+    })
+
+    expect(builder.nuxt.options.extensions!.filter(ext => ext === 'ts')).toHaveLength(1)
   })
 
   test('without typeCheck', async () => {
@@ -58,9 +84,9 @@ describe('module', () => {
       }
     })
 
-    expect(builder.nuxt.options.build.warningIgnoreFilters).toHaveLength(1)
-    expect(builder.nuxt.options.build.warningIgnoreFilters).toEqual([expect.any(Function)])
-    expect(builder.nuxt.options.build.warningIgnoreFilters[0]({
+    expect(builder.nuxt.options.build!.warningIgnoreFilters).toHaveLength(1)
+    expect(builder.nuxt.options.build!.warningIgnoreFilters).toEqual([expect.any(Function)])
+    expect(builder.nuxt.options.build!.warningIgnoreFilters![0]({
       name: 'ModuleDependencyWarning',
       message: 'export x was not found in y'
     })).toEqual(true)
@@ -69,7 +95,7 @@ describe('module', () => {
   test('with custom ts-loader options', async () => {
     const loaderOptions = {
       transpileOnly: false
-    }
+    } as TsLoaderOptions
 
     builder = await buildWithTsModule({
       typescript: {
@@ -81,11 +107,16 @@ describe('module', () => {
     })
 
     const webpackConfig = builder.bundleBuilder.getWebpackConfig('Client')
-    const tsLoader = webpackConfig.module.rules.find(rule => rule.test.test('file.ts')).use.find(u => u.loader === 'ts-loader')
-    const tsxLoader = webpackConfig.module.rules.find(rule => rule.test.test('file.tsx')).use.find(u => u.loader === 'ts-loader')
 
-    expect(tsLoader.options.transpileOnly).toBe(false)
-    expect(tsxLoader.options.transpileOnly).toBe(false)
+    const tsLoader = (webpackConfig.module!.rules.find(r => (r.test as RegExp).test('file.ts'))!.use as RuleSetLoader[]).find(u => u.loader === 'ts-loader')
+
+    expect(tsLoader).toBeDefined()
+    expect((tsLoader!.options as TsLoaderOptions).transpileOnly).toBe(false)
+
+    const tsxLoader = (webpackConfig.module!.rules.find(r => (r.test as RegExp).test('file.tsx'))!.use as RuleSetLoader[]).find(u => u.loader === 'ts-loader')
+
+    expect(tsxLoader).toBeDefined()
+    expect((tsxLoader!.options as TsLoaderOptions).transpileOnly).toBe(false)
   })
 
   afterEach(async () => {
