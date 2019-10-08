@@ -100,3 +100,22 @@ When enabled, you can suppress `export ... was not found ...` warnings.
 See also about background information [here](https://github.com/TypeStrong/ts-loader/issues/653).
 
 **Warning:** This property might suppress the warnings you want to see. Be careful with how you configure it.
+
+### loaders
+
+> Customization of [`ts-loader`](https://github.com/TypeStrong/ts-loader#loader-options) options
+
+- Type: `Object`
+
+If you need extra customization of the TypeScript loader, you can customize it for both `ts` & `tsx` files through `loaders.ts` & `loaders.tsx` module options :
+
+```ts
+loaders: {
+  ts: {
+    silent: true
+  },
+  tsx: {
+    silent: true
+  }
+}
+```
