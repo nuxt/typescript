@@ -1,5 +1,7 @@
 # Lint
 
+## Configuration
+
 If you're using ESLint to lint your project, here is how you can make ESLint lint your TypeScript files.
 
 All you need is to install `@nuxtjs/eslint-config-typescript`:
@@ -41,3 +43,23 @@ You can now lint your TypeScript files by running `npm run lint` (or `yarn lint`
 ::: tip
 If you need to edit/override TypeScript ESLint rules, You can find [here](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#supported-rules) the list of all supported rules.
 :::
+
+## Runtime lint
+
+If you want to have runtime lint (having ESLint running after a file has been saved), you can enable the `eslint` feature of [fork-ts-checker-webpack-plugin](https://github.com/TypeStrong/fork-ts-checker-webpack-plugin) by configuring the `typeCheck` module option
+
+```ts
+export default {
+  typescript: {
+    typeCheck: {
+      eslint: true
+    }
+  }
+}
+```
+
+::: tip
+You can also give specific ESLint options with `typeCheck.eslintOptions`
+:::
+
+It will both type-check and lint your code whenever you're saving files.
