@@ -1,6 +1,6 @@
 {
   "name": "@nuxt/typescript-build",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Nuxt.js TypeScript support",
   "repository": "nuxt/typescript",
   "license": "MIT",
@@ -15,7 +15,7 @@
     "compile": "tsc"
   },
   "dependencies": {
-    "@nuxt/types": "0.3.0",
+    "@nuxt/types": "0.3.1",
     "consola": "^2.10.1",
     "fork-ts-checker-webpack-plugin": "^1.5.0",
     "ts-loader": "^6.2.0",

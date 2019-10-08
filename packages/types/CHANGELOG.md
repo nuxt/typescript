@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/nuxt/typescript/compare/@nuxt/types@0.3.0...@nuxt/types@0.3.1) (2019-10-08)
+
+**Note:** Version bump only for package @nuxt/types
+
+
+
+
+
 # [0.3.0](https://github.com/nuxt/typescript/compare/@nuxt/types@0.2.15...@nuxt/types@0.3.0) (2019-10-02)
 
 

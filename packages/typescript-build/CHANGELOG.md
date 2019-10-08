@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/nuxt/typescript/compare/@nuxt/typescript-build@0.3.0...@nuxt/typescript-build@0.3.1) (2019-10-08)
+
+
+### Bug Fixes
+
+* **build:** bring back options.extensions statement ([52b3c3b](https://github.com/nuxt/typescript/commit/52b3c3b)), closes [#141](https://github.com/nuxt/typescript/issues/141)
+
+
+
+
+
 # [0.3.0](https://github.com/nuxt/typescript/compare/@nuxt/typescript-build@0.2.10...@nuxt/typescript-build@0.3.0) (2019-10-02)
 
 
