@@ -6,7 +6,7 @@ Nuxt TypeScript Support comes with 3 packages :
 ![Version](https://img.shields.io/npm/v/@nuxt/types?color=%23007ACC&style=flat-square)
 ![Downloads](https://img.shields.io/npm/dm/@nuxt/types?style=flat-square)
 
-Contains Nuxt typescript type definitions.
+Contains Nuxt TypeScript type definitions.
 
 It is shipped by both **@nuxt/typescript-build** and **@nuxt/typescript-runtime** packages.
 :::
