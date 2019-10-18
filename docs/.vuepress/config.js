@@ -56,6 +56,7 @@ function getMainSidebar () {
         '/cookbook/components/',
         '/cookbook/middlewares',
         '/cookbook/plugins',
+        '/cookbook/store',
         '/cookbook/configuration',
         '/cookbook/modules',
         '/cookbook/server-middlewares'
