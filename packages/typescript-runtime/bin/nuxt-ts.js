@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const cli = (() => { try { return require('@nuxt/cli') } catch { return require('@nuxt/cli-edge') } })()
+const cli = (() => { try { return require('@nuxt/cli') } catch (err) { return require('@nuxt/cli-edge') } })()
 
 const { hooks } = require('..')
 
