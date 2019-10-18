@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.2](https://github.com/nuxt/typescript/compare/@nuxt/typescript-runtime@0.2.1...@nuxt/typescript-runtime@0.2.2) (2019-10-18)
+
+
+### Bug Fixes
+
+* **runtime:** node 8 compatibility ([69f2d20](https://github.com/nuxt/typescript/commit/69f2d2053af8a00b4d11dc155a868183a0a392fb))
+
+
+
+
+
 ## [0.2.1](https://github.com/nuxt/typescript/compare/@nuxt/typescript-runtime@0.2.0...@nuxt/typescript-runtime@0.2.1) (2019-10-08)
 
 **Note:** Version bump only for package @nuxt/typescript-runtime
