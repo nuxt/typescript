@@ -10,7 +10,7 @@ export interface NuxtConfigurationFeatures {
   fetch?: boolean
   clientOnline?: boolean
   clientPrefetch?: boolean
-  clientUseUrl?: false,
+  clientUseUrl?: boolean
   componentAliases?: boolean
   componentClientOnly?: boolean
 }
