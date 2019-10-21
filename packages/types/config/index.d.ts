@@ -3,6 +3,7 @@ import { NuxtConfigurationBuild } from './build'
 import { NuxtConfigurationCli } from './cli'
 import { NuxtConfigurationEnv } from './env'
 import { NuxtConfigurationFetch } from './fetch'
+import { NuxtConfigurationFeatures } from './features'
 import { NuxtConfigurationGenerate } from './generate'
 import { NuxtConfigurationHead } from './head'
 import { NuxtConfigurationHooks } from './hooks'
@@ -28,6 +29,7 @@ export interface Configuration extends Record<string, any> {
   env?: NuxtConfigurationEnv
   extensions?: string[]
   fetch?: NuxtConfigurationFetch
+  features?: NuxtConfigurationFeatures
   generate?: NuxtConfigurationGenerate
   globalName?: string
   globals?: NuxtConfigurationGlobals
