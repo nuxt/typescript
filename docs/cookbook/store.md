@@ -77,6 +77,8 @@ For use with Nuxt, there are few key provisos:
    export function initializeAxios(axiosInstance: NuxtAxiosInstance) {
      $axios = axiosInstance
    }
+   
+   export { $axios }
    ```
 
    `~/store/users.ts`:
