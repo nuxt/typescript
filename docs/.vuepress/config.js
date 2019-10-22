@@ -1,8 +1,18 @@
 const fs = require('fs-extra')
 
 module.exports = {
-  title: 'Nuxt TypeScript',
-  description: 'TypeScript Support for Nuxt.js',
+  locales: {
+    '/': {
+      lang: 'en-US',
+      title: 'Nuxt TypeScript',
+      description: 'TypeScript Support for Nuxt.js'
+    },
+    '/ja/': {
+      lang: 'ja-JP',
+      title: 'Nuxt TypeScript',
+      description: 'Nuxt.js 向け TypeScript サポート'
+    }
+  },
   plugins: [
     ['autometa', {
       canonical_base: 'https://typescript.nuxtjs.org'
@@ -17,52 +27,77 @@ module.exports = {
     repo: 'nuxt/typescript',
     docsDir: 'docs',
     editLinks: true,
-    editLinkText: 'Edit this page on GitHub',
     lastUpdated: 'Last Updated',
     logo: '/assets/logo.svg',
-    sidebar: {
-      '/examples': getExamplesSidebar(),
-      '/': getMainSidebar()
-    },
-    nav: [
-      {
-        text: 'Guide',
-        link: '/guide/'
+    locales: {
+      '/': {
+        label: 'English',
+        selectText: 'Languages',
+        editLinkText: 'Edit this page on GitHub',
+        sidebar: {
+          '/examples': getExamplesSidebar(),
+          '/': getMainSidebar('', 'Guide', 'Cookbook')
+        },
+        nav: [
+          {
+            text: 'Guide',
+            link: '/guide/'
+          },
+          {
+            text: 'Examples',
+            link: '/examples/options-api/minimal'
+          }
+        ]
       },
-      {
-        text: 'Examples',
-        link: '/examples/options-api/minimal'
+      '/ja/': {
+        label: '日本語',
+        selectText: '言語',
+        editLinkText: 'このページを GitHub で編集する',
+        sidebar: {
+          '/examples': getExamplesSidebar(),
+          '/ja/': getMainSidebar('/ja', 'Guide', 'Cookbook')
+        },
+        nav: [
+          {
+            text: 'ガイド',
+            link: '/ja/guide/'
+          },
+          {
+            text: '例',
+            link: '/examples/options-api/minimal'
+          }
+        ]
       }
-    ]
+    }
   }
 }
 
-function getMainSidebar () {
+function getMainSidebar (prefix, guide, cookbook) {
   return [
     {
-      title: 'Guide',
+      title: guide,
       collapsable: false,
       children: [
-        '/guide/',
-        '/guide/setup',
-        '/guide/runtime',
-        '/guide/lint'
+        prefix + '/guide/',
+        prefix + '/guide/setup',
+        prefix + '/guide/runtime',
+        prefix + '/guide/lint'
       ]
     },
     {
-      title: 'Cookbook',
+      title: cookbook,
       collapsable: false,
       children: [
-        '/cookbook/components/',
-        '/cookbook/middlewares',
-        '/cookbook/plugins',
-        '/cookbook/store',
-        '/cookbook/configuration',
-        '/cookbook/modules',
-        '/cookbook/server-middlewares'
+        prefix + '/cookbook/components/',
+        prefix + '/cookbook/middlewares',
+        prefix + '/cookbook/plugins',
+        prefix + '/cookbook/store',
+        prefix + '/cookbook/configuration',
+        prefix + '/cookbook/modules',
+        prefix + '/cookbook/server-middlewares'
       ]
     },
-    '/migration'
+    prefix + '/migration'
   ]
 }
 
