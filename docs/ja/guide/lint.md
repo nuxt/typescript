@@ -16,7 +16,7 @@ npm i -D @nuxtjs/eslint-config-typescript
 yarn add -D @nuxtjs/eslint-config-typescript
 ```
 
-そして、`.eslintrc.js` by extending `@nuxtjs/eslint-config-typescript` :
+そして、 ESLint設定ファイル `.eslintrc.js` を作成または編集して `@nuxtjs/eslint-config-typescript` を extends に入れます :
 ```js
 module.exports = {
   extends: [
