@@ -3,7 +3,7 @@
 
 TypeScript ランタイムは、**nuxt.config** ファイル、ローカルの **modules** および **serverMiddlewares** といった Webpack でコンパイルされていないファイルが必要です。
 
-Nuxt.js は **`@nuxt/typescript-runtime`** という専用パッケージの下に TypeScript ランタイムラッパーを作成しました。ラッパーは **nuxt-ts** という名前のバイナリで、実行前に裏側で **ts-node**](https://github.com/TypeStrong/ts-node) を登録します。
+Nuxt.js は **`@nuxt/typescript-runtime`** という専用パッケージの下に TypeScript ランタイムラッパーを作成しました。ラッパーは **nuxt-ts** という名前のバイナリで、実行前に裏側で [**ts-node**](https://github.com/TypeStrong/ts-node) を登録します。
 
 ## インストール
 
