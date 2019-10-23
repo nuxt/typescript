@@ -4,7 +4,7 @@
 import { Configuration } from '@nuxt/types'
 
 const config: Configuration = {
-  // Define your configuration with auto-completion & type checking
+  // 自動補完と型判定による設定の定義
 }
 
 export default config

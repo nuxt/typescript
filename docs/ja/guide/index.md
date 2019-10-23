@@ -8,7 +8,7 @@ Nuxt の TypeScript サポートは 3 つのパッケージからなっていま
 
 Nuxt TypeScript 型定義が含まれています。
 
-**@nuxt/typescript-build** パッケージ　と **@nuxt/typescript-runtime** パッケージが同梱されています。
+**@nuxt/typescript-build** パッケージ　と **@nuxt/typescript-runtime** パッケージに同梱されています。
 :::
 
 ::: tip @nuxt/typescript-build

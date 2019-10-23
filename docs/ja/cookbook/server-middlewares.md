@@ -8,7 +8,7 @@ next: false
 import { ServerMiddleware } from '@nuxt/types'
 
 const myServerMiddleware: ServerMiddleware = function (req, res, next) {
-  // Use req, res, next
+  // req, res, next を使用
 }
 
 export default myServerMiddleware
