@@ -29,3 +29,12 @@ Nuxt wrapper binary to provide TypeScript runtime support for **nuxt.config** fi
 ::: warning 
 These packages are intended to only be used with **Nuxt 2.10** or **above**.
 :::
+
+::: warning 
+If you want to distribute your **Nuxt Typescript** app using **npm** packages, be
+aware that **nuxt-ts start** will not work properly, because path to your
+appplication with contain **node_modules**. Is is because **nuxt-ts** uses
+**ts-node** under the hood.
+See [ts-node docs](https://github.com/TypeStrong/ts-node/#how-it-works) for more
+details
+:::
