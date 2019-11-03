@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.3](https://github.com/nuxt/typescript/compare/@nuxt/types@0.3.2...@nuxt/types@0.3.3) (2019-11-03)
+
+
+### Bug Fixes
+
+* **types:** add features configuration types ([#160](https://github.com/nuxt/typescript/issues/160)) ([18b07a8](https://github.com/nuxt/typescript/commit/18b07a821d8ead10888507c0f2fc02788642d793))
+* **types:** add router trailingSlash ([#176](https://github.com/nuxt/typescript/issues/176)) ([d3c8677](https://github.com/nuxt/typescript/commit/d3c867795756667120c2562e36bbb1903f99e6ff))
+
+
+
+
+
 ## [0.3.2](https://github.com/nuxt/typescript/compare/@nuxt/types@0.3.1...@nuxt/types@0.3.2) (2019-10-18)
 
 **Note:** Version bump only for package @nuxt/types
