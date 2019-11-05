@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.4](https://github.com/nuxt/typescript/compare/@nuxt/types@0.3.3...@nuxt/types@0.3.4) (2019-11-05)
+
+
+### Bug Fixes
+
+* **types:** add prefix property to NuxtConfigurationServerMiddleware ([#182](https://github.com/nuxt/typescript/issues/182)) ([3f8c54b](https://github.com/nuxt/typescript/commit/3f8c54b6be6efdfb631c54fb726d042d8e89e7df))
+
+
+
+
+
 ## [0.3.3](https://github.com/nuxt/typescript/compare/@nuxt/types@0.3.2...@nuxt/types@0.3.3) (2019-11-03)
 
 
