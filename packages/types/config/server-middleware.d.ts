@@ -7,4 +7,4 @@ import { RequestHandler } from 'express'
 
 export type ServerMiddleware = RequestHandler
 
-export type NuxtConfigurationServerMiddleware = string | { path: string, handler: string | Function } | ServerMiddleware
+export type NuxtConfigurationServerMiddleware = string | { path: string, prefix?: boolean, handler: string | ServerMiddleware } | ServerMiddleware
