@@ -27,5 +27,5 @@ Wrapper del binario para Nuxt que provee soporte de runtime de Typescript para e
 
 
 ::: warning 
-Estos paquetes estan diseñado para usarse solamente con **Nuxt 2.10** o **mayor**.
+Estos paquetes están diseñado para usarse solamente con **Nuxt 2.10** o **mayor**.
 :::

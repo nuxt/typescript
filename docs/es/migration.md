@@ -6,7 +6,7 @@ prev: false
 
 El soporte de Typescript ha sido externalizado en paquete dedicados y fueron removidos del core desde **Nuxt 2.9**. Aquí están las pautas para migrar su proyecto existente de Nuxt TypeScript a las últimas especificaciones.
 
-La siguiente guia de migración funciona tanto para **nuxt** o **nuxt-edge**.
+La siguiente guía de migración funciona tanto para **nuxt** o **nuxt-edge**.
 
 **1. Migrar dependencias**
 
@@ -18,7 +18,7 @@ npm uninstall @nuxt/typescript
 npm install --save-dev @nuxt/typescript-build
 ```
 
-**2. Agregar el modulo `@nuxt/typescript-build` en tu nuxt.config.js**
+**2. Agregar el módulo `@nuxt/typescript-build` en tu nuxt.config.js**
 
 ```js
 // nuxt.config.js
@@ -41,10 +41,10 @@ export default {
 ::: tip
 Si estaba importando tipos desde **@nuxt/config**, debe importarlos desde **@nuxt/types**.
 
-Las importaciones de los tipos pueden haber cambiado un poco, usted puede familiarizarse con ellas activando el intellisense cuando importa or verlo [aqui](https://github.com/nuxt/typescript/tree/master/packages/types) ahora.
+Las importaciones de los tipos pueden haber cambiado un poco, usted puede familiarizarse con ellas activando el intellisense cuando importa o verlo [aquí](https://github.com/nuxt/typescript/tree/master/packages/types) ahora.
 :::
 
-**4. Mueva sus opciones customizadas desde `build.typescript` hacia las opciones del modulo**
+**4. Mueva sus opciones customizadas desde `build.typescript` hacia las opciones del módulo**
 
 ```js
 // nuxt.config.js
@@ -72,4 +72,4 @@ export default {
 
 **5. TypeScript Runtime (opcional)**
 
-Si tu proyecto esta usando TypeScript runtime (**nuxt.config.ts**, **modulos** locales o **serverMiddlewares**), por favor consulta directamente la seccion [**Runtime**](./guide/runtime).
+Si tu proyecto esta usando TypeScript runtime (**nuxt.config.ts**, **modulos** locales o **serverMiddlewares**), por favor consulta directamente la sección [**Runtime**](./guide/runtime).

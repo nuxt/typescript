@@ -14,12 +14,12 @@ footer: MIT Licensed | Copyright © 2019-present Nuxt.js Team
   </div>
   <div class="feature">
     <h2>Seguridad de los Tipos</h2>
-    <p>Los Tipos incrementa tu agilidad cuando estas refactorizando.</p>
-    <p>Es mejor para el compilador en detectar errores que podrian suceder en la ejecucion del código.</p>
+    <p>Los Tipos incrementan tu agilidad cuando estas refactorizando.</p>
+    <p>Es mejor para el compilador en detectar errores que podrían suceder en la ejecución del código.</p>
   </div>
   <div class="feature">
     <h2>Calidad del códigos</h2>
-    <p>Los Tipos tiene la capacidad de mejorar la calidad de tu codigo y su entendimiento.</p> 
-    <p>Equipos grandes (Google, Microsoft, Facebook) ha llegado continuamente a esta conclusión.</p>
+    <p>Los Tipos tiene la capacidad de mejorar la calidad de tu código y su entendimiento.</p> 
+    <p>Equipos grandes (Google, Microsoft, Facebook) han llegado continuamente a esta conclusión.</p>
   </div>
 </div>
