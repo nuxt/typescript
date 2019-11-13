@@ -1,13 +1,13 @@
 # Lint
 
-## Configuracion
+## Configuración
 
 Si usted esta usando ESLint para lintear tu proyecto, asi es como usted puede hacer que ESLint lintee sus archivos TypeScript.
 
 Todo lo que usted necesita es instalar `@nuxtjs/eslint-config-typescript`:
 
 ::: tip
-Si usted esta usando `@nuxtjs/eslint-config`, eliminelo de sus dependencias, la configuracion de ESLint para Nuxt TypeScript ESLint ya lo incluye.
+Si usted esta usando `@nuxtjs/eslint-config`, eliminelo de sus dependencias, la configuración de ESLint para Nuxt TypeScript ESLint ya lo incluye.
 :::
 
 ```sh
@@ -16,7 +16,7 @@ npm i -D @nuxtjs/eslint-config-typescript
 yarn add -D @nuxtjs/eslint-config-typescript
 ```
 
-Luego, cree o edite su configuracion de ESLint `.eslintrc.js` para que extienda de `@nuxtjs/eslint-config-typescript` :
+Luego, cree o edite su configuración de ESLint `.eslintrc.js` para que extienda de `@nuxtjs/eslint-config-typescript` :
 ```js
 module.exports = {
   extends: [
@@ -25,9 +25,9 @@ module.exports = {
 }
 ```
 ::: warning 
-Para hacer que ESlint use el TypeScript parser ([`@typescript-eslint/parser`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser)), por favor, asegurese que la opcion `parserOptions.parser` no esta siendo sobreescrita por usted o por alguna otra configuracion que esta extendiendo.
+Para hacer que ESlint use el TypeScript parser ([`@typescript-eslint/parser`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser)), por favor, asegurese que la opción `parserOptions.parser` no esta siendo sobreescrita por usted o por alguna otra configuración que esta extendiendo.
 
-Si usted usa `babel-eslint` como parser, solo remuevalo de su configuracion `.eslintrc.js` y sus dependencias.
+Si usted usa `babel-eslint` como parser, solo remuevalo de su configuración `.eslintrc.js` y sus dependencias.
 :::
 
 Finalmente, edite el script `lint` de su `package.json`:
@@ -46,7 +46,7 @@ Si usted necesita editar/sobreescribir las reglas de TypeScript ESLint, Usted pu
 
 ## Runtime lint
 
-Si usted desea tener una runtime lint (teniendo ESLint corriendo despues de que una archivo es guardado), usted debe activar la opcion `eslint` del [fork-ts-checker-webpack-plugin](https://github.com/TypeStrong/fork-ts-checker-webpack-plugin) configurando la opcion `typeCheck` del modulo
+Si usted desea tener una runtime lint (teniendo ESLint corriendo despues de que una archivo es guardado), usted debe activar la opción `eslint` del [fork-ts-checker-webpack-plugin](https://github.com/TypeStrong/fork-ts-checker-webpack-plugin) configurando la opción `typeCheck` del módulo
 
 ```ts
 export default {

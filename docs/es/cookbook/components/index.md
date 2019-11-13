@@ -41,7 +41,7 @@ export default {
 }
 ```
 
-La instalacion de este plugin es obligatorio para que la funcion `setup` funcione en componentes.
+La instalación de este plugin es obligatorio para que la función `setup` funcione en componentes.
 
 :::
 

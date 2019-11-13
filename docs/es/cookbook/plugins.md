@@ -1,6 +1,6 @@
 # Plugins
 
-## I. Inyectar en la instancias de Vue
+## I. Inyectar en las instancias de Vue
 
 ### Plugin
 

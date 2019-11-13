@@ -6,10 +6,10 @@ Existen varias formas diferentes de escribir y acceder al store en un proyecto d
 
 ### `vuex-module-decorators`
 
-Uno de los enfoques más popular es [vuex-module-decorators](https://github.com/championswimmer/vuex-module-decorators) - ver la [guia](https://championswimmer.in/vuex-module-decorators/).
+Uno de los enfoques más popular es [vuex-module-decorators](https://github.com/championswimmer/vuex-module-decorators) - ver la [guía](https://championswimmer.in/vuex-module-decorators/).
 
 ::: warning
-Esto tiene un problema serio de seguridad con `nuxt-module-decorators`: existe un cross-request state pollution - por ello usted necesita estar seguro que no exista informacion especifica a la peticion en el store del SSR. Ver [este PR](https://github.com/championswimmer/vuex-module-decorators/pull/157) para revisar el estado de este error.
+Esto tiene un problema serio de seguridad con `nuxt-module-decorators`: existe un cross-request state pollution - por ello usted necesita estar seguro que no exista informacion especifica a la petición en el store del SSR. Ver [este PR](https://github.com/championswimmer/vuex-module-decorators/pull/157) para revisar el estado de este error.
 :::
 
 Para usar con Nuxt, existen pocos puntos claves:
@@ -53,7 +53,7 @@ Para usar con Nuxt, existen pocos puntos claves:
    export * from '~/utils/store-accessor'
    ```
 
-3. Si usted quiere accede a la instancia app de Nuxt, usted debe hacer algo similar con un plugin, por ejemplo:
+3. Si usted quiere acceder a la instancia app de Nuxt, usted debe hacer algo similar con un plugin, por ejemplo:
    `~/plugins/axios-accessor.ts`:
 
    ```ts

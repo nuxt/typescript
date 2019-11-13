@@ -14,7 +14,7 @@ npm install @nuxt/typescript-runtime
 ```
 
 ::: tip
-Nota este paquete es instalado como `dependency` y no como `devDependency` igual a `@nuxt/typescript-build`, porque `@nuxt/typescript-runtime` es necesario en produccion.
+Nota este paquete es instalado como `dependency` y no como `devDependency` igual a `@nuxt/typescript-build`, porque `@nuxt/typescript-runtime` es necesario en producción.
 :::
 
 ## Uso

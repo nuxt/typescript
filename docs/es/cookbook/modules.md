@@ -16,6 +16,6 @@ const myModule: Module<Options> = function (moduleOptions) {
 
 export default myModule
 
-// REQUERIDO si usted va a publicar el modulo como un paquete de npm
+// REQUERIDO si usted va a publicar el módulo como un paquete de npm
 // export const meta = require('./package.json')
 ```

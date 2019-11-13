@@ -1,8 +1,8 @@
 # Preparación
 
-El soporte de Typescript en Nuxt viene principalmente mediante un modulo de Nuxt, **@nuxt/typescript-build**.
+El soporte de Typescript en Nuxt viene principalmente mediante un módulo de Nuxt, **@nuxt/typescript-build**.
 
-Aqui estan las guias para instalar y configurarlo.
+Aqui están las guias para instalar y configurarlo.
 
 ## Instalación
 
@@ -75,16 +75,16 @@ Eso es todo, ya todo esta listo para usar Typescript en tus **layouts**, **compo
 
 Usted puede revisar la sección del [**CookBook**](../cookbook/components/) para ver algunos ejemplos de TypeScript para tus proyectos de Nuxt.
 
-## Opciones del modulo
+## Opciones del módulo
 
 ### typeCheck
 
-> Activa la comprobacion de tipos de Typescript en un proceso separado.
+> Activa la comprobación de tipos de Typescript en un proceso separado.
 
 - Tipo: `Boolean` o `Object`
 - Defecto: `true`
 
-Cuando esta activado, Nuxt.js usa [fork-ts-checker-webpack-plugin](https://github.com/TypeStrong/fork-ts-checker-webpack-plugin) para proveer la comprobacion de los tipos.
+Cuando esta activado, Nuxt.js usa [fork-ts-checker-webpack-plugin](https://github.com/TypeStrong/fork-ts-checker-webpack-plugin) para proveer la comprobación de los tipos.
 
 Usted puede usar un `Object` para reemplazar las opciones del plugins or asignar con un `false` para desactivarlo.
 
@@ -107,7 +107,7 @@ Puedes ver los antecedentes [aqui](https://github.com/TypeStrong/ts-loader/issue
 
 - Tipo: `Object`
 
-Si necesita customizar el loader de Typescript, puedes customizar ambos archivos `ts` & `tsx` mediante las opciones del modulo: `loaders.ts` & `loaders.tsx`:
+Si necesita customizar el loader de Typescript, puedes customizar ambos archivos `ts` & `tsx` mediante las opciones del módulo: `loaders.ts` & `loaders.tsx`:
 
 ```ts
 loaders: {

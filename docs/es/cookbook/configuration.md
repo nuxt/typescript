@@ -1,4 +1,4 @@
-# Configuracion (Runtime)
+# Configuración (Runtime)
 
 ```ts
 import { Configuration } from '@nuxt/types'
