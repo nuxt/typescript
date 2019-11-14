@@ -100,3 +100,8 @@ export interface NuxtApp extends Vue {
   refresh(): void
   setLayout(layout: string): any // TBD
 }
+
+// Global Nuxt Object accessible outside components
+declare global {
+  const $nuxt: NuxtApp
+}
