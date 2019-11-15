@@ -57,7 +57,4 @@ export interface Configuration extends Record<string, any> {
   watchers?: NuxtConfigurationWatchers
 }
 
-export {
-  Module,
-  ServerMiddleware
-}
+export { Module, ServerMiddleware }

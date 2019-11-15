@@ -22,16 +22,12 @@ export interface Options {
 
 const defaults: Options = {
   ignoreNotFoundWarnings: false,
-  typeCheck: true
+  typeCheck: true,
 }
 
-const tsModule: Module<Options> = function (moduleOptions) {
+const tsModule: Module<Options> = function(moduleOptions) {
   // Combine options
-  const options = Object.assign(
-    defaults,
-    this.options.typescript,
-    moduleOptions
-  )
+  const options = Object.assign(defaults, this.options.typescript, moduleOptions)
 
   // Change color of CLI banner
   this.options.cli!.bannerColor = 'blue'
@@ -44,8 +40,8 @@ const tsModule: Module<Options> = function (moduleOptions) {
   this.options.build!.additionalExtensions = ['ts', 'tsx']
 
   if (options.ignoreNotFoundWarnings) {
-    this.options.build!.warningIgnoreFilters!.push(warn =>
-      warn.name === 'ModuleDependencyWarning' && /export .* was not found in /.test(warn.message)
+    this.options.build!.warningIgnoreFilters!.push(
+      warn => warn.name === 'ModuleDependencyWarning' && /export .* was not found in /.test(warn.message)
     )
   }
 
@@ -55,8 +51,8 @@ const tsModule: Module<Options> = function (moduleOptions) {
     const jsxRuleLoaders = config.module!.rules.find(r => (r.test as RegExp).test('.jsx'))!.use as RuleSetUseItem[]
     const babelLoader = jsxRuleLoaders[jsxRuleLoaders.length - 1]
 
-    config.module!.rules.push(...(['ts', 'tsx'] as const).map(ext =>
-      ({
+    config.module!.rules.push(
+      ...(['ts', 'tsx'] as const).map(ext => ({
         test: new RegExp(`\\.${ext}$`, 'i'),
         use: [
           babelLoader,
@@ -65,21 +61,28 @@ const tsModule: Module<Options> = function (moduleOptions) {
             options: {
               transpileOnly: true,
               [`append${ext.charAt(0).toUpperCase() + ext.slice(1)}SuffixTo`]: [/\.vue$/],
-              ...(options.loaders && options.loaders[ext])
-            }
-          }
-        ]
-      })
-    ))
+              ...(options.loaders && options.loaders[ext]),
+            },
+          },
+        ],
+      }))
+    )
 
     if (options.typeCheck && isClient && !isModern) {
       const ForkTsCheckerWebpackPlugin = require(this.nuxt.resolver.resolveModule('fork-ts-checker-webpack-plugin'))
-      config.plugins!.push(new ForkTsCheckerWebpackPlugin(Object.assign({
-        vue: true,
-        tsconfig: path.resolve(this.options.rootDir!, 'tsconfig.json'),
-        formatter: 'codeframe',
-        logger: consola.withScope('nuxt:typescript')
-      }, options.typeCheck)))
+      config.plugins!.push(
+        new ForkTsCheckerWebpackPlugin(
+          Object.assign(
+            {
+              vue: true,
+              tsconfig: path.resolve(this.options.rootDir!, 'tsconfig.json'),
+              formatter: 'codeframe',
+              logger: consola.withScope('nuxt:typescript'),
+            },
+            options.typeCheck
+          )
+        )
+      )
     }
   })
 }

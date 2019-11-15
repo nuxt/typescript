@@ -1,4 +1,4 @@
 export default {
   modules: ['@nuxt/typescript-build'],
-  plugins: ['~/plugins/composition-api']
+  plugins: ['~/plugins/composition-api'],
 }

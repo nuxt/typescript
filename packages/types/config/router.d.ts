@@ -1,4 +1,3 @@
-
 /**
  * NuxtConfigurationRouter
  * Documentation: https://nuxtjs.org/api/configuration-router

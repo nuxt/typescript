@@ -13,11 +13,11 @@ import { Server as ConnectServer } from 'connect'
 export interface NuxtConfigurationHooks {
   build?: {
     before?(builder: any, buildOptions: any): void
-    compile?(params: { name: 'client' | 'server', compiler: any }): void
-    compiled?(params: { name: 'client' | 'server', compiler: any, stats: any }): void
+    compile?(params: { name: 'client' | 'server'; compiler: any }): void
+    compiled?(params: { name: 'client' | 'server'; compiler: any; stats: any }): void
     done?(builder: any): void
     extendRoutes?(routes: any, resolve: any): void
-    templates?(params: { templateFiles: any, templateVars: any, resolve: any }): void
+    templates?(params: { templateFiles: any; templateVars: any; resolve: any }): void
   }
   close?(nuxt: any): void
   error?(error: Error): void
@@ -27,11 +27,11 @@ export interface NuxtConfigurationHooks {
     distRemoved?(generator: any): void
     done?(generator: any): void
     extendRoutes?(routes: any): void
-    page?(params: { route: any, path: any, html: any }): void
+    page?(params: { route: any; path: any; html: any }): void
     routeCreated?(route: any, path: any, errors: any): void
     routeFailed?(route: any, errors: any): void
   }
-  listen?(server: any, params: { host: string, port: number | string }): void
+  listen?(server: any, params: { host: string; port: number | string }): void
   modules?: {
     before?(moduleContainer: any, options: any): void
     done?(moduleContainer: any): void

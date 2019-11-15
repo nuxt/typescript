@@ -3,11 +3,7 @@
  * Documentation: https://nuxtjs.org/api/configuration-build
  */
 
-import {
-  Configuration as WebpackConfiguration,
-  Options as WebpackOptions,
-  Plugin as WebpackPlugin
-} from 'webpack'
+import { Configuration as WebpackConfiguration, Options as WebpackOptions, Plugin as WebpackPlugin } from 'webpack'
 import { TransformOptions, PluginItem } from '@babel/core'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 import { Options as WebpackDevMiddlewareOptions } from 'webpack-dev-middleware'
@@ -47,14 +43,16 @@ export interface NuxtConfigurationBuild {
   extend?(
     config: WebpackConfiguration,
     ctx: {
-      isDev: boolean,
-      isClient: boolean,
-      isServer: boolean,
+      isDev: boolean
+      isClient: boolean
+      isServer: boolean
       loaders: NuxtConfigurationLoaders
     }
   ): void
   extractCSS?: boolean | Record<string, any>
-  filenames?: { [key in 'app' | 'chunk' | 'css' | 'img' | 'font' | 'video']?: (ctx: { isDev: boolean, isModern: boolean }) => string }
+  filenames?: {
+    [key in 'app' | 'chunk' | 'css' | 'img' | 'font' | 'video']?: (ctx: { isDev: boolean; isModern: boolean }) => string
+  }
   friendlyErrors?: boolean
   hardSource?: boolean
   hotMiddleware?: WebpackHotMiddlewareOptions

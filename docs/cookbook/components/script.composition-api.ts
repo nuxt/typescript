@@ -9,17 +9,17 @@ export default createComponent({
   props: {
     user: {
       type: Object as PropType<User>,
-      required: true
-    }
+      required: true,
+    },
   },
 
-  setup ({ user }) {
+  setup({ user }) {
     const fullName = computed(() => `${user.firstName} ${user.lastName}`)
     const message = reactive('This is a message')
 
     return {
       fullName,
-      message
+      message,
     }
-  }
+  },
 })

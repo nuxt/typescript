@@ -8,12 +8,11 @@
 import { createComponent, reactive } from '@vue/composition-api'
 
 export default createComponent({
-  setup () {
+  setup() {
     const message = reactive('This is a message')
-
     return {
-      message
+      message,
     }
-  }
+  },
 })
 </script>

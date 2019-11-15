@@ -9,6 +9,6 @@ import { Component, Vue } from 'vue-property-decorator'
 
 @Component
 export default class PageIndex extends Vue {
-  message: string = 'This is a message'
+  message = 'This is a message'
 }
 </script>

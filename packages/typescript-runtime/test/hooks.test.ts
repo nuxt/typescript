@@ -16,8 +16,8 @@ describe('run:before hook', () => {
     expect(register).toHaveBeenCalledWith({
       project: path.resolve('path', 'tsconfig.json'),
       compilerOptions: {
-        module: 'commonjs'
-      }
+        module: 'commonjs',
+      },
     })
   })
 
@@ -27,8 +27,8 @@ describe('run:before hook', () => {
     expect(register).toHaveBeenCalledWith({
       project: path.resolve('custom/tsconfig.json'),
       compilerOptions: {
-        module: 'commonjs'
-      }
+        module: 'commonjs',
+      },
     })
   })
 
@@ -38,8 +38,8 @@ describe('run:before hook', () => {
     expect(register).toHaveBeenCalledWith({
       project: path.resolve('custom/tsconfig.json'),
       compilerOptions: {
-        module: 'commonjs'
-      }
+        module: 'commonjs',
+      },
     })
   })
 })

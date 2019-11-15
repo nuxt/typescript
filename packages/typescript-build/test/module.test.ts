@@ -1,4 +1,3 @@
-
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin'
 import { Nuxt } from '@nuxt/core-edge'
 import { Builder } from '@nuxt/builder-edge'
@@ -14,7 +13,7 @@ jest.mock('fork-ts-checker-webpack-plugin')
 
 interface BuilderInstance {
   nuxt: {
-    options: Configuration,
+    options: Configuration
     close(): void
   }
 
@@ -28,9 +27,9 @@ interface BuilderInstance {
 const buildWithTsModule = async (config: Configuration = {}): Promise<BuilderInstance> => {
   const nuxt = new Nuxt({
     build: {
-      warningIgnoreFilters: []
+      warningIgnoreFilters: [],
     },
-    ...config
+    ...config,
   })
 
   await nuxt.moduleContainer.addModule(tsModule)
@@ -44,8 +43,7 @@ describe('module', () => {
   let builder: BuilderInstance
 
   beforeEach(() => {
-    // @ts-ignore
-    ForkTsCheckerWebpackPlugin.mockClear()
+    ;(ForkTsCheckerWebpackPlugin as any).mockClear()
   })
 
   test('with default options', async () => {
@@ -61,7 +59,7 @@ describe('module', () => {
 
   test('register ts extension once', async () => {
     builder = await buildWithTsModule({
-      extensions: ['ts']
+      extensions: ['ts'],
     })
 
     expect(builder.nuxt.options.extensions!.filter(ext => ext === 'ts')).toHaveLength(1)
@@ -70,8 +68,8 @@ describe('module', () => {
   test('without typeCheck', async () => {
     builder = await buildWithTsModule({
       typescript: {
-        typeCheck: false
-      }
+        typeCheck: false,
+      },
     })
 
     expect(ForkTsCheckerWebpackPlugin).not.toHaveBeenCalled()
@@ -80,40 +78,44 @@ describe('module', () => {
   test('with ignoreNotFoundWarnings', async () => {
     builder = await buildWithTsModule({
       typescript: {
-        ignoreNotFoundWarnings: true
-      }
+        ignoreNotFoundWarnings: true,
+      },
     })
 
     expect(builder.nuxt.options.build!.warningIgnoreFilters).toHaveLength(1)
     expect(builder.nuxt.options.build!.warningIgnoreFilters).toEqual([expect.any(Function)])
-    expect(builder.nuxt.options.build!.warningIgnoreFilters![0]({
-      name: 'ModuleDependencyWarning',
-      message: 'export x was not found in y'
-    })).toEqual(true)
+    expect(
+      builder.nuxt.options.build!.warningIgnoreFilters![0]({
+        name: 'ModuleDependencyWarning',
+        message: 'export x was not found in y',
+      })
+    ).toEqual(true)
   })
 
   test('with custom ts-loader options', async () => {
     const loaderOptions = {
-      transpileOnly: false
+      transpileOnly: false,
     } as TsLoaderOptions
 
     builder = await buildWithTsModule({
       typescript: {
         loaders: {
           ts: loaderOptions,
-          tsx: loaderOptions
-        }
-      }
+          tsx: loaderOptions,
+        },
+      },
     })
 
     const webpackConfig = builder.bundleBuilder.getWebpackConfig('Client')
 
-    const tsLoader = (webpackConfig.module!.rules.find(r => (r.test as RegExp).test('file.ts'))!.use as RuleSetLoader[]).find(u => u.loader === 'ts-loader')
+    const tsLoader = (webpackConfig.module!.rules.find(r => (r.test as RegExp).test('file.ts'))!
+      .use as RuleSetLoader[]).find(u => u.loader === 'ts-loader')
 
     expect(tsLoader).toBeDefined()
     expect((tsLoader!.options as TsLoaderOptions).transpileOnly).toBe(false)
 
-    const tsxLoader = (webpackConfig.module!.rules.find(r => (r.test as RegExp).test('file.tsx'))!.use as RuleSetLoader[]).find(u => u.loader === 'ts-loader')
+    const tsxLoader = (webpackConfig.module!.rules.find(r => (r.test as RegExp).test('file.tsx'))!
+      .use as RuleSetLoader[]).find(u => u.loader === 'ts-loader')
 
     expect(tsxLoader).toBeDefined()
     expect((tsxLoader!.options as TsLoaderOptions).transpileOnly).toBe(false)

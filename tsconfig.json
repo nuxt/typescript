@@ -4,12 +4,23 @@
     "lib": ["dom", "esnext"],
     "module": "esnext",
     "moduleResolution": "node",
-    "skipLibCheck": true,
+    "types": ["node", "jest"],
     "esModuleInterop": true,
     "strict": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
+    "incremental": true,
+    "jsx": "preserve",
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
     "stripInternal": true,
-    "noUnusedLocals": true
-  }
+    "importHelpers": true,
+    "strictNullChecks": false,
+    "downlevelIteration": true,
+    "skipLibCheck": true,
+    "noImplicitThis": true
+  },
+  "include": ["examples/**/*", "packages/**/*"],
+  "exclude": ["node_modules", ".github", ".circleci"]
 }

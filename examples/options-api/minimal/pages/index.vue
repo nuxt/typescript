@@ -8,12 +8,12 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  data () {
-    const message: string = 'This is a message'
+  data() {
+    const message = 'This is a message'
 
     return {
-      message
+      message,
     }
-  }
+  },
 })
 </script>

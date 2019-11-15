@@ -16,15 +16,15 @@ export interface Context {
   base: string
   /**
    * @deprecated Use process.client instead
-  */
+   */
   isClient: boolean
   /**
    * @deprecated Use process.server instead
-  */
+   */
   isServer: boolean
   /**
    * @deprecated Use process.static instead
-  */
+   */
   isStatic: boolean
   isDev: boolean
   isHMR: boolean
@@ -41,7 +41,7 @@ export interface Context {
   redirect(location: Location): void
   error(params: NuxtError): void
   nuxtState: NuxtState
-  beforeNuxtRender(fn: (params: { Components: VueRouter['getMatchedComponents'], nuxtState: NuxtState }) => void): void
+  beforeNuxtRender(fn: (params: { Components: VueRouter['getMatchedComponents']; nuxtState: NuxtState }) => void): void
 }
 
 export type Middleware = string | ((ctx: Context, cb: Function) => Promise<void> | void)

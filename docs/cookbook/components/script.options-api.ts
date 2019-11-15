@@ -11,19 +11,19 @@ export default Vue.extend({
   props: {
     user: {
       type: Object,
-      required: true
-    } as PropOptions<User>
+      required: true,
+    } as PropOptions<User>,
   },
 
-  data () {
+  data() {
     return {
-      message: 'This is a message'
+      message: 'This is a message',
     }
   },
 
   computed: {
-    fullName (): string {
+    fullName(): string {
       return `${this.user.firstName} ${this.user.lastName}`
-    }
-  }
+    },
+  },
 })

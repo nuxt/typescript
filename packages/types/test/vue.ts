@@ -12,7 +12,7 @@ const options: ComponentOptions<Vue> = {}
 
 options.asyncData = () => {
   return {
-    foo: 'bar'
+    foo: 'bar',
   }
 }
 
@@ -21,7 +21,7 @@ options.asyncData = () => undefined
 // fetch
 
 options.fetch = ({ store }) => {
-  return Promise.resolve('bar').then((res) => {
+  return Promise.resolve('bar').then(res => {
     store.commit('setFoo', res)
   })
 }
@@ -40,9 +40,7 @@ options.key = to => to.fullPath
 
 const metaInfo = {
   title: 'Home',
-  meta: [
-    { hid: 'description', name: 'description', content: 'My custom description' }
-  ]
+  meta: [{ hid: 'description', name: 'description', content: 'My custom description' }],
 }
 
 options.head = metaInfo
@@ -59,11 +57,7 @@ options.loading = true
 
 // middleware
 
-const middlewares: Middleware[] = [
-  'foo',
-  () => {},
-  async () => {}
-]
+const middlewares: Middleware[] = ['foo', () => {}, async () => {}]
 
 options.middleware = middlewares
 options.middleware = middlewares[0]
@@ -97,10 +91,16 @@ options.watchQuery = ['foo', 'bar']
 
 const vm = new Vue(options)
 
-if (vm.$nuxt.$loading.fail) { vm.$nuxt.$loading.fail() }
+if (vm.$nuxt.$loading.fail) {
+  vm.$nuxt.$loading.fail()
+}
 vm.$nuxt.$loading.finish()
-if (vm.$nuxt.$loading.increase) { vm.$nuxt.$loading.increase(1) }
-if (vm.$nuxt.$loading.pause) { vm.$nuxt.$loading.pause() }
+if (vm.$nuxt.$loading.increase) {
+  vm.$nuxt.$loading.increase(1)
+}
+if (vm.$nuxt.$loading.pause) {
+  vm.$nuxt.$loading.pause()
+}
 vm.$nuxt.$loading.start()
 
 vm.$nuxt.isOffline = true
