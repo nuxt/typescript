@@ -1,6 +1,6 @@
 # Plugins
 
-## I. Inject into Vue instances
+## I. Inyéctalo en las instancias de Vue
 
 ### Plugin
 
@@ -14,7 +14,7 @@ declare module 'vue/types/vue' {
 Vue.prototype.$myInjectedFunction = (message: string) => console.log(message)
 ```
 
-### Usage
+### Uso
 
 ```html
 <template>
@@ -35,7 +35,7 @@ export default Vue.extend({
 </script>
 ```
 
-## II. Inject into context
+## II. Inyéctalo en el contexto
 
 ### Plugin
 
@@ -69,7 +69,7 @@ export default Vue.extend({
 </script>
 ```
 
-## III. Combined Inject
+## III. Inyección Combinada
 
 ### Plugin
 
@@ -101,7 +101,7 @@ const myPlugin: Plugin = (context, inject) => {
 export default myPlugin
 ```
 
-### Usage
+### Uso
 
 ```html
 <script lang="ts">
@@ -119,5 +119,5 @@ export default Vue.extend({
 ```
 
 ::: tip
-Please note that `inject` doesn't inject in `context` but in `context.app`. 
+Por favor ten en cuenta que `inject` no inyecta en `context` si no en `context.app`
 :::

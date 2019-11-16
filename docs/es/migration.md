@@ -2,24 +2,23 @@
 prev: false
 ---
 
-# Migración de Nuxt 2.8
+# Migración desde Nuxt 2.8
 
-TypeScript support has been externalized in dedicated packages and have been removed from core starting **Nuxt 2.9**. Here are the guidelines to migrate your existing Nuxt TypeScript project to the last specifications.
+El Soporte de TypeScriot ha sido externalidado en paquetes dedicados y han sido removidos del _"core"_ empezando en **Nuxt 2.9**. Aquí están las pautas para migrar de tu proyecto existente con Nuxt TypeScript a la última especificación.
 
-The following migration guide works for either **nuxt** or **nuxt-edge**.
+La siguiente guía de migración funciona ya sea para **nuxt** o **nuxt-edge**.
 
-
-**1. Migrate dependencies**
+**1. Migrar las dependencias**
 
 ```sh
 yarn remove @nuxt/typescript
 yarn add --dev @nuxt/typescript-build
-# OR
+# o tambien
 npm uninstall @nuxt/typescript
 npm install --save-dev @nuxt/typescript-build
 ```
 
-**2. Add `@nuxt/typescript-build` module to your nuxt.config.js**
+**2. Agrega el módulo `@nuxt/typescript-build` a tu archivo nuxt.config.js**
 
 ```js
 // nuxt.config.js
@@ -28,7 +27,7 @@ export default {
 }
 ```
 
-**3. Replace `@nuxt/vue-app` and `@nuxt/config` by `@nuxt/types` in your `tsconfig.json`**
+**3. Reemplaza `@nuxt/vue-app` y `@nuxt/config` con `@nuxt/types` en tu archivo `tsconfig.json`**
 
 ```json{4}
 // tsconfig.json
@@ -40,12 +39,12 @@ export default {
 ```
 
 ::: tip
-If you were importing types from **@nuxt/config** you need to instead import them from **@nuxt/types**.
+Si tu estas importando tipos desde **@nuxt/config**, necesitas cambiarlo a que importen desde **@nuxt/types**.
 
-Types imports might have changed a little, you can get familiar with them either by triggering intellisense when importing or watch them live [here](https://github.com/nuxt/typescript/tree/master/packages/types) now.
+El como importas tipos puede que cambie un poco, puedes familiarizarte con cualquiera ya sea activando el IntelliSense cuando importar o miralos en vivo [aquí](https://github.com/nuxt/typescript/tree/master/packages/types) ahora.
 :::
 
-**4. Move the customized options from `build.typescript` to module options**
+**4. Mueve las opciones personalizadas de `build.typescript` a opciones de módulo**
 
 ```js
 // nuxt.config.js
@@ -57,7 +56,7 @@ export default {
 }
 ```
 
-You can also do it this way :
+Puedes tambien hacerlo de esta forma :
 
 ```js
 // nuxt.config.js
@@ -71,6 +70,6 @@ export default {
 }
 ```
 
-**5. TypeScript Runtime (optional)**
+**5. TypeScript en Tiempo de Ejecución (opcional)**
 
-If your project is using TypeScript runtime (**nuxt.config.ts**, local **modules** or **serverMiddlewares**), please directly refer to the [**Runtime**](./guide/runtime) section.
+Si tu proyecto está usando TypeScript en tiempo de ejecución (**nuxt.config.ts**, **modules** locales o **serverMiddlewares**), por favor referirse directamente a la seccion de [**Tiempo de Ejecución**](./guide/runtime).

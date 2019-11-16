@@ -1,4 +1,4 @@
-# Modules (Runtime)
+# Modules (Tiempo de Ejecución)
 
 ```ts
 import { Module } from '@nuxt/types'
@@ -10,12 +10,12 @@ interface Options {
 }
 
 const myModule: Module<Options> = function (moduleOptions) {
-  // Use this, this.options, this.nuxt
-  // Use moduleOptions
+  // Usa this, this.options, this.nuxt
+  // Usa moduleOptions
 }
 
 export default myModule
 
-// REQUIRED if publishing the module as npm package
+// REQUERIDO si se publica el módulo como un paquete de npm.
 // export const meta = require('./package.json')
 ```

@@ -1,10 +1,10 @@
-# Configuration (Runtime)
+# Configuración (Tiempo de Ejecución)
 
 ```ts
 import { Configuration } from '@nuxt/types'
 
 const config: Configuration = {
-  // Define your configuration with auto-completion & type checking
+  // Defina tu configuracion con auto completado y verificación de tipos
 }
 
 export default config

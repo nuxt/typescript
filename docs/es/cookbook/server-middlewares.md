@@ -2,13 +2,13 @@
 next: false
 ---
 
-# Server Middlewares (Runtime)
+# Server Middlewares (Tiempo de Ejecución)
 
 ```ts
 import { ServerMiddleware } from '@nuxt/types'
 
 const myServerMiddleware: ServerMiddleware = function (req, res, next) {
-  // Use req, res, next
+  // Usa req, res, next
 }
 
 export default myServerMiddleware
