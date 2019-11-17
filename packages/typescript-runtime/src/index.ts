@@ -1,18 +1,23 @@
 import { resolve } from 'path'
 import { register } from 'ts-node'
 import { Hooks } from '@nuxt/types/cli'
+import { compileTypescriptBuildFiles } from './compile'
 
 const hooks: Hooks = {
-  'run:before' ({ argv, rootDir }) {
+  async 'run:before' ({ argv, rootDir, cmd }) {
     const customPath = argv.find((_arg, index) => index > 0 && argv[index - 1] === '--tsconfig')
     const tsConfigPath = resolve(customPath || rootDir, customPath && customPath.endsWith('.json') ? '' : 'tsconfig.json')
 
-    register({
-      project: tsConfigPath,
-      compilerOptions: {
-        module: 'commonjs'
-      }
-    })
+    if (cmd.name === 'build' && argv.includes('--config')) {
+      await compileTypescriptBuildFiles({ rootDir })
+    } else {
+      register({
+        project: tsConfigPath,
+        compilerOptions: {
+          module: 'commonjs'
+        }
+      })
+    }
   },
 
   config (config) {
