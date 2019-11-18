@@ -139,7 +139,9 @@ export async function compileTypescriptBuildFiles ({
         replaceInFile.sync({
           files: path.resolve(rootDir, 'nuxt.config.js'),
           from: new RegExp(`(?<=['"\`])${itemPath}(?=['"\`])`, 'g'),
-          to: itemPath.replace(/\.ts$/, '')
+          to: itemPath
+            .replace(/\.ts$/, '')
+            .replace(/^[@~.]\//, '~/.nuxt.config/')
         })
       }
     }
