@@ -17,7 +17,7 @@ import { Options as OptimizeCssAssetsWebpackPluginOptions } from 'optimize-css-a
 import { TerserPluginOptions } from 'terser-webpack-plugin'
 import { Options as FileLoaderOptions } from 'file-loader'
 import { Options as PugOptions } from 'pug'
-import { Options as LessOptions } from 'less'
+import * as Less from 'less'
 import { Options as SassOptions } from 'node-sass'
 import { VueLoaderOptions } from 'vue-loader'
 
@@ -57,7 +57,7 @@ interface NuxtConfigurationLoaders {
   vue?: VueLoaderOptions
   css?: CssLoaderOptions
   cssModules?: CssLoaderOptions
-  less?: LessOptions
+  less?: Less.Options
   sass?: SassOptions
   scss?: SassOptions
   stylus?: any // TBD
