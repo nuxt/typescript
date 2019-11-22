@@ -15,8 +15,58 @@ import { Options as WebpackHotMiddlewareOptions } from 'webpack-hot-middleware'
 import { Options as HtmlMinifierOptions } from 'html-minifier'
 import { Options as OptimizeCssAssetsWebpackPluginOptions } from 'optimize-css-assets-webpack-plugin'
 import { TerserPluginOptions } from 'terser-webpack-plugin'
+import { Options as FileLoaderOptions } from 'file-loader'
+import { Options as PugOptions } from 'pug'
+import { Options as LessOptions } from 'less'
+import { Options as SassOptions } from 'node-sass'
+import { VueLoaderOptions } from 'vue-loader'
 
-type NuxtConfigurationLoaders = any // TBD
+interface FileLoaderOptions {
+  fallback?: string
+  limit?: number | boolean | string
+  mimetype?: string
+}
+
+type CssLoaderUrlFunction = (url: string, resourcePath: string) => boolean
+type CssLoaderImportFunction = (parsedImport: string, resourcePath: string) => boolean
+type CssLoaderMode = 'global' | 'local'
+interface CssLoaderModulesOptions {
+  mode?: CssLoaderMode
+  localIdentName?: string
+  context?: string
+  hashPrefix?: string
+  getLocalIdent?: (context: string, localIdentName: string, localName: string, options: CssLoaderModulesOptions) => string
+  localIdentRegExp?: string | RegExp
+}
+
+interface CssLoaderOptions {
+  url?: boolean | CssLoaderUrlFunction
+  import?: boolean | CssLoaderImportFunction
+  modules?: boolean | CssLoaderMode | CssLoaderModulesOptions
+  sourceMap?: boolean
+  importLoaders?: number
+  localsConvention?: 'asIs' | 'camelCase' | 'camelCaseOnly' | 'dashes' | 'dashesOnly'
+  onlyLocals?: boolean
+}
+
+interface NuxtConfigurationLoaders {
+  file?: FileLoaderOptions
+  fontUrl?: FileLoaderOptions
+  imgUrl?: FileLoaderOptions
+  pugPlain?: PugOptions
+  vue?: VueLoaderOptions
+  css?: CssLoaderOptions
+  cssModules?: CssLoaderOptions
+  less?: LessOptions
+  sass?: SassOptions
+  scss?: SassOptions
+  stylus?: any // TBD
+  vueStyle?: {
+    manualInject?: boolean
+    ssrId?: boolean
+    shadowMode?: boolean
+  }
+}
 
 interface NuxtBabelPresetEnv {
   isServer: boolean
