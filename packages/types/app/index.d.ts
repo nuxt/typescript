@@ -29,6 +29,7 @@ export interface Context {
   isDev: boolean
   isHMR: boolean
   route: Route
+  from: Route
   store: Store<any>
   env: Record<string, any>
   params: Route['params']
