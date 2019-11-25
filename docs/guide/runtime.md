@@ -29,11 +29,11 @@ All you need to do is update your **package.json** file:
   "start": "nuxt-ts start"
 },
 "dependencies": {
-  "@nuxt/typescript-runtime",
-  "nuxt"
+  "@nuxt/typescript-runtime": "latest",
+  "nuxt": "latest"
 },
 "devDependencies": {
-  "@nuxt/typescript-build"
+  "@nuxt/typescript-build": "latest"
 }
 ```
 
