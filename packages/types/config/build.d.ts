@@ -31,36 +31,36 @@ type CssLoaderUrlFunction = (url: string, resourcePath: string) => boolean
 type CssLoaderImportFunction = (parsedImport: string, resourcePath: string) => boolean
 type CssLoaderMode = 'global' | 'local'
 interface CssLoaderModulesOptions {
-  mode?: CssLoaderMode
-  localIdentName?: string
   context?: string
-  hashPrefix?: string
   getLocalIdent?: (context: string, localIdentName: string, localName: string, options: CssLoaderModulesOptions) => string
+  hashPrefix?: string
+  localIdentName?: string
   localIdentRegExp?: string | RegExp
+  mode?: CssLoaderMode
 }
 
 interface CssLoaderOptions {
-  url?: boolean | CssLoaderUrlFunction
   import?: boolean | CssLoaderImportFunction
-  modules?: boolean | CssLoaderMode | CssLoaderModulesOptions
-  sourceMap?: boolean
   importLoaders?: number
   localsConvention?: 'asIs' | 'camelCase' | 'camelCaseOnly' | 'dashes' | 'dashesOnly'
+  modules?: boolean | CssLoaderMode | CssLoaderModulesOptions
   onlyLocals?: boolean
+  sourceMap?: boolean
+  url?: boolean | CssLoaderUrlFunction
 }
 
 interface NuxtConfigurationLoaders {
+  css?: CssLoaderOptions
+  cssModules?: CssLoaderOptions
   file?: FileLoaderOptions
   fontUrl?: FileLoaderOptions
   imgUrl?: FileLoaderOptions
-  pugPlain?: PugOptions
-  vue?: VueLoaderOptions
-  css?: CssLoaderOptions
-  cssModules?: CssLoaderOptions
   less?: Less.Options
+  pugPlain?: PugOptions
   sass?: SassOptions
   scss?: SassOptions
   stylus?: any // TBD
+  vue?: VueLoaderOptions
   vueStyle?: {
     manualInject?: boolean
     ssrId?: boolean
