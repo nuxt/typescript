@@ -19,6 +19,11 @@ import { TerserPluginOptions } from 'terser-webpack-plugin'
 type NuxtConfigurationLoaders = any // TBD
 
 interface NuxtBabelPresetEnv {
+  envName: 'client' | 'modern' | 'server'
+  isClient: boolean
+  isDev: boolean
+  isLegacy: boolean
+  isModern: boolean
   isServer: boolean
 }
 
