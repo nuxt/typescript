@@ -8,9 +8,6 @@ There are a number of different options for writing and accessing the store in a
 
 One of the most popular approaches is [vuex-module-decorators](https://github.com/championswimmer/vuex-module-decorators) - see [guide](https://championswimmer.in/vuex-module-decorators/).
 
-::: warning
-There is currently a very serious security issue with `nuxt-module-decorators`: there is cross-request state pollution - so you will need to make sure that there is no request-specific information in the SSR store. See [this PR](https://github.com/championswimmer/vuex-module-decorators/pull/157) for the current status of the fix.
-:::
 
 For use with Nuxt, there are few key provisos:
 
