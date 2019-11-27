@@ -152,6 +152,31 @@ export const actions: ActionTree<RootState, RootState> = {
 }
 ```
 
+You would do exactly the same for a module. For example:
+
+`~/store/anotherModule.ts`:
+```ts
+import { GetterTree, ActionTree, MutationTree } from 'vuex'
+import { RootState } from '~/store'
+
+export const state = () => ({
+  more: 3,
+})
+
+export type AnotherModuleState = ReturnType<typeof state>
+
+export const getters: GetterTree<AnotherModuleState, RootState> = {
+  evenMore: state => state.more + 5,
+  nameAndMore: (state, getters, rootState) => `${rootState.name}: ${state.more}`,
+}
+
+export const actions: ActionTree<AnotherModuleState, RootState> = {
+  printRootState({ rootState }) {
+    console.log('accessing rootState:', rootState.name)
+  },
+}
+```
+
 ### Accessing the store
 
 #### `nuxt-typed-vuex`
@@ -170,12 +195,16 @@ Alternatively, you can provide your own types at the point of use.
 <script lang="ts">
 
 import { Component, Vue } from 'nuxt-property-decorator'
-import { RootState } from '~/store'
+import { getters, RootState } from '~/store'
 
 @Component
 export default class MyComponent extends Vue {
     get myThings() {
         return (this.$store.state as RootState).things
+    }
+
+    mounted() {
+        const name = this.$store.getters['name'] as ReturnType<typeof getters.name>
     }
 }
 ```
