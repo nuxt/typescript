@@ -64,7 +64,7 @@ export interface NuxtConfigurationRender {
       publicPath: string,
       preloadFiles: PreloadFile[]
     ) => string[]
-  };
+  }
   injectScripts?: boolean
   resourceHints?: boolean
   ssr?: boolean
