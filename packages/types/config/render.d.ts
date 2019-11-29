@@ -54,7 +54,7 @@ export interface NuxtConfigurationRender {
   fallback?: {
     dist?: ServePlaceholderOptions
     static?: ServePlaceholderOptions
-  };
+  }
   http2?: {
     push?: boolean
     shouldPush?: boolean
