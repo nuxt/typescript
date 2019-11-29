@@ -8,10 +8,6 @@ TypeScript を使用している Nuxt プロジェクトでは、ストアにア
 
 最も人気のあるアプローチの1つは [vuex-module-decorators](https://github.com/championswimmer/vuex-module-decorators) です。- [ガイド](https://championswimmer.in/vuex-module-decorators/)を参照してください。
 
-::: warning
-現在、`nuxt-module-decorators` には非常に深刻なセキュリティ問題があります：クロスリクエストの状態汚染があるため、SSR ストアにリクエスト固有の情報がないことを確認してください。修正の状況については、[この PR](https://github.com/championswimmer/vuex-module-decorators/pull/157) を参照してください。
-:::
-
 Nuxt で使用するために重要な条件がいくつかあります：
 
 1. モジュールは `stateFactory: true` で装飾する必要があるため、以下のようにします:
