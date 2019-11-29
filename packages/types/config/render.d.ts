@@ -32,9 +32,9 @@ type CspPolicyName = 'child-src' | 'connect-src' | 'default-src' | 'font-src' | 
 interface CspOptions {
   addMeta?: boolean
   allowedSources?: {}
-  hashAlgorithm: string
+  hashAlgorithm?: string
   policies?: Record<CspPolicyName, string[]>
-  reportOnly: boolean
+  reportOnly?: boolean
   unsafeInlineCompatibility?: boolean
 }
 
