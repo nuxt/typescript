@@ -101,3 +101,10 @@ export interface NuxtApp extends Vue {
   refresh(): void
   setLayout(layout: string): any // TBD
 }
+
+// window.$nuxt
+declare global {
+  interface Window {
+    $nuxt: NuxtApp
+  }
+}
