@@ -7,9 +7,15 @@ const config: Configuration = {
   head: {
     title: pkg.name
   },
-  buildModules: ['@nuxt/typescript-build'],
-  modules: ['~/local-module.ts'],
-  serverMiddleware: ['@/server-middleware.ts']
+  modules: [
+    '~/local-module.ts',
+    ['~/local-module.ts', {}],
+    ['@nuxt/typescript-build', {}]
+  ],
+  serverMiddleware: [
+    '@/server-middleware.ts',
+    { handler: '@/server-middleware.ts', path: '/test' }
+  ]
 }
 
 export default config

@@ -76,17 +76,12 @@ async function readAndMergeOptions (
   filename: string,
   options: JsonOptions
 ): Promise<JsonOptions> {
-  let newOptions: JsonOptions = options
-  if (existsSync(filename)) {
-    let tsConfig: { compilerOptions?: JsonOptions }
-    try {
-      tsConfig = await readJson(filename)
-    } catch (e) {
-      throw new Error(`Cannot read ${filename}.`)
-    }
-    newOptions = { ...tsConfig.compilerOptions, ...options }
+  try {
+    const tsConfig: { compilerOptions?: JsonOptions } = await readJson(filename)
+    return { ...tsConfig.compilerOptions, ...options }
+  } catch (e) {
+    throw new Error(`Cannot read ${filename}.`)
   }
-  return newOptions
 }
 
 export async function compileTypescriptBuildFiles ({
