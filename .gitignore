@@ -13,6 +13,7 @@ node_modules
 
 # Dist folders
 dist
+.tmp
 
 # Coverage reports
 coverage

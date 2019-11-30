@@ -1,0 +1,11 @@
+{
+  "name": "nuxt-ts-compile",
+  "dependencies": {
+    "nuxt-edge": "latest",
+    "typescript": "~3.7"
+  },
+  "devDependencies": {
+    "@nuxt/typescript-build": "latest",
+    "@nuxt/typescript-runtime": "latest"
+  }
+}
