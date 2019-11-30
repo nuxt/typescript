@@ -5,6 +5,7 @@
 
 import {
   Configuration as WebpackConfiguration,
+  Loader as WebpackLoader,
   Options as WebpackOptions,
   Plugin as WebpackPlugin
 } from 'webpack'
@@ -49,12 +50,19 @@ interface CssLoaderOptions {
   url?: boolean | CssLoaderUrlFunction
 }
 
+interface UrlLoaderOptions {
+  esModules?: boolean
+  fallback?: WebpackLoader
+  limit?: boolean | number | string
+  mimetype?: string
+}
+
 interface NuxtConfigurationLoaders {
   css?: CssLoaderOptions
   cssModules?: CssLoaderOptions
   file?: FileLoaderOptions
-  fontUrl?: FileLoaderOptions
-  imgUrl?: FileLoaderOptions
+  fontUrl?: UrlLoaderOptions
+  imgUrl?: UrlLoaderOptions
   less?: Less.Options
   pugPlain?: PugOptions
   sass?: SassOptions
