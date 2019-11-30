@@ -106,9 +106,7 @@ export async function compileTypescriptBuildFiles ({
     path.join(rootDir, compileDir),
     'nuxt.config.js'
   )
-  const srcDir = nuxtConfigFile.srcDir
-    ? path.relative(rootDir, nuxtConfigFile.srcDir)
-    : '.'
+  const srcDir = '.'
   const { serverMiddleware, modules } = nuxtConfigFile
 
   const filesToCompile = [
