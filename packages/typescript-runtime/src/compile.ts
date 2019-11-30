@@ -1,5 +1,5 @@
 import path from 'path'
-import { moveSync, existsSync, readJson, mkdirp } from 'fs-extra'
+import { existsSync, readJson, mkdirp } from 'fs-extra'
 import replaceInFile from 'replace-in-file'
 import execa from 'execa'
 import { Configuration as NuxtConfiguration } from '@nuxt/types'
@@ -106,10 +106,7 @@ export async function compileTypescriptBuildFiles ({
   )
   await mkdirp('.nuxt.config')
   await exec('tsc', [...compilerOptions, nuxtConfigName])
-  await moveSync('.nuxt.config/nuxt.config.js', 'nuxt.config.js', {
-    overwrite: true
-  })
-  const nuxtConfigFile = getNuxtConfig(rootDir, 'nuxt.config.js')
+  const nuxtConfigFile = getNuxtConfig('.nuxt.config', 'nuxt.config.js')
   const { serverMiddleware, modules } = nuxtConfigFile
 
   const filesToCompile = [
