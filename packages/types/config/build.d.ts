@@ -22,12 +22,6 @@ import * as Less from 'less'
 import { Options as SassOptions } from 'node-sass'
 import { VueLoaderOptions } from 'vue-loader'
 
-interface FileLoaderOptions {
-  fallback?: string
-  limit?: number | boolean | string
-  mimetype?: string
-}
-
 type CssLoaderUrlFunction = (url: string, resourcePath: string) => boolean
 type CssLoaderImportFunction = (parsedImport: string, resourcePath: string) => boolean
 type CssLoaderMode = 'global' | 'local'
