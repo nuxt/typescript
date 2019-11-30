@@ -67,7 +67,8 @@ describe('run:before hook', () => {
     })
 
     expect(compileTypescriptBuildFiles).toHaveBeenCalledWith({
-      rootDir: 'path'
+      rootDir: 'path',
+      tsConfigName: 'tsconfig.json'
     })
   })
 })
