@@ -38,7 +38,11 @@ describe('run:before hook', () => {
   })
 
   test('registers ts-node (custom tsconfig.json path)', () => {
-    hooks['run:before']!({ argv: ['--tsconfig', 'custom/tsconfig.json'], cmd: devCommand, rootDir: 'path' })
+    hooks['run:before']!({
+      argv: ['--tsconfig', 'custom/tsconfig.json'],
+      cmd: devCommand,
+      rootDir: 'path'
+    })
 
     expect(register).toHaveBeenCalledWith({
       project: path.resolve('custom/tsconfig.json'),
@@ -49,7 +53,11 @@ describe('run:before hook', () => {
   })
 
   test('registers ts-node (custom tsconfig.json dir path)', () => {
-    hooks['run:before']!({ argv: ['--tsconfig', 'custom'], cmd: devCommand, rootDir: 'path' })
+    hooks['run:before']!({
+      argv: ['--tsconfig', 'custom'],
+      cmd: devCommand,
+      rootDir: 'path'
+    })
 
     expect(register).toHaveBeenCalledWith({
       project: path.resolve('custom/tsconfig.json'),
@@ -61,7 +69,7 @@ describe('run:before hook', () => {
 
   test('tries to compile config', () => {
     hooks['run:before']!({
-      argv: ['--config'],
+      argv: ['--compile'],
       cmd: buildCommand,
       rootDir: 'path'
     })

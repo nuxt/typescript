@@ -1,4 +1,3 @@
-
 # Runtime (optional)
 
 TypeScript runtime is needed for files not compiled by Webpack, such as **nuxt.config** file, local **modules** and **serverMiddlewares**.
@@ -63,12 +62,13 @@ We now support compiling local modules, serverMiddleware and `nuxt.config.ts` us
      "@nuxt/typescript-build": "latest"
    }
    ```
+
 2. **Update your build and start scripts**
 
    ```json{2-5}
    "scripts": {
      ...
-     "build": "nuxt-ts build --config",
+     "build": "nuxt-ts build --compile",
      "start": "nuxt start -c .nuxt.config/nuxt.config.js"
    },
    ```
