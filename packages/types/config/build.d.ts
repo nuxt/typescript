@@ -21,7 +21,7 @@ import * as Less from 'less'
 import { Options as SassOptions } from 'node-sass'
 import { VueLoaderOptions } from 'vue-loader'
 
-interface FileLoaderOptions {
+interface CustomFileLoaderOptions extends FileLoaderOptions {
   fallback?: string
   limit?: number | boolean | string
   mimetype?: string
@@ -52,9 +52,9 @@ interface CssLoaderOptions {
 interface NuxtConfigurationLoaders {
   css?: CssLoaderOptions
   cssModules?: CssLoaderOptions
-  file?: FileLoaderOptions
-  fontUrl?: FileLoaderOptions
-  imgUrl?: FileLoaderOptions
+  file?: CustomFileLoaderOptions
+  fontUrl?: CustomFileLoaderOptions
+  imgUrl?: CustomFileLoaderOptions
   less?: Less.Options
   pugPlain?: PugOptions
   sass?: SassOptions
