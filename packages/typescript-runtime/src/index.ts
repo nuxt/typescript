@@ -9,7 +9,7 @@ const hooks: Hooks = {
     const tsConfigPath = resolve(customPath || rootDir, customPath && customPath.endsWith('.json') ? '' : 'tsconfig.json')
 
     if (cmd.name === 'build' && argv.includes('--config')) {
-      await compileTypescriptBuildFiles({ rootDir })
+      await compileTypescriptBuildFiles({ rootDir, tsConfigPath })
     } else {
       register({
         project: tsConfigPath,
