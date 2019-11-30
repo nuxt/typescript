@@ -13,7 +13,7 @@ interface JsonOptions {
 interface CompileTypescriptOptions {
   rootDir: string
   tscOptions?: JsonOptions
-  tsConfigPath?: string
+  tsConfigName?: string
 }
 
 function exec (cmd: string, args: string[]) {
@@ -29,7 +29,8 @@ function getNuxtConfig (
   rootDir: string,
   nuxtConfigName: string
 ): NuxtConfiguration {
-  const nuxtConfigFile = esm(path.resolve(rootDir, nuxtConfigName))
+  const _esm = esm(module)
+  const nuxtConfigFile = _esm(path.resolve(rootDir, nuxtConfigName))
   return nuxtConfigFile.default || nuxtConfigFile
 }
 
@@ -45,11 +46,11 @@ function getNuxtConfigName (rootDir: string): string {
 async function getTypescriptCompilerOptions (
   rootDir: string,
   options: JsonOptions = {},
-  tsConfigPath: string = 'tsconfig.json'
+  tsConfigName: string = 'tsconfig.json'
 ): Promise<string[]> {
   let compilerOptions: string[] = []
 
-  options = await readAndMergeOptions(tsConfigPath, rootDir, options)
+  options = await readAndMergeOptions(path.join(rootDir, tsConfigName), options)
 
   compilerOptions = Object.keys(options).reduce((compilerOptions, option) => {
     if (compilerOptions && !['rootDirs', 'paths'].includes(option)) {
@@ -65,13 +66,14 @@ async function getTypescriptCompilerOptions (
     '--rootDir',
     rootDir,
     '--outDir',
-    '.nuxt.config'
+    path.join(rootDir, '.nuxt.config'),
+    '--allowJs',
+    'true'
   ]
 }
 
 async function readAndMergeOptions (
   filename: string,
-  rootDir: string,
   options: JsonOptions
 ): Promise<JsonOptions> {
   let newOptions: JsonOptions = options
@@ -80,7 +82,7 @@ async function readAndMergeOptions (
     try {
       tsConfig = await readJson(filename)
     } catch (e) {
-      throw new Error(`Can not read ${filename} from ${rootDir}`)
+      throw new Error(`Cannot read ${filename}.`)
     }
     newOptions = { ...tsConfig.compilerOptions, ...options }
   }
@@ -89,7 +91,7 @@ async function readAndMergeOptions (
 
 export async function compileTypescriptBuildFiles ({
   rootDir,
-  tsConfigPath,
+  tsConfigName,
   tscOptions
 }: CompileTypescriptOptions): Promise<void> {
   const compileDir = '.nuxt.config'
@@ -97,11 +99,21 @@ export async function compileTypescriptBuildFiles ({
   const compilerOptions = await getTypescriptCompilerOptions(
     rootDir,
     tscOptions,
-    tsConfigPath
+    tsConfigName
   )
+
+  // Compile nuxt.config
   await mkdirp(compileDir)
-  await exec('tsc', [...compilerOptions, nuxtConfigName])
-  const nuxtConfigFile = getNuxtConfig(compileDir, 'nuxt.config.js')
+  await exec('tsc', [...compilerOptions, path.join(rootDir, nuxtConfigName)])
+
+  // Compile local modules and serverMiddleware
+  const nuxtConfigFile = getNuxtConfig(
+    path.join(rootDir, compileDir),
+    'nuxt.config.js'
+  )
+  const srcDir = nuxtConfigFile.srcDir
+    ? path.relative(rootDir, nuxtConfigFile.srcDir)
+    : '.'
   const { serverMiddleware, modules } = nuxtConfigFile
 
   const filesToCompile = [
@@ -109,6 +121,7 @@ export async function compileTypescriptBuildFiles ({
     ...(modules || [])
   ].reduce((filesToCompile, item) => {
     let itemPath = ''
+
     if (typeof item === 'string') {
       itemPath = item
     } else if (typeof item === 'object' && Array.isArray(item)) {
@@ -116,10 +129,8 @@ export async function compileTypescriptBuildFiles ({
     } else if (typeof item === 'object' && typeof item.handler === 'string') {
       itemPath = item.handler
     }
+
     if (itemPath) {
-      const srcDir = nuxtConfigFile.srcDir
-        ? path.relative(rootDir, nuxtConfigFile.srcDir).replace(compileDir, '.')
-        : '.'
       const resolvedPath = path.resolve(
         rootDir,
         itemPath.replace(/^[@~.]\//, `${srcDir}/`).replace(/\.ts$/, '')
@@ -135,6 +146,7 @@ export async function compileTypescriptBuildFiles ({
     }
     return filesToCompile
   }, [] as string[])
+
   await Promise.all(
     filesToCompile.map(file => exec('tsc', [...compilerOptions, file]))
   )
