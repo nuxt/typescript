@@ -90,7 +90,7 @@ export default {
 
 ### ignoreNotFoundWarnings
 
-> note found に関する TypeScript の警告抑制を有効にします。
+> not found に関する TypeScript の警告抑制を有効にします。
 
 - 型: `Boolean`
 - デフォルト: `false`

@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/nuxt/typescript/compare/@nuxt/types@0.3.4...@nuxt/types@0.4.0) (2019-11-30)
+
+
+### Bug Fixes
+
+* **types:** add `from` property in context interface ([#209](https://github.com/nuxt/typescript/issues/209)) ([cb98916](https://github.com/nuxt/typescript/commit/cb989165a9e98a231d92095af4fdd0f5015614d0))
+* **types:** add babel preset types for function argument ([#192](https://github.com/nuxt/typescript/issues/192)) ([fff6f92](https://github.com/nuxt/typescript/commit/fff6f92b60b1ee7f9665e16972810c3f03029267)), closes [#6691](https://github.com/nuxt/typescript/issues/6691)
+* **types:** fix build.hotMiddleware.client ([7f5d9f8](https://github.com/nuxt/typescript/commit/7f5d9f8b9be802d53286603120145428a9643f57)), closes [#187](https://github.com/nuxt/typescript/issues/187)
+
+
+### Features
+
+* **types:** add types for NuxtConfigurationLoaders ([#202](https://github.com/nuxt/typescript/issues/202)) ([df586d0](https://github.com/nuxt/typescript/commit/df586d0a17cb843a907da89e2ee715257e13e4ce))
+* **types:** add types for NuxtConfigurationRender ([#203](https://github.com/nuxt/typescript/issues/203)) ([bc394de](https://github.com/nuxt/typescript/commit/bc394de9ebac22b7911a15203d247121d85f3aae))
+* **types:** add window.$nuxt type ([63847c7](https://github.com/nuxt/typescript/commit/63847c741103286e61e014e191648346e4b3b275)), closes [#194](https://github.com/nuxt/typescript/issues/194)
+
+
+
+
+
 ## [0.3.4](https://github.com/nuxt/typescript/compare/@nuxt/types@0.3.3...@nuxt/types@0.3.4) (2019-11-05)
 
 

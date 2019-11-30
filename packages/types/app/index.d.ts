@@ -29,6 +29,7 @@ export interface Context {
   isDev: boolean
   isHMR: boolean
   route: Route
+  from: Route
   store: Store<any>
   env: Record<string, any>
   params: Route['params']
@@ -99,4 +100,11 @@ export interface NuxtApp extends Vue {
   loadLayout(layout: string): Promise<any> // TBD
   refresh(): void
   setLayout(layout: string): any // TBD
+}
+
+// window.$nuxt
+declare global {
+  interface Window {
+    $nuxt: NuxtApp
+  }
 }

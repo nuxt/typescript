@@ -7,20 +7,65 @@
  *                https://github.com/jshttp/etag#readme
  */
 
+import { IncomingMessage, ServerResponse } from 'http'
 import { CompressionOptions } from 'compression'
 import { Options as EtagOptions } from 'etag'
 import { ServeStaticOptions } from 'serve-static'
 import { BundleRendererOptions } from 'vue-server-renderer'
 import { NuxtConfigurationServerMiddleware } from './server-middleware'
 
+type NuxtEtagOptions = EtagOptions & {
+  hash?: (html: string) => string
+}
+
+type ServePlaceholderHandler = 'default' | 'css' | 'html' | 'js' | 'json' | 'map' | 'plain' | 'image'
+interface ServePlaceholderOptions {
+  handlers?: Record<string, ServePlaceholderHandler | null | false>
+  mimes?: Record<ServePlaceholderHandler, string | false | undefined>
+  noCache?: boolean
+  placeholders?: Record<ServePlaceholderHandler, string | Buffer | false>
+  skipUnknown?: boolean
+  statusCode?: false | number
+}
+
+type CspPolicyName = 'child-src' | 'connect-src' | 'default-src' | 'font-src' | 'frame-src' | 'img-src' | 'manifest-src' | 'media-src' | 'object-src' | 'prefetch-src' | 'script-src' | 'script-src-elem' | 'script-src-attr' | 'style-src' | 'style-src-elem' | 'style-src-attr' | 'worker-src' | 'base-uri' | 'plugin-types' | 'sandbox' | 'form-action' | 'frame-ancestors' | 'navigate-to' | 'report-uri' | 'report-to' | 'block-all-mixed-content' | 'referrer' | 'require-sri-for' | 'trusted-types' | 'upgrade-insecure-requests'
+interface CspOptions {
+  addMeta?: boolean
+  allowedSources?: string[]
+  hashAlgorithm?: string
+  policies?: Record<CspPolicyName, string[]>
+  reportOnly?: boolean
+  unsafeInlineCompatibility?: boolean
+}
+
+interface PreloadFile {
+  asType: 'script' | 'style' | 'font'
+  extension: string
+  file: string
+  fileWithoutQuery: string
+}
+
 export interface NuxtConfigurationRender {
   bundleRenderer?: BundleRendererOptions
   compressor?: CompressionOptions | NuxtConfigurationServerMiddleware | false
-  csp?: any // TBD
+  csp?: boolean | CspOptions
   dist?: ServeStaticOptions
-  etag?: EtagOptions | false
-  fallback?: any // https://github.com/nuxt/serve-placeholder types TBD
-  http2?: any // TBD
+  etag?: NuxtEtagOptions | false
+  fallback?: {
+    dist?: ServePlaceholderOptions
+    static?: ServePlaceholderOptions
+  }
+  http2?: {
+    push?: boolean
+    shouldPush?: boolean
+    pushAssets?: (
+      req: IncomingMessage,
+      res: ServerResponse,
+      publicPath: string,
+      preloadFiles: PreloadFile[]
+    ) => string[]
+  }
+  injectScripts?: boolean
   resourceHints?: boolean
   ssr?: boolean
   ssrLog?: boolean | 'collapsed'
