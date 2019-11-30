@@ -112,7 +112,7 @@ export interface NuxtConfigurationBuild {
   filenames?: { [key in 'app' | 'chunk' | 'css' | 'img' | 'font' | 'video']?: (ctx: { isDev: boolean, isModern: boolean }) => string }
   friendlyErrors?: boolean
   hardSource?: boolean
-  hotMiddleware?: WebpackHotMiddlewareOptions
+  hotMiddleware?: WebpackHotMiddlewareOptions & { client: any /* TBD */ }
   html?: { minify: HtmlMinifierOptions }
   indicator?: boolean
   loaders?: NuxtConfigurationLoaders
