@@ -15,8 +15,58 @@ import { Options as WebpackHotMiddlewareOptions } from 'webpack-hot-middleware'
 import { Options as HtmlMinifierOptions } from 'html-minifier'
 import { Options as OptimizeCssAssetsWebpackPluginOptions } from 'optimize-css-assets-webpack-plugin'
 import { TerserPluginOptions } from 'terser-webpack-plugin'
+import { Options as FileLoaderOptions } from 'file-loader'
+import { Options as PugOptions } from 'pug'
+import * as Less from 'less'
+import { Options as SassOptions } from 'node-sass'
+import { VueLoaderOptions } from 'vue-loader'
 
-type NuxtConfigurationLoaders = any // TBD
+interface FileLoaderOptions {
+  fallback?: string
+  limit?: number | boolean | string
+  mimetype?: string
+}
+
+type CssLoaderUrlFunction = (url: string, resourcePath: string) => boolean
+type CssLoaderImportFunction = (parsedImport: string, resourcePath: string) => boolean
+type CssLoaderMode = 'global' | 'local'
+interface CssLoaderModulesOptions {
+  context?: string
+  getLocalIdent?: (context: string, localIdentName: string, localName: string, options: CssLoaderModulesOptions) => string
+  hashPrefix?: string
+  localIdentName?: string
+  localIdentRegExp?: string | RegExp
+  mode?: CssLoaderMode
+}
+
+interface CssLoaderOptions {
+  import?: boolean | CssLoaderImportFunction
+  importLoaders?: number
+  localsConvention?: 'asIs' | 'camelCase' | 'camelCaseOnly' | 'dashes' | 'dashesOnly'
+  modules?: boolean | CssLoaderMode | CssLoaderModulesOptions
+  onlyLocals?: boolean
+  sourceMap?: boolean
+  url?: boolean | CssLoaderUrlFunction
+}
+
+interface NuxtConfigurationLoaders {
+  css?: CssLoaderOptions
+  cssModules?: CssLoaderOptions
+  file?: FileLoaderOptions
+  fontUrl?: FileLoaderOptions
+  imgUrl?: FileLoaderOptions
+  less?: Less.Options
+  pugPlain?: PugOptions
+  sass?: SassOptions
+  scss?: SassOptions
+  stylus?: any // TBD
+  vue?: VueLoaderOptions
+  vueStyle?: {
+    manualInject?: boolean
+    ssrId?: boolean
+    shadowMode?: boolean
+  }
+}
 
 interface NuxtBabelPresetEnv {
   envName: 'client' | 'modern' | 'server'
