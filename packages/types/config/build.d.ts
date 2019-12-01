@@ -123,8 +123,8 @@ interface PostcssConfiguration {
       [key: string]: boolean | { [key: string]: any }
     }
     importFrom?: string | string[] | Partial<PostcssVariableMap> | (() => Partial<PostcssVariableMap>)
-    insertBefore?: { [key: string]: PostcssPlugin<any> }
     insertAfter?: { [key: string]: PostcssPlugin<any> }
+    insertBefore?: { [key: string]: PostcssPlugin<any> }
     preserve?: boolean
     stage?: 0 | 1 | 2 | 3 | 4 | false
   }
