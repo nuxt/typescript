@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://github.com/nuxt/typescript/compare/@nuxt/types@0.4.0...@nuxt/types@0.4.1) (2019-12-01)
+
+
+### Bug Fixes
+
+* **types:** add correct url-loader options ([#220](https://github.com/nuxt/typescript/issues/220)) ([01084f1](https://github.com/nuxt/typescript/commit/01084f180570f703b6d5583e45d3de4d7fc14dc3)), closes [#221](https://github.com/nuxt/typescript/issues/221)
+
+
+
+
+
 # [0.4.0](https://github.com/nuxt/typescript/compare/@nuxt/types@0.3.4...@nuxt/types@0.4.0) (2019-11-30)
 
 
