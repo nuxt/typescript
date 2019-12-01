@@ -114,7 +114,7 @@ interface PostcssConfiguration {
   order?: PostcssOrderPreset | string[] | ((names: string[], presets: PostcssOrderPresetFunctions) => string[])
   plugins?: {
     [key: string]: false | { [key: string]: any }
-  },
+  }
   preset?: {
     autoprefixer?: false | AutoprefixerOptions
     browsers?: string
