@@ -70,8 +70,7 @@ interface NuxtConfigurationLoaders {
   }
 }
 
-interface NuxtBabelPresetEnv {
-  envName: 'client' | 'modern' | 'server'
+interface NuxtWebpackEnv {
   isClient: boolean
   isDev: boolean
   isLegacy: boolean
@@ -79,12 +78,16 @@ interface NuxtBabelPresetEnv {
   isServer: boolean
 }
 
+interface NuxtBabelPresetEnv {
+  envName: 'client' | 'modern' | 'server'
+}
+
 interface NuxtBabelOptions extends Pick<TransformOptions, Exclude<keyof TransformOptions, 'presets'>> {
   cacheCompression?: boolean
   cacheDirectory?: boolean
   cacheIdentifier?: string
   customize?: string | null
-  presets?: ((env: NuxtBabelPresetEnv, defaultPreset: [string, object]) => PluginItem[] | void) | PluginItem[] | null
+  presets?: ((env: NuxtBabelPresetEnv & NuxtWebpackEnv, defaultPreset: [string, object]) => PluginItem[] | void) | PluginItem[] | null
 }
 
 interface Warning {
@@ -104,14 +107,11 @@ export interface NuxtConfigurationBuild {
   extend?(
     config: WebpackConfiguration,
     ctx: {
-      isDev: boolean,
-      isClient: boolean,
-      isServer: boolean,
       loaders: NuxtConfigurationLoaders
-    }
+    } & NuxtWebpackEnv
   ): void
   extractCSS?: boolean | Record<string, any>
-  filenames?: { [key in 'app' | 'chunk' | 'css' | 'img' | 'font' | 'video']?: (ctx: { isDev: boolean, isModern: boolean }) => string }
+  filenames?: { [key in 'app' | 'chunk' | 'css' | 'img' | 'font' | 'video']?: (ctx: NuxtWebpackEnv) => string }
   friendlyErrors?: boolean
   hardSource?: boolean
   hotMiddleware?: WebpackHotMiddlewareOptions & { client: any /* TBD */ }
@@ -135,7 +135,7 @@ export interface NuxtConfigurationBuild {
   standalone?: boolean
   templates?: any
   terser?: TerserPluginOptions | boolean
-  transpile?: (string | RegExp)[]
+  transpile?: (string | RegExp | ((context: NuxtWebpackEnv) => string | RegExp))[]
   warningIgnoreFilters?: Array<(warn: Warning) => boolean>
   watch?: string[]
 }
