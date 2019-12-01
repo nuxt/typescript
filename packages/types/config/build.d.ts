@@ -3,24 +3,26 @@
  * Documentation: https://nuxtjs.org/api/configuration-build
  */
 
+import { TransformOptions, PluginItem } from '@babel/core'
+import { Options as AutoprefixerOptions } from 'autoprefixer'
+import { Options as FileLoaderOptions } from 'file-loader'
+import { Options as HtmlMinifierOptions } from 'html-minifier'
+import * as Less from 'less'
+import { Options as SassOptions } from 'node-sass'
+import { Options as OptimizeCssAssetsWebpackPluginOptions } from 'optimize-css-assets-webpack-plugin'
+import { Plugin as PostcssPlugin } from 'postcss'
+import { Options as PugOptions } from 'pug'
+import { TerserPluginOptions } from 'terser-webpack-plugin'
+import { VueLoaderOptions } from 'vue-loader'
 import {
   Configuration as WebpackConfiguration,
   Loader as WebpackLoader,
   Options as WebpackOptions,
   Plugin as WebpackPlugin
 } from 'webpack'
-import { TransformOptions, PluginItem } from '@babel/core'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 import { Options as WebpackDevMiddlewareOptions } from 'webpack-dev-middleware'
 import { Options as WebpackHotMiddlewareOptions } from 'webpack-hot-middleware'
-import { Options as HtmlMinifierOptions } from 'html-minifier'
-import { Options as OptimizeCssAssetsWebpackPluginOptions } from 'optimize-css-assets-webpack-plugin'
-import { TerserPluginOptions } from 'terser-webpack-plugin'
-import { Options as FileLoaderOptions } from 'file-loader'
-import { Options as PugOptions } from 'pug'
-import * as Less from 'less'
-import { Options as SassOptions } from 'node-sass'
-import { VueLoaderOptions } from 'vue-loader'
 
 type CssLoaderUrlFunction = (url: string, resourcePath: string) => boolean
 type CssLoaderImportFunction = (parsedImport: string, resourcePath: string) => boolean
@@ -95,6 +97,39 @@ interface Warning {
   name: string
 }
 
+interface PostcssOrderPresetFunctions {
+  cssnanoLast: (names: string[]) => string[]
+  presetEnvAndCssnanoLast: (names: string[]) => string[]
+  presetEnvLast: (names: string[]) => string[]
+}
+type PostcssOrderPreset = keyof PostcssOrderPresetFunctions
+interface PostcssVariableMap {
+  customMedia: Record<string, string>
+  customProperties: Record<string, string>
+  customSelectors: Record<string, string>
+  environmentVariables?: Record<string, string>
+}
+
+interface PostcssConfiguration {
+  order?: PostcssOrderPreset | string[] | ((names: string[], presets: PostcssOrderPresetFunctions) => string[])
+  plugins?: {
+    [key: string]: false | { [key: string]: any }
+  }
+  preset?: {
+    autoprefixer?: false | AutoprefixerOptions
+    browsers?: string
+    exportTo?: string | string[] | Partial<PostcssVariableMap> | ((map: PostcssVariableMap) => Partial<PostcssVariableMap>)
+    features?: {
+      [key: string]: boolean | { [key: string]: any }
+    }
+    importFrom?: string | string[] | Partial<PostcssVariableMap> | (() => Partial<PostcssVariableMap>)
+    insertAfter?: { [key: string]: PostcssPlugin<any> }
+    insertBefore?: { [key: string]: PostcssPlugin<any> }
+    preserve?: boolean
+    stage?: 0 | 1 | 2 | 3 | 4 | false
+  }
+}
+
 export interface NuxtConfigurationBuild {
   additionalExtensions?: string[]
   analyze?: BundleAnalyzerPlugin.Options | boolean
@@ -122,7 +157,7 @@ export interface NuxtConfigurationBuild {
   optimizeCSS?: OptimizeCssAssetsWebpackPluginOptions | boolean
   parallel?: boolean
   plugins?: WebpackPlugin[]
-  postcss?: any // TBD
+  postcss?: string[] | boolean | PostcssConfiguration | (() => PostcssConfiguration)
   profile?: boolean
   publicPath?: string
   quiet?: boolean
