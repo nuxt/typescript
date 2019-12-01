@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/nuxt/typescript/compare/@nuxt/types@0.4.1...@nuxt/types@0.5.0) (2019-12-01)
+
+
+### Bug Fixes
+
+* **types:** improve consistency with class nuxtEnv ([#222](https://github.com/nuxt/typescript/issues/222)) ([2631980](https://github.com/nuxt/typescript/commit/26319806ff4f5b9c81b34f0859e3352365e4e095))
+
+
+### Features
+
+* **types:** add postcss build types ([#223](https://github.com/nuxt/typescript/issues/223)) ([7268990](https://github.com/nuxt/typescript/commit/7268990a06c6d3c8b20d1dbf312e7a3fbfd05cc4))
+
+
+
+
+
 ## [0.4.1](https://github.com/nuxt/typescript/compare/@nuxt/types@0.4.0...@nuxt/types@0.4.1) (2019-12-01)
 
 
