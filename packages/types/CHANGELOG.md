@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.2](https://github.com/nuxt/typescript/compare/@nuxt/types@0.5.1...@nuxt/types@0.5.2) (2019-12-02)
+
+
+### Bug Fixes
+
+* **types:** fix PostcssPlugin type error ([e9a7965](https://github.com/nuxt/typescript/commit/e9a79656ac71e2b9893b9eb6100d87e80636b1a4))
+
+
+
+
+
 ## [0.5.1](https://github.com/nuxt/typescript/compare/@nuxt/types@0.5.0...@nuxt/types@0.5.1) (2019-12-02)
 
 
