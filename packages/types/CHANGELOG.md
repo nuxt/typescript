@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.1](https://github.com/nuxt/typescript/compare/@nuxt/types@0.5.0...@nuxt/types@0.5.1) (2019-12-02)
+
+
+### Bug Fixes
+
+* **types:** add functions and arrays for plugins ([#225](https://github.com/nuxt/typescript/issues/225)) ([748b465](https://github.com/nuxt/typescript/commit/748b46526e6fc555ba5298a53c1091c9ca980ec3))
+
+
+
+
+
 # [0.5.0](https://github.com/nuxt/typescript/compare/@nuxt/types@0.4.1...@nuxt/types@0.5.0) (2019-12-01)
 
 
