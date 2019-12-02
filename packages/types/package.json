@@ -14,7 +14,6 @@
     "@types/compression": "^1.0.1",
     "@types/connect": "^3.4.32",
     "@types/etag": "^1.8.0",
-    "@types/express": "^4.17.2",
     "@types/file-loader": "^4.2.0",
     "@types/html-minifier": "^3.5.3",
     "@types/less": "^3.0.1",
