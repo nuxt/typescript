@@ -2,7 +2,9 @@
 
 ## I. Inject into Vue instances
 
-### Plugin
+### Declaration
+
+`index.d.ts`:
 
 ```ts
 declare module 'vue/types/vue' {
@@ -10,7 +12,11 @@ declare module 'vue/types/vue' {
     $myInjectedFunction(message: string): void
   }
 }
+```
 
+### Plugin
+
+```ts
 Vue.prototype.$myInjectedFunction = (message: string) => console.log(message)
 ```
 
@@ -37,16 +43,23 @@ export default Vue.extend({
 
 ## II. Inject into context
 
-### Plugin
+
+### Declaration
+
+`index.d.ts`:
 
 ```ts
-import { Plugin } from '@nuxt/types'
-
 declare module '@nuxt/types' {
   interface Context {
     $myInjectedFunction(message: string): void
   }
 }
+```
+
+### Plugin
+
+```ts
+import { Plugin } from '@nuxt/types'
 
 const myPlugin: Plugin = (context) => {
   context.$myInjectedFunction = (message: string) => console.log(message)
@@ -71,11 +84,11 @@ export default Vue.extend({
 
 ## III. Combined Inject
 
-### Plugin
+### Declaration
+
+`index.d.ts`:
 
 ```ts
-import { Plugin } from '@nuxt/types'
-
 declare module 'vue/types/vue' {
   interface Vue {
     $myInjectedFunction(message: string): void
@@ -93,6 +106,12 @@ declare module 'vuex/types/index' {
     $myInjectedFunction(message: string): void
   }
 }
+```
+
+### Plugin
+
+```ts
+import { Plugin } from '@nuxt/types'
 
 const myPlugin: Plugin = (context, inject) => {
   inject('myInjectedFunction', (message: string) => console.log(message))
