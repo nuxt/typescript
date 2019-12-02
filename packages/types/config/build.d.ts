@@ -115,7 +115,7 @@ interface PostcssConfiguration {
   order?: PostcssOrderPreset | string[] | ((names: string[], presets: PostcssOrderPresetFunctions) => string[])
   plugins?: {
     [key: string]: false | { [key: string]: any }
-  } | ((loader: WebpackLoaderNamespace.LoaderContext) => PostcssPlugin[]) | Array<[string | PostcssPlugin, any] | string | PostcssPlugin>
+  } | ((loader: WebpackLoaderNamespace.LoaderContext) => PostcssPlugin<any>[]) | Array<[string | PostcssPlugin<any>, any] | string | PostcssPlugin<any>>
   preset?: {
     autoprefixer?: false | AutoprefixerOptions
     browsers?: string
