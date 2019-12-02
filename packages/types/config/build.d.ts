@@ -17,6 +17,7 @@ import { VueLoaderOptions } from 'vue-loader'
 import {
   Configuration as WebpackConfiguration,
   Loader as WebpackLoader,
+  loader as WebpackLoaderNamespace,
   Options as WebpackOptions,
   Plugin as WebpackPlugin
 } from 'webpack'
@@ -114,7 +115,7 @@ interface PostcssConfiguration {
   order?: PostcssOrderPreset | string[] | ((names: string[], presets: PostcssOrderPresetFunctions) => string[])
   plugins?: {
     [key: string]: false | { [key: string]: any }
-  }
+  } | ((loader: WebpackLoaderNamespace.LoaderContext) => PostcssPlugin[]) | Array<[string | PostcssPlugin, any] | string | PostcssPlugin>
   preset?: {
     autoprefixer?: false | AutoprefixerOptions
     browsers?: string
