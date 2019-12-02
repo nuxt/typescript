@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.3](https://github.com/nuxt/typescript/compare/@nuxt/types@0.5.2...@nuxt/types@0.5.3) (2019-12-02)
+
+
+### Bug Fixes
+
+* **types:** use connect type for server middleware ([#227](https://github.com/nuxt/typescript/issues/227)) ([0d50ef2](https://github.com/nuxt/typescript/commit/0d50ef27201aca9c749331563dbd6ad0bbf1e5c3)), closes [#183](https://github.com/nuxt/typescript/issues/183)
+
+
+
+
+
 ## [0.5.2](https://github.com/nuxt/typescript/compare/@nuxt/types@0.5.1...@nuxt/types@0.5.2) (2019-12-02)
 
 
