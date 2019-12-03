@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.3](https://github.com/nuxt/typescript/compare/@nuxt/types@0.5.2...@nuxt/types@0.5.3) (2019-12-02)
+
+
+### Bug Fixes
+
+* **types:** use connect type for server middleware ([#227](https://github.com/nuxt/typescript/issues/227)) ([0d50ef2](https://github.com/nuxt/typescript/commit/0d50ef27201aca9c749331563dbd6ad0bbf1e5c3)), closes [#183](https://github.com/nuxt/typescript/issues/183)
+
+
+
+
+
+## [0.5.2](https://github.com/nuxt/typescript/compare/@nuxt/types@0.5.1...@nuxt/types@0.5.2) (2019-12-02)
+
+
+### Bug Fixes
+
+* **types:** fix PostcssPlugin type error ([e9a7965](https://github.com/nuxt/typescript/commit/e9a79656ac71e2b9893b9eb6100d87e80636b1a4))
+
+
+
+
+
+## [0.5.1](https://github.com/nuxt/typescript/compare/@nuxt/types@0.5.0...@nuxt/types@0.5.1) (2019-12-02)
+
+
+### Bug Fixes
+
+* **types:** add functions and arrays for plugins ([#225](https://github.com/nuxt/typescript/issues/225)) ([748b465](https://github.com/nuxt/typescript/commit/748b46526e6fc555ba5298a53c1091c9ca980ec3))
+
+
+
+
+
 # [0.5.0](https://github.com/nuxt/typescript/compare/@nuxt/types@0.4.1...@nuxt/types@0.5.0) (2019-12-01)
 
 
