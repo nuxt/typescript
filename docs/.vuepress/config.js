@@ -13,9 +13,9 @@ module.exports = {
       description: 'Nuxt.js 向け TypeScript サポート'
     },
     '/es/': {
-      lang: 'es-MX',
+      lang: 'es-ES',
       title: 'Nuxt TypeScript',
-      description: 'Soporte de TypeScript para Nuxt.js'
+      description: 'Soporte de Typescript para Nuxt.js'
     }
   },
   plugins: [
@@ -75,11 +75,11 @@ module.exports = {
       },
       '/es/': {
         label: 'Español',
-        selectText: 'Lenguajes',
+        selectText: 'Idiomas',
         editLinkText: 'Edita esta pagina en GitHub',
         sidebar: {
           '/examples': getExamplesSidebar(),
-          '/es/': getMainSidebar('/es', 'Guía', 'Recetas de Cocina')
+          '/es/': getMainSidebar('/es', 'Guía', 'Cookbook')
         },
         nav: [
           {

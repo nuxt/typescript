@@ -10,12 +10,12 @@ interface Options {
 }
 
 const myModule: Module<Options> = function (moduleOptions) {
-  // Usa this, this.options, this.nuxt
-  // Usa moduleOptions
+  // Usar this, this.options, this.nuxt
+  // Usar moduleOptions
 }
 
 export default myModule
 
-// REQUERIDO si se publica el módulo como un paquete de npm.
+// REQUERIDO si usted va a publicar el módulo como un paquete de npm
 // export const meta = require('./package.json')
 ```

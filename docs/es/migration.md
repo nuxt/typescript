@@ -2,13 +2,13 @@
 prev: false
 ---
 
-# Migración desde Nuxt 2.8
+# Migracion desde Nuxt 2.8
 
-El Soporte de TypeScriot ha sido externalidado en paquetes dedicados y han sido removidos del _"core"_ empezando en **Nuxt 2.9**. Aquí están las pautas para migrar de tu proyecto existente con Nuxt TypeScript a la última especificación.
+El soporte de Typescript ha sido externalizado en paquete dedicados y fueron removidos del core desde **Nuxt 2.9**. Aquí están las pautas para migrar su proyecto existente de Nuxt TypeScript a las últimas especificaciones.
 
-La siguiente guía de migración funciona ya sea para **nuxt** o **nuxt-edge**.
+La siguiente guía de migración funciona tanto para **nuxt** o **nuxt-edge**.
 
-**1. Migrar las dependencias**
+**1. Migrar dependencias**
 
 ```sh
 yarn remove @nuxt/typescript
@@ -39,12 +39,12 @@ export default {
 ```
 
 ::: tip
-Si tu estas importando tipos desde **@nuxt/config**, necesitas cambiarlo a que importen desde **@nuxt/types**.
+Si estaba importando tipos desde **@nuxt/config**, debe importarlos desde **@nuxt/types**.
 
-El como importas tipos puede que cambie un poco, puedes familiarizarte con cualquiera ya sea activando el IntelliSense cuando importar o miralos en vivo [aquí](https://github.com/nuxt/typescript/tree/master/packages/types) ahora.
+Las importaciones de los tipos pueden haber cambiado un poco, usted puede familiarizarse con ellas activando el intellisense cuando importa o verlo [aquí](https://github.com/nuxt/typescript/tree/master/packages/types) ahora.
 :::
 
-**4. Mueve las opciones personalizadas de `build.typescript` a opciones de módulo**
+**4. Mueva sus opciones customizadas desde `build.typescript` hacia las opciones del módulo**
 
 ```js
 // nuxt.config.js
@@ -56,7 +56,7 @@ export default {
 }
 ```
 
-Puedes tambien hacerlo de esta forma :
+También puedes hacerlo de esta manera:
 
 ```js
 // nuxt.config.js
@@ -70,6 +70,6 @@ export default {
 }
 ```
 
-**5. TypeScript en Tiempo de Ejecución (opcional)**
+**5. TypeScript Runtime (opcional)**
 
-Si tu proyecto está usando TypeScript en tiempo de ejecución (**nuxt.config.ts**, **modules** locales o **serverMiddlewares**), por favor referirse directamente a la seccion de [**Tiempo de Ejecución**](./guide/runtime).
+Si tu proyecto esta usando TypeScript runtime (**nuxt.config.ts**, **modulos** locales o **serverMiddlewares**), por favor consulta directamente la sección [**Runtime**](./guide/runtime).

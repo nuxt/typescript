@@ -9,17 +9,17 @@ Nuxt.js ha creado un envolvente de TypeScript en tiempo de ejecución bajo un pa
 
 ```sh
 yarn add @nuxt/typescript-runtime
-# o tamvbien
+# o tambien
 npm install @nuxt/typescript-runtime
 ```
 
 ::: tip
-Nota que este paquete es instalado como una `dependency` y no una `devDependency` como `@nuxt/typescript-build`, debido a que `@nuxt/typescript-runtime` es requerido para producción.
+Nota este paquete es instalado como `dependency` y no como `devDependency` igual a `@nuxt/typescript-build`, porque `@nuxt/typescript-runtime` es necesario en producción.
 :::
 
 ## Uso
 
-Todo lo que necesitas hacer es actualizar tu archivo **package.json** :
+Todo lo que necesitas es actualizar tu archivo **package.json**:
 
 ```json{2-5}
 "scripts": {
@@ -38,7 +38,7 @@ Todo lo que necesitas hacer es actualizar tu archivo **package.json** :
 ```
 
 ::: tip
-**nuxt-ts** tambien funciona si estás usando la version _"edge"_ de Nuxt.js (**nuxt-edge**).
+**nuxt-ts** tambien funciona si usted esta usando la version edge de Nuxt.js (**nuxt-edge**).
 :::
 
-Ya puedes usar TypeScript para tu archivo **nuxt.config** , **modules** locales y **serverMiddlewares**.
+Usted puede ahora usar TypeScript para el archivo **nuxt.config**, **modulos** locales y **serverMiddlewares**.

@@ -1,20 +1,20 @@
 # Preparación
 
-El soporte de TypeScript para Nuxt principalmente viene a través de un módulo Nuxt, **@nuxt/typescript-build**.
+El soporte de Typescript en Nuxt viene principalmente mediante un módulo de Nuxt, **@nuxt/typescript-build**.
 
-Aquí están las pautas pata instalarlo y configurarlo.
+Aqui están las guias para instalar y configurarlo.
 
 ## Instalación
 
 ```sh
 yarn add --dev @nuxt/typescript-build
-# o tambien
+# O
 npm install --save-dev @nuxt/typescript-build
 ```
 
 ## Configuración
 
-Todo lo que necesitas hacer es agregar **`@nuxt/typescript-build`** a tu **`buildModules`** en **`nuxt.config.js`**
+Todo lo que necesitas es agregar **`@nuxt/typescript-build`** a tus **`buildModules`** en **`nuxt.config.js`**
 
 ```js
 // nuxt.config.js
@@ -63,51 +63,51 @@ y crear un archivo **`tsconfig.json`** :
 ```
 
 ::: tip
-`@nuxt/typescript-build` ya contiene `@nuxt/types`, asi que no hay necesidad de instalarlo independientemente.
+`@nuxt/typescript-build` incluye `@nuxt/types`, asi que no necesitas instalarlo de forma independiente.
 :::
 
 ::: tip
 
-Checa la [documentación oficial de TypeScript](https://www.typescriptlang.org/docs/handbook/compiler-options.html) para aprender sobre las diferentes opciones del compilador.
+Revisar la [documentación oficial de TypeScript](https://www.typescriptlang.org/docs/handbook/compiler-options.html) para aprender acerca de las diferentes opciones del compilador.
 :::
 
-Y es todo! Ya estás listo para usar TypeScript en tus **layouts**, **components**, **plugins** y **middlewares**.
+Eso es todo, ya todo esta listo para usar Typescript en tus **layouts**, **componentes**, **plugins** y **middlewares**.
 
-Puedes tambien checar la sección de [**Recetas de Cocina**](../cookbook/components/) para obtener algunas recetas usando TypeScript para tu proyecto con Nuxt.
+Usted puede revisar la sección del [**CookBook**](../cookbook/components/) para ver algunos ejemplos de TypeScript para tus proyectos de Nuxt.
 
-## Opciónes de Modulo
+## Opciones del módulo
 
 ### typeCheck
 
-> Habilita la verificación de tipos de TypeScript en un proceso separado.
+> Activa la comprobación de tipos de Typescript en un proceso separado.
 
 - Tipo: `Boolean` o `Object`
-- Predeterminado: `true`
+- Defecto: `true`
 
-Cuando está habilitado, Nuxt.js usa [fork-ts-checker-webpack-plugin](https://github.com/TypeStrong/fork-ts-checker-webpack-plugin) para proveer la verificación de tipos.
+Cuando esta activado, Nuxt.js usa [fork-ts-checker-webpack-plugin](https://github.com/TypeStrong/fork-ts-checker-webpack-plugin) para proveer la comprobación de los tipos.
 
-Puedes usar un `Object` para sobreescribir opciones del plugin o ponerlo en `false` para deshabilitarlo.
+Usted puede usar un `Object` para reemplazar las opciones del plugins or asignar con un `false` para desactivarlo.
 
 ### ignoreNotFoundWarnings
 
-> Habilita la repreción de advertencias de TypeScript de no encontrado.
+> Permite suprimir advertencias de typescript: not found.
 
 - Tipo: `Boolean`
-- Predeterminado: `false`
+- Defecto: `false`
 
-Cuando está habilotado, puedes reprimir las advertencias de tipo `export ... was not found ...`
+Cuando esta activado, puedes suprimir las advertencias  `export ... was not found ...`.
 
-Vea también sobre información de antecedentes [aquí](https://github.com/TypeStrong/ts-loader/issues/653).
+Puedes ver los antecedentes [aqui](https://github.com/TypeStrong/ts-loader/issues/653).
+ 
+**Advertencia:** Esta propiedad puede suprimir las advertencias que desea ver. Tenga cuidado como lo configura.
 
-**Advertencia:** Esta propiedad podría reprimir las advertencias que quieres ver. Ten cuidaddo en como lo configuras.
+### loaders
 
-### Cargadores
-
-> Personalizacion de las opciones del [`ts-loader`](https://github.com/TypeStrong/ts-loader#loader-options)
+> Customizacion de las opciones de [`ts-loader`](https://github.com/TypeStrong/ts-loader#loader-options)
 
 - Tipo: `Object`
 
-Si necesitas personalización extra del cargador de TypeScript, puedes personalizarlo para ambos archivos `ts` y `tsx` a traves de las opciones de módulo `loaders.ts` y `loaders.tsx`:
+Si necesita customizar el loader de Typescript, puedes customizar ambos archivos `ts` & `tsx` mediante las opciones del módulo: `loaders.ts` & `loaders.tsx`:
 
 ```ts
 loaders: {

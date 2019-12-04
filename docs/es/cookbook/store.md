@@ -1,20 +1,20 @@
 # Store
 
-Hay un numero de diferentes opciones pata escribir y acceder al _"store"_ en un proyecto de Nuxt usando TypeScript.
+Existen varias formas diferentes de escribir y acceder al store en un proyecto de Nuxt usando Typescript.
 
-## Basado en Clases
+## Class-based
 
 ### `vuex-module-decorators`
 
-Uno de los enfoques mas populares es usando [vuex-module-decorators](https://github.com/championswimmer/vuex-module-decorators) - mira la [guía](https://championswimmer.in/vuex-module-decorators/).
+Uno de los enfoques más popular es [vuex-module-decorators](https://github.com/championswimmer/vuex-module-decorators) - ver la [guía](https://championswimmer.in/vuex-module-decorators/).
 
 ::: warning
-Actualmente, hay un problema muy serio de seguriar con `nuxt-module-decorators`: hay un "cross-request state pollution" - asi que necesitarás asegurarte de que no hay información específica de la solicitud en el _"store"_ en _"SSR"_. Mira [este _"PR"_](https://github.com/championswimmer/vuex-module-decorators/pull/157) para ver el estatus actual del _"fix"_.
+Esto tiene un problema serio de seguridad con `nuxt-module-decorators`: existe un cross-request state pollution - por ello usted necesita estar seguro que no exista informacion especifica a la petición en el store del SSR. Ver [este PR](https://github.com/championswimmer/vuex-module-decorators/pull/157) para revisar el estado de este error.
 :::
 
-Para el uso con Nuxt, hay pocas condiciones clave:
+Para usar con Nuxt, existen pocos puntos claves:
 
-1. Tus módulos deben ser decorados con `stateFactory: true`, por ejemplo:
+1. Tus modulos deben ser decorados con `stateFactory: true`, por ejemplo:
 
    `~/store/mymodule.ts`:
 
@@ -40,7 +40,7 @@ Para el uso con Nuxt, hay pocas condiciones clave:
    }
    ```
 
-2. Si quieres acceder al _"store"_ sin inicializarlo en cada componente, puedes hacerlo utilizando un [plugin inicializador](https://github.com/championswimmer/vuex-module-decorators#accessing-modules-with-nuxtjs), por ejemplo:
+2. Si usted quiere acceder al store sin iniciarlo en cada componente, usted debe crear un [plugin inicializador](https://github.com/championswimmer/vuex-module-decorators#accessing-modules-with-nuxtjs), por ejemplo:
    `~/store/index.ts`:
 
    ```ts
@@ -53,7 +53,7 @@ Para el uso con Nuxt, hay pocas condiciones clave:
    export * from '~/utils/store-accessor'
    ```
 
-3. Si quieres acceder a la instancia de app de Nuxt, necesitarás hacer algo similar a un plugin, por ejemplo:
+3. Si usted quiere acceder a la instancia app de Nuxt, usted debe hacer algo similar con un plugin, por ejemplo:
    `~/plugins/axios-accessor.ts`:
 
    ```ts
@@ -77,7 +77,7 @@ Para el uso con Nuxt, hay pocas condiciones clave:
    export function initializeAxios(axiosInstance: NuxtAxiosInstance) {
      $axios = axiosInstance
    }
-
+   
    export { $axios }
    ```
 
@@ -111,20 +111,20 @@ Para el uso con Nuxt, hay pocas condiciones clave:
 
 ### `vuex-class-component`
 
-[`vuex-class-component`](https://github.com/michaelolof/vuex-class-component) es un enfoque prometedor basado en clases para el _"store"_ de Nuxt, y la sintaxis es muy similar a `vuex-module-decorators`. Acaba de lanzar una nueva API, aunque todavía no es totalmente compatible con Nuxt. La solución alternativa es definir módulos con un decorador:
+[`vuex-class-component`](https://github.com/michaelolof/vuex-class-component) es un enfoque basado en clases muy prometedor para el store de Nuxt, y la sintaxis es muy similar a `vuex-module-decorators`.Acaba de lanzar una nueva API, aunque todavía no es totalmente compatible con Nuxt. La solución alternativa es definir módulos con un decorador:
 
 ```ts
 @Module({ namespacedPath: 'foo' })
 export default class extends VuexModule {}
 ```
 
-Ve [este _"issue"_](https://github.com/michaelolof/vuex-class-component/issues/43) para el estado actual del problema de compatibilidad con Nuxt.
+Ver [este reporte](https://github.com/michaelolof/vuex-class-component/issues/43) para visualizar el estado actual de los problemas de compatibilidad con Nuxt.
 
-## Vainilla
+## Vanilla
 
-### Tipado Clásico
+### Basico
 
-Vuex suministra tipos muy básicos para usarse con el _"store"_. Puede usarlos para  definir tu _"store"_. Por ejemplo:
+Vuex suministra tipos muy básicos para usar con la tienda. Puede usarlos para ayudar a definir su store. Por ejemplo:
 
 `~/store/index.ts`:
 
@@ -155,17 +155,17 @@ export const actions: ActionTree<RootState, RootState> = {
 }
 ```
 
-### Accediendo al "store"
+### Accediendo al store
 
 #### `nuxt-typed-vuex`
 
-Vuex no proporciona tipos útiles para acceder al _"store"_ desde la aplicación. `this.$store` permanece sin tipo en una aplicación de Nuxt.
+Vuex no provee tipos utiles para acceder al store desde tu app. `this.$store` todavia esta sin tipos en una app de Nuxt.
 
-Hay un nuevo proyecto, [`nuxt-typed-vuex`](https://github.com/danielroe/nuxt-typed-vuex) - y una [guía](https://nuxt-typed-vuex.danielcroe.com/) - que tiene como objetivo remediar eso, proporcionando un acceso fuertemente tipado para un _"store"_ vainilla de Nuxt.
+Aqui esta un nuevo proyecto, [`nuxt-typed-vuex`](https://github.com/danielroe/nuxt-typed-vuex) - y una [guia](https://nuxt-typed-vuex.danielcroe.com/) - que tiene como objetivo remediar eso: proporcionar un acceso fuertemente tipado para un store de Nuxt.
 
-#### Trae el tuyo
+#### Hazlo a tu manera
 
-Alternativamente, puede proporcionar tus propios tipos en el punto de uso.
+Alternativamente, usted puede proveer sus propios tipos como un punto de uso.
 
 `~/components/MyComponent.vue`:
 
