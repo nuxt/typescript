@@ -1,4 +1,4 @@
-name: test
+name: Test
 
 on: [push, pull_request]
 
@@ -19,7 +19,7 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: yarn
 
-      - name: Run test
+      - name: Run tests
         run: yarn test
 
       - name: Coverage
