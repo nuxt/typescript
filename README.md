@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/nuxt/typescript/actions"><img src="https://github.com/nuxt/typescript/workflows/test/badge.svg" alt="github actions"></a>
+  <a href="https://github.com/nuxt/typescript/actions"><img src="https://badgen.net/github/status/nuxt/typescript?style=flat" alt="github actions"></a>
   <a href="https://codecov.io/gh/nuxt/typescript"><img src="https://img.shields.io/codecov/c/github/nuxt/typescript.svg?style=flat-square" alt="coverage"></a>
   <a href="https://github.com/nuxt/typescript"><img src="https://img.shields.io/github/license/nuxt/typescript.svg?style=flat-square" alt="License"></a>
 </p>
