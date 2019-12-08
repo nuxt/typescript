@@ -1,9 +1,9 @@
 # Componentes
 
-In [**Single File Components (SFC)**](https://vuejs.org/v2/guide/single-file-components.html), `script` tags must specify the `ts` language:
+En [**Single File Components (SFC)**](https://vuejs.org/v2/guide/single-file-components.html), los tags `script` deben especificar el lenguaje `ts`:
 ```html
 <script lang="ts">
-  // use TypeScript here
+  // Usar TypeScript aqui
 </script>
 ```
 
@@ -22,9 +22,9 @@ In [**Single File Components (SFC)**](https://vuejs.org/v2/guide/single-file-com
   </tab>
   <tab name="Composition API">
 
-Using [@vue/composition-api](https://github.com/vuejs/composition-api) plugin
+Usando el plugin [@vue/composition-api](https://github.com/vuejs/composition-api)
 
-::: tip Plugin installation
+::: tip Instalacion del Plugin
 
 ```js
 // plugins/composition-api.js
@@ -41,7 +41,7 @@ export default {
 }
 ```
 
-This plugin registration is mandatory to make `setup` function works in components.
+La instalación de este plugin es obligatorio para que la función `setup` funcione en componentes.
 
 :::
 
@@ -50,7 +50,7 @@ This plugin registration is mandatory to make `setup` function works in componen
   </tab>
   <tab name="Class API">  
 
-Using [vue-class-component](https://github.com/vuejs/vue-class-component) through [vue-property-decorator](https://github.com/kaorun343/vue-property-decorator)
+Usando [vue-class-component](https://github.com/vuejs/vue-class-component) mediante [vue-property-decorator](https://github.com/kaorun343/vue-property-decorator)
 
 <<< @/cookbook/components/script.class-api.ts
 
