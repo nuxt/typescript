@@ -71,6 +71,22 @@ and create a **`tsconfig.json`** file :
 Check official [TypeScript documentation](https://www.typescriptlang.org/docs/handbook/compiler-options.html) to learn about the different compiler options.
 :::
 
+::: warning
+
+If you are using Nuxt programmatically with a custom server framework, note that you will need to ensure that you wait for Nuxt to be ready before building:
+
+```js
+
+// Make sure to wait for Nuxt to load @nuxt/typescript-build before proceeding
+await nuxt.ready()
+...
+if (config.dev) {
+  const builder = new Builder(nuxt)
+  await builder.build()
+}
+```
+:::
+
 That's it, you're all set to use TypeScript in your **layouts**, **components**, **plugins** and **middlewares**.
 
 You can check the [**CookBook**](../cookbook/components/) section to get some TypeScript recipes for your Nuxt project.
