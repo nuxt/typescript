@@ -39,7 +39,7 @@ export default {
 }
 ```
 
-::: dica
+::: tip
 
 Se você estava importando tipos de **@nuxt/config** você precisa, em vez importá-los de **@nuxt/types**.
 

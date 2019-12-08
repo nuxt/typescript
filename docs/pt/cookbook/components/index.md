@@ -24,7 +24,7 @@ Em [**Componentes de arquivo único**](https://vuejs.org/v2/guide/single-file-co
 
 Usando o plugin [@vue/composition-api](https://github.com/vuejs/composition-api) 
 
-::: dica de instalação do plugin
+::: tip de instalação do plugin
 
 ```js
 // plugins/composition-api.js

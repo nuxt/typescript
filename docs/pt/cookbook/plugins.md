@@ -118,6 +118,6 @@ export default Vue.extend({
 </script>
 ```
 
-::: dica
+::: tip
 Por favor note que o `inject` não injeta no` context`, mas no `context.app`.
 :::

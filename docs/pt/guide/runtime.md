@@ -13,7 +13,7 @@ yarn add @nuxt/typescript-runtime
 npm install @nuxt/typescript-runtime
 ```
 
-::: dica
+::: tip
 Note-se que este pacote é instalado como "dependência" e não "devDependência", como `@nuxt/typescript-build`, por causa que o `@nuxt/typescript-runtime` é necessário em produção.
 :::
 
@@ -37,7 +37,7 @@ Tudo que voê precisa é atualiza o seu arquivo **package.json**:
 }
 ```
 
-::: dica
+::: tip
 **nuxt-ts** também funciona se você estiver utilizando a versão edge do Nuxt.js (**nuxt-edge**).
 :::
 

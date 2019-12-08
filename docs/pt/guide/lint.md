@@ -6,7 +6,7 @@ Se você estiver usando eslint para verificar seu projeto, aqui está como você
 
 Tudo o que você precisa é instalar o pacote `@nuxtjs/eslint-config-typescript`:
 
-::: dica
+::: tip
 Se você já estiver usando `@nuxtjs/eslint-config`, removê-lo de suas dependências, as configurações do Nuxt TypeScript ESLint já o incluem.
 :::
 
@@ -24,7 +24,7 @@ module.exports = {
   ]
 }
 ```
-::: aviso 
+::: warning 
 Como isso fará com que a ESlint use um parser TypeScript ([`@typescript-eslint/parser`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser)), por favor, certifique-se de que a opção 'parserOptions.parser' não seja substituta nem por você ou por outra configuração que você esteja extendendo.
 
 Se você estivesse usando 'babel-eslint' como parser, basta removê-lo de seu '.eslintrc.js' assim como suas dependências.
@@ -40,7 +40,7 @@ Finalmente, edite o script 'lint' do seu arquivo `package.json`:
 
 Agora você pode verificar seus arquivos TypeScript executando 'npm run lint' (ou 'yarn lint').
 
-::: dica
+::: tip
 Se você precisa editar/atualizar as regras do TypeScript ESLint, você pode encontrar [aqui](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#supported-rules) uma lista com todas as regras suportadas.
 :::
 
@@ -58,7 +58,7 @@ export default {
 }
 ```
 
-::: dica
+::: tip
 Você também pode oferecer opções específicas de ESLint com `typeCheck.eslintOptions`
 :::
 

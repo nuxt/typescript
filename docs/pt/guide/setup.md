@@ -62,11 +62,11 @@ e criar um arquivo **`tsconfig.json`** :
 }
 ```
 
-::: dica
+::: tip
 `@nuxt/typescript-build` entrega `@nuxt/types`, então não há necessidade de instalá-lo de forma independente.
 :::
 
-::: dica
+::: tip
 
 Verifique a documentação oficial do [TypeScript](https://www.typescriptlang.org/docs/handbook/compiler-options.html) para saber mais sobre as diferentes opções do compilador.
 :::
