@@ -2,7 +2,7 @@
 next: false
 ---
 
-# Server Middlewares (Runtime)
+# Server Middlewares (Tempo de execução)
 
 ```ts
 import { ServerMiddleware } from '@nuxt/types'
