@@ -2,7 +2,7 @@
 home: true
 heroImage: /assets/logo.svg
 actionText: Introdução →
-actionLink: /guide/
+actionLink: /pt/guide/
 footer: Distribuído sob a Licença MIT | Copyright © 2019-present Nuxt.js Team
 ---
 
