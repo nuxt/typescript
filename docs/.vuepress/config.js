@@ -79,11 +79,11 @@ module.exports = {
         editLinkText: 'Edita esta pagina en GitHub',
         sidebar: {
           '/examples': getExamplesSidebar(),
-          '/es/': getMainSidebar('/es', 'Guia', 'Cookbook')
+          '/es/': getMainSidebar('/es', 'Guía', 'Cookbook')
         },
         nav: [
           {
-            text: 'Guia',
+            text: 'Guía',
             link: '/es/guide/'
           },
           {

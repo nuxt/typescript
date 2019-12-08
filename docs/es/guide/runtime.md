@@ -1,15 +1,15 @@
 
-# Runtime (opcional)
+# Tiempo de Ejecución (opcional)
 
-TypeScript runtime es necesario para archivos que no son compilados por Webpack, asi como el archivo **nuxt.config** , local **modules** y **serverMiddlewares**.
+TypeScript en tiempo de ejecución es requerido para archivos que no son compilados por Webpack como lo es el archivo **nuxt.config**, **modules** locales y **serverMiddlewares**
 
-Nuxt.js creo un wrapper para TypeScript runtime en un paquete dedicado **`@nuxt/typescript-runtime`**. El wrapper es un binario llamado **nuxt-ts** que registra [**ts-node**](https://github.com/TypeStrong/ts-node) detras del proceso antes de ejecutarse.
+Nuxt.js ha creado un envolvente de TypeScript en tiempo de ejecución bajo un paquete dedicado **`@nuxt/typescript-runtime`**. El envolventes es un binario llamado **nuxt-ts** que registra [**ts-node**](https://github.com/TypeStrong/ts-node) detrás de escena antes de correrlo.
 
 ## Instalación
 
 ```sh
 yarn add @nuxt/typescript-runtime
-# OR
+# o tambien
 npm install @nuxt/typescript-runtime
 ```
 
