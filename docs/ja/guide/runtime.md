@@ -29,11 +29,11 @@ npm install @nuxt/typescript-runtime
   "start": "nuxt-ts start"
 },
 "dependencies": {
-  "@nuxt/typescript-runtime",
-  "nuxt"
+  "@nuxt/typescript-runtime": "latest",
+  "nuxt": "latest"
 },
 "devDependencies": {
-  "@nuxt/typescript-build"
+  "@nuxt/typescript-build": "latest"
 }
 ```
 
