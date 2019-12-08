@@ -62,6 +62,16 @@ export default {
 }
 ```
 
+また、以下の型宣言を追加し Vue ファイルの型を提供する必要があります：
+
+`vue-shim.d.ts`:
+```ts 
+declare module "*.vue" {
+  import Vue from 'vue'
+  export default Vue
+}
+```
+
 ::: tip
 `@nuxt/typescript-build` は `@nuxt/types` を同梱しているため、それぞれをインストールする必要はありません。
 :::
@@ -69,6 +79,22 @@ export default {
 ::: tip
 
 さまざまなコンパイラオプションについては、公式の [TypeScript ドキュメント](https://www.typescriptlang.org/docs/handbook/compiler-options.html)を確認してください。
+:::
+
+::: warning
+
+独自のサーバーフレームワークで Nuxt をプログラムにより使用している場合、ビルドを行う前に Nuxt の準備ができるまで待機する必要があることに注意してください：
+
+```js
+
+// Make sure to wait for Nuxt to load @nuxt/typescript-build before proceeding
+await nuxt.ready()
+...
+if (config.dev) {
+  const builder = new Builder(nuxt)
+  await builder.build()
+}
+```
 :::
 
 これで **layouts**、**components**、**plugins** と **middlewares** で TypeScript が使えるように設定できました。

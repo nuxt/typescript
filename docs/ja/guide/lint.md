@@ -11,9 +11,9 @@
 :::
 
 ```sh
-npm i -D @nuxtjs/eslint-config-typescript
-# または
 yarn add -D @nuxtjs/eslint-config-typescript
+# または
+npm i -D @nuxtjs/eslint-config-typescript
 ```
 
 そして、 ESLint設定ファイル `.eslintrc.js` を作成または編集して `@nuxtjs/eslint-config-typescript` を extends に入れます :
