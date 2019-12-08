@@ -11,9 +11,9 @@ If you're already using `@nuxtjs/eslint-config`, remove it from your dependencie
 :::
 
 ```sh
-npm i -D @nuxtjs/eslint-config-typescript
-# OR
 yarn add -D @nuxtjs/eslint-config-typescript
+# OR
+npm i -D @nuxtjs/eslint-config-typescript
 ```
 
 Then, create or edit your ESLint configuration `.eslintrc.js` by extending `@nuxtjs/eslint-config-typescript` :
