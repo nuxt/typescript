@@ -62,6 +62,16 @@ and create a **`tsconfig.json`** file :
 }
 ```
 
+You will also need to provide types for Vue files by adding the following type declaration:
+
+`vue-shim.d.ts`:
+```ts 
+declare module "*.vue" {
+  import Vue from 'vue'
+  export default Vue
+}
+```
+
 ::: tip
 `@nuxt/typescript-build` ships `@nuxt/types`, so there's no need to install it independently.
 :::
