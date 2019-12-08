@@ -29,11 +29,11 @@ npm install @nuxt/typescript-runtime
   "start": "nuxt-ts start"
 },
 "dependencies": {
-  "@nuxt/typescript-runtime",
-  "nuxt"
+  "@nuxt/typescript-runtime": "latest",
+  "nuxt": "latest"
 },
 "devDependencies": {
-  "@nuxt/typescript-build"
+  "@nuxt/typescript-build": "latest"
 }
 ```
 
@@ -42,3 +42,23 @@ Nuxt.js の edge バージョン（**nuxt-edge**）を使用しているなら�
 :::
 
 これで、**nuxt.config** ファイル、ローカルの **modules** および **serverMiddlewares** で TypeScript を使用できるようになりました。
+
+::: warning
+
+`@nuxt/typescript-runtime` はプログラムによる使用をサポートしていません（`@nuxt/cli` を拡張しているため）。 
+
+上級ユーザーは、サーバーエントリーポイントに次のコードを追加することができます（ [source](https://github.com/nuxt/typescript/blob/master/packages/typescript-runtime/src/index.ts) を参照してください）：
+
+```js
+import { register } from 'ts-node'
+
+register({
+  project: 'tsconfig.json',
+  compilerOptions: {
+    module: 'commonjs'
+  }
+})
+```
+
+ただし、この方法は**推奨またはサポートされていません**。
+:::
