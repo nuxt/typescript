@@ -1,4 +1,4 @@
-# Modulos (Runtime)
+# Modules (Tiempo de Ejecución)
 
 ```ts
 import { Module } from '@nuxt/types'

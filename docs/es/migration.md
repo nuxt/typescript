@@ -13,12 +13,12 @@ La siguiente guía de migración funciona tanto para **nuxt** o **nuxt-edge**.
 ```sh
 yarn remove @nuxt/typescript
 yarn add --dev @nuxt/typescript-build
-# OR
+# o tambien
 npm uninstall @nuxt/typescript
 npm install --save-dev @nuxt/typescript-build
 ```
 
-**2. Agregar el módulo `@nuxt/typescript-build` en tu nuxt.config.js**
+**2. Agrega el módulo `@nuxt/typescript-build` a tu archivo nuxt.config.js**
 
 ```js
 // nuxt.config.js
@@ -27,7 +27,7 @@ export default {
 }
 ```
 
-**3. Reemplaza `@nuxt/vue-app` y `@nuxt/config` por `@nuxt/types` en tu `tsconfig.json`**
+**3. Reemplaza `@nuxt/vue-app` y `@nuxt/config` con `@nuxt/types` en tu archivo `tsconfig.json`**
 
 ```json{4}
 // tsconfig.json

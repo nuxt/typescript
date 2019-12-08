@@ -18,7 +18,7 @@ footer: MIT Licensed | Copyright © 2019-present Nuxt.js Team
     <p>Es mejor para el compilador en detectar errores que podrían suceder en la ejecución del código.</p>
   </div>
   <div class="feature">
-    <h2>Calidad del códigos</h2>
+    <h2>Calidad del código</h2>
     <p>Los Tipos tiene la capacidad de mejorar la calidad de tu código y su entendimiento.</p> 
     <p>Equipos grandes (Google, Microsoft, Facebook) han llegado continuamente a esta conclusión.</p>
   </div>
