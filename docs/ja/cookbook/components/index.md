@@ -9,7 +9,7 @@
 
 ## Template
 
-<<< @/ja/cookbook/components/template.html
+<<< @/cookbook/components/template.html
 
 ## Script
 
@@ -17,7 +17,7 @@
 <tabs :options="{ useUrlFragment: false }">
   <tab name="Options API">  
 
-<<< @/ja/cookbook/components/script.options-api.ts
+<<< @/cookbook/components/script.options-api.ts
 
   </tab>
   <tab name="Composition API">
@@ -45,14 +45,14 @@ export default {
 
 :::
 
-<<< @/ja/cookbook/components/script.composition-api.ts
+<<< @/cookbook/components/script.composition-api.ts
 
   </tab>
   <tab name="Class API">  
 
 [vue-property-decorator](https://github.com/kaorun343/vue-property-decorator) から [vue-class-component](https://github.com/vuejs/vue-class-component) を使用しています。
 
-<<< @/ja/cookbook/components/script.class-api.ts
+<<< @/cookbook/components/script.class-api.ts
 
   </tab>
 </tabs>

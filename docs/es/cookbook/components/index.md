@@ -3,7 +3,7 @@
 En [**Single File Components (SFC)**](https://vuejs.org/v2/guide/single-file-components.html), los tags `script` deben especificar el lenguaje `ts`:
 ```html
 <script lang="ts">
-  // Usar TypeScript aqui
+  // usar TypeScript aqui
 </script>
 ```
 

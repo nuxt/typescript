@@ -1,6 +1,6 @@
 # Componentes
 
-Em [**Componentes de arquivo único**](https://vuejs.org/v2/guide/single-file-components.html) ou Single File Components (SFC), as tags `script` devem especificar a linguagem ` ts`:
+En [**Single File Components (SFC)**](https://vuejs.org/v2/guide/single-file-components.html), as tags `script` devem especificar a linguagem ` ts`:
 ```html
 <script lang="ts">
   // usar TypeScript aqui
@@ -50,7 +50,7 @@ Este registo do plugin é obrigatório para fazer a função "setup" funciona em
   </tab>
   <tab name="Class API">  
 
-Usndo [vue-class-component](https://github.com/vuejs/vue-class-component) através do [vue-property-decorator](https://github.com/kaorun343/vue-property-decorator)
+Usando [vue-class-component](https://github.com/vuejs/vue-class-component) através do [vue-property-decorator](https://github.com/kaorun343/vue-property-decorator)
 
 <<< @/cookbook/components/script.class-api.ts
 
