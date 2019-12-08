@@ -62,6 +62,16 @@ export default {
 }
 ```
 
+また、以下の型宣言を追加し Vue ファイルの型を提供する必要があります：
+
+`vue-shim.d.ts`:
+```ts 
+declare module "*.vue" {
+  import Vue from 'vue'
+  export default Vue
+}
+```
+
 ::: tip
 `@nuxt/typescript-build` は `@nuxt/types` を同梱しているため、それぞれをインストールする必要はありません。
 :::
