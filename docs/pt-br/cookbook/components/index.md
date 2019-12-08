@@ -1,9 +1,9 @@
-# Components
+# Componentes
 
-In [**Single File Components (SFC)**](https://vuejs.org/v2/guide/single-file-components.html), `script` tags must specify the `ts` language:
+Em [**Componentes de arquivo único**](https://vuejs.org/v2/guide/single-file-components.html) ou Single File Components (SFC), as tags `script` devem especificar a linguagem ` ts`:
 ```html
 <script lang="ts">
-  // use TypeScript here
+  // usar TypeScript aqui
 </script>
 ```
 

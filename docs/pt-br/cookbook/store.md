@@ -182,9 +182,9 @@ export const actions: ActionTree<AnotherModuleState, RootState> = {
 #### `nuxt-typed-vuex`
 
 
-O Vuex não fornece tipos úteis para acessar a loja a partir do seu aplicativo. `this.$store` permanece sem tipo em um aplicação Nuxt.
+O Vuex não fornece tipos úteis para acessar a store a partir da sua aplicação. `this.$store` permanece sem tipo em um aplicação Nuxt.
 
-There is a new project, [`nuxt-typed-vuex`](https://github.com/danielroe/nuxt-typed-vuex) - and [guide](https://nuxt-typed-vuex.danielcroe.com/) - que visa remediar isso - fornecendo um acessador fortemente tipado para uma store do Nuxt vanilla.
+Há um novo projeto, o [`nuxt-typed-vuex`](https://github.com/danielroe/nuxt-typed-vuex) - e o [guia](https://nuxt-typed-vuex.danielcroe.com/) - que visa remediar isso - fornecendo um acessador fortemente tipado para uma store do Nuxt vanilla.
 
 
 #### Traga o seu próprio
