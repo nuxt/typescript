@@ -11,6 +11,11 @@ module.exports = {
       lang: 'ja-JP',
       title: 'Nuxt TypeScript',
       description: 'Nuxt.js 向け TypeScript サポート'
+    },
+    '/es/': {
+      lang: 'es-ES',
+      title: 'Nuxt TypeScript',
+      description: 'Soporte de Typescript para Nuxt.js'
     }
   },
   plugins: [
@@ -64,6 +69,25 @@ module.exports = {
           },
           {
             text: '例',
+            link: '/examples/options-api/minimal'
+          }
+        ]
+      },
+      '/es/': {
+        label: 'Español',
+        selectText: 'Idiomas',
+        editLinkText: 'Edita esta pagina en GitHub',
+        sidebar: {
+          '/examples': getExamplesSidebar(),
+          '/es/': getMainSidebar('/es', 'Guía', 'Cookbook')
+        },
+        nav: [
+          {
+            text: 'Guía',
+            link: '/es/guide/'
+          },
+          {
+            text: 'Ejemplos',
             link: '/examples/options-api/minimal'
           }
         ]
