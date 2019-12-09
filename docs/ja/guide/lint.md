@@ -49,6 +49,7 @@ TypeScript ESLint のルールを編集/上書きする必要がある場合は�
 ランタイム lint（ファイル保存後に ESLint を実行する）が必要な場合は、`typeCheck` モジュールオプションを設定することで [fork-ts-checker-webpack-plugin](https://github.com/TypeStrong/fork-ts-checker-webpack-plugin) の `eslint` 機能を有効にすることができます。
 
 ```ts
+// nuxt.config.js
 export default {
   typescript: {
     typeCheck: {

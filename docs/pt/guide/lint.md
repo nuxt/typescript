@@ -49,6 +49,7 @@ Se você precisa editar/atualizar as regras do TypeScript ESLint, você pode enc
 Se você quiser ter o lint em tempo de execução (tendo ESLint funcionando depois que um arquivo foi salvo), você pode ativar o recurso 'eslint' de [fork-ts-checker-webpack-plugin](https://github.com/TypeStrong/fork-ts-checker-webpack-plugin) configurando a opção de módulo 'typeCheck'
 
 ```ts
+// nuxt.config.js
 export default {
   typescript: {
     typeCheck: {
