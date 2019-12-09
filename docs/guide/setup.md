@@ -77,6 +77,22 @@ declare module "*.vue" {
 :::
 
 ::: tip
+In ordder to get latest TS features nullish-coalescing-operator && optional-chaining working install respective babel plugins
+```sh
+yarn add --dev @babel/plugin-proposal-nullish-coalescing-operator @babel/plugin-proposal-optional-chaining
+```  
+and add the following lines to **`nuxt.config.js`**
+```ts 
+  babel: {
+      plugins: [
+        "@babel/plugin-proposal-nullish-coalescing-operator",
+        "@babel/plugin-proposal-optional-chaining"
+      ]}
+```      
+:::
+
+
+::: tip
 
 Check official [TypeScript documentation](https://www.typescriptlang.org/docs/handbook/compiler-options.html) to learn about the different compiler options.
 :::
