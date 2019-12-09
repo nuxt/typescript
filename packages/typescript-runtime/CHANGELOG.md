@@ -3,6 +3,146 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/nuxt/typescript/compare/@nuxt/typescript-runtime@0.2.10...@nuxt/typescript-runtime@0.3.0) (2019-12-09)
+
+
+### Features
+
+* **deps:** upgrade typescript to 3.7 ([508fcef](https://github.com/nuxt/typescript/commit/508fcef3b3f0938edad9659849a82d89ac868c7c)), closes [#185](https://github.com/nuxt/typescript/issues/185)
+
+
+
+
+
+## [0.2.10](https://github.com/nuxt/typescript/compare/@nuxt/typescript-runtime@0.2.9...@nuxt/typescript-runtime@0.2.10) (2019-12-02)
+
+**Note:** Version bump only for package @nuxt/typescript-runtime
+
+
+
+
+
+## [0.2.9](https://github.com/nuxt/typescript/compare/@nuxt/typescript-runtime@0.2.8...@nuxt/typescript-runtime@0.2.9) (2019-12-02)
+
+**Note:** Version bump only for package @nuxt/typescript-runtime
+
+
+
+
+
+## [0.2.8](https://github.com/nuxt/typescript/compare/@nuxt/typescript-runtime@0.2.7...@nuxt/typescript-runtime@0.2.8) (2019-12-02)
+
+**Note:** Version bump only for package @nuxt/typescript-runtime
+
+
+
+
+
+## [0.2.7](https://github.com/nuxt/typescript/compare/@nuxt/typescript-runtime@0.2.6...@nuxt/typescript-runtime@0.2.7) (2019-12-01)
+
+**Note:** Version bump only for package @nuxt/typescript-runtime
+
+
+
+
+
+## [0.2.6](https://github.com/nuxt/typescript/compare/@nuxt/typescript-runtime@0.2.5...@nuxt/typescript-runtime@0.2.6) (2019-12-01)
+
+**Note:** Version bump only for package @nuxt/typescript-runtime
+
+
+
+
+
+## [0.2.5](https://github.com/nuxt/typescript/compare/@nuxt/typescript-runtime@0.2.4...@nuxt/typescript-runtime@0.2.5) (2019-11-30)
+
+**Note:** Version bump only for package @nuxt/typescript-runtime
+
+
+
+
+
+## [0.2.4](https://github.com/nuxt/typescript/compare/@nuxt/typescript-runtime@0.2.3...@nuxt/typescript-runtime@0.2.4) (2019-11-05)
+
+**Note:** Version bump only for package @nuxt/typescript-runtime
+
+
+
+
+
+## [0.2.3](https://github.com/nuxt/typescript/compare/@nuxt/typescript-runtime@0.2.2...@nuxt/typescript-runtime@0.2.3) (2019-11-03)
+
+**Note:** Version bump only for package @nuxt/typescript-runtime
+
+
+
+
+
+## [0.2.2](https://github.com/nuxt/typescript/compare/@nuxt/typescript-runtime@0.2.1...@nuxt/typescript-runtime@0.2.2) (2019-10-18)
+
+
+### Bug Fixes
+
+* **runtime:** node 8 compatibility ([69f2d20](https://github.com/nuxt/typescript/commit/69f2d2053af8a00b4d11dc155a868183a0a392fb))
+
+
+
+
+
+## [0.2.1](https://github.com/nuxt/typescript/compare/@nuxt/typescript-runtime@0.2.0...@nuxt/typescript-runtime@0.2.1) (2019-10-08)
+
+**Note:** Version bump only for package @nuxt/typescript-runtime
+
+
+
+
+
+# [0.2.0](https://github.com/nuxt/typescript/compare/@nuxt/typescript-runtime@0.1.7...@nuxt/typescript-runtime@0.2.0) (2019-10-02)
+
+
+### Features
+
+* use hooks ([#97](https://github.com/nuxt/typescript/issues/97)) ([f7b680a](https://github.com/nuxt/typescript/commit/f7b680a))
+
+
+
+
+
+## [0.1.7](https://github.com/nuxt/typescript/compare/@nuxt/typescript-runtime@0.1.6...@nuxt/typescript-runtime@0.1.7) (2019-09-23)
+
+**Note:** Version bump only for package @nuxt/typescript-runtime
+
+
+
+
+
+## [0.1.6](https://github.com/nuxt/typescript/compare/@nuxt/typescript-runtime@0.1.5...@nuxt/typescript-runtime@0.1.6) (2019-09-16)
+
+**Note:** Version bump only for package @nuxt/typescript-runtime
+
+
+
+
+
+## [0.1.5](https://github.com/nuxt/typescript/compare/@nuxt/typescript-runtime@0.1.4...@nuxt/typescript-runtime@0.1.5) (2019-09-03)
+
+
+### Bug Fixes
+
+* pin typescript to 3.5.x ([d69ec27](https://github.com/nuxt/typescript/commit/d69ec27)), closes [#98](https://github.com/nuxt/typescript/issues/98)
+
+
+
+
+
+## [0.1.4](https://github.com/nuxt/typescript/compare/@nuxt/typescript-runtime@0.1.3...@nuxt/typescript-runtime@0.1.4) (2019-09-01)
+
+**Note:** Version bump only for package @nuxt/typescript-runtime
+
+
+
+
+
 ## [0.1.3](https://github.com/nuxt/typescript/compare/@nuxt/typescript-runtime@0.1.2...@nuxt/typescript-runtime@0.1.3) (2019-08-22)
 
 

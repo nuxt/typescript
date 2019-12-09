@@ -62,6 +62,16 @@ and create a **`tsconfig.json`** file :
 }
 ```
 
+You will also need to provide types for Vue files by adding the following type declaration:
+
+`vue-shim.d.ts`:
+```ts 
+declare module "*.vue" {
+  import Vue from 'vue'
+  export default Vue
+}
+```
+
 ::: tip
 `@nuxt/typescript-build` ships `@nuxt/types`, so there's no need to install it independently.
 :::
@@ -69,6 +79,22 @@ and create a **`tsconfig.json`** file :
 ::: tip
 
 Check official [TypeScript documentation](https://www.typescriptlang.org/docs/handbook/compiler-options.html) to learn about the different compiler options.
+:::
+
+::: warning
+
+If you are using Nuxt programmatically with a custom server framework, note that you will need to ensure that you wait for Nuxt to be ready before building:
+
+```js
+
+// Make sure to wait for Nuxt to load @nuxt/typescript-build before proceeding
+await nuxt.ready()
+...
+if (config.dev) {
+  const builder = new Builder(nuxt)
+  await builder.build()
+}
+```
 :::
 
 That's it, you're all set to use TypeScript in your **layouts**, **components**, **plugins** and **middlewares**.
@@ -100,3 +126,22 @@ When enabled, you can suppress `export ... was not found ...` warnings.
 See also about background information [here](https://github.com/TypeStrong/ts-loader/issues/653).
 
 **Warning:** This property might suppress the warnings you want to see. Be careful with how you configure it.
+
+### loaders
+
+> Customization of [`ts-loader`](https://github.com/TypeStrong/ts-loader#loader-options) options
+
+- Type: `Object`
+
+If you need extra customization of the TypeScript loader, you can customize it for both `ts` & `tsx` files through `loaders.ts` & `loaders.tsx` module options :
+
+```ts
+loaders: {
+  ts: {
+    silent: true
+  },
+  tsx: {
+    silent: true
+  }
+}
+```

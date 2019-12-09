@@ -4,7 +4,7 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "nuxt-ts",
+    "build": "lerna run build",
     "lint": "eslint --ext .ts,.tsx,.js,.vue .",
     "lint:fix": "yarn lint --fix",
     "test": "yarn lint && yarn test:unit && yarn test:types",
@@ -23,7 +23,8 @@
     "jest": "latest",
     "lerna": "latest",
     "nuxt-edge": "latest",
-    "typescript": "latest",
+    "ts-jest": "latest",
+    "typescript": "~3.7",
     "vue-property-decorator": "latest"
   }
 }

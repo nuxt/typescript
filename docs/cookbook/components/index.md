@@ -13,23 +13,18 @@ In [**Single File Components (SFC)**](https://vuejs.org/v2/guide/single-file-com
 
 ## Script
 
-:::: tabs :options="{ useUrlFragment: false }"
 
-::: tab "Options API"
+<tabs :options="{ useUrlFragment: false }">
+  <tab name="Options API">  
+
 <<< @/cookbook/components/script.options-api.ts
-:::
 
-::: tab "Class API"
-Using [vue-class-component](https://github.com/vuejs/vue-class-component) through [vue-property-decorator](https://github.com/kaorun343/vue-property-decorator)
+  </tab>
+  <tab name="Composition API">
 
-<<< @/cookbook/components/script.class-api.ts
-:::
-
-
-::: tab "Composition API"
 Using [@vue/composition-api](https://github.com/vuejs/composition-api) plugin
 
-:::tip Plugin installation
+::: tip Plugin installation
 
 ```js
 // plugins/composition-api.js
@@ -47,7 +42,17 @@ export default {
 ```
 
 This plugin registration is mandatory to make `setup` function works in components.
+
 :::
 
 <<< @/cookbook/components/script.composition-api.ts
 
+  </tab>
+  <tab name="Class API">  
+
+Using [vue-class-component](https://github.com/vuejs/vue-class-component) through [vue-property-decorator](https://github.com/kaorun343/vue-property-decorator)
+
+<<< @/cookbook/components/script.class-api.ts
+
+  </tab>
+</tabs>
