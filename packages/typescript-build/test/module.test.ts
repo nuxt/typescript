@@ -55,6 +55,10 @@ describe('module', () => {
 
     expect(builder.nuxt.options.build!.additionalExtensions).toHaveLength(2)
     expect(builder.nuxt.options.build!.additionalExtensions).toEqual(['ts', 'tsx'])
+    expect(builder.nuxt.options.build!.babel!.plugins).toEqual(expect.arrayContaining([
+      '@babel/plugin-proposal-nullish-coalescing-operator',
+      '@babel/plugin-proposal-optional-chaining'
+    ]))
 
     expect(ForkTsCheckerWebpackPlugin).toHaveBeenCalledTimes(1)
   })
