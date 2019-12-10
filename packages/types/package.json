@@ -17,7 +17,7 @@
     "@types/file-loader": "^4.2.0",
     "@types/html-minifier": "^3.5.3",
     "@types/less": "^3.0.1",
-    "@types/node": "^12.12.16",
+    "@types/node": "^12.12.17",
     "@types/node-sass": "^4.11.0",
     "@types/optimize-css-assets-webpack-plugin": "^5.0.1",
     "@types/pug": "^2.0.4",
@@ -26,7 +26,7 @@
     "@types/webpack": "^4.41.0",
     "@types/webpack-bundle-analyzer": "^2.13.3",
     "@types/webpack-dev-middleware": "^2.0.3",
-    "@types/webpack-hot-middleware": "^2.16.5"
+    "@types/webpack-hot-middleware": "^2.25.0"
   },
   "publishConfig": {
     "access": "public"
