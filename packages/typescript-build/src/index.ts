@@ -43,13 +43,6 @@ const tsModule: Module<Options> = function (moduleOptions) {
   // Extend Builder to handle .ts/.tsx files as routes and watch them
   this.options.build!.additionalExtensions = ['ts', 'tsx']
 
-  // Support new TypeScript 3.7 features
-  this.options.build!.babel!.plugins = this.options.build!.babel!.plugins || []
-  this.options.build!.babel!.plugins.push(...[
-    '@babel/plugin-proposal-nullish-coalescing-operator',
-    '@babel/plugin-proposal-optional-chaining'
-  ])
-
   if (options.ignoreNotFoundWarnings) {
     this.options.build!.warningIgnoreFilters!.push(warn =>
       warn.name === 'ModuleDependencyWarning' && /export .* was not found in /.test(warn.message)
