@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.1](https://github.com/nuxt/typescript/compare/@nuxt/typescript-build@0.5.0...@nuxt/typescript-build@0.5.1) (2019-12-11)
+
+
+### Reverts
+
+* **build:** ship & enable TS 3.7 features ([1d944be](https://github.com/nuxt/typescript/commit/1d944bea5e8745f0f8ac545fab17b03b675fbbb6))
+
+
+
+
+
 # [0.5.0](https://github.com/nuxt/typescript/compare/@nuxt/typescript-build@0.4.0...@nuxt/typescript-build@0.5.0) (2019-12-09)
 
 
