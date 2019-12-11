@@ -25,42 +25,7 @@ export default {
 
 e criar um arquivo **`tsconfig.json`** :
 
-```json
-// tsconfig.json
-{
-  "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "lib": [
-      "esnext",
-      "esnext.asynciterable",
-      "dom"
-    ],
-    "esModuleInterop": true,
-    "allowJs": true,
-    "sourceMap": true,
-    "strict": true,
-    "noEmit": true,
-    "baseUrl": ".",
-    "paths": {
-      "~/*": [
-        "./*"
-      ],
-      "@/*": [
-        "./*"
-      ]
-    },
-    "types": [
-      "@types/node",
-      "@nuxt/types"
-    ]
-  },
-  "exclude": [
-    "node_modules"
-  ]
-}
-```
+<<< @/shared/tsconfig.json
 
 ::: tip
 `@nuxt/typescript-build` entrega `@nuxt/types`, então não há necessidade de instalá-lo de forma independente.

@@ -25,42 +25,7 @@ export default {
 
 そして、**`tsconfig.json`** ファイルを作成します：
 
-```json
-// tsconfig.json
-{
-  "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "lib": [
-      "esnext",
-      "esnext.asynciterable",
-      "dom"
-    ],
-    "esModuleInterop": true,
-    "allowJs": true,
-    "sourceMap": true,
-    "strict": true,
-    "noEmit": true,
-    "baseUrl": ".",
-    "paths": {
-      "~/*": [
-        "./*"
-      ],
-      "@/*": [
-        "./*"
-      ]
-    },
-    "types": [
-      "@types/node",
-      "@nuxt/types"
-    ]
-  },
-  "exclude": [
-    "node_modules"
-  ]
-}
-```
+<<< @/shared/tsconfig.json
 
 また、以下の型宣言を追加し Vue ファイルの型を提供する必要があります：
 

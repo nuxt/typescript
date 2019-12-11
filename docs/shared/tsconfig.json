@@ -1,3 +1,4 @@
+// tsconfig.json
 {
   "compilerOptions": {
     "target": "es2018",
@@ -23,7 +24,11 @@
       ]
     },
     "types": [
+      "@types/node",
       "@nuxt/types"
     ]
-  }
+  },
+  "exclude": [
+    "node_modules"
+  ]
 }
