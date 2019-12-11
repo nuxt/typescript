@@ -28,7 +28,7 @@ and create a **`tsconfig.json`** file :
 <<< @/shared/tsconfig.json
 
 ::: tip
-Notice that **es2018** target is needed to be able to use [**Optional chaining**](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#optional-chaining) and [**Nullish Coalescing**](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#nullish-coalescing), as **esnext** target doesn't seem to support these features for now.
+Notice that **es2018** target is needed to be able to use [**Optional Chaining**](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#optional-chaining) and [**Nullish Coalescing**](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#nullish-coalescing), as **esnext** target doesn't seem to support these features for now.
 :::
 
 You will also need to provide types for Vue files by adding the following type declaration:
