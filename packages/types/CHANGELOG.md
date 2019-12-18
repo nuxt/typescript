@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.7](https://github.com/nuxt/typescript/compare/@nuxt/types@0.5.6...@nuxt/types@0.5.7) (2019-12-18)
+
+
+### Bug Fixes
+
+* **types:** use IncomingMessage from connect instead of from http ([#251](https://github.com/nuxt/typescript/issues/251)) ([ae4b705](https://github.com/nuxt/typescript/commit/ae4b70579a0a3aa28ff253a0aa7aa43002092e77))
+
+
+
+
+
 ## [0.5.6](https://github.com/nuxt/typescript/compare/@nuxt/types@0.5.5...@nuxt/types@0.5.6) (2019-12-11)
 
 **Note:** Version bump only for package @nuxt/types
