@@ -1,4 +1,5 @@
-import { IncomingMessage, ServerResponse } from 'http'
+import { ServerResponse } from 'http'
+import { IncomingMessage } from 'connect'
 import Vue, { ComponentOptions } from 'vue'
 import VueRouter, { Location, Route } from 'vue-router'
 import { Store } from 'vuex'

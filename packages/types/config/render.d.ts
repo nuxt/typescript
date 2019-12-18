@@ -7,8 +7,9 @@
  *                https://github.com/jshttp/etag#readme
  */
 
-import { IncomingMessage, ServerResponse } from 'http'
+import { ServerResponse } from 'http'
 import { CompressionOptions } from 'compression'
+import { IncomingMessage } from 'connect'
 import { Options as EtagOptions } from 'etag'
 import { ServeStaticOptions } from 'serve-static'
 import { BundleRendererOptions } from 'vue-server-renderer'
