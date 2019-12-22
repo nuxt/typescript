@@ -25,40 +25,15 @@ export default {
 
 そして、**`tsconfig.json`** ファイルを作成します：
 
-```json
-// tsconfig.json
-{
-  "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "lib": [
-      "esnext",
-      "esnext.asynciterable",
-      "dom"
-    ],
-    "esModuleInterop": true,
-    "allowJs": true,
-    "sourceMap": true,
-    "strict": true,
-    "noEmit": true,
-    "baseUrl": ".",
-    "paths": {
-      "~/*": [
-        "./*"
-      ],
-      "@/*": [
-        "./*"
-      ]
-    },
-    "types": [
-      "@types/node",
-      "@nuxt/types"
-    ]
-  },
-  "exclude": [
-    "node_modules"
-  ]
+<<< @/shared/tsconfig.json
+
+また、以下の型宣言を追加し Vue ファイルの型を提供する必要があります：
+
+`vue-shim.d.ts`:
+```ts 
+declare module "*.vue" {
+  import Vue from 'vue'
+  export default Vue
 }
 ```
 
@@ -69,6 +44,22 @@ export default {
 ::: tip
 
 さまざまなコンパイラオプションについては、公式の [TypeScript ドキュメント](https://www.typescriptlang.org/docs/handbook/compiler-options.html)を確認してください。
+:::
+
+::: warning
+
+独自のサーバーフレームワークで Nuxt をプログラムにより使用している場合、ビルドを行う前に Nuxt の準備ができるまで待機する必要があることに注意してください：
+
+```js
+
+// Make sure to wait for Nuxt to load @nuxt/typescript-build before proceeding
+await nuxt.ready()
+...
+if (config.dev) {
+  const builder = new Builder(nuxt)
+  await builder.build()
+}
+```
 :::
 
 これで **layouts**、**components**、**plugins** と **middlewares** で TypeScript が使えるように設定できました。

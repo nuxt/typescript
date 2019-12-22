@@ -24,7 +24,7 @@
     "lerna": "latest",
     "nuxt-edge": "latest",
     "ts-jest": "latest",
-    "typescript": "~3.6",
+    "typescript": "~3.7",
     "vue-property-decorator": "latest"
   }
 }

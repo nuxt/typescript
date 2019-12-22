@@ -11,9 +11,9 @@ If you're already using `@nuxtjs/eslint-config`, remove it from your dependencie
 :::
 
 ```sh
-npm i -D @nuxtjs/eslint-config-typescript
-# OR
 yarn add -D @nuxtjs/eslint-config-typescript
+# OR
+npm i -D @nuxtjs/eslint-config-typescript
 ```
 
 Then, create or edit your ESLint configuration `.eslintrc.js` by extending `@nuxtjs/eslint-config-typescript` :
@@ -49,6 +49,7 @@ If you need to edit/override TypeScript ESLint rules, You can find [here](https:
 If you want to have runtime lint (having ESLint running after a file has been saved), you can enable the `eslint` feature of [fork-ts-checker-webpack-plugin](https://github.com/TypeStrong/fork-ts-checker-webpack-plugin) by configuring the `typeCheck` module option
 
 ```ts
+// nuxt.config.js
 export default {
   typescript: {
     typeCheck: {

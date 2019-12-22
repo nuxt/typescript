@@ -3,6 +3,47 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.2](https://github.com/nuxt/typescript/compare/@nuxt/typescript-build@0.5.1...@nuxt/typescript-build@0.5.2) (2019-12-18)
+
+**Note:** Version bump only for package @nuxt/typescript-build
+
+
+
+
+
+## [0.5.1](https://github.com/nuxt/typescript/compare/@nuxt/typescript-build@0.5.0...@nuxt/typescript-build@0.5.1) (2019-12-11)
+
+
+### Reverts
+
+* **build:** ship & enable TS 3.7 features ([1d944be](https://github.com/nuxt/typescript/commit/1d944bea5e8745f0f8ac545fab17b03b675fbbb6))
+
+
+
+
+
+# [0.5.0](https://github.com/nuxt/typescript/compare/@nuxt/typescript-build@0.4.0...@nuxt/typescript-build@0.5.0) (2019-12-09)
+
+
+### Features
+
+* **build:** ship & enable TS 3.7 features ([d62bdfc](https://github.com/nuxt/typescript/commit/d62bdfc1a1ae7b16a723761bc6dbc189ebf04a7e)), closes [#245](https://github.com/nuxt/typescript/issues/245)
+
+
+
+
+
+# [0.4.0](https://github.com/nuxt/typescript/compare/@nuxt/typescript-build@0.3.10...@nuxt/typescript-build@0.4.0) (2019-12-09)
+
+
+### Features
+
+* **deps:** upgrade typescript to 3.7 ([508fcef](https://github.com/nuxt/typescript/commit/508fcef3b3f0938edad9659849a82d89ac868c7c)), closes [#185](https://github.com/nuxt/typescript/issues/185)
+
+
+
+
+
 ## [0.3.10](https://github.com/nuxt/typescript/compare/@nuxt/typescript-build@0.3.9...@nuxt/typescript-build@0.3.10) (2019-12-02)
 
 **Note:** Version bump only for package @nuxt/typescript-build
