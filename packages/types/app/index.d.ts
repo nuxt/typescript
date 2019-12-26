@@ -99,7 +99,7 @@ export interface NuxtApp extends Vue {
   layout: any // TBD
   layoutName: string
   loadLayout(layout: string): Promise<any> // TBD
-  refresh(): void
+  refresh(): Promise<void>
   setLayout(layout: string): any // TBD
 }
 
