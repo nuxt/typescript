@@ -78,11 +78,28 @@ export interface NuxtError {
 }
 
 export interface NuxtLoading extends Vue {
-  fail?(): NuxtLoading
+  canSucceed: boolean
+  clear(): void
+  continuous: boolean
+  decrease(num: number): NuxtLoading
+  duration: number
+  fail(): NuxtLoading
   finish(): NuxtLoading
-  increase?(num: number): NuxtLoading
-  pause?(): NuxtLoading
+  increase(num: number): NuxtLoading
+  get(): number
+  hide(): NuxtLoading
+  left: number
+  pause(): NuxtLoading
+  percent: number
+  resume(): NuxtLoading
+  reversed: boolean
+  rtl: boolean
+  set(num: number): NuxtLoading
+  skipTimerCount: number
+  show: boolean
   start(): NuxtLoading
+  startTimer(): void
+  throttle: number
 }
 
 export interface NuxtAppOptions extends ComponentOptions<Vue> {
