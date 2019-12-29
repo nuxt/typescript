@@ -106,6 +106,7 @@ export interface CustomNuxtLoading extends Vue {
   fail?(): CustomNuxtLoading
   finish(): CustomNuxtLoading
   increase?(num: number): CustomNuxtLoading
+  pause?(): CustomNuxtLoading
   start(): CustomNuxtLoading
 }
 
