@@ -77,7 +77,7 @@ export interface NuxtError {
   statusCode?: number
 }
 
-export interface NuxtLoading extends Vue {
+export interface DefaultNuxtLoader extends Vue {
   canSucceed: boolean
   clear(): void
   continuous: boolean
@@ -101,6 +101,15 @@ export interface NuxtLoading extends Vue {
   startTimer(): void
   throttle: number
 }
+
+export interface CustomNuxtLoader extends Vue {
+  fail?(): NuxtLoading
+  finish(): NuxtLoading
+  increase?(num: number): NuxtLoading
+  start(): NuxtLoading
+}
+
+export type NuxtLoader = DefaultNuxtLoader | CustomNuxtLoader
 
 export interface NuxtAppOptions extends ComponentOptions<Vue> {
   [key: string]: any // TBD
