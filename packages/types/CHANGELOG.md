@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/nuxt/typescript/compare/@nuxt/types@0.5.9...@nuxt/types@0.6.0) (2020-01-02)
+
+
+### Features
+
+* **types:** add missing types for NuxtLoading ([#259](https://github.com/nuxt/typescript/issues/259)) ([8717b63](https://github.com/nuxt/typescript/commit/8717b6395429f5542197beb6ce5a3b8879c236ad))
+
+
+
+
+
 ## [0.5.9](https://github.com/nuxt/typescript/compare/@nuxt/types@0.5.8...@nuxt/types@0.5.9) (2019-12-26)
 
 
