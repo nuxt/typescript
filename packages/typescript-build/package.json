@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@nuxt/types": "0.5.9",
-    "consola": "^2.11.2",
+    "consola": "^2.11.3",
     "fork-ts-checker-webpack-plugin": "^3.1.1",
     "ts-loader": "^6.2.1",
     "typescript": "~3.7"
