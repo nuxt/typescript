@@ -77,13 +77,40 @@ export interface NuxtError {
   statusCode?: number
 }
 
-export interface NuxtLoading extends Vue {
-  fail?(): NuxtLoading
-  finish(): NuxtLoading
-  increase?(num: number): NuxtLoading
-  pause?(): NuxtLoading
-  start(): NuxtLoading
+export interface DefaultNuxtLoading extends Vue {
+  canSucceed: boolean
+  clear(): void
+  continuous: boolean
+  decrease(num: number): DefaultNuxtLoading
+  duration: number
+  fail(): DefaultNuxtLoading
+  finish(): DefaultNuxtLoading
+  increase(num: number): DefaultNuxtLoading
+  get(): number
+  hide(): DefaultNuxtLoading
+  left: number
+  pause(): DefaultNuxtLoading
+  percent: number
+  resume(): DefaultNuxtLoading
+  reversed: boolean
+  rtl: boolean
+  set(num: number): DefaultNuxtLoading
+  skipTimerCount: number
+  show: boolean
+  start(): DefaultNuxtLoading
+  startTimer(): void
+  throttle: number
 }
+
+export interface CustomNuxtLoading extends Vue {
+  fail?(): CustomNuxtLoading
+  finish(): CustomNuxtLoading
+  increase?(num: number): CustomNuxtLoading
+  pause?(): CustomNuxtLoading
+  start(): CustomNuxtLoading
+}
+
+export type NuxtLoading = DefaultNuxtLoading | CustomNuxtLoading
 
 export interface NuxtAppOptions extends ComponentOptions<Vue> {
   [key: string]: any // TBD
