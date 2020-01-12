@@ -3,8 +3,8 @@
  */
 
 import Vue, { ComponentOptions } from 'vue'
-import { Route } from 'vue-router'
 import { MetaInfo } from 'vue-meta'
+import { Route } from 'vue-router'
 import { Context, Middleware, Transition, NuxtApp } from './index'
 
 declare module 'vue/types/options' {
@@ -19,7 +19,7 @@ declare module 'vue/types/options' {
     scrollToTop?: boolean
     transition?: string | Transition | ((to: Route, from: Route) => string)
     validate?(ctx: Context): Promise<boolean> | boolean
-    watchQuery?: boolean | string[]
+    watchQuery?: boolean | string[] | ((newQuery: Route['query'], oldQuery: Route['query']) => boolean)
     meta?: { [key: string]: any }
   }
 }
