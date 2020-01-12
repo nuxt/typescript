@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.1](https://github.com/nuxt/typescript/compare/@nuxt/types@0.6.0...@nuxt/types@0.6.1) (2020-01-12)
+
+
+### Bug Fixes
+
+* **types:** add watchQuery function type ([#265](https://github.com/nuxt/typescript/issues/265)) ([e5862b7](https://github.com/nuxt/typescript/commit/e5862b778b6acb7e2800a18464053b29e0c13c28)), closes [#263](https://github.com/nuxt/typescript/issues/263)
+
+
+
+
+
 # [0.6.0](https://github.com/nuxt/typescript/compare/@nuxt/types@0.5.9...@nuxt/types@0.6.0) (2020-01-02)
 
 
