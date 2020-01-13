@@ -27,6 +27,10 @@ export default {
 
 <<< @/shared/tsconfig.json
 
+::: tip
+現時点では **esnext** が [**Optional Chaining**](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#optional-chaining) と [**Nullish Coalescing**](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#nullish-coalescing) をサポートしていないようです。これらの機能を使えるようにするためにターゲットに **es2018** を指定する必要があることに注意してください。
+:::
+
 また、以下の型宣言を追加し Vue ファイルの型を提供する必要があります：
 
 `vue-shim.d.ts`:
