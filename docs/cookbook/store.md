@@ -64,6 +64,8 @@ For use with Nuxt, there are few key provisos:
    export default accessor
    ```
 
+   Don't forget to add the plugin to your `nuxt.config.js` file.
+
    `~/utils/api.ts`:
 
    ```ts
