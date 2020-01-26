@@ -7155,10 +7155,10 @@ vuepress-plugin-smooth-scroll@^0.0.3:
   dependencies:
     smoothscroll-polyfill "^0.4.3"
 
-vuepress-plugin-tabs@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-tabs/-/vuepress-plugin-tabs-0.2.2.tgz#b217cc2070fc3b182fd78dbe8638c20f1eaba304"
-  integrity sha512-PqC1/Qf84klDTlfDr5Hb3WRsS/NJAicYroYxqdhi8uVwhiCiHXeK/ehs+glYaQd9NRSG7z2AT5mKHCxRVzKayA==
+vuepress-plugin-tabs@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-tabs/-/vuepress-plugin-tabs-0.3.0.tgz#e95fb98d3736af450a9baaf1a09b8677983ca8d8"
+  integrity sha512-jooDlcMdBqhXgIaF1awFSaOTM56mleP6bbCiGxyQxTZexfvCfDvZhNLGpyXqMQA50ZmNGmvLrK82YYb63k1jfA==
 
 vuepress@^1.2.0:
   version "1.2.0"
