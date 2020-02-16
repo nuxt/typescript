@@ -18,6 +18,7 @@
     "@types/jest": "latest",
     "@vue/composition-api": "latest",
     "codecov": "latest",
+    "consola": "^2.11.3",
     "eslint": "latest",
     "husky": "latest",
     "jest": "latest",
