@@ -8,6 +8,7 @@ TypeScript を使用している Nuxt プロジェクトでは、ストアにア
 
 最も人気のあるアプローチの1つは [vuex-module-decorators](https://github.com/championswimmer/vuex-module-decorators) です。- [ガイド](https://championswimmer.in/vuex-module-decorators/)を参照してください。
 
+
 Nuxt で使用するために重要な条件がいくつかあります：
 
 1. モジュールは `stateFactory: true` で装飾する必要があるため、以下のようにします:
@@ -62,6 +63,8 @@ Nuxt で使用するために重要な条件がいくつかあります：
 
    export default accessor
    ```
+
+   プラグインを忘れずに `nuxt.config.js` ファイルに追加してください。
 
    `~/utils/api.ts`:
 
@@ -151,6 +154,31 @@ export const actions: ActionTree<RootState, RootState> = {
 }
 ```
 
+モジュールに対しても同様のことができます。例：
+
+`~/store/anotherModule.ts`:
+```ts
+import { GetterTree, ActionTree, MutationTree } from 'vuex'
+import { RootState } from '~/store'
+
+export const state = () => ({
+  more: 3,
+})
+
+export type AnotherModuleState = ReturnType<typeof state>
+
+export const getters: GetterTree<AnotherModuleState, RootState> = {
+  evenMore: state => state.more + 5,
+  nameAndMore: (state, getters, rootState) => `${rootState.name}: ${state.more}`,
+}
+
+export const actions: ActionTree<AnotherModuleState, RootState> = {
+  printRootState({ rootState }) {
+    console.log('accessing rootState:', rootState.name)
+  },
+}
+```
+
 ### ストアへのアクセス
 
 #### `nuxt-typed-vuex`
@@ -169,12 +197,16 @@ Vuex はアプリケーションからストアへアクセスするための便
 <script lang="ts">
 
 import { Component, Vue } from 'nuxt-property-decorator'
-import { RootState } from '~/store'
+import { getters, RootState } from '~/store'
 
 @Component
 export default class MyComponent extends Vue {
     get myThings() {
         return (this.$store.state as RootState).things
+    }
+
+    mounted() {
+        const name = this.$store.getters['name'] as ReturnType<typeof getters.name>
     }
 }
 ```
