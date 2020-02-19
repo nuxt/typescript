@@ -48,7 +48,7 @@ interface CssLoaderOptions {
 }
 
 interface UrlLoaderOptions {
-  esModules?: boolean
+  esModule?: boolean
   fallback?: WebpackLoader
   limit?: boolean | number | string
   mimetype?: string
