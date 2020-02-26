@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.3](https://github.com/nuxt/typescript/compare/@nuxt/types@0.6.2...@nuxt/types@0.6.3) (2020-02-26)
+
+
+### Bug Fixes
+
+* **types:** fix configuration module type ([f41463f](https://github.com/nuxt/typescript/commit/f41463f623ce7dfaa2f02df387dd5e386188c463))
+* **types:** rename UrlLoaderOptions.esModules to esModule ([#294](https://github.com/nuxt/typescript/issues/294)) ([f4e511c](https://github.com/nuxt/typescript/commit/f4e511cb332ba5d52d2abb54b32afb9d6e7affd6))
+
+
+
+
+
 ## [0.6.2](https://github.com/nuxt/typescript/compare/@nuxt/types@0.6.1...@nuxt/types@0.6.2) (2020-02-17)
 
 **Note:** Version bump only for package @nuxt/types
