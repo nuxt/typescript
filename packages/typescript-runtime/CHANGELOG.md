@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/nuxt/typescript/compare/@nuxt/typescript-runtime@0.3.10...@nuxt/typescript-runtime@0.4.0) (2020-03-02)
+
+
+### Features
+
+* **deps:** upgrade typescript to 3.8 ([6cb7409](https://github.com/nuxt/typescript/commit/6cb7409ea6914e8c9bf5622d8fb3e2e0a312691e)), closes [#300](https://github.com/nuxt/typescript/issues/300)
+
+
+
+
+
 ## [0.3.10](https://github.com/nuxt/typescript/compare/@nuxt/typescript-runtime@0.3.9...@nuxt/typescript-runtime@0.3.10) (2020-02-26)
 
 **Note:** Version bump only for package @nuxt/typescript-runtime
