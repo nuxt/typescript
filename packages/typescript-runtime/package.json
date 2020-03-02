@@ -21,7 +21,7 @@
   "dependencies": {
     "@nuxt/types": "0.6.3",
     "ts-node": "^8.6.2",
-    "typescript": "~3.7"
+    "typescript": "~3.8"
   },
   "publishConfig": {
     "access": "public"
