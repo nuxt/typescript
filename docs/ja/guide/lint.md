@@ -27,7 +27,7 @@ module.exports = {
 ::: warning 
 ESlint が TypeScript パーサー（[`@typescript-eslint/parser`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser)）を使用するようにするために、`parserOptions.parser` オプションが拡張した他の設定等によってオーバーライドされないことを確認してください。
 
-パーサーとして `babel-eslint` を使いたい場合は、`.eslintrc.js` と依存関係から削除してください。
+パーサーとして `babel-eslint` を使用していた場合は、`.eslintrc.js` と依存関係から削除してください。
 :::
 
 最後に、`package.json` の `lint` スクリプトを編集します。
