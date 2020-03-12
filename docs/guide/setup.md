@@ -42,7 +42,7 @@ declare module "*.vue" {
 ```
 
 ::: tip
-You can place this file in the root directory of your project or a directory named `@types`. You can place it in a custom directory, but you'll need to configure [`typeRoots`](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html#types-typeroots-and-types) in the `tsconfig.json` file.
+You can place this file in the root directory of your project or a directory named `types`. You can place it in a custom directory, but you'll need to configure [`typeRoots`](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html#types-typeroots-and-types) in the `tsconfig.json` file.
 :::
 
 ::: tip
