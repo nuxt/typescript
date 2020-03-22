@@ -29,8 +29,8 @@ declare module 'vue/types/vue' {
     $nuxt: NuxtApp
     $fetch(): void
     $fetchState: {
-      pending: boolean
       error: Error | null
+      pending: boolean
       timestamp: number
     }
   }
