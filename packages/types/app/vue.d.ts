@@ -27,5 +27,11 @@ declare module 'vue/types/options' {
 declare module 'vue/types/vue' {
   interface Vue {
     $nuxt: NuxtApp
+    $fetch(): void
+    $fetchState: {
+      error: Error | null
+      pending: boolean
+      timestamp: number
+    }
   }
 }
