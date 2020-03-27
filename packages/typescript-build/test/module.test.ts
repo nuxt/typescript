@@ -10,7 +10,11 @@ import { Options as TsLoaderOptions } from 'ts-loader'
 import tsModule from '../src'
 
 jest.setTimeout(60000)
-jest.mock('fork-ts-checker-webpack-plugin')
+jest.mock('fork-ts-checker-webpack-plugin', () => {
+  return jest.fn().mockImplementation(() => ({
+    apply () {}
+  }))
+})
 
 interface BuilderInstance {
   nuxt: {
