@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/nuxt/typescript/compare/@nuxt/types@0.6.4...@nuxt/types@0.7.0) (2020-03-27)
+
+
+### Features
+
+* **types:** nuxt 2.12 support ([#317](https://github.com/nuxt/typescript/issues/317)) ([56626b4](https://github.com/nuxt/typescript/commit/56626b476ebf3a4d265c62f557fd0b9b4144745d))
+
+
+
+
+
 ## [0.6.4](https://github.com/nuxt/typescript/compare/@nuxt/types@0.6.3...@nuxt/types@0.6.4) (2020-03-02)
 
 **Note:** Version bump only for package @nuxt/types
