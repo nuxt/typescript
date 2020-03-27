@@ -182,7 +182,11 @@ function getExamplesSidebar () {
       title: `${apiName[0].toUpperCase() + apiName.slice(1)} API`,
       collapsable: false,
       children: levels.map((level, index) => {
-        const hasGenerated = generateExampleMarkdown(apiName, level, index === 0 ? { prev: false } : index === levels.length - 1 ? { next: false } : {})
+        const hasGenerated = generateExampleMarkdown(apiName, level, {
+          editLink: false,
+          prev: index !== 0,
+          next: index !== levels.length - 1
+        })
         const title = level[0].toUpperCase() + level.slice(1)
         return [`/examples/${apiName}-api/${level}`, hasGenerated ? title : `${title} (soon)`]
       })
