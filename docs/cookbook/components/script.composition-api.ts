@@ -1,11 +1,11 @@
-import { createComponent, computed, ref } from '@vue/composition-api'
+import { defineComponent, computed, ref } from '@vue/composition-api'
 
 interface User {
   firstName: string
   lastName: number
 }
 
-export default createComponent({
+export default defineComponent({
   props: {
     user: {
       type: Object as () => User,
