@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.1](https://github.com/nuxt/typescript/compare/@nuxt/types@0.7.0...@nuxt/types@0.7.1) (2020-04-03)
+
+
+### Bug Fixes
+
+* **types:** nuxt module options can't be undefined ([df8dc96](https://github.com/nuxt/typescript/commit/df8dc9669b2f4a79c04a5c31b1c33424a0d6835d))
+
+
+
+
+
 # [0.7.0](https://github.com/nuxt/typescript/compare/@nuxt/types@0.6.4...@nuxt/types@0.7.0) (2020-03-27)
 
 
