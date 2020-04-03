@@ -26,6 +26,6 @@ interface ModuleThis {
   [key: string]: any // TBD
 }
 
-export type Module<T = Record<string, any>> = (this: ModuleThis, moduleOptions?: T) => Promise<void> | void
+export type Module<T = Record<string, any>> = (this: ModuleThis, moduleOptions: T) => Promise<void> | void
 
 export type NuxtConfigurationModule = string | Module | [string | Module, Record<string, any>]
