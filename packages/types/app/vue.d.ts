@@ -11,6 +11,8 @@ declare module 'vue/types/options' {
   interface ComponentOptions<V extends Vue> {
     asyncData?(ctx: Context): Promise<object | void> | object | void
     fetch?(ctx: Context): Promise<void> | void
+    fetchOnServer?: boolean
+    fetchDelay?: number
     head?: MetaInfo | (() => MetaInfo)
     key?: string | ((to: Route) => string)
     layout?: string | ((ctx: Context) => string)
