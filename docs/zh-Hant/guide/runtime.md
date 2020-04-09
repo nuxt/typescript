@@ -56,7 +56,8 @@ register({
   project: 'tsconfig.json',
   compilerOptions: {
     module: 'commonjs'
-  }
+  },
+  transpileOnly: true
 })
 ```
 
