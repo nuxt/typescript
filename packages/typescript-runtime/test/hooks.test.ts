@@ -17,7 +17,8 @@ describe('run:before hook', () => {
       project: path.resolve('path', 'tsconfig.json'),
       compilerOptions: {
         module: 'commonjs'
-      }
+      },
+      transpileOnly: true
     })
   })
 
@@ -28,7 +29,8 @@ describe('run:before hook', () => {
       project: path.resolve('custom/tsconfig.json'),
       compilerOptions: {
         module: 'commonjs'
-      }
+      },
+      transpileOnly: true
     })
   })
 
@@ -39,7 +41,8 @@ describe('run:before hook', () => {
       project: path.resolve('custom/tsconfig.json'),
       compilerOptions: {
         module: 'commonjs'
-      }
+      },
+      transpileOnly: true
     })
   })
 })

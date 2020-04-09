@@ -11,7 +11,8 @@ const hooks: Hooks = {
       project: tsConfigPath,
       compilerOptions: {
         module: 'commonjs'
-      }
+      },
+      transpileOnly: true
     })
   },
 
