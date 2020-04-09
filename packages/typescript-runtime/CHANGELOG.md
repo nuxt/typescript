@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.3](https://github.com/nuxt/typescript/compare/@nuxt/typescript-runtime@0.4.2...@nuxt/typescript-runtime@0.4.3) (2020-04-09)
+
+
+### Performance Improvements
+
+* **runtime:** makes nuxt-ts transpileOnly ([436f742](https://github.com/nuxt/typescript/commit/436f742faa7ec7f7a2470df11b59778ba1122e40)), closes [#329](https://github.com/nuxt/typescript/issues/329)
+
+
+
+
+
 ## [0.4.2](https://github.com/nuxt/typescript/compare/@nuxt/typescript-runtime@0.4.1...@nuxt/typescript-runtime@0.4.2) (2020-04-03)
 
 **Note:** Version bump only for package @nuxt/typescript-runtime

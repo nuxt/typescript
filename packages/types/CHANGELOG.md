@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.2](https://github.com/nuxt/typescript/compare/@nuxt/types@0.7.1...@nuxt/types@0.7.2) (2020-04-09)
+
+
+### Bug Fixes
+
+* **types:** adding fetchOnServer and fetchDelay missing types ([#328](https://github.com/nuxt/typescript/issues/328)) ([b412a5b](https://github.com/nuxt/typescript/commit/b412a5b40a060c872a36ad10124bae712069a3fa))
+
+
+
+
+
 ## [0.7.1](https://github.com/nuxt/typescript/compare/@nuxt/types@0.7.0...@nuxt/types@0.7.1) (2020-04-03)
 
 
