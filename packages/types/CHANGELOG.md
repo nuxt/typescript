@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.4](https://github.com/nuxt/typescript/compare/@nuxt/types@0.7.3...@nuxt/types@0.7.4) (2020-04-11)
+
+
+### Bug Fixes
+
+* **types:** fix webpack-hot-middleware types ([aa44afb](https://github.com/nuxt/typescript/commit/aa44afb584c21d4374cf99ed21c5739c0449e0bb)), closes [#334](https://github.com/nuxt/typescript/issues/334) [#333](https://github.com/nuxt/typescript/issues/333)
+
+
+
+
+
 ## [0.7.3](https://github.com/nuxt/typescript/compare/@nuxt/types@0.7.2...@nuxt/types@0.7.3) (2020-04-09)
 
 
