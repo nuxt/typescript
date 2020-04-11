@@ -26,7 +26,7 @@
     "@types/webpack": "^4.41.10",
     "@types/webpack-bundle-analyzer": "^2.13.3",
     "@types/webpack-dev-middleware": "^3.7.0",
-    "@types/webpack-hot-middleware": "^2.25.0"
+    "@types/webpack-hot-middleware": "^2.25.1"
   },
   "publishConfig": {
     "access": "public"
