@@ -4,7 +4,6 @@
     "lib": ["dom", "esnext"],
     "module": "esnext",
     "moduleResolution": "node",
-    "skipLibCheck": true,
     "esModuleInterop": true,
     "strict": true,
     "noFallthroughCasesInSwitch": true,

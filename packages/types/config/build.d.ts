@@ -23,7 +23,7 @@ import {
 } from 'webpack'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 import { Options as WebpackDevMiddlewareOptions } from 'webpack-dev-middleware'
-import { Options as WebpackHotMiddlewareOptions } from 'webpack-hot-middleware'
+import { MiddlewareOptions as WebpackHotMiddlewareOptions, ClientOptions as WebpackHotMiddlewareClientOptions } from 'webpack-hot-middleware'
 
 type CssLoaderUrlFunction = (url: string, resourcePath: string) => boolean
 type CssLoaderImportFunction = (parsedImport: string, resourcePath: string) => boolean
@@ -150,7 +150,7 @@ export interface NuxtConfigurationBuild {
   filenames?: { [key in 'app' | 'chunk' | 'css' | 'img' | 'font' | 'video']?: (ctx: NuxtWebpackEnv) => string }
   friendlyErrors?: boolean
   hardSource?: boolean
-  hotMiddleware?: WebpackHotMiddlewareOptions & { client: any /* TBD */ }
+  hotMiddleware?: WebpackHotMiddlewareOptions & { client?: WebpackHotMiddlewareClientOptions }
   html?: { minify: HtmlMinifierOptions }
   indicator?: boolean
   loaders?: NuxtConfigurationLoaders
