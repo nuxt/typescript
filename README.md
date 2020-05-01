@@ -3,8 +3,9 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/nuxt/typescript/actions"><img src="https://img.shields.io/github/workflow/status/nuxt/typescript/test?style=flat-square" alt="github actions"></a>
-  <a href="https://codecov.io/gh/nuxt/typescript"><img src="https://img.shields.io/codecov/c/github/nuxt/typescript.svg?style=flat-square" alt="coverage"></a>
+  <a href="https://npmjs.com/package/@nuxt/types"><img src="https://img.shields.io/npm/dt/@nuxt/types.svg?style=flat-square" alt="npm downloads"></a>
+  <a href="https://github.com/nuxt/typescript/actions"><img src="https://img.shields.io/github/workflow/status/nuxt/typescript/test?label=ci&style=flat-square" alt="Github Actions"></a>
+  <a href="https://codecov.io/gh/nuxt/typescript"><img src="https://img.shields.io/codecov/c/github/nuxt/typescript.svg?style=flat-square" alt="Coverage"></a>
   <a href="https://github.com/nuxt/typescript"><img src="https://img.shields.io/github/license/nuxt/typescript.svg?style=flat-square" alt="License"></a>
 </p>
 
