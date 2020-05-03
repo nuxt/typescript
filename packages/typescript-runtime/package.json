@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@nuxt/types": "0.7.5",
-    "ts-node": "^8.9.1",
+    "ts-node": "^8.10.1",
     "typescript": "~3.8"
   },
   "publishConfig": {
