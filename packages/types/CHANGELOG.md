@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.6](https://github.com/nuxt/typescript/compare/@nuxt/types@0.7.5...@nuxt/types@0.7.6) (2020-05-18)
+
+
+### Bug Fixes
+
+* **types:** fix build.transpile type ([#358](https://github.com/nuxt/typescript/issues/358)) ([9c37af8](https://github.com/nuxt/typescript/commit/9c37af86ffc8c500639b4ae17ab370b3b0f88acd))
+
+
+
+
+
 ## [0.7.5](https://github.com/nuxt/typescript/compare/@nuxt/types@0.7.4...@nuxt/types@0.7.5) (2020-04-25)
 
 

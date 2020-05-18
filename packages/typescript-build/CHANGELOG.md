@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/nuxt/typescript/compare/@nuxt/typescript-build@0.6.6...@nuxt/typescript-build@1.0.0) (2020-05-18)
+
+
+### chore
+
+* **deps:** update dependency ts-loader to v7 ([#338](https://github.com/nuxt/typescript/issues/338)) ([17c368a](https://github.com/nuxt/typescript/commit/17c368a565fb630ba5f330a8555a403b492e64af))
+
+
+### BREAKING CHANGES
+
+* **deps:** Drop Node v8 support
+Co-authored-by: Renovate Bot <bot@renovateapp.com>
+
+
+
+
+
 ## [0.6.6](https://github.com/nuxt/typescript/compare/@nuxt/typescript-build@0.6.5...@nuxt/typescript-build@0.6.6) (2020-04-25)
 
 **Note:** Version bump only for package @nuxt/typescript-build

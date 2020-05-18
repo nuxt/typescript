@@ -1,6 +1,6 @@
 {
   "name": "@nuxt/types",
-  "version": "0.7.5",
+  "version": "0.7.6",
   "description": "Nuxt.js types",
   "repository": "nuxt/typescript",
   "license": "MIT",
