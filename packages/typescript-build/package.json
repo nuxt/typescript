@@ -18,7 +18,7 @@
     "@nuxt/types": "0.7.5",
     "consola": "^2.12.1",
     "fork-ts-checker-webpack-plugin": "^4.1.4",
-    "ts-loader": "^6.2.2",
+    "ts-loader": "^7.0.4",
     "typescript": "~3.8"
   },
   "publishConfig": {
