@@ -171,7 +171,7 @@ export interface NuxtConfigurationBuild {
   standalone?: boolean
   templates?: any
   terser?: TerserPluginOptions | boolean
-  transpile?: Array<string | RegExp | ((context: NuxtWebpackEnv) => string | RegExp)>
+  transpile?: Array<string | RegExp | ((context: NuxtWebpackEnv) => string | RegExp | undefined)>
   warningIgnoreFilters?: Array<(warn: Warning) => boolean>
   watch?: string[]
 }
