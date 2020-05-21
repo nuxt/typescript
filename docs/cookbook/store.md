@@ -9,7 +9,7 @@ There are a number of different options for writing and accessing the store in a
 One of the most popular approaches is [vuex-module-decorators](https://github.com/championswimmer/vuex-module-decorators) - see [guide](https://championswimmer.in/vuex-module-decorators/).
 
 
-For use with Nuxt, there are few key provisos:
+For use with Nuxt, there are few key provisions:
 
 1. Your modules must be decorated with `stateFactory: true`, so for example:
 
