@@ -8,4 +8,4 @@ export interface NuxtRuntimeConfig {
   [key: string]: any
 }
 
-export type NuxtConfigurationRuntimeConfig = NuxtRuntimeConfig | ((env: Record<any, string>) => NuxtRuntimeConfig)
+export type NuxtConfigurationRuntimeConfig = NuxtRuntimeConfig | ((env: Record<string, string>) => NuxtRuntimeConfig)
