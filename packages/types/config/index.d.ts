@@ -13,6 +13,7 @@ import { NuxtConfigurationModule, Module } from './module'
 import { NuxtConfigurationPlugin } from './plugin'
 import { NuxtConfigurationRender } from './render'
 import { NuxtConfigurationRouter } from './router'
+import { NuxtConfigurationRuntimeConfig } from './runtime'
 import { NuxtConfigurationServer } from './server'
 import { NuxtConfigurationServerMiddleware, ServerMiddleware } from './server-middleware'
 import { NuxtConfigurationVueConfiguration } from './vue-configuration'
@@ -45,8 +46,8 @@ export interface Configuration extends Record<string, any> {
   modules?: NuxtConfigurationModule[]
   modulesDir?: string[]
   plugins?: NuxtConfigurationPlugin[]
-  privateRuntimeConfig?: Record<string, any> | ((env: NuxtConfigurationEnv) => Record<string, any>)
-  publicRuntimeConfig?: Record<string, any> | ((env: NuxtConfigurationEnv) => Record<string, any>)
+  privateRuntimeConfig?: NuxtConfigurationRuntimeConfig
+  publicRuntimeConfig?: NuxtConfigurationRuntimeConfig
   render?: NuxtConfigurationRender
   rootDir?: string
   router?: NuxtConfigurationRouter

@@ -4,6 +4,8 @@ import Vue, { ComponentOptions } from 'vue'
 import VueRouter, { Location, Route } from 'vue-router'
 import { Store } from 'vuex'
 
+import { NuxtRuntimeConfig } from '../config/runtime'
+
 // augment typings of Vue.js
 import './vue'
 
@@ -13,9 +15,9 @@ import './vuex'
 type NuxtState = Record<string, any>
 
 export interface Context {
+  $config: NuxtRuntimeConfig
   app: NuxtAppOptions
   base: string
-  $config: Record<string, any>
   /**
    * @deprecated Use process.client instead
   */
