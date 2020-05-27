@@ -5,7 +5,6 @@
 import Vue, { ComponentOptions } from 'vue'
 import { MetaInfo } from 'vue-meta'
 import { Route } from 'vue-router'
-import { NuxtConfigurationEnv } from '../config/env'
 import { Context, Middleware, Transition, NuxtApp } from './index'
 
 declare module 'vue/types/options' {
@@ -29,7 +28,7 @@ declare module 'vue/types/options' {
 
 declare module 'vue/types/vue' {
   interface Vue {
-    $config: NuxtConfigurationEnv
+    $config: Record<string, any>
     $fetch(): void
     $fetchState: {
       error: Error | null

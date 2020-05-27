@@ -1,7 +1,7 @@
 import { Transition } from '../app'
 import { NuxtConfigurationBuild } from './build'
 import { NuxtConfigurationCli } from './cli'
-import { NuxtConfigurationEnv, NuctConfigurationRuntimeConfig } from './env'
+import { NuxtConfigurationEnv } from './env'
 import { NuxtConfigurationFeatures } from './features'
 import { NuxtConfigurationFetch } from './fetch'
 import { NuxtConfigurationGenerate } from './generate'
@@ -17,8 +17,6 @@ import { NuxtConfigurationServer } from './server'
 import { NuxtConfigurationServerMiddleware, ServerMiddleware } from './server-middleware'
 import { NuxtConfigurationVueConfiguration } from './vue-configuration'
 import { NuxtConfigurationWatchers } from './watchers'
-
-type NuctConfigurationRuntimeConfig = Record<string, any> | ((env: NuxtConfigurationEnv) => Record<string, any>)
 
 export interface Configuration extends Record<string, any> {
   build?: NuxtConfigurationBuild
@@ -47,8 +45,8 @@ export interface Configuration extends Record<string, any> {
   modules?: NuxtConfigurationModule[]
   modulesDir?: string[]
   plugins?: NuxtConfigurationPlugin[]
-  privateRuntimeConfig?: NuctConfigurationRuntimeConfig
-  publicRuntimeConfig?: NuctConfigurationRuntimeConfig
+  privateRuntimeConfig?: Record<string, any> | ((env: NuxtConfigurationEnv) => Record<string, any>)
+  publicRuntimeConfig?: Record<string, any> | ((env: NuxtConfigurationEnv) => Record<string, any>)
   render?: NuxtConfigurationRender
   rootDir?: string
   router?: NuxtConfigurationRouter
