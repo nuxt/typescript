@@ -3,6 +3,7 @@ import { IncomingMessage } from 'connect'
 import Vue, { ComponentOptions } from 'vue'
 import VueRouter, { Location, Route } from 'vue-router'
 import { Store } from 'vuex'
+import { NuxtConfigurationEnv } from '../config/env'
 
 // augment typings of Vue.js
 import './vue'
@@ -15,6 +16,7 @@ type NuxtState = Record<string, any>
 export interface Context {
   app: NuxtAppOptions
   base: string
+  $config: NuxtConfigurationEnv
   /**
    * @deprecated Use process.client instead
   */
@@ -32,7 +34,7 @@ export interface Context {
   route: Route
   from: Route
   store: Store<any>
-  env: Record<string, any>
+  env: NuxtConfigurationEnv
   params: Route['params']
   payload: any
   query: Route['query']

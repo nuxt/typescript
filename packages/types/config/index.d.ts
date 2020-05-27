@@ -45,6 +45,8 @@ export interface Configuration extends Record<string, any> {
   modules?: NuxtConfigurationModule[]
   modulesDir?: string[]
   plugins?: NuxtConfigurationPlugin[]
+  privateRuntimeConfig?: NuxtConfigurationEnv
+  publicRuntimeConfig?: NuxtConfigurationEnv
   render?: NuxtConfigurationRender
   rootDir?: string
   router?: NuxtConfigurationRouter
