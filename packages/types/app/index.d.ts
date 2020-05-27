@@ -34,7 +34,7 @@ export interface Context {
   route: Route
   from: Route
   store: Store<any>
-  env: NuxtConfigurationEnv
+  env: Record<string, any>
   params: Route['params']
   payload: any
   query: Route['query']

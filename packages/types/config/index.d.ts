@@ -18,6 +18,8 @@ import { NuxtConfigurationServerMiddleware, ServerMiddleware } from './server-mi
 import { NuxtConfigurationVueConfiguration } from './vue-configuration'
 import { NuxtConfigurationWatchers } from './watchers'
 
+type NuctConfigurationRuntimeConfig = Record<string, any> | ((env: NuxtConfigurationEnv) => Record<string, any>)
+
 export interface Configuration extends Record<string, any> {
   build?: NuxtConfigurationBuild
   buildDir?: string
