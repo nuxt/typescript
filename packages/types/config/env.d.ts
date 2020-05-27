@@ -4,3 +4,4 @@
  */
 
 export type NuxtConfigurationEnv = Record<string, any>
+export type NuctConfigurationRuntimeConfig = NuxtConfigurationEnv | ((env: NuxtConfigurationEnv) => NuxtConfigurationEnv)
