@@ -42,6 +42,10 @@ declare module "*.vue" {
 ```
 
 ::: tip
+このファイルはプロジェクトのルートディレクトリか `types` という名前のディレクトリに配置できます。カスタムディレクトリにも配置できますが、その場合は `tsconfig.json` ファイルに [`typeRoots`](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html#types-typeroots-and-types) を設定する必要があります。
+:::
+
+::: tip
 `@nuxt/typescript-build` は `@nuxt/types` を同梱しているため、それぞれをインストールする必要はありません。
 :::
 
