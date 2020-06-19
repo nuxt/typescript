@@ -7,7 +7,7 @@ import Vue from 'vue'
 
 export default Vue.extend({
   data () {
-    const text: string = 'Index Page'
+    const text: string = 2
     return { text }
   }
 })
