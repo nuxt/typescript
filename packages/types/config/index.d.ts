@@ -51,6 +51,7 @@ export interface Configuration extends Record<string, any> {
   server?: NuxtConfigurationServer
   serverMiddleware?: NuxtConfigurationServerMiddleware[]
   srcDir?: string
+  telemetry?: boolean
   transition?: Transition
   'vue.config'?: NuxtConfigurationVueConfiguration
   watch?: string[]
