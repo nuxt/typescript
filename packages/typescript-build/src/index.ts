@@ -50,7 +50,7 @@ const tsModule: Module<Options> = function (moduleOptions) {
   }
 
   this.extendBuild((config, { isClient, isModern }) => {
-    config.resolve!.extensions!.push('.ts', '.tsx', '.vue')
+    config.resolve!.extensions!.push('.ts', '.tsx')
 
     const jsxRuleLoaders = config.module!.rules.find(r => (r.test as RegExp).test('.jsx'))!.use as RuleSetUseItem[]
     const babelLoader = jsxRuleLoaders[jsxRuleLoaders.length - 1]
