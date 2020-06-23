@@ -7,7 +7,8 @@ const config: Configuration = {
   ],
   serverMiddleware: [
     logger
-  ]
+  ],
+  telemetry: false
 }
 
 export default config
