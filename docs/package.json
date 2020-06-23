@@ -7,7 +7,7 @@
   "devDependencies": {
     "fs-extra": "^9.0.1",
     "vue-tabs-component": "^1.5.0",
-    "vuepress": "^1.5.1",
+    "vuepress": "^1.5.2",
     "vuepress-plugin-autometa": "^0.1.13",
     "vuepress-plugin-tabs": "^0.3.0"
   }
