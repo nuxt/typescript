@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.9](https://github.com/nuxt/typescript/compare/@nuxt/types@0.7.8...@nuxt/types@0.7.9) (2020-06-12)
+
+
+### Bug Fixes
+
+* **types:** router types fix for vue-router 3.3.3 ([b181e7a](https://github.com/nuxt/typescript/commit/b181e7aa49080e10a8bbea3d0818258f5ecf1e8e)), closes [#374](https://github.com/nuxt/typescript/issues/374)
+
+
+
+
+
+## [0.7.8](https://github.com/nuxt/typescript/compare/@nuxt/types@0.7.7...@nuxt/types@0.7.8) (2020-06-07)
+
+**Note:** Version bump only for package @nuxt/types
+
+
+
+
+
+## [0.7.7](https://github.com/nuxt/typescript/compare/@nuxt/types@0.7.6...@nuxt/types@0.7.7) (2020-05-26)
+
+**Note:** Version bump only for package @nuxt/types
+
+
+
+
+
 ## [0.7.6](https://github.com/nuxt/typescript/compare/@nuxt/types@0.7.5...@nuxt/types@0.7.6) (2020-05-18)
 
 
