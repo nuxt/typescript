@@ -102,7 +102,7 @@ For use with Nuxt, there are few key provisions:
 
      @Action
      async getUsers() {
-       const users = $axios.$get('/users')
+       const users = await $axios.$get('/users')
        this.setUsers(users)
      }
    }
@@ -146,8 +146,8 @@ export const mutations: MutationTree<RootState> = {
 }
 
 export const actions: ActionTree<RootState, RootState> = {
-  fetchThings({ commit }) {
-    const things = this.$axios.$get('/things')
+  async fetchThings({ commit }) {
+    const things = await this.$axios.$get('/things')
     console.log(things)
     commit('CHANGE_NAME', 'New name')
   },
