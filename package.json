@@ -12,14 +12,11 @@
     "test:unit": "jest"
   },
   "devDependencies": {
-    "@commitlint/cli": "latest",
-    "@commitlint/config-conventional": "latest",
     "@nuxtjs/eslint-config-typescript": "latest",
     "@types/jest": "latest",
     "@vue/composition-api": "latest",
     "codecov": "latest",
     "eslint": "latest",
-    "husky": "latest",
     "jest": "latest",
     "lerna": "latest",
     "nuxt-edge": "latest",
