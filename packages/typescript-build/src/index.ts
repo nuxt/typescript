@@ -2,7 +2,7 @@ import path from 'path'
 import consola from 'consola'
 import { Module } from '@nuxt/types'
 import { Options as TsLoaderOptions } from 'ts-loader'
-import { Options as TsCheckerOptions } from 'fork-ts-checker-webpack-plugin'
+import { ForkTsCheckerWebpackPluginOptions as TsCheckerOptions } from 'fork-ts-checker-webpack-plugin/lib/ForkTsCheckerWebpackPluginOptions'
 import { RuleSetUseItem } from 'webpack'
 
 declare module '@nuxt/types' {
@@ -17,7 +17,7 @@ export interface Options {
     ts?: Partial<TsLoaderOptions>
     tsx?: Partial<TsLoaderOptions>
   }
-  typeCheck?: Partial<TsCheckerOptions> | boolean
+  typeCheck?: TsCheckerOptions | boolean
 }
 
 const defaults: Options = {
@@ -75,11 +75,14 @@ const tsModule: Module<Options> = function (moduleOptions) {
     if (options.typeCheck && isClient && !isModern) {
       const ForkTsCheckerWebpackPlugin = require(this.nuxt.resolver.resolveModule('fork-ts-checker-webpack-plugin'))
       config.plugins!.push(new ForkTsCheckerWebpackPlugin(Object.assign({
-        vue: true,
-        tsconfig: path.resolve(this.options.rootDir!, 'tsconfig.json'),
-        formatter: 'codeframe',
+        typescript: {
+          configFile: path.resolve(this.options.rootDir!, 'tsconfig.json'),
+          extensions: {
+            vue: true
+          }
+        },
         logger: consola.withScope('nuxt:typescript')
-      }, options.typeCheck)))
+      } as TsCheckerOptions, options.typeCheck)))
     }
   })
 }
