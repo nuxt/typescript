@@ -1,8 +1,8 @@
 # Setup
 
-Nuxt TypeScript Support mainly comes through a Nuxt module, **@nuxt/typescript-build**.
+Nuxt TypeScript Support mainly comes through a Nuxt module, **@nuxt/typescript-build**, and its types **@nuxt/types**.
 
-Here are the guidelines to install & configure it.
+Here are the guidelines to install & configure them.
 
 ## Installation
 
@@ -11,6 +11,18 @@ yarn add --dev @nuxt/typescript-build @nuxt/types
 # OR
 npm install --save-dev @nuxt/typescript-build @nuxt/types
 ```
+
+::: tip Types version
+You may want to install specific types version to match your Nuxt version if its not latest :
+
+```sh
+yarn add --dev @nuxt/types@2.13.2
+# OR
+npm install --save-dev @nuxt/types@2.13.2
+```
+
+Types versioning match Nuxt versioning since [2.13.0](https://github.com/nuxt/nuxt.js/releases/tag/v2.13.0).
+:::
 
 ## Configuration
 
