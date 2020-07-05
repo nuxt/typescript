@@ -7,9 +7,9 @@ Nuxt TypeScript サポートは主に Nuxt モジュールである **@nuxt/type
 ## インストール
 
 ```sh
-yarn add --dev @nuxt/typescript-build
+yarn add --dev @nuxt/typescript-build @nuxt/types
 # または
-npm install --save-dev @nuxt/typescript-build
+npm install --save-dev @nuxt/typescript-build @nuxt/types
 ```
 
 ## 設定
@@ -28,7 +28,7 @@ export default {
 <<< @/shared/tsconfig.json
 
 ::: tip
-現時点では **esnext** が [**Optional Chaining**](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#optional-chaining) と [**Nullish Coalescing**](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#nullish-coalescing) をサポートしていないようです。これらの機能を使えるようにするためにターゲットに **es2018** を指定する必要があることに注意してください。
+現時点では **ESNext** が [**Optional Chaining**](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#optional-chaining) と [**Nullish Coalescing**](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#nullish-coalescing) をサポートしていないようです。これらの機能を使えるようにするためにターゲットに **ES2018** を指定する必要があることに注意してください。
 :::
 
 また、以下の型宣言を追加し Vue ファイルの型を提供する必要があります：
@@ -43,10 +43,6 @@ declare module "*.vue" {
 
 ::: tip
 このファイルはプロジェクトのルートディレクトリか `types` という名前のディレクトリに配置できます。カスタムディレクトリにも配置できますが、その場合は `tsconfig.json` ファイルに [`typeRoots`](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html#types-typeroots-and-types) を設定する必要があります。
-:::
-
-::: tip
-`@nuxt/typescript-build` は `@nuxt/types` を同梱しているため、それぞれをインストールする必要はありません。
 :::
 
 ::: tip

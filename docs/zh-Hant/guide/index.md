@@ -8,7 +8,7 @@ Nuxt 的 TypeScript 支援有三個依賴套件 :
 
 包含 Nuxt 的 TypeScript 型別定義。
 
-這會包含在 **@nuxt/typescript-build** 以及 **@nuxt/typescript-runtime**。
+它們按照Nuxt核心代碼維護[資料庫 `nuxt/nuxt.js`](https://github.com/nuxt/nuxt.js/tree/dev/packages/types)。
 :::
 
 ::: tip @nuxt/typescript-build

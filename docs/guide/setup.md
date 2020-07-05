@@ -7,9 +7,9 @@ Here are the guidelines to install & configure it.
 ## Installation
 
 ```sh
-yarn add --dev @nuxt/typescript-build
+yarn add --dev @nuxt/typescript-build @nuxt/types
 # OR
-npm install --save-dev @nuxt/typescript-build
+npm install --save-dev @nuxt/typescript-build @nuxt/types
 ```
 
 ## Configuration
@@ -28,7 +28,7 @@ and create a **`tsconfig.json`** file :
 <<< @/shared/tsconfig.json
 
 ::: tip
-Notice that **es2018** target is needed to be able to use [**Optional Chaining**](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#optional-chaining) and [**Nullish Coalescing**](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#nullish-coalescing), as **esnext** target doesn't seem to support these features for now.
+Notice that **ES2018** target is needed to be able to use [**Optional Chaining**](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#optional-chaining) and [**Nullish Coalescing**](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#nullish-coalescing), as **ESNext** target doesn't seem to support these features for now.
 :::
 
 You will also need to provide types for Vue files by adding the following type declaration:
@@ -43,10 +43,6 @@ declare module "*.vue" {
 
 ::: tip
 You can place this file in the root directory of your project or a directory named `types`. You can place it in a custom directory, but you'll need to configure [`typeRoots`](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html#types-typeroots-and-types) in the `tsconfig.json` file.
-:::
-
-::: tip
-`@nuxt/typescript-build` ships `@nuxt/types`, so there's no need to install it independently.
 :::
 
 ::: tip

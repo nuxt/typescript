@@ -7,9 +7,9 @@ Nuxt 的 TypeScript 支援主要是透過 **@nuxt/typescript-build** 這個 Nuxt
 ## 安裝
 
 ```sh
-yarn add --dev @nuxt/typescript-build
+yarn add --dev @nuxt/typescript-build @nuxt/types
 # 或
-npm install --save-dev @nuxt/typescript-build
+npm install --save-dev @nuxt/typescript-build @nuxt/types
 ```
 
 ## 設定
@@ -28,7 +28,7 @@ export default {
 <<< @/shared/tsconfig.json
 
 ::: tip
-請注意，若你要使用 [**Optional Chaining**](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#optional-chaining) 和 [**Nullish Coalescing**](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#nullish-coalescing) 語法，請將 tsconfig 中的 target 設定成 **es2018**。如果你設定成 **esnext** 的話，則不會如期運作，因為目前看起來尚未支援。
+請注意，若你要使用 [**Optional Chaining**](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#optional-chaining) 和 [**Nullish Coalescing**](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#nullish-coalescing) 語法，請將 tsconfig 中的 target 設定成 **ES2018**。如果你設定成 **ESNext** 的話，則不會如期運作，因為目前看起來尚未支援。
 :::
 
 你也需要加入下方的 型別聲明檔 來為 Vue 提供 型別
@@ -40,10 +40,6 @@ declare module "*.vue" {
   export default Vue
 }
 ```
-
-::: tip
-`@nuxt/types` 已在 `@nuxt/typescript-build` 中一起提供了，所以你可以不用再獨立安裝一次。
-:::
 
 ::: tip
 
