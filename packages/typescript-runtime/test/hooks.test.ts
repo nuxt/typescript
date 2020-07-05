@@ -1,6 +1,6 @@
 import path from 'path'
 import { register } from 'ts-node'
-import { Configuration as NuxtConfiguration } from '@nuxt/types'
+import { NuxtConfig } from '@nuxt/types'
 import { hooks } from '../src'
 
 jest.mock('ts-node')
@@ -57,7 +57,7 @@ describe('config hook', () => {
   })
 
   test('adds ts extension (config.extensions is: undefined)', () => {
-    const config: NuxtConfiguration = {}
+    const config: NuxtConfig = {}
 
     hooks.config!(config)
 

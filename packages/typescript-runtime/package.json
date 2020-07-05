@@ -19,9 +19,11 @@
     "compile": "tsc"
   },
   "dependencies": {
-    "@nuxt/types": "0.7.9",
     "ts-node": "^8.10.2",
     "typescript": "~3.9"
+  },
+  "peerDependencies": {
+    "@nuxt/types": ">=2.13.1"
   },
   "publishConfig": {
     "access": "public"
