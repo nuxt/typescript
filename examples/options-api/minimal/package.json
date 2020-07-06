@@ -13,6 +13,7 @@
     "post-update": "yarn upgrade --latest"
   },
   "devDependencies": {
+    "@nuxt/types": "latest",
     "@nuxt/typescript-build": "latest"
   }
 }

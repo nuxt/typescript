@@ -33,6 +33,7 @@ Tudo que voê precisa é atualiza o seu arquivo **package.json**:
   "nuxt": "latest"
 },
 "devDependencies": {
+  "@nuxt/types": "latest",
   "@nuxt/typescript-build": "latest"
 }
 ```

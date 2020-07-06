@@ -7,9 +7,9 @@ Aqui están las guias para instalar y configurarlo.
 ## Instalación
 
 ```sh
-yarn add --dev @nuxt/typescript-build
+yarn add --dev @nuxt/typescript-build @nuxt/types
 # O
-npm install --save-dev @nuxt/typescript-build
+npm install --save-dev @nuxt/typescript-build @nuxt/types
 ```
 
 ## Configuración
@@ -26,10 +26,6 @@ export default {
 y crear un archivo **`tsconfig.json`** :
 
 <<< @/shared/tsconfig.json
-
-::: tip
-`@nuxt/typescript-build` incluye `@nuxt/types`, asi que no necesitas instalarlo de forma independiente.
-:::
 
 ::: tip
 

@@ -4,7 +4,7 @@ import { Nuxt } from '@nuxt/core-edge'
 import { Builder } from '@nuxt/builder-edge'
 import { BundleBuilder } from '@nuxt/webpack-edge'
 import { Configuration as WebpackConfiguration, RuleSetLoader } from 'webpack'
-import { Configuration } from '@nuxt/types'
+import { NuxtConfig, NuxtOptions } from '@nuxt/types'
 import { Options as TsLoaderOptions } from 'ts-loader'
 
 import tsModule from '../src'
@@ -18,7 +18,7 @@ jest.mock('fork-ts-checker-webpack-plugin', () => {
 
 interface BuilderInstance {
   nuxt: {
-    options: Configuration,
+    options: NuxtOptions,
     close(): void
   }
 
@@ -29,7 +29,7 @@ interface BuilderInstance {
   build(): void
 }
 
-const buildWithTsModule = async (config: Configuration = {}): Promise<BuilderInstance> => {
+const buildWithTsModule = async (config: NuxtConfig = {}): Promise<BuilderInstance> => {
   const nuxt = new Nuxt({
     build: {
       warningIgnoreFilters: []
@@ -57,8 +57,8 @@ describe('module', () => {
 
     expect(builder.nuxt.options.extensions).toContain('ts')
 
-    expect(builder.nuxt.options.build!.additionalExtensions).toHaveLength(2)
-    expect(builder.nuxt.options.build!.additionalExtensions).toEqual(['ts', 'tsx'])
+    expect(builder.nuxt.options.build.additionalExtensions).toHaveLength(2)
+    expect(builder.nuxt.options.build.additionalExtensions).toEqual(['ts', 'tsx'])
 
     expect(ForkTsCheckerWebpackPlugin).toHaveBeenCalledTimes(1)
   })
@@ -68,7 +68,7 @@ describe('module', () => {
       extensions: ['ts']
     })
 
-    expect(builder.nuxt.options.extensions!.filter(ext => ext === 'ts')).toHaveLength(1)
+    expect(builder.nuxt.options.extensions.filter(ext => ext === 'ts')).toHaveLength(1)
   })
 
   test('without typeCheck', async () => {
@@ -88,9 +88,9 @@ describe('module', () => {
       }
     })
 
-    expect(builder.nuxt.options.build!.warningIgnoreFilters).toHaveLength(1)
-    expect(builder.nuxt.options.build!.warningIgnoreFilters).toEqual([expect.any(Function)])
-    expect(builder.nuxt.options.build!.warningIgnoreFilters![0]({
+    expect(builder.nuxt.options.build.warningIgnoreFilters).toHaveLength(1)
+    expect(builder.nuxt.options.build.warningIgnoreFilters).toEqual([expect.any(Function)])
+    expect(builder.nuxt.options.build.warningIgnoreFilters![0]({
       name: 'ModuleDependencyWarning',
       message: 'export x was not found in y'
     })).toEqual(true)

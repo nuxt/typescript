@@ -53,14 +53,12 @@ TypeScript ESLint のルールを編集/上書きする必要がある場合は�
 export default {
   typescript: {
     typeCheck: {
-      eslint: true
+      eslint: {
+        files: './src/**/*.{ts,js,vue}'
+      }
     }
   }
 }
 ```
-
-::: tip
-`typeCheck.eslintOptions` で特定の ESLint オプションを指定することもできます。
-:::
 
 ファイルを保存するたびに、コードの型チェックと lint の両方が行われます。

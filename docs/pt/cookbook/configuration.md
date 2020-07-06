@@ -1,9 +1,9 @@
 # Configuração (Tempo de execução)
 
 ```ts
-import { Configuration } from '@nuxt/types'
+import { NuxtConfig } from '@nuxt/types'
 
-const config: Configuration = {
+const config: NuxtConfig = {
   // Defina sua configuração com preenchimento automático e verificação de tipo
 }
 

@@ -7,11 +7,10 @@
     "build": "lerna run build",
     "lint": "eslint --ext .ts,.tsx,.js,.vue .",
     "lint:fix": "yarn lint --fix",
-    "test": "yarn lint && yarn test:unit && yarn test:types",
-    "test:types": "tsc -p packages/types/test",
-    "test:unit": "jest"
+    "test": "yarn lint && jest"
   },
   "devDependencies": {
+    "@nuxt/types": "npm:@nuxt/types-edge@latest",
     "@nuxtjs/eslint-config-typescript": "latest",
     "@types/jest": "latest",
     "@vue/composition-api": "latest",

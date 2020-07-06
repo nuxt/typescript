@@ -168,8 +168,7 @@ function getMainSidebar (prefix, guide, cookbook) {
         prefix + '/cookbook/modules',
         prefix + '/cookbook/server-middlewares'
       ]
-    },
-    prefix + '/migration'
+    }
   ]
 }
 
@@ -209,7 +208,7 @@ function generateExampleMarkdown (apiName, level, options = {}) {
   content += `# ${apiName[0].toUpperCase()}${apiName.slice(1)} API example (${level})\n\n`
 
   if (!exampleExists) {
-    content += '### Coming Soon ...\n\n'
+    content += `### Contribute and propose your ${level} example on [Github](https://github.com/nuxt/typescript) !\n\n`
     content += `<!-- <Example name="${apiName}-api/${level}" /> -->\n`
   } else {
     content += `<Example name="${apiName}-api/${level}" />\n`

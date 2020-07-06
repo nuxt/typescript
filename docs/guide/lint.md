@@ -53,14 +53,12 @@ If you want to have runtime lint (having ESLint running after a file has been sa
 export default {
   typescript: {
     typeCheck: {
-      eslint: true
+      eslint: {
+        files: './src/**/*.{ts,js,vue}'
+      }
     }
   }
 }
 ```
-
-::: tip
-You can also give specific ESLint options with `typeCheck.eslintOptions`
-:::
 
 It will both type-check and lint your code whenever you're saving files.

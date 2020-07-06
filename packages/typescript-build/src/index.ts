@@ -6,8 +6,8 @@ import { ForkTsCheckerWebpackPluginOptions as TsCheckerOptions } from 'fork-ts-c
 import { RuleSetUseItem } from 'webpack'
 
 declare module '@nuxt/types' {
-  interface Configuration {
-    typescript?: Options
+  interface NuxtOptions {
+    typescript: Options
   }
 }
 
@@ -34,17 +34,17 @@ const tsModule: Module<Options> = function (moduleOptions) {
   )
 
   // Change color of CLI banner
-  this.options.cli!.bannerColor = 'blue'
+  this.options.cli.bannerColor = 'blue'
 
-  if (!this.options.extensions!.includes('ts')) {
-    this.options.extensions!.push('ts')
+  if (!this.options.extensions.includes('ts')) {
+    this.options.extensions.push('ts')
   }
 
   // Extend Builder to handle .ts/.tsx files as routes and watch them
-  this.options.build!.additionalExtensions = ['ts', 'tsx']
+  this.options.build.additionalExtensions = ['ts', 'tsx']
 
   if (options.ignoreNotFoundWarnings) {
-    this.options.build!.warningIgnoreFilters!.push(warn =>
+    this.options.build.warningIgnoreFilters!.push(warn =>
       warn.name === 'ModuleDependencyWarning' && /export .* was not found in /.test(warn.message)
     )
   }
@@ -64,7 +64,7 @@ const tsModule: Module<Options> = function (moduleOptions) {
             loader: 'ts-loader',
             options: {
               transpileOnly: true,
-              [`append${ext.charAt(0).toUpperCase() + ext.slice(1)}SuffixTo`]: [/\.vue$/],
+              appendTsxSuffixTo: ext === 'tsx' ? [/\.vue$/] : [],
               ...(options.loaders && options.loaders[ext])
             }
           }

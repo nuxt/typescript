@@ -8,7 +8,7 @@ O suporte do Nuxt TypeScript, vem com 2 pacotes :
 
 Contém as definições de tipo do Nuxt TypeScript.
 
-Ele é enviado através pacotes **@nuxt/typescript-build** e **@nuxt/typescript-runtime**.
+Eles são mantidos ao longo do código principal do Nuxt em [`nuxt/nuxt.js` repositório](https://github.com/nuxt/nuxt.js/tree/dev/packages/types).
 :::
 
 ::: tip @nuxt/typescript-build

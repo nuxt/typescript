@@ -53,14 +53,12 @@ Se você quiser ter o lint em tempo de execução (tendo ESLint funcionando depo
 export default {
   typescript: {
     typeCheck: {
-      eslint: true
+      eslint: {
+        files: './src/**/*.{ts,js,vue}'
+      }
     }
   }
 }
 ```
-
-::: tip
-Você também pode oferecer opções específicas de ESLint com `typeCheck.eslintOptions`
-:::
 
 Ele vai verificar o tipo e verificar seu código sempre que você estiver salvando arquivos.

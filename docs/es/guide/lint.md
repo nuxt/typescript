@@ -53,14 +53,12 @@ Si usted desea tener una runtime lint (teniendo ESLint corriendo despues de que 
 export default {
   typescript: {
     typeCheck: {
-      eslint: true
+      eslint: {
+        files: './src/**/*.{ts,js,vue}'
+      }
     }
   }
 }
 ```
-
-::: tip
-Usted tambien puede dar opciones especificas de ESLint con `typeCheck.eslintOptions`
-:::
 
 Esto va a verificar los tipos y va a lintear su código cada vez que guarde archivos.

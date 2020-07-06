@@ -53,14 +53,12 @@ module.exports = {
 export default {
   typescript: {
     typeCheck: {
-      eslint: true
+      eslint: {
+        files: './src/**/*.{ts,js,vue}'
+      }
     }
   }
 }
 ```
-
-::: tip
-你也可以透過 `typeCheck.eslintOptions` 來設定自定義的 ESLint 選項。
-:::
 
 當你每次存檔時，都會進行 型別檢查 和 校驗你的程式碼。
