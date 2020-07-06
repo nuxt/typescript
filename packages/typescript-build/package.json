@@ -21,7 +21,7 @@
     "typescript": "~3.9"
   },
   "peerDependencies": {
-    "@nuxt/types": ">=2.13.1"
+    "@nuxt/types": ">=2.13.3"
   },
   "publishConfig": {
     "access": "public"
