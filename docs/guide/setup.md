@@ -21,6 +21,13 @@ yarn add --dev @nuxt/types@2.13.2
 npm install --save-dev @nuxt/types@2.13.2
 ```
 
+If you're using `nuxt-edge` :
+```sh
+yarn add --dev @nuxt/types@npm:@nuxt/types-edge
+# OR
+npm install --save-dev @nuxt/types@npm:@nuxt/types-edge
+```
+
 Types versioning match Nuxt versioning since [2.13.0](https://github.com/nuxt/nuxt.js/releases/tag/v2.13.0).
 :::
 
