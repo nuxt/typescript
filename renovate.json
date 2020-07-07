@@ -9,6 +9,7 @@
     "dependencies"
   ],
   "ignoreDeps": [
+    "@nuxt/types",
     "typescript"
   ]
 }
