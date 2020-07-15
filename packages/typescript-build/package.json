@@ -17,7 +17,7 @@
   "dependencies": {
     "consola": "^2.14.0",
     "fork-ts-checker-webpack-plugin": "^5.0.7",
-    "ts-loader": "^7.0.5",
+    "ts-loader": "^8.0.1",
     "typescript": "~3.9"
   },
   "peerDependencies": {
