@@ -2063,9 +2063,9 @@
     std-env "^2.2.1"
 
 "@nuxt/types@npm:@nuxt/types-edge@latest":
-  version "2.14.0-26582020.6ab65fbf"
-  resolved "https://registry.yarnpkg.com/@nuxt/types-edge/-/types-edge-2.14.0-26582020.6ab65fbf.tgz#2145cd0c90fe0a14b1480e46a251cb8a91cfa421"
-  integrity sha512-Q0Wxj+ysmx0E35px7zWYB/o6FHt7yN+xrapMH3VGXewuRvkkq0TvYZ8Zspw0xZCn7LtXCFpnXQkBDwYgsTBBuw==
+  version "2.13.4-26566360.4833915a"
+  resolved "https://registry.yarnpkg.com/@nuxt/types-edge/-/types-edge-2.13.4-26566360.4833915a.tgz#37e66ca03bb640bd8417fa95309442f590be67b5"
+  integrity sha512-/ilSXDx/eG7+B8tvxjXQfT4HsHQrQBaDlMS4Qn7NCySRR0gN2WRRpEl9qqZNH99n54O21dh94hTUXYVm4Va5lw==
   dependencies:
     "@types/autoprefixer" "^9.7.2"
     "@types/babel__core" "^7.1.9"
@@ -2075,13 +2075,13 @@
     "@types/file-loader" "^4.2.0"
     "@types/html-minifier" "^4.0.0"
     "@types/less" "^3.0.1"
-    "@types/node" "^12.12.50"
+    "@types/node" "^12.12.47"
     "@types/node-sass" "^4.11.1"
     "@types/optimize-css-assets-webpack-plugin" "^5.0.1"
     "@types/pug" "^2.0.4"
     "@types/serve-static" "^1.13.4"
     "@types/terser-webpack-plugin" "^2.2.0"
-    "@types/webpack" "^4.41.21"
+    "@types/webpack" "^4.41.18"
     "@types/webpack-bundle-analyzer" "^3.8.0"
     "@types/webpack-dev-middleware" "^3.7.1"
     "@types/webpack-hot-middleware" "^2.25.3"
@@ -2560,7 +2560,7 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.26.tgz#22a3b8a46510da8944b67bfc27df02c34a35331c"
   integrity sha512-W+fpe5s91FBGE0pEa0lnqGLL4USgpLgs4nokw16SrBBco/gQxuua7KnArSEOd5iaMqbbSHV10vUDkJYJJqpXKA==
 
-"@types/node@^12.12.50":
+"@types/node@^12.12.47":
   version "12.12.53"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.53.tgz#be0d375933c3d15ef2380dafb3b0350ea7021129"
   integrity sha512-51MYTDTyCziHb70wtGNFRwB4l+5JNvdqzFSkbDvpbftEgVUBEE+T5f7pROhWMp/fxp07oNIEQZd5bbfAH22ohQ==
@@ -2684,7 +2684,7 @@
     "@types/source-list-map" "*"
     source-map "^0.7.3"
 
-"@types/webpack@*", "@types/webpack@^4.41.21", "@types/webpack@^4.41.8":
+"@types/webpack@*", "@types/webpack@^4.41.18", "@types/webpack@^4.41.8":
   version "4.41.21"
   resolved "https://registry.yarnpkg.com/@types/webpack/-/webpack-4.41.21.tgz#cc685b332c33f153bb2f5fc1fa3ac8adeb592dee"
   integrity sha512-2j9WVnNrr/8PLAB5csW44xzQSJwS26aOnICsP3pSGCEdsu6KYtfQ6QJsVUKHWRnm1bL7HziJsfh5fHqth87yKA==
