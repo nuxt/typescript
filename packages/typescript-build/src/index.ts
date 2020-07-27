@@ -61,7 +61,7 @@ const tsModule: Module<Options> = function (moduleOptions) {
         use: [
           babelLoader,
           {
-            loader: 'ts-loader',
+            loader: require.resolve('ts-loader'),
             options: {
               transpileOnly: true,
               appendTsxSuffixTo: ext === 'tsx' ? [/\.vue$/] : [],
@@ -73,7 +73,7 @@ const tsModule: Module<Options> = function (moduleOptions) {
     ))
 
     if (options.typeCheck && isClient && !isModern) {
-      const ForkTsCheckerWebpackPlugin = require(this.nuxt.resolver.resolveModule('fork-ts-checker-webpack-plugin'))
+      const ForkTsCheckerWebpackPlugin = require(require.resolve('fork-ts-checker-webpack-plugin'))
       config.plugins!.push(new ForkTsCheckerWebpackPlugin(Object.assign({
         typescript: {
           configFile: path.resolve(this.options.rootDir!, 'tsconfig.json'),
