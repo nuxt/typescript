@@ -112,12 +112,12 @@ describe('module', () => {
 
     const webpackConfig = builder.bundleBuilder.getWebpackConfig('Client')
 
-    const tsLoader = (webpackConfig.module!.rules.find(r => (r.test as RegExp).test('file.ts'))!.use as RuleSetLoader[]).find(u => u.loader === 'ts-loader')
+    const tsLoader = (webpackConfig.module!.rules.find(r => (r.test as RegExp).test('file.ts'))!.use as RuleSetLoader[]).find(u => u.loader?.includes('/node_modules/ts-loader/'))
 
     expect(tsLoader).toBeDefined()
     expect((tsLoader!.options as TsLoaderOptions).transpileOnly).toBe(false)
 
-    const tsxLoader = (webpackConfig.module!.rules.find(r => (r.test as RegExp).test('file.tsx'))!.use as RuleSetLoader[]).find(u => u.loader === 'ts-loader')
+    const tsxLoader = (webpackConfig.module!.rules.find(r => (r.test as RegExp).test('file.tsx'))!.use as RuleSetLoader[]).find(u => u.loader?.includes('/node_modules/ts-loader/'))
 
     expect(tsxLoader).toBeDefined()
     expect((tsxLoader!.options as TsLoaderOptions).transpileOnly).toBe(false)
