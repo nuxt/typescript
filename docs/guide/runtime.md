@@ -46,7 +46,7 @@ You can now use TypeScript for **nuxt.config** file, local **modules** and **ser
 
 ::: warning
 
-`@nuxt/typescript-runtime` does not support programmatic usage (as it extends `@nuxt/cli`). 
+`@nuxt/typescript-runtime` does not support programmatic usage (as it extends `@nuxt/cli`).
 
 Advanced users might try adding the following code to your server entrypoint (see [source](https://github.com/nuxt/typescript/blob/master/packages/typescript-runtime/src/index.ts)):
 

@@ -26,6 +26,11 @@ module.exports = {
       lang: 'zh-Hant',
       title: 'Nuxt TypeScript',
       description: 'Nuxt.js 的 Typescript 支援'
+    },
+    '/zh-Hans/' : {
+      lang: 'zh-Hans',
+      title: 'Nuxt TypeScript',
+      description: 'Nuxt.js 的 Typescript 支持'
     }
   },
   plugins: [
@@ -136,6 +141,25 @@ module.exports = {
           },
           {
             text: '範例',
+            link: '/examples/options-api/minimal'
+          }
+        ]
+      },
+      '/zh-Hans/': {
+        label: '简体中文',
+        selectText: '语言',
+        editLinkText: '在 GitHub 上编辑此页',
+        sidebar: {
+          '/examples': getExamplesSidebar(),
+          '/zh-Hans/': getMainSidebar('/zh-Hans', '快速入门', '更多使用方式')
+        },
+        nav: [
+          {
+            text: '指南',
+            link: '/zh-Hans/guide/'
+          },
+          {
+            text: '示例',
             link: '/examples/options-api/minimal'
           }
         ]
