@@ -5,6 +5,8 @@
 ### Plugin
 
 ```ts
+import 'vue'
+
 declare module 'vue/types/vue' {
   interface Vue {
     $myInjectedFunction(message: string): void
@@ -74,6 +76,8 @@ export default Vue.extend({
 ### Plugin
 
 ```ts
+import 'vue'
+import 'vuex'
 import { Plugin } from '@nuxt/types'
 
 declare module 'vue/types/vue' {
