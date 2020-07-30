@@ -1,9 +1,9 @@
 # Configuration (Runtime)
 
 ```ts
-import { NuxtConfig } from '@nuxt/types'
+import { Configuration } from '@nuxt/types'
 
-const config: NuxtConfig = {
+const config: Configuration = {
   // Define your configuration with auto-completion & type checking
 }
 
