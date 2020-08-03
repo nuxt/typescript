@@ -6206,10 +6206,10 @@ forever-agent@~0.6.1:
   resolved "https://registry.yarnpkg.com/forever-agent/-/forever-agent-0.6.1.tgz#fbc71f0c41adeb37f96c577ad1ed42d8fdacca91"
   integrity sha1-+8cfDEGt6zf5bFd60e1C2P2sypE=
 
-fork-ts-checker-webpack-plugin@^5.0.11:
-  version "5.0.11"
-  resolved "https://registry.yarnpkg.com/fork-ts-checker-webpack-plugin/-/fork-ts-checker-webpack-plugin-5.0.11.tgz#40a49a45403910c118c6ae7f3415dbdb317e4574"
-  integrity sha512-7QFCTfjayFhoX7uxncnHHi3ICWwffUQMoYaHldElA6wYy/9aDTsRIi6QcS8MDAkZa7xdDyv0YKuqcGYjAzboyQ==
+fork-ts-checker-webpack-plugin@^5.0.14:
+  version "5.0.14"
+  resolved "https://registry.yarnpkg.com/fork-ts-checker-webpack-plugin/-/fork-ts-checker-webpack-plugin-5.0.14.tgz#83758b733ccd5d6e5780a72a5d5f099c353c108d"
+  integrity sha512-iwRdjgZx1Ll0DAMhmtOF4ffoICpiUxOqOHLrbIHmeCtZiwCrL/qscm+EXOJyzj3a9X8hLRLDEHy9FOyD6Gm42g==
   dependencies:
     "@babel/code-frame" "^7.8.3"
     "@types/json-schema" "^7.0.5"
@@ -12391,10 +12391,10 @@ ts-jest@latest:
     semver "7.x"
     yargs-parser "18.x"
 
-ts-loader@^8.0.1:
-  version "8.0.1"
-  resolved "https://registry.yarnpkg.com/ts-loader/-/ts-loader-8.0.1.tgz#9670dcbce2a8c8506d01a37fee042350d02c8c21"
-  integrity sha512-I9Nmly0ufJoZRMuAT9d5ijsC2B7oSPvUnOJt/GhgoATlPGYfa17VicDKPcqwUCrHpOkCxr/ybLYwbnS4cOxmvQ==
+ts-loader@^8.0.2:
+  version "8.0.2"
+  resolved "https://registry.yarnpkg.com/ts-loader/-/ts-loader-8.0.2.tgz#ee73ca9350f745799396fff8578ba29b1e95616b"
+  integrity sha512-oYT7wOTUawYXQ8XIDsRhziyW0KUEV38jISYlE+9adP6tDtG+O5GkRe4QKQXrHVH4mJJ88DysvEtvGP65wMLlhg==
   dependencies:
     chalk "^2.3.0"
     enhanced-resolve "^4.0.0"
