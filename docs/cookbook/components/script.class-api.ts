@@ -2,7 +2,7 @@ import { Vue, Component, Prop } from 'vue-property-decorator'
 
 interface User {
   firstName: string
-  lastName: number
+  lastName: string
 }
 
 @Component

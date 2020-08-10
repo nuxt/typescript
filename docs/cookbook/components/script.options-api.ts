@@ -2,7 +2,7 @@ import Vue, { PropOptions } from 'vue'
 
 interface User {
   firstName: string
-  lastName: number
+  lastName: string
 }
 
 export default Vue.extend({

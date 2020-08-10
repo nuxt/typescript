@@ -2,7 +2,7 @@ import { defineComponent, computed, ref } from '@vue/composition-api'
 
 interface User {
   firstName: string
-  lastName: number
+  lastName: string
 }
 
 export default defineComponent({
