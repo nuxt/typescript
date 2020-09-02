@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/nuxt/typescript/compare/@nuxt/typescript-runtime@1.0.0...@nuxt/typescript-runtime@2.0.0) (2020-09-02)
+
+
+### chore
+
+* **deps:** upgrade ts-node to v9 ([380eccc](https://github.com/nuxt/typescript/commit/380eccce6059ee819a381063540ca39c554f0b54))
+
+
+### BREAKING CHANGES
+
+* **deps:** Drops support for Node versions < 10
+
+
+
+
+
 # [1.0.0](https://github.com/nuxt/typescript/compare/@nuxt/typescript-runtime@0.4.10...@nuxt/typescript-runtime@1.0.0) (2020-07-06)
 
 
