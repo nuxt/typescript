@@ -197,16 +197,12 @@ Alternatively, you can provide your own types at the point of use.
 <script lang="ts">
 
 import { Component, Vue } from 'nuxt-property-decorator'
-import { getters, RootState } from '~/store'
+import { RootState } from '~/store'
 
 @Component
 export default class MyComponent extends Vue {
     get myThings() {
         return (this.$store.state as RootState).things
-    }
-
-    mounted() {
-        const name = this.$store.getters['name'] as ReturnType<typeof getters.name>
     }
 }
 ```

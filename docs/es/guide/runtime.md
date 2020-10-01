@@ -43,3 +43,24 @@ Todo lo que necesitas es actualizar tu archivo **package.json**:
 :::
 
 Usted puede ahora usar TypeScript para el archivo **nuxt.config**, **modulos** locales y **serverMiddlewares**.
+
+::: warning
+
+`@nuxt/typescript-runtime` no soporta uso programado (como esto extiende de `@nuxt/cli`).
+
+Los usuarios avanzados pueden intentar agregar el siguiente código al punto de entrada de su servidor (ver [fuente](https://github.com/nuxt/typescript/blob/master/packages/typescript-runtime/src/index.ts)):
+
+```js
+import { register } from 'ts-node'
+
+register({
+  project: 'tsconfig.json',
+  compilerOptions: {
+    module: 'commonjs'
+  },
+  transpileOnly: true
+})
+```
+
+Igualmente, esto es **no recomendado o soportado**.
+:::
