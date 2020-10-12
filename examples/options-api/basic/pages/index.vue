@@ -1,29 +1,33 @@
 <template>
   <div class="container">
-     <button @click="increment">Increment</button>
+    <button @click="increment">
+      Increment
+    </button>
     <p>Counter : {{ counter }}</p>
-    <button @click="decrement">Decrement</button>
+    <button @click="decrement">
+      Decrement
+    </button>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import Vue from 'vue'
 
 export default Vue.extend({
-  data() {
+  data () {
     return {
-      counter: 0,
-    };
-  },
-  methods: {
-    increment() {
-      return this.counter++;
-    },
-    decrement() {
-      return this.counter--;
+      counter: 0
     }
   },
-});
+  methods: {
+    increment () {
+      return this.counter++
+    },
+    decrement () {
+      return this.counter--
+    }
+  }
+})
 </script>
 
 <style>

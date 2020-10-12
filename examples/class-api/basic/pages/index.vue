@@ -1,8 +1,12 @@
 <template>
   <div class="container">
-     <button @click="increment">Increment</button>
+    <button @click="increment">
+      Increment
+    </button>
     <p>Counter : {{ counter }}</p>
-    <button @click="decrement">Decrement</button>
+    <button @click="decrement">
+      Decrement
+    </button>
   </div>
 </template>
 
@@ -13,11 +17,11 @@ import { Vue, Component } from 'vue-property-decorator'
 export default class ClassAPICounter extends Vue {
   counter = 0
 
-  increment() {
+  increment () {
     this.counter++
   }
 
-  decrement(){
+  decrement () {
     this.counter--
   }
 }
