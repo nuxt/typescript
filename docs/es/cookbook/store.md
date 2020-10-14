@@ -8,9 +8,6 @@ Existen varias formas diferentes de escribir y acceder al store en un proyecto d
 
 Uno de los enfoques más popular es [vuex-module-decorators](https://github.com/championswimmer/vuex-module-decorators) - ver la [guía](https://championswimmer.in/vuex-module-decorators/).
 
-::: warning
-Esto tiene un problema serio de seguridad con `nuxt-module-decorators`: existe un cross-request state pollution - por ello usted necesita estar seguro que no exista informacion especifica a la petición en el store del SSR. Ver [este PR](https://github.com/championswimmer/vuex-module-decorators/pull/157) para revisar el estado de este error.
-:::
 
 Para usar con Nuxt, existen pocos puntos claves:
 
@@ -155,6 +152,31 @@ export const actions: ActionTree<RootState, RootState> = {
 }
 ```
 
+Usted deberia hacer exactamente lo mismo para un modulo. Por ejemplo:
+
+`~/store/anotherModule.ts`:
+```ts
+import { GetterTree, ActionTree, MutationTree } from 'vuex'
+import { RootState } from '~/store'
+
+export const state = () => ({
+  more: 3,
+})
+
+export type AnotherModuleState = ReturnType<typeof state>
+
+export const getters: GetterTree<AnotherModuleState, RootState> = {
+  evenMore: state => state.more + 5,
+  nameAndMore: (state, getters, rootState) => `${rootState.name}: ${state.more}`,
+}
+
+export const actions: ActionTree<AnotherModuleState, RootState> = {
+  printRootState({ rootState }) {
+    console.log('accessing rootState:', rootState.name)
+  },
+}
+```
+
 ### Accediendo al store
 
 #### `nuxt-typed-vuex`
@@ -173,12 +195,16 @@ Alternativamente, usted puede proveer sus propios tipos como un punto de uso.
 <script lang="ts">
 
 import { Component, Vue } from 'nuxt-property-decorator'
-import { RootState } from '~/store'
+import { getters, RootState } from '~/store'
 
 @Component
 export default class MyComponent extends Vue {
     get myThings() {
         return (this.$store.state as RootState).things
+    }
+
+    mounted() {
+        const name = this.$store.getters['name'] as ReturnType<typeof getters.name>
     }
 }
 ```
