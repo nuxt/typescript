@@ -1,4 +1,9 @@
-# モジュール（ランタイム）
+---
+title: モジュール（ランタイム）
+position: 27
+description: TypeScript Support for Nuxt.js
+category: ''
+---
 
 ```ts
 import { Module } from '@nuxt/types'

@@ -1,8 +1,8 @@
 ---
 title: Configuration (Runtime)
-position: ''
-description:  TypeScript Support for Nuxt.js
-category: ''
+position: 26
+description: TypeScript Support for Nuxt.js
+category: Cookbook
 ---
 
 ```ts

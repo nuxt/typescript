@@ -1,4 +1,9 @@
-# セットアップ
+---
+title: セットアップ
+position: 11
+description: TypeScript Support for Nuxt.js
+category: ガイド
+---
 
 Nuxt TypeScript サポートは主に Nuxt モジュールである **@nuxt/typescript-build** を通して行われます。
 
@@ -6,18 +11,28 @@ Nuxt TypeScript サポートは主に Nuxt モジュールである **@nuxt/type
 
 ## インストール
 
+<code-group>
+<code-block label="Yarn">
+
 ```sh
 yarn add --dev @nuxt/typescript-build @nuxt/types
-# または
+```
+
+</code-block>
+<code-block label="NPM">
+
+```sh
 npm install --save-dev @nuxt/typescript-build @nuxt/types
 ```
+
+</code-block>
+</code-group>
 
 ## 設定
 
 必要なことは、**`nuxt.config.js`** 内の **`buildModules`** に **`@nuxt/typescript-build`** を追加することです。
 
-```js
-// nuxt.config.js
+```js{}[nuxt.config.js]
 export default {
   buildModules: ['@nuxt/typescript-build']
 }
@@ -25,32 +40,37 @@ export default {
 
 そして、**`tsconfig.json`** ファイルを作成します：
 
-<<< @/shared/tsconfig.json
+<inject-code query="shared/tsconfig.json"></inject-code>
 
-::: tip
+<alert type="info">
+
 現時点では **ESNext** が [**Optional Chaining**](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#optional-chaining) と [**Nullish Coalescing**](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#nullish-coalescing) をサポートしていないようです。これらの機能を使えるようにするためにターゲットに **ES2018** を指定する必要があることに注意してください。
-:::
+
+</alert>
 
 また、以下の型宣言を追加し Vue ファイルの型を提供する必要があります：
 
-`vue-shim.d.ts`:
-```ts 
+```js{}[vue-shim.d.ts]
 declare module "*.vue" {
   import Vue from 'vue'
   export default Vue
 }
 ```
 
-::: tip
-このファイルはプロジェクトのルートディレクトリか `types` という名前のディレクトリに配置できます。カスタムディレクトリにも配置できますが、その場合は `tsconfig.json` ファイルに [`typeRoots`](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html#types-typeroots-and-types) を設定する必要があります。
-:::
+<alert type="info">
 
-::: tip
+このファイルはプロジェクトのルートディレクトリか `types` という名前のディレクトリに配置できます。カスタムディレクトリにも配置できますが、その場合は `tsconfig.json` ファイルに [`typeRoots`](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html#types-typeroots-and-types) を設定する必要があります。
+
+</alert>
+
+<alert type="info">
 
 さまざまなコンパイラオプションについては、公式の [TypeScript ドキュメント](https://www.typescriptlang.org/docs/handbook/compiler-options.html)を確認してください。
-:::
 
-::: warning
+</alert>
+
+<alert type="warning">
+
 
 独自のサーバーフレームワークで Nuxt をプログラムにより使用している場合、ビルドを行う前に Nuxt の準備ができるまで待機する必要があることに注意してください：
 
@@ -64,7 +84,8 @@ if (config.dev) {
   await builder.build()
 }
 ```
-:::
+
+</alert>
 
 これで **layouts**、**components**、**plugins** と **middlewares** で TypeScript が使えるように設定できました。
 

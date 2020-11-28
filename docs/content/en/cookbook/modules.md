@@ -1,8 +1,8 @@
 ---
 title: Modules (Runtime)
-position: ''
-description:  TypeScript Support for Nuxt.js
-category: ''
+position: 27
+description: TypeScript Support for Nuxt.js
+category: Cookbook
 ---
 
 ```ts

@@ -1,4 +1,9 @@
-# Lint
+---
+title: Lint
+position: 13
+description: TypeScript Support for Nuxt.js
+category: 導覽
+---
 
 ## 設定
 
@@ -6,15 +11,28 @@
 
 你只需要安裝 `@nuxtjs/eslint-config-typescript`:
 
-::: tip
+<alert type="info">
+
 Nuxt TypeScript ESLint 的設定檔已經包含 `@nuxtjs/eslint-config`，如果你正在使用，請先移除這個依賴套件。
-:::
+
+</alert>
+
+<code-group>
+<code-block label="Yarn">
 
 ```sh
 yarn add -D @nuxtjs/eslint-config-typescript
-# 或
+```
+
+</code-block>
+<code-block label="NPM">
+
+```sh
 npm i -D @nuxtjs/eslint-config-typescript
 ```
+
+</code-block>
+</code-group>
 
 然後，建立或編輯 `.eslintrc.js` 讓他擴展 (extends) 自 `@nuxtjs/eslint-config-typescript` :
 ```js
@@ -24,11 +42,13 @@ module.exports = {
   ]
 }
 ```
-::: warning 
+<alert type="warning">
+ 
 因為這樣做會使 ESlint 使用 ([`@typescript-eslint/parser`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser)) 當作語法分析器，請確保 `parserOptions.parser` 這個選項並沒有被其他的擴展 (extends) 設定給覆蓋。
 
 如果你正在使用 `babel-eslint` 當作你的語法分析器，請把他從 `.eslintrc.js` 和你的依賴套件中移除。
-:::
+
+</alert>
 
 最後，編輯 `package.json` 中的 `lint` 指令。
 
@@ -40,16 +60,17 @@ module.exports = {
 
 現在就可以透過執行 `npm run lint (或 yarn lint)` 來檢驗你的 TypeScript 檔案。
 
-::: tip
+<alert type="info">
+
 如果你需要 編輯/覆蓋 TypeScript ESLint 規則，你可以在 [這裏](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#supported-rules) 找到所有支援的規則。
-:::
+
+</alert>
 
 ## Runtime 校驗
 
 如果你想要在 runtime 時進行校驗 (存檔後立刻執行 ESLint)，你可以在 `typeCheck` 模組選項中設定並啟用 [fork-ts-checker-webpack-plugin](https://github.com/TypeStrong/fork-ts-checker-webpack-plugin)。
 
-```ts
-// nuxt.config.js
+```ts{}[nuxt.config.js]
 export default {
   typescript: {
     typeCheck: {

@@ -1,4 +1,9 @@
-# Componentes
+---
+title: Componentes
+position: ''
+description: TypeScript Support for Nuxt.js
+category: ''
+---
 
 En [**Single File Components (SFC)**](https://vuejs.org/v2/guide/single-file-components.html), los tags `script` deben especificar el lenguaje `ts`:
 ```html
@@ -9,7 +14,7 @@ En [**Single File Components (SFC)**](https://vuejs.org/v2/guide/single-file-com
 
 ## Template
 
-<<< @/cookbook/components/template.html
+<inject-code query="shared/cookbook/components/template.html"></inject-code>
 
 ## Script
 
@@ -17,25 +22,25 @@ En [**Single File Components (SFC)**](https://vuejs.org/v2/guide/single-file-com
 <tabs :options="{ useUrlFragment: false }">
   <tab name="Options API">  
 
-<<< @/cookbook/components/script.options-api.ts
+<inject-code query="shared/cookbook/components/script.options-api.ts"></inject-code>
 
   </tab>
   <tab name="Composition API">
 
 Usando el plugin [@vue/composition-api](https://github.com/vuejs/composition-api)
 
-::: tip Instalacion del Plugin
+<alert type="info">
 
-```js
-// plugins/composition-api.js
+**Instalacion del Plugin**
+
+```js{}[plugins/composition-api.js]
 import Vue from 'vue'
 import VueCompositionApi from '@vue/composition-api'
 
 Vue.use(VueCompositionApi)
 ```
 
-```js
-// nuxt.config.js
+```js{}[nuxt.config.js]
 export default {
   plugins: ['@/plugins/composition-api']
 }
@@ -43,16 +48,17 @@ export default {
 
 La instalación de este plugin es obligatorio para que la función `setup` funcione en componentes.
 
-:::
 
-<<< @/cookbook/components/script.composition-api.ts
+</alert>
+
+<inject-code query="shared/cookbook/components/script.composition-api.ts"></inject-code>
 
   </tab>
   <tab name="Class API">  
 
 Usando [vue-class-component](https://github.com/vuejs/vue-class-component) mediante [vue-property-decorator](https://github.com/kaorun343/vue-property-decorator)
 
-<<< @/cookbook/components/script.class-api.ts
+<inject-code query="shared/cookbook/components/script.class-api.ts"></inject-code>
 
   </tab>
 </tabs>

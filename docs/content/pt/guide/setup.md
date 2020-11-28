@@ -1,4 +1,9 @@
-# Configuração
+---
+title: Configuração
+position: 11
+description: TypeScript Support for Nuxt.js
+category: Guia
+---
 
 O suporte do Nuxt TypeScript vem principalmente através de um módulo Nuxt, **@nuxt/typescript-build**.
 
@@ -6,18 +11,28 @@ Aqui estão as orientações para sua instalar e configurá-lo.
 
 ## Instalação
 
+<code-group>
+<code-block label="Yarn">
+
 ```sh
 yarn add --dev @nuxt/typescript-build @nuxt/types
-# OU
+```
+
+</code-block>
+<code-block label="NPM">
+
+```sh
 npm install --save-dev @nuxt/typescript-build @nuxt/types
 ```
+
+</code-block>
+</code-group>
 
 ## Configuração
 
 Tudo o que você precisa é adicionar **`@nuxt/typescript-build`** ao seu **`buildModules`**  no arquivo **`nuxt.config.js`**
 
-```js
-// nuxt.config.js
+```js{}[nuxt.config.js]
 export default {
   buildModules: ['@nuxt/typescript-build']
 }
@@ -25,12 +40,13 @@ export default {
 
 e criar um arquivo **`tsconfig.json`** :
 
-<<< @/shared/tsconfig.json
+<inject-code query="shared/tsconfig.json"></inject-code>
 
-::: tip
+<alert type="info">
 
 Verifique a documentação oficial do [TypeScript](https://www.typescriptlang.org/docs/handbook/compiler-options.html) para saber mais sobre as diferentes opções do compilador.
-:::
+
+</alert>
 
 É isso, você está pronto para usar o TypeScrip em seus **layouts**, **componentes**, **plugins** e **middlewares**.
 

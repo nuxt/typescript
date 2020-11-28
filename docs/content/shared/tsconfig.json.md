@@ -1,4 +1,4 @@
-// tsconfig.json
+```json{}[tsconfig.json]
 {
   "compilerOptions": {
     "target": "ES2018",
@@ -32,3 +32,4 @@
     "node_modules"
   ]
 }
+```

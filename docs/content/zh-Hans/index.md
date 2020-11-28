@@ -1,5 +1,10 @@
 ---
-home: true
+position: 1
+title: ''
+menuTitle: Introduction
+fullscreen: true
+category: ''
+description: TypeScript Support for Nuxt.js
 heroImage: /assets/logo.svg
 actionText: 快速入门 →
 actionLink: /zh-Hans/guide/

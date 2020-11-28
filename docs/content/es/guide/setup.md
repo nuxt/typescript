@@ -1,4 +1,9 @@
-# Preparación
+---
+title: Preparación
+position: 11
+description: TypeScript Support for Nuxt.js
+category: Guía
+---
 
 El soporte de Typescript en Nuxt viene principalmente mediante un módulo de Nuxt, **@nuxt/typescript-build**.
 
@@ -6,13 +11,26 @@ Aqui están las guias para instalar y configurarlo.
 
 ## Instalación
 
+<code-group>
+<code-block label="Yarn">
+
 ```sh
 yarn add --dev @nuxt/typescript-build @nuxt/types
-# O
+```
+
+</code-block>
+<code-block label="NPM">
+
+```sh
 npm install --save-dev @nuxt/typescript-build @nuxt/types
 ```
 
-::: tip Types version
+</code-block>
+</code-group>
+
+<alert type="info">
+
+**Types version**
 Si usted quiere instalar versiones especifica de los types para coincidir con tu version de Nuxt que no es la más reciente :
 
 ```sh
@@ -29,14 +47,14 @@ npm install --save-dev @nuxt/types@npm:@nuxt/types-edge
 ```
 
 El versionamiento de los types coincide con el versionamiento de Nuxt desde la version [2.13.0](https://github.com/nuxt/nuxt.js/releases/tag/v2.13.0).
-:::
+
+</alert>
 
 ## Configuración
 
 Todo lo que necesitas es agregar **`@nuxt/typescript-build`** a tus **`buildModules`** en **`nuxt.config.js`**
 
-```js
-// nuxt.config.js
+```js{}[nuxt.config.js]
 export default {
   buildModules: ['@nuxt/typescript-build']
 }
@@ -44,32 +62,37 @@ export default {
 
 y crear un archivo **`tsconfig.json`** :
 
-<<< @/shared/tsconfig.json
+<inject-code query="shared/tsconfig.json"></inject-code>
 
-::: tip
+<alert type="info">
+
 Notese que el target **ES2018** es necesario para usar el [**Optional Chaining**](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#optional-chaining) y [**Nullish Coalescing**](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#nullish-coalescing), porque el target **ESNext** parece no soportar estas funciones actualmente.
-:::
+
+</alert>
 
 Usted tambien debe proveer los types para los archivos de Vue añadiendo la siguiente declaracion de types:
 
-`vue-shim.d.ts`:
-```ts 
+```js{}[vue-shim.d.ts]
 declare module "*.vue" {
   import Vue from 'vue'
   export default Vue
 }
 ```
 
-::: tip
-Usted puede poner este archivo en el directorio raiz de tu proyecto o en una carpeta llamada `types`. Usted tambien puede poner en un directorio personalizado, pero va tener que configurar el [`typeRoots`](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html#types-typeroots-and-types) en el archivo `tsconfig.json`.
-:::
+<alert type="info">
 
-::: tip
+Usted puede poner este archivo en el directorio raiz de tu proyecto o en una carpeta llamada `types`. Usted tambien puede poner en un directorio personalizado, pero va tener que configurar el [`typeRoots`](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html#types-typeroots-and-types) en el archivo `tsconfig.json`.
+
+</alert>
+
+<alert type="info">
 
 Revisar la [documentación oficial de TypeScript](https://www.typescriptlang.org/docs/handbook/compiler-options.html) para aprender acerca de las diferentes opciones del compilador.
-:::
 
-::: warning
+</alert>
+
+<alert type="warning">
+
 
 Si usted esta usando Nuxt de forma personalizada con un framework de servidor personalizado, notesé que usted necesitara asegurarse de esperar que Nuxt este listo antes de construirlo:
 
@@ -83,7 +106,8 @@ if (config.dev) {
   await builder.build()
 }
 ```
-:::
+
+</alert>
 
 
 Eso es todo, ya todo esta listo para usar Typescript en tus **layouts**, **componentes**, **plugins** y **middlewares**.

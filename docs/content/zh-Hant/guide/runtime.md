@@ -1,5 +1,10 @@
 
-# Runtime (可選)
+---
+title: Runtime (可選)
+position: 12
+description: TypeScript Support for Nuxt.js
+category: 導覽
+---
 
 **nuxt.config** 設定檔 和 本地 **modules** 以及 **serverMiddlewares**，這些非 Webpack 編譯的檔案需要透過 TypeScript runtime 來執行。
 
@@ -7,15 +12,28 @@ Nuxt.js 建立了一個專用的依賴套件 **`@nuxt/typescript-runtime`** 去�
 
 ## 安裝
 
+<code-group>
+<code-block label="Yarn">
+
 ```sh
 yarn add @nuxt/typescript-runtime
-# 或
+```
+
+</code-block>
+<code-block label="NPM">
+
+```sh
 npm install @nuxt/typescript-runtime
 ```
 
-::: tip
+</code-block>
+</code-group>
+
+<alert type="info">
+
 注意，這個依賴套件是安裝為 `dependency` 而非 `devDependency` 像是 `@nuxt/typescript-build` 一樣，原因是 `@nuxt/typescript-runtime` 是正式環境所需要的。
-:::
+
+</alert>
 
 ## 如何使用
 
@@ -38,13 +56,16 @@ npm install @nuxt/typescript-runtime
 }
 ```
 
-::: tip
+<alert type="info">
+
 如果你使用的是 Nuxt.js 的 edge 版本，**nuxt-ts** 也是可以照常使用的。
-:::
+
+</alert>
 
 設定完成後，你可以在 **nuxt.config** 設定檔， 本地 **modules** 和 **serverMiddlewares** 中使用 TypeScript 了。
 
-::: warning
+<alert type="warning">
+
 
 `@nuxt/typescript-runtime` 不支援在可程式化的方式下使用 (因為他是擴展自 `@nuxt/cli`)。
 
@@ -63,6 +84,7 @@ register({
 ```
 
 然而，我們 **不建議 且 不支持** 這麼做。
-:::
+
+</alert>
 
 

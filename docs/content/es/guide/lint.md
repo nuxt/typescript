@@ -1,4 +1,9 @@
-# Lint
+---
+title: Lint
+position: 13
+description: TypeScript Support for Nuxt.js
+category: Guía
+---
 
 ## Configuración
 
@@ -6,9 +11,11 @@ Si usted esta usando ESLint para lintear tu proyecto, asi es como usted puede ha
 
 Todo lo que usted necesita es instalar `@nuxtjs/eslint-config-typescript`:
 
-::: tip
+<alert type="info">
+
 Si usted esta usando `@nuxtjs/eslint-config`, eliminelo de sus dependencias, la configuración de ESLint para Nuxt TypeScript ESLint ya lo incluye.
-:::
+
+</alert>
 
 ```sh
 npm i -D @nuxtjs/eslint-config-typescript
@@ -24,11 +31,13 @@ module.exports = {
   ]
 }
 ```
-::: warning 
+<alert type="warning">
+ 
 Para hacer que ESlint use el TypeScript parser ([`@typescript-eslint/parser`](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser)), por favor, asegurese que la opción `parserOptions.parser` no esta siendo sobreescrita por usted o por alguna otra configuración que esta extendiendo.
 
 Si usted usa `babel-eslint` como parser, solo remuevalo de su configuración `.eslintrc.js` y sus dependencias.
-:::
+
+</alert>
 
 Finalmente, edite el script `lint` de su `package.json`:
 
@@ -40,16 +49,17 @@ Finalmente, edite el script `lint` de su `package.json`:
 
 Ahora, usted puede lintear sus archivos TypeScript corriendo el comando `npm run lint` (o `yarn lint`).
 
-::: tip
+<alert type="info">
+
 Si usted necesita editar/sobreescribir las reglas de TypeScript ESLint, Usted puede encontrar [aqui](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#supported-rules) una lista de todas las reglas soportadas.
-:::
+
+</alert>
 
 ## Runtime lint
 
 Si usted desea tener una runtime lint (teniendo ESLint corriendo despues de que una archivo es guardado), usted debe activar la opción `eslint` del [fork-ts-checker-webpack-plugin](https://github.com/TypeStrong/fork-ts-checker-webpack-plugin) configurando la opción `typeCheck` del módulo
 
-```ts
-// nuxt.config.js
+```ts{}[nuxt.config.js]
 export default {
   typescript: {
     typeCheck: {

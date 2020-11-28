@@ -1,8 +1,9 @@
 ---
-next: false
+title: Server Middlewares (Tempo de execução)
+position: 28
+description: TypeScript Support for Nuxt.js
+category: ''
 ---
-
-# Server Middlewares (Tempo de execução)
 
 ```ts
 import { ServerMiddleware } from '@nuxt/types'

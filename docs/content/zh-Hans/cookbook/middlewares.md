@@ -1,4 +1,9 @@
-# 中间件
+---
+title: 中间件
+position: 23
+description: TypeScript Support for Nuxt.js
+category: ''
+---
 
 ```ts
 import { Middleware } from '@nuxt/types'

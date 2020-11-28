@@ -1,4 +1,9 @@
-# ミドルウェア
+---
+title: ミドルウェア
+position: 23
+description: TypeScript Support for Nuxt.js
+category: ''
+---
 
 ```ts
 import { Middleware } from '@nuxt/types'

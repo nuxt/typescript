@@ -1,5 +1,9 @@
-
-# Runtime (optional)
+---
+title: Runtime (optional)
+position: 12
+description: TypeScript Support for Nuxt.js
+category: Guide
+---
 
 TypeScript runtime is needed for files not compiled by Webpack, such as **nuxt.config** file, local **modules** and **serverMiddlewares**.
 
@@ -7,15 +11,28 @@ Nuxt.js has created a TypeScript runtime wrapper under a dedicated package **`@n
 
 ## Installation
 
+<code-group>
+<code-block label="Yarn">
+
 ```sh
 yarn add @nuxt/typescript-runtime
-# OR
+```
+
+</code-block>
+<code-block label="NPM">
+
+```sh
 npm install @nuxt/typescript-runtime
 ```
 
-::: tip
+</code-block>
+</code-group>
+
+<alert type="info">
+
 Note that this package is installed as `dependency` and not `devDependency` like `@nuxt/typescript-build`, cause `@nuxt/typescript-runtime` is needed for production.
-:::
+
+</alert>
 
 ## Usage
 
@@ -38,13 +55,16 @@ All you need to do is update your **package.json** file:
 }
 ```
 
-::: tip
+<alert type="info">
+
 **nuxt-ts** also works if you're using edge version of Nuxt.js (**nuxt-edge**).
-:::
+
+</alert>
 
 You can now use TypeScript for **nuxt.config** file, local **modules** and **serverMiddlewares**.
 
-::: warning
+<alert type="warning">
+
 
 `@nuxt/typescript-runtime` does not support programmatic usage (as it extends `@nuxt/cli`).
 
@@ -63,6 +83,7 @@ register({
 ```
 
 However, this is **not recommended or supported**.
-:::
+
+</alert>
 
 

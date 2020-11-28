@@ -1,8 +1,9 @@
 ---
-next: false
+title: Server Middlewares（ランタイム）
+position: 28
+description: TypeScript Support for Nuxt.js
+category: ''
 ---
-
-# Server Middlewares（ランタイム）
 
 ```ts
 import { ServerMiddleware } from '@nuxt/types'

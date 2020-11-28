@@ -1,4 +1,9 @@
-# Plugins
+---
+title: Plugins
+position: 24
+description: TypeScript Support for Nuxt.js
+category: ''
+---
 
 ## I. Inyectar en las instancias de Vue
 
@@ -127,6 +132,8 @@ export default Vue.extend({
 </script>
 ```
 
-::: tip
+<alert type="info">
+
 Por favor, nota que el `inject` no inyecta en el `context` sino en `context.app`. 
-:::
+
+</alert>

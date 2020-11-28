@@ -1,4 +1,9 @@
-# プラグイン
+---
+title: プラグイン
+position: 24
+description: TypeScript Support for Nuxt.js
+category: ''
+---
 
 ## I. Vue インスタンスにインジェクトする
 
@@ -120,6 +125,8 @@ export default Vue.extend({
 </script>
 ```
 
-::: tip
+<alert type="info">
+
 `inject` は `context` ではなく `context.app` にインジェクトされることに注意してください。 
-:::
+
+</alert>

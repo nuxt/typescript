@@ -1,3 +1,4 @@
+```ts
 import { Vue, Component, Prop } from 'vue-property-decorator'
 
 interface User {
@@ -15,3 +16,4 @@ export default class YourComponent extends Vue {
     return `${this.user.firstName} ${this.user.lastName}`
   }
 }
+```

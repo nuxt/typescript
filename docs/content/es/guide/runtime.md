@@ -1,5 +1,10 @@
 
-# Tiempo de Ejecución (opcional)
+---
+title: Tiempo de Ejecución (opcional)
+position: 12
+description: TypeScript Support for Nuxt.js
+category: Guía
+---
 
 TypeScript en tiempo de ejecución es requerido para archivos que no son compilados por Webpack como lo es el archivo **nuxt.config**, **modules** locales y **serverMiddlewares**
 
@@ -7,15 +12,28 @@ Nuxt.js ha creado un envolvente de TypeScript en tiempo de ejecución bajo un pa
 
 ## Instalación
 
+<code-group>
+<code-block label="Yarn">
+
 ```sh
 yarn add @nuxt/typescript-runtime
-# o tambien
+```
+
+</code-block>
+<code-block label="NPM">
+
+```sh
 npm install @nuxt/typescript-runtime
 ```
 
-::: tip
+</code-block>
+</code-group>
+
+<alert type="info">
+
 Nota este paquete es instalado como `dependency` y no como `devDependency` igual a `@nuxt/typescript-build`, porque `@nuxt/typescript-runtime` es necesario en producción.
-:::
+
+</alert>
 
 ## Uso
 
@@ -38,13 +56,16 @@ Todo lo que necesitas es actualizar tu archivo **package.json**:
 }
 ```
 
-::: tip
+<alert type="info">
+
 **nuxt-ts** tambien funciona si usted esta usando la version edge de Nuxt.js (**nuxt-edge**).
-:::
+
+</alert>
 
 Usted puede ahora usar TypeScript para el archivo **nuxt.config**, **modulos** locales y **serverMiddlewares**.
 
-::: warning
+<alert type="warning">
+
 
 `@nuxt/typescript-runtime` no soporta uso programado (como esto extiende de `@nuxt/cli`).
 
@@ -63,4 +84,5 @@ register({
 ```
 
 Igualmente, esto es **no recomendado o soportado**.
-:::
+
+</alert>

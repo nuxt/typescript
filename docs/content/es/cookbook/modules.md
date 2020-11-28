@@ -1,4 +1,9 @@
-# Modules (Tiempo de Ejecución)
+---
+title: Modules (Tiempo de Ejecución)
+position: 27
+description: TypeScript Support for Nuxt.js
+category: ''
+---
 
 ```ts
 import { Module } from '@nuxt/types'

@@ -1,12 +1,8 @@
 ---
-next: false
----
-
----
 title: Server Middlewares (Runtime)
-position: ''
-description:  TypeScript Support for Nuxt.js
-category: ''
+position: 28
+description: TypeScript Support for Nuxt.js
+category: Cookbook
 ---
 
 ```ts

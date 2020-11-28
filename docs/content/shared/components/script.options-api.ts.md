@@ -1,3 +1,4 @@
+```ts
 import Vue, { PropOptions } from 'vue'
 
 interface User {
@@ -27,3 +28,4 @@ export default Vue.extend({
     }
   }
 })
+```

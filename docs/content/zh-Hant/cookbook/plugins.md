@@ -1,4 +1,9 @@
-# 擴充元件
+---
+title: 擴充元件
+position: 24
+description: TypeScript Support for Nuxt.js
+category: ''
+---
 
 ## I. 注入到 Vue 實例
 
@@ -120,6 +125,8 @@ export default Vue.extend({
 </script>
 ```
 
-::: tip
+<alert type="info">
+
 請注意， `inject` 是在 `context.app` 中注入，並不會存在於 `context` 中。
-:::
+
+</alert>

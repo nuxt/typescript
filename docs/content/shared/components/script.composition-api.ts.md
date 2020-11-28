@@ -1,3 +1,4 @@
+```ts
 import { defineComponent, computed, ref } from '@vue/composition-api'
 
 interface User {
@@ -23,3 +24,4 @@ export default defineComponent({
     }
   }
 })
+```

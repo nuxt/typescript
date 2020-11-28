@@ -1,5 +1,10 @@
 
-# Runtime（オプション）
+---
+title: Runtime（オプション）
+position: 12
+description: TypeScript Support for Nuxt.js
+category: ガイド
+---
 
 TypeScript ランタイムは、**nuxt.config** ファイル、ローカルの **modules** および **serverMiddlewares** といった Webpack でコンパイルされていないファイルのために必要です。
 
@@ -7,15 +12,28 @@ Nuxt.js は **`@nuxt/typescript-runtime`** という専用パッケージの下�
 
 ## インストール
 
+<code-group>
+<code-block label="Yarn">
+
 ```sh
 yarn add @nuxt/typescript-runtime
-# または
+```
+
+</code-block>
+<code-block label="NPM">
+
+```sh
 npm install @nuxt/typescript-runtime
 ```
 
-::: tip
+</code-block>
+</code-group>
+
+<alert type="info">
+
 このパッケージは、`@nuxt/typescript-build` のように `devDependency` ではなく `dependency` でインストールされることに注意してください。本番環境では、`@nuxt/typescript-runtime` が必要になります。
-:::
+
+</alert>
 
 ## 使用方法
 
@@ -38,13 +56,16 @@ npm install @nuxt/typescript-runtime
 }
 ```
 
-::: tip
+<alert type="info">
+
 Nuxt.js の edge バージョン（**nuxt-edge**）を使用しているなら、**nuxt-ts** も動きます。
-:::
+
+</alert>
 
 これで、**nuxt.config** ファイル、ローカルの **modules** および **serverMiddlewares** で TypeScript を使用できるようになりました。
 
-::: warning
+<alert type="warning">
+
 
 `@nuxt/typescript-runtime` はプログラムによる使用をサポートしていません（`@nuxt/cli` を拡張しているため）。 
 
@@ -63,4 +84,5 @@ register({
 ```
 
 ただし、この方法は**推奨またはサポートされていません**。
-:::
+
+</alert>

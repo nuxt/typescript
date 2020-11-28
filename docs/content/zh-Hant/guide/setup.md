@@ -1,4 +1,9 @@
-# 安裝設定
+---
+title: 安裝設定
+position: 11
+description: TypeScript Support for Nuxt.js
+category: 導覽
+---
 
 Nuxt 的 TypeScript 支援主要是透過 **@nuxt/typescript-build** 這個 Nuxt 模組提供。
 
@@ -6,18 +11,28 @@ Nuxt 的 TypeScript 支援主要是透過 **@nuxt/typescript-build** 這個 Nuxt
 
 ## 安裝
 
+<code-group>
+<code-block label="Yarn">
+
 ```sh
 yarn add --dev @nuxt/typescript-build @nuxt/types
-# 或
+```
+
+</code-block>
+<code-block label="NPM">
+
+```sh
 npm install --save-dev @nuxt/typescript-build @nuxt/types
 ```
+
+</code-block>
+</code-group>
 
 ## 設定
 
 你只需要在 **`nuxt.config.js`** 中的 **`buildModules`** 中加入 **`@nuxt/typescript-build`**
 
-```js
-// nuxt.config.js
+```js{}[nuxt.config.js]
 export default {
   buildModules: ['@nuxt/typescript-build']
 }
@@ -25,28 +40,31 @@ export default {
 
 然後再建立 **`tsconfig.json`** 檔案 :
 
-<<< @/shared/tsconfig.json
+<inject-code query="shared/tsconfig.json"></inject-code>
 
-::: tip
+<alert type="info">
+
 請注意，若你要使用 [**Optional Chaining**](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#optional-chaining) 和 [**Nullish Coalescing**](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#nullish-coalescing) 語法，請將 tsconfig 中的 target 設定成 **ES2018**。如果你設定成 **ESNext** 的話，則不會如期運作，因為目前看起來尚未支援。
-:::
+
+</alert>
 
 你也需要加入下方的 型別聲明檔 來為 Vue 提供 型別
 
-`vue-shim.d.ts`:
-```ts 
+```js{}[vue-shim.d.ts]
 declare module "*.vue" {
   import Vue from 'vue'
   export default Vue
 }
 ```
 
-::: tip
+<alert type="info">
 
 查看 [TypeScript 文件](https://www.typescriptlang.org/docs/handbook/compiler-options.html) 來得知 編譯器 的更多選項。
-:::
 
-::: warning
+</alert>
+
+<alert type="warning">
+
 
 如果你是透過程式化的方式來建立一個自定義伺服器框架時，請注意: 你需要確保在 Nuxt 建置 (Building) 之前就已經準備好 (Ready):
 
@@ -60,7 +78,8 @@ if (config.dev) {
   await builder.build()
 }
 ```
-:::
+
+</alert>
 
 你已經設定好在 **layouts**, **components**, **plugins** 和 **middlewares** 中使用 TypeScript，就這麼簡單 !
 

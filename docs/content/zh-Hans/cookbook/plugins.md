@@ -1,4 +1,9 @@
-# 插件
+---
+title: 插件
+position: 24
+description: TypeScript Support for Nuxt.js
+category: ''
+---
 
 ## I. 注入到 Vue 实例
 
@@ -118,6 +123,8 @@ export default Vue.extend({
 </script>
 ```
 
-::: tip
+<alert type="info">
+
 请注意， `inject` 注入到 `context.app` ，而不是 `context` 。
-:::
+
+</alert>

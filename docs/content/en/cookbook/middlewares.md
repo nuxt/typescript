@@ -1,8 +1,8 @@
 ---
 title: Middlewares
-position: ''
-description:  TypeScript Support for Nuxt.js
-category: ''
+position: 23
+description: TypeScript Support for Nuxt.js
+category: Cookbook
 ---
 
 ```ts

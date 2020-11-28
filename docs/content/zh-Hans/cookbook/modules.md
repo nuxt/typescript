@@ -1,4 +1,9 @@
-# 模块 (运行时)
+---
+title: 模块 (运行时)
+position: 27
+description: TypeScript Support for Nuxt.js
+category: ''
+---
 
 ```ts
 import { Module } from '@nuxt/types'

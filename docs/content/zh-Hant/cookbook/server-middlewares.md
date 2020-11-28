@@ -1,8 +1,9 @@
 ---
-next: false
+title: 伺服器渲染中介層 (Runtime)
+position: 28
+description: TypeScript Support for Nuxt.js
+category: ''
 ---
-
-# 伺服器渲染中介層 (Runtime)
 
 ```ts
 import { ServerMiddleware } from '@nuxt/types'

@@ -1,4 +1,9 @@
-# Store
+---
+title: Store
+position: 25
+description: TypeScript Support for Nuxt.js
+category: ''
+---
 
 在 Nuxt 專案中以 TypeScript 使用 store 的方法有很多種。
 
@@ -13,9 +18,7 @@
 
 1. 你的模組必須和 `stateFactory: true` 一起使用，例如:
 
-   `~/store/mymodule.ts`:
-
-   ```ts
+   ```ts{}[store/mymodule.ts]
    import { Module, VuexModule, Mutation } from 'vuex-module-decorators'
 
    @Module({
@@ -39,9 +42,7 @@
 
 2. 如果你不想要在每個元件中初始化並存取 store，你可以使用
 [initialiser plugin](https://github.com/championswimmer/vuex-module-decorators#accessing-modules-with-nuxtjs)， 例如:
-   `~/store/index.ts`:
-
-   ```ts
+   ```ts{}[store/index.ts]
    import { Store } from 'vuex'
    import { initialiseStores } from '~/utils/store-accessor'
 
@@ -52,9 +53,7 @@
    ```
 
 3. 如果你想要存取 Nuxt app 實例，你會需要對 plugin 做類似的事，例如:
-   `~/plugins/axios-accessor.ts`:
-
-   ```ts
+   ```ts{}[plugins/axios-accessor.ts]
    import { Plugin } from '@nuxt/types'
    import { initializeAxios } from '~/utils/api'
 
@@ -65,9 +64,7 @@
    export default accessor
    ```
 
-   `~/utils/api.ts`:
-
-   ```ts
+   ```ts{}[utils/api.ts]
    import { NuxtAxiosInstance } from '@nuxtjs/axios'
 
    let $axios: NuxtAxiosInstance
@@ -79,9 +76,7 @@
    export { $axios }
    ```
 
-   `~/store/users.ts`:
-
-   ```ts
+   ```ts{}[store/users.ts]
    import { Module, VuexModule, Action, Mutation } from 'vuex-module-decorators'
    import { $axios } from '~/utils/api'
    import { User } from '~/types'
@@ -126,9 +121,7 @@ export default class extends VuexModule {}
 
 當你在使用 store 時，Vuex 提供了非常基本的型別。你可以使用他們幫助你定義你的 store。例如:
 
-`~/store/index.ts`:
-
-```ts
+```ts{}[store/index.ts]
 import { GetterTree, ActionTree, MutationTree } from 'vuex'
 
 export const state = () => ({
@@ -192,9 +185,7 @@ Vuex 並沒有在你的應用程式當中提供型別給你，在 Nuxt app 中�
 
 或者你也可以使用自己提供的型別。
 
-`~/components/MyComponent.vue`:
-
-```ts
+```ts{}[components/MyComponent.vue]
 <script lang="ts">
 
 import { Component, Vue } from 'nuxt-property-decorator'

@@ -1,4 +1,9 @@
-# 配置文件 (运行时)
+---
+title: 配置文件 (运行时)
+position: 26
+description: TypeScript Support for Nuxt.js
+category: ''
+---
 
 ```ts
 import { NuxtConfig } from '@nuxt/types'

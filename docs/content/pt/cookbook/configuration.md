@@ -1,4 +1,9 @@
-# Configuração (Tempo de execução)
+---
+title: Configuração (Tempo de execução)
+position: 26
+description: TypeScript Support for Nuxt.js
+category: ''
+---
 
 ```ts
 import { NuxtConfig } from '@nuxt/types'

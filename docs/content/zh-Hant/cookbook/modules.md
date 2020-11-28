@@ -1,4 +1,9 @@
-# 模組 (Runtime)
+---
+title: 模組 (Runtime)
+position: 27
+description: TypeScript Support for Nuxt.js
+category: ''
+---
 
 ```ts
 import { Module } from '@nuxt/types'
