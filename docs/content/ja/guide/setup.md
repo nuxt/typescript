@@ -12,7 +12,7 @@ Nuxt TypeScript サポートは主に Nuxt モジュールである **@nuxt/type
 ## インストール
 
 <code-group>
-<code-block label="Yarn">
+<code-block label="Yarn" active>
 
 ```sh
 yarn add --dev @nuxt/typescript-build @nuxt/types

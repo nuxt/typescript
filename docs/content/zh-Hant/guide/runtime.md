@@ -13,7 +13,7 @@ Nuxt.js 建立了一個專用的依賴套件 **`@nuxt/typescript-runtime`** 去�
 ## 安裝
 
 <code-group>
-<code-block label="Yarn">
+<code-block label="Yarn" active>
 
 ```sh
 yarn add @nuxt/typescript-runtime

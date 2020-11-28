@@ -13,7 +13,7 @@ Nuxt.js 创建了一个专用的包 **`@nuxt/typescript-runtime`** 以封装 Typ
 ## 安装
 
 <code-group>
-<code-block label="Yarn">
+<code-block label="Yarn" active>
 
 ```sh
 yarn add @nuxt/typescript-runtime

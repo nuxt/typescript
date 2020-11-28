@@ -18,7 +18,7 @@ Nuxt TypeScript ESLint 的設定檔已經包含 `@nuxtjs/eslint-config`，如果
 </alert>
 
 <code-group>
-<code-block label="Yarn">
+<code-block label="Yarn" active>
 
 ```sh
 yarn add -D @nuxtjs/eslint-config-typescript

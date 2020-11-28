@@ -12,7 +12,7 @@ Aqui estão as orientações para sua instalar e configurá-lo.
 ## Instalação
 
 <code-group>
-<code-block label="Yarn">
+<code-block label="Yarn" active>
 
 ```sh
 yarn add --dev @nuxt/typescript-build @nuxt/types

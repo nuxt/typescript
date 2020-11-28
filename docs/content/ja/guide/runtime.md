@@ -13,7 +13,7 @@ Nuxt.js は **`@nuxt/typescript-runtime`** という専用パッケージの下�
 ## インストール
 
 <code-group>
-<code-block label="Yarn">
+<code-block label="Yarn" active>
 
 ```sh
 yarn add @nuxt/typescript-runtime

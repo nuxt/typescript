@@ -18,7 +18,7 @@ category: ガイド
 </alert>
 
 <code-group>
-<code-block label="Yarn">
+<code-block label="Yarn" active>
 
 ```sh
 yarn add -D @nuxtjs/eslint-config-typescript

@@ -13,7 +13,7 @@ Nuxt.js ha creado un envolvente de TypeScript en tiempo de ejecución bajo un pa
 ## Instalación
 
 <code-group>
-<code-block label="Yarn">
+<code-block label="Yarn" active>
 
 ```sh
 yarn add @nuxt/typescript-runtime

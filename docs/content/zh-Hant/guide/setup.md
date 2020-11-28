@@ -12,7 +12,7 @@ Nuxt 的 TypeScript 支援主要是透過 **@nuxt/typescript-build** 這個 Nuxt
 ## 安裝
 
 <code-group>
-<code-block label="Yarn">
+<code-block label="Yarn" active>
 
 ```sh
 yarn add --dev @nuxt/typescript-build @nuxt/types

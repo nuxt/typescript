@@ -13,7 +13,7 @@ Nuxt.js criou um wrapper para o tempo de execução TypeScript em um pacote dedi
 ## Instalação
 
 <code-group>
-<code-block label="Yarn">
+<code-block label="Yarn" active>
 
 ```sh
 yarn add @nuxt/typescript-runtime

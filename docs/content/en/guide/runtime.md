@@ -12,7 +12,7 @@ Nuxt.js has created a TypeScript runtime wrapper under a dedicated package **`@n
 ## Installation
 
 <code-group>
-<code-block label="Yarn">
+<code-block label="Yarn" active>
 
 ```sh
 yarn add @nuxt/typescript-runtime

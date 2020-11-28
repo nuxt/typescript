@@ -12,7 +12,7 @@ Here are the guidelines to install & configure them.
 ## Installation
 
 <code-group>
-<code-block label="Yarn">
+<code-block label="Yarn" active>
 
 ```sh
 yarn add --dev @nuxt/typescript-build @nuxt/types
@@ -35,7 +35,7 @@ npm install --save-dev @nuxt/typescript-build @nuxt/types
 You may want to install specific types version to match your Nuxt version if its not latest :
 
 <code-group>
-<code-block label="nuxt">
+<code-block label="nuxt" active>
 
 ```sh
 yarn add --dev @nuxt/types@2.13.2
