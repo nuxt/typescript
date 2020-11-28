@@ -1,4 +1,9 @@
-# Components
+---
+title: Components
+position: ''
+description:  TypeScript Support for Nuxt.js
+category: ''
+---
 
 In [**Single File Components (SFC)**](https://vuejs.org/v2/guide/single-file-components.html), `script` tags must specify the `ts` language:
 ```html

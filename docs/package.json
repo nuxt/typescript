@@ -1,14 +1,12 @@
 {
   "private": true,
   "scripts": {
-    "dev": "vuepress dev",
-    "build": "vuepress build"
+    "dev": "nuxt dev",
+    "build": "nuxt generate"
   },
   "devDependencies": {
-    "fs-extra": "^9.0.1",
-    "vue-tabs-component": "^1.5.0",
-    "vuepress": "^1.6.0",
-    "vuepress-plugin-autometa": "^0.1.13",
-    "vuepress-plugin-tabs": "^0.3.0"
+    "@nuxt/content-theme-docs": "^0.7.2",
+    "nuxt": "^2.14.7",
+    "vue-tabs-component": "^1.5.0"
   }
 }

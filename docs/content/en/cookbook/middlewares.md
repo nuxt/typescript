@@ -1,4 +1,9 @@
-# Middlewares
+---
+title: Middlewares
+position: ''
+description:  TypeScript Support for Nuxt.js
+category: ''
+---
 
 ```ts
 import { Middleware } from '@nuxt/types'

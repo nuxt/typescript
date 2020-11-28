@@ -1,4 +1,9 @@
-# Configuration (Runtime)
+---
+title: Configuration (Runtime)
+position: ''
+description:  TypeScript Support for Nuxt.js
+category: ''
+---
 
 ```ts
 import { NuxtConfig } from '@nuxt/types'

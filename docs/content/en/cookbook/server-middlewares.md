@@ -2,7 +2,12 @@
 next: false
 ---
 
-# Server Middlewares (Runtime)
+---
+title: Server Middlewares (Runtime)
+position: ''
+description:  TypeScript Support for Nuxt.js
+category: ''
+---
 
 ```ts
 import { ServerMiddleware } from '@nuxt/types'

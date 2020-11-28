@@ -1,4 +1,9 @@
-# Plugins
+---
+title: Plugins
+position: ''
+description:  TypeScript Support for Nuxt.js
+category: ''
+---
 
 ## I. Inject into Vue instances
 

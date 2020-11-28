@@ -1,4 +1,9 @@
-# Modules (Runtime)
+---
+title: Modules (Runtime)
+position: ''
+description:  TypeScript Support for Nuxt.js
+category: ''
+---
 
 ```ts
 import { Module } from '@nuxt/types'

@@ -1,4 +1,9 @@
-# Store
+---
+title: Store
+position: ''
+description:  TypeScript Support for Nuxt.js
+category: ''
+---
 
 There are a number of different options for writing and accessing the store in a Nuxt project using TypeScript.
 
