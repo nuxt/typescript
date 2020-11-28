@@ -16,8 +16,8 @@ aside > div > ul {
   @apply absolute;
 }
 
-.prose img[href*=img.shields.io] {
-  display: inline;
+.prose img[src*="img.shields.io"] {
+  display: inline !important;
 }
 .tabs-component {
   margin: 4em 0;
