@@ -1,7 +1,7 @@
 ---
 title: Configuração
 position: 11
-description: TypeScript Support for Nuxt.js
+description: 'Suporte de Typescript para Nuxt.js'
 category: Guia
 ---
 

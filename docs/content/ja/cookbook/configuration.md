@@ -1,8 +1,8 @@
 ---
 title: 設定（ランタイム）
 position: 26
-description: TypeScript Support for Nuxt.js
-category: ''
+description: 'Nuxt.js 向け TypeScript サポート'
+category: 'Cookbook'
 ---
 
 ```ts

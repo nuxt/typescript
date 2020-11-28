@@ -1,7 +1,7 @@
 ---
 title: Introdución
 position: 10
-description: TypeScript Support for Nuxt.js
+description: 'Soporte de Typescript para Nuxt.js'
 category: Guía
 fullscreen: true
 ---

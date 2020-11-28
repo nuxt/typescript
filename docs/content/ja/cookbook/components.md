@@ -1,8 +1,8 @@
 ---
 title: コンポーネント
-position: ''
-description: TypeScript Support for Nuxt.js
-category: ''
+position: 20
+description: 'Nuxt.js 向け TypeScript サポート'
+category: 'Cookbook'
 ---
 
 [**シングルファイルコンポーネント（SFC）**](https://vuejs.org/v2/guide/single-file-components.html)では、 `script` タグに `ts` 言語を指定しないといけません：
@@ -14,7 +14,7 @@ category: ''
 
 ## Template
 
-<inject-code query="shared/cookbook/components/template.html"></inject-code>
+<inject-code query="shared/components/template.html"></inject-code>
 
 ## Script
 
@@ -22,7 +22,7 @@ category: ''
 <tabs :options="{ useUrlFragment: false }">
   <tab name="Options API">  
 
-<inject-code query="shared/cookbook/components/script.options-api.ts"></inject-code>
+<inject-code query="shared/components/script.options-api.ts"></inject-code>
 
   </tab>
   <tab name="Composition API">
@@ -51,14 +51,14 @@ export default {
 
 </alert>
 
-<inject-code query="shared/cookbook/components/script.composition-api.ts"></inject-code>
+<inject-code query="shared/components/script.composition-api.ts"></inject-code>
 
   </tab>
   <tab name="Class API">  
 
 [vue-property-decorator](https://github.com/kaorun343/vue-property-decorator) から [vue-class-component](https://github.com/vuejs/vue-class-component) を使用しています。
 
-<inject-code query="shared/cookbook/components/script.class-api.ts"></inject-code>
+<inject-code query="shared/components/script.class-api.ts"></inject-code>
 
   </tab>
 </tabs>

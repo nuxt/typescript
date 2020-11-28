@@ -1,8 +1,8 @@
 ---
 title: Plugins
 position: 24
-description: TypeScript Support for Nuxt.js
-category: ''
+description: 'Soporte de Typescript para Nuxt.js'
+category: 'Cookbook'
 ---
 
 ## I. Inyectar en las instancias de Vue

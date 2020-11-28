@@ -1,7 +1,7 @@
 ---
 title: 安裝設定
 position: 11
-description: TypeScript Support for Nuxt.js
+description: 'Nuxt.js 的 Typescript 支援'
 category: 導覽
 ---
 

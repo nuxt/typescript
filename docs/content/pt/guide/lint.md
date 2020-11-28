@@ -1,7 +1,7 @@
 ---
 title: Lint
 position: 13
-description: TypeScript Support for Nuxt.js
+description: 'Suporte de Typescript para Nuxt.js'
 category: Guia
 ---
 

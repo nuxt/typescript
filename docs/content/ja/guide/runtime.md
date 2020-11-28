@@ -1,8 +1,7 @@
-
 ---
 title: Runtime（オプション）
 position: 12
-description: TypeScript Support for Nuxt.js
+description: 'Nuxt.js 向け TypeScript サポート'
 category: ガイド
 ---
 

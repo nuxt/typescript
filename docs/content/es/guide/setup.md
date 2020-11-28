@@ -1,7 +1,7 @@
 ---
 title: Preparación
 position: 11
-description: TypeScript Support for Nuxt.js
+description: 'Soporte de Typescript para Nuxt.js'
 category: Guía
 ---
 

@@ -1,8 +1,7 @@
-
 ---
 title: Tiempo de Ejecución (opcional)
 position: 12
-description: TypeScript Support for Nuxt.js
+description: 'Soporte de Typescript para Nuxt.js'
 category: Guía
 ---
 

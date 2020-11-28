@@ -1,4 +1,9 @@
-li a[href="/"] {
+li a[href="/"],
+li a[href="/es"],
+li a[href="/ja"],
+li a[href="/pt"],
+li a[href="/zh-Hant"],
+li a[href="/zh-Hans"] {
   @apply -ml-2 mb-2 text-gray-500 uppercase tracking-wider font-bold text-sm;
 
   @screen lg {

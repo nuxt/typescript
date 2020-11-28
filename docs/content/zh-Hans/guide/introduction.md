@@ -1,7 +1,7 @@
 ---
 title: 介绍
 position: 10
-description: TypeScript Support for Nuxt.js
+description: 'Nuxt.js 的 Typescript 支持'
 category: 指南
 fullscreen: true
 ---

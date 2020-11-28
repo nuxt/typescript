@@ -1,8 +1,8 @@
 ---
 title: Server Middlewares (Tempo de execução)
 position: 28
-description: TypeScript Support for Nuxt.js
-category: ''
+description: 'Suporte de Typescript para Nuxt.js'
+category: 'Cookbook'
 ---
 
 ```ts

@@ -1,8 +1,8 @@
 ---
 title: Store
 position: 25
-description: TypeScript Support for Nuxt.js
-category: ''
+description: 'Suporte de Typescript para Nuxt.js'
+category: 'Cookbook'
 ---
 
 Existem várias opções diferentes para escrever e acessar o store em um projeto Nuxt usando o TypeScript.

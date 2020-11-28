@@ -1,8 +1,8 @@
 ---
 title: Modules (Tiempo de Ejecución)
 position: 27
-description: TypeScript Support for Nuxt.js
-category: ''
+description: 'Soporte de Typescript para Nuxt.js'
+category: 'Cookbook'
 ---
 
 ```ts

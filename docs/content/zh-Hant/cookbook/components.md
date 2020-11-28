@@ -1,8 +1,8 @@
 ---
 title: 元件
-position: ''
-description: TypeScript Support for Nuxt.js
-category: ''
+position: 20
+description: 'Nuxt.js 的 Typescript 支援'
+category: '更多使用方式'
 ---
 
 在 [**單一元件檔 (SFC)**](https://vuejs.org/v2/guide/single-file-components.html) 時， `script` 標籤必須指定成 `ts` 語言。
@@ -14,7 +14,7 @@ category: ''
 
 ## 模板
 
-<inject-code query="shared/cookbook/components/template.html"></inject-code>
+<inject-code query="shared/components/template.html"></inject-code>
 
 ## Script
 
@@ -22,7 +22,7 @@ category: ''
 <tabs :options="{ useUrlFragment: false }">
   <tab name="Options API">  
 
-<inject-code query="shared/cookbook/components/script.options-api.ts"></inject-code>
+<inject-code query="shared/components/script.options-api.ts"></inject-code>
 
   </tab>
   <tab name="Composition API">
@@ -51,14 +51,14 @@ export default {
 
 </alert>
 
-<inject-code query="shared/cookbook/components/script.composition-api.ts"></inject-code>
+<inject-code query="shared/components/script.composition-api.ts"></inject-code>
 
   </tab>
   <tab name="Class API">  
 
 透過 [vue-property-decorator](https://github.com/kaorun343/vue-property-decorator) 來使用 [vue-class-component](https://github.com/vuejs/vue-class-component) 
 
-<inject-code query="shared/cookbook/components/script.class-api.ts"></inject-code>
+<inject-code query="shared/components/script.class-api.ts"></inject-code>
 
   </tab>
 </tabs>

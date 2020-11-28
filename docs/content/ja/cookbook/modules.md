@@ -1,8 +1,8 @@
 ---
 title: モジュール（ランタイム）
 position: 27
-description: TypeScript Support for Nuxt.js
-category: ''
+description: 'Nuxt.js 向け TypeScript サポート'
+category: 'Cookbook'
 ---
 
 ```ts

@@ -1,8 +1,8 @@
 ---
 title: Store
 position: 25
-description: TypeScript Support for Nuxt.js
-category: ''
+description: 'Nuxt.js 的 Typescript 支持'
+category: '更多使用方式'
 ---
 
 在 Nuxt 项目中以 TypeScript 使用 store 的方法有多种。

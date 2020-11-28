@@ -1,7 +1,7 @@
 ---
 title: 代码检查
 position: 13
-description: TypeScript Support for Nuxt.js
+description: 'Nuxt.js 的 Typescript 支持'
 category: 指南
 ---
 

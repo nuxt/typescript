@@ -1,8 +1,8 @@
 ---
 title: 擴充元件
 position: 24
-description: TypeScript Support for Nuxt.js
-category: ''
+description: 'Nuxt.js 的 Typescript 支援'
+category: '更多使用方式'
 ---
 
 ## I. 注入到 Vue 實例

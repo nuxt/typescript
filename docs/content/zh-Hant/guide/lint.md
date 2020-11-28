@@ -1,7 +1,7 @@
 ---
 title: Lint
 position: 13
-description: TypeScript Support for Nuxt.js
+description: 'Nuxt.js 的 Typescript 支援'
 category: 導覽
 ---
 

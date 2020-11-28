@@ -1,8 +1,8 @@
 ---
 title: 服务器渲染中间件 (运行时)
 position: 28
-description: TypeScript Support for Nuxt.js
-category: ''
+description: 'Nuxt.js 的 Typescript 支持'
+category: '更多使用方式'
 ---
 
 ```ts

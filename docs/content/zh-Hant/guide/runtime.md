@@ -1,8 +1,7 @@
-
 ---
 title: Runtime (可選)
 position: 12
-description: TypeScript Support for Nuxt.js
+description: 'Nuxt.js 的 Typescript 支援'
 category: 導覽
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: 配置文件 (运行时)
 position: 26
-description: TypeScript Support for Nuxt.js
-category: ''
+description: 'Nuxt.js 的 Typescript 支持'
+category: '更多使用方式'
 ---
 
 ```ts

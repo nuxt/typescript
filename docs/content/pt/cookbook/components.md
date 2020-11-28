@@ -1,8 +1,8 @@
 ---
 title: Componentes
-position: ''
-description: TypeScript Support for Nuxt.js
-category: ''
+position: 20
+description: 'Suporte de Typescript para Nuxt.js'
+category: 'Cookbook'
 ---
 
 En [**Single File Components (SFC)**](https://vuejs.org/v2/guide/single-file-components.html), as tags `script` devem especificar a linguagem ` ts`:
@@ -14,7 +14,7 @@ En [**Single File Components (SFC)**](https://vuejs.org/v2/guide/single-file-com
 
 ## Modelo
 
-<inject-code query="shared/cookbook/components/template.html"></inject-code>
+<inject-code query="shared/components/template.html"></inject-code>
 
 ## Script
 
@@ -22,7 +22,7 @@ En [**Single File Components (SFC)**](https://vuejs.org/v2/guide/single-file-com
 <tabs :options="{ useUrlFragment: false }">
   <tab name="Options API">  
 
-<inject-code query="shared/cookbook/components/script.options-api.ts"></inject-code>
+<inject-code query="shared/components/script.options-api.ts"></inject-code>
 
   </tab>
   <tab name="Composition API">
@@ -51,14 +51,14 @@ Este registo do plugin é obrigatório para fazer a função "setup" funciona em
 
 </alert>
 
-<inject-code query="shared/cookbook/components/script.composition-api.ts"></inject-code>
+<inject-code query="shared/components/script.composition-api.ts"></inject-code>
 
   </tab>
   <tab name="Class API">  
 
 Usando [vue-class-component](https://github.com/vuejs/vue-class-component) através do [vue-property-decorator](https://github.com/kaorun343/vue-property-decorator)
 
-<inject-code query="shared/cookbook/components/script.class-api.ts"></inject-code>
+<inject-code query="shared/components/script.class-api.ts"></inject-code>
 
   </tab>
 </tabs>

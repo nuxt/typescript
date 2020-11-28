@@ -1,8 +1,8 @@
 ---
 title: 模組 (Runtime)
 position: 27
-description: TypeScript Support for Nuxt.js
-category: ''
+description: 'Nuxt.js 的 Typescript 支援'
+category: '更多使用方式'
 ---
 
 ```ts

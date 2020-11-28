@@ -1,8 +1,8 @@
 ---
 title: ストア
 position: 25
-description: TypeScript Support for Nuxt.js
-category: ''
+description: 'Nuxt.js 向け TypeScript サポート'
+category: 'Cookbook'
 ---
 
 TypeScript を使用している Nuxt プロジェクトでは、ストアにアクセスしたり、書き込んだりするためにさまざまなオプションがあります。

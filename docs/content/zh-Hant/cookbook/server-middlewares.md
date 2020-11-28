@@ -1,8 +1,8 @@
 ---
 title: 伺服器渲染中介層 (Runtime)
 position: 28
-description: TypeScript Support for Nuxt.js
-category: ''
+description: 'Nuxt.js 的 Typescript 支援'
+category: '更多使用方式'
 ---
 
 ```ts
