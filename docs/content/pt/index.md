@@ -17,7 +17,7 @@ footer: Distribuído sob a Licença MIT | Copyright © 2019-present Nuxt.js Team
 <p class="text-xl">
   Suporte de Typescript para Nuxt.js
 </p>
-<a href="/pt/guide//introduction" class="rounded bg-primary-100 dark:bg-primary-900 text-primary-500 text-lg font-medium px-3 py-1 inline-block">
+<a href="/pt/guide/introduction" class="rounded bg-primary-100 dark:bg-primary-900 text-primary-500 text-lg font-medium px-3 py-1 inline-block">
   Introdução →
 </a>
 </p>

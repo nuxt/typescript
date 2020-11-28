@@ -17,7 +17,7 @@ footer: MIT Licensed | Copyright © 2019-present Nuxt.js Team
 <p class="text-xl">
   Nuxt.js 向け TypeScript サポート
 </p>
-<a href="/ja/guide//introduction" class="rounded bg-primary-100 dark:bg-primary-900 text-primary-500 text-lg font-medium px-3 py-1 inline-block">
+<a href="/ja/guide/introduction" class="rounded bg-primary-100 dark:bg-primary-900 text-primary-500 text-lg font-medium px-3 py-1 inline-block">
   はじめる →
 </a>
 </p>
