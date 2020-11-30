@@ -1470,17 +1470,18 @@
     google-fonts-helper "^1.0.5"
 
 "@nuxtjs/pwa@^3.1.2":
-  version "3.2.2"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/pwa/-/pwa-3.2.2.tgz#e03c632e30f3df287a842d67323d945f36b97440"
-  integrity sha512-B+2VKwmaw40Wyds0hOKuN9R8ODHg7de8B7uQbzaZpLNuCinfKioQOk8jjaLDKRf4sndNG4AYI90Et4M+MRQetQ==
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/pwa/-/pwa-3.3.1.tgz#1056d9b2c52201094ff0683e2ee652a15cc701ab"
+  integrity sha512-XQGRooqZl9kEQLNC+FtsJyG5ZbeeTGrtme4Yr12XpJPvPfrwN2a4BkCS+ucNGbkDV9yxRtGtj04rIXLqsuMAkQ==
   dependencies:
-    defu "^3.1.0"
-    execa "^4.0.3"
+    defu "^3.2.2"
+    execa "^4.1.0"
     fs-extra "^9.0.1"
     hasha "^5.2.2"
     jimp-compact "^0.16.1"
     lodash.template "^4.5.0"
-    workbox-cdn "^5.1.3"
+    serve-static "^1.14.1"
+    workbox-cdn "^5.1.4"
 
 "@nuxtjs/tailwindcss@^3.1.0":
   version "3.2.0"
@@ -2847,9 +2848,9 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000981, caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001148, caniuse-lite@^1.0.30001157:
-  version "1.0.30001161"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001161.tgz#64f7ffe79ee780b8c92843ff34feb36cea4651e0"
-  integrity sha512-JharrCDxOqPLBULF9/SPa6yMcBRTjZARJ6sc3cuKrPfyIk64JN6kuMINWqA99Xc8uElMFcROliwtz0n9pYej+g==
+  version "1.0.30001162"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001162.tgz#9f83aad1f42539ce9aab58bb177598f2f8e22ec6"
+  integrity sha512-E9FktFxaNnp4ky3ucIGzEXLM+Knzlpuq1oN1sFAU0KeayygabGTmOsndpo8QrL4D9pcThlf4D2pUKaDxPCUmVw==
 
 capital-case@^1.0.3:
   version "1.0.3"
@@ -4104,7 +4105,7 @@ execa@^3.4.0:
     signal-exit "^3.0.2"
     strip-final-newline "^2.0.0"
 
-execa@^4.0.3:
+execa@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/execa/-/execa-4.1.0.tgz#4e5491ad1572f2f17a77d388c6c857135b22847a"
   integrity sha512-j5W0//W7f8UxAn8hXVnwG8tLwdiUy4FJLcSupCg6maBYZDpyBvTApK7KyuI4bKj8KOh1r2YH+6ucuYtJv1bTZA==
@@ -9106,9 +9107,9 @@ unist-util-generated@^1.0.0:
   integrity sha512-cln2Mm1/CZzN5ttGK7vkoGw+RZ8VcUH6BtGbq98DDtRGquAAOXig1mrBQYelOwMXYS8rK+vZDyyojSjp7JX+Lg==
 
 unist-util-is@^4.0.0:
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/unist-util-is/-/unist-util-is-4.0.3.tgz#e8b44db55fc20c43752b3346c116344d45d7c91d"
-  integrity sha512-bTofCFVx0iQM8Jqb1TBDVRIQW03YkD3p66JOd/aCWuqzlLyUtx1ZAGw/u+Zw+SttKvSVcvTiKYbfrtLoLefykw==
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/unist-util-is/-/unist-util-is-4.0.4.tgz#3e9e8de6af2eb0039a59f50c9b3e99698a924f50"
+  integrity sha512-3dF39j/u423v4BBQrk1AQ2Ve1FxY5W3JKwXxVFzBODQ6WEvccguhgp802qQLKSnxPODE6WuRZtV+ohlUg4meBA==
 
 unist-util-position@^3.0.0:
   version "3.1.0"
@@ -9611,7 +9612,7 @@ widest-line@^3.1.0:
   dependencies:
     string-width "^4.0.0"
 
-workbox-cdn@^5.1.3:
+workbox-cdn@^5.1.4:
   version "5.1.4"
   resolved "https://registry.yarnpkg.com/workbox-cdn/-/workbox-cdn-5.1.4.tgz#dbd8acee70b1978be70106207590bbb76af935cf"
   integrity sha512-04gM3mi8QGutokkSaA9xunVfjURnLbo9TTWyi8+pSDCEW5cD8u5GbJiliLK1vB9CShk/9OY1UDfW+XcmD+d6KQ==
