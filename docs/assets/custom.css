@@ -117,6 +117,10 @@ aside > div > ul {
     border: solid 1px #ddd;
     border-radius: 0 6px 6px 6px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .05);
-    padding: 4em 2em;
+    padding: 2em;
   }
+}
+
+.dark-mode .dark\:prose-dark .tabs-component-panels  {
+  color: #4a5568;
 }
