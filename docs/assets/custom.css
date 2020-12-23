@@ -1,0 +1,65 @@
+li a[href="/"],
+li a[href="/es"],
+li a[href="/ja"],
+li a[href="/pt"],
+li a[href="/zh-Hant"],
+li a[href="/zh-Hans"] {
+  @apply -ml-2 mb-2 text-gray-500 uppercase tracking-wider font-bold text-sm;
+
+  @screen lg {
+     @apply text-xs;
+  }
+}
+
+aside > div > ul {
+  @screen lg {
+    padding-left: 0.5rem !important;
+  }
+}
+
+.prose {
+  pre code::after {
+    @apply absolute;
+  }
+
+  img[src*="img.shields.io"] {
+    display: inline !important;
+  }
+}
+
+.tabs-component {
+  @apply my-16 mx-0
+}
+
+.tabs-component-tabs {
+  @apply z-10 bg-tabs px-2 rounded-t-md mb-0 !important;
+
+  @screen md {
+    @apply flex justify-start items-stretch;
+  }
+}
+
+.tabs-component-tab {
+  @apply font-bold font-mono pl-0 mr-0 mt-0 mb-0 list-none !important;
+}
+
+.tabs-component-tab::before {
+  @apply hidden;
+}
+
+.tabs-component-tab.is-active {
+  border-bottom-style: solid;
+  @apply border-b-2 border-tabs-active z-10;
+}
+
+.tabs-component-tab.is-disabled * {
+  @apply cursor-not-allowed text-opacity-50 !important;
+}
+
+.tabs-component-tab-a {
+  @apply flex items-center no-underline px-4 py-3 text-sm text-gray-400 !important;
+}
+
+.tabs-component-panels {
+  @apply bg-tabs p-4 rounded-none text-white rounded-b-md border-solid border-l-0 border-r-0 border-b-0 border-t-2 border-tabs-separator transform -translate-y-2;
+}

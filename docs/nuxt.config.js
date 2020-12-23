@@ -6,7 +6,7 @@ export default theme({
   docs: {
     primaryColor: '#6badff'
   },
-  css: [path.resolve(__dirname, './assets/tabs.scss')],
+  css: [path.resolve(__dirname, './assets/custom.css')],
   plugins: [path.resolve(__dirname, './plugins/vue-tabs.js')],
   generate: {
     routes: ['/', '/es', 'ja', 'pt', 'zh-Hant', 'zh-Hans']
