@@ -4,7 +4,7 @@ import theme from '@nuxt/content-theme-docs'
 
 export default theme({
   docs: {
-    primaryColor: '#007ACC'
+    primaryColor: '#6badff'
   },
   css: [path.resolve(__dirname, './assets/custom.css')],
   plugins: [path.resolve(__dirname, './plugins/vue-tabs.js')],
