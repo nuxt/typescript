@@ -1,7 +1,7 @@
 ---
 title: Módulos (Tempo de execução)
 position: 27
-description: 'Suporte de Typescript para Nuxt.js'
+description: 'Suporte de TypeScript para Nuxt.js'
 category: 'Cookbook'
 ---
 
@@ -15,12 +15,12 @@ interface Options {
 }
 
 const myModule: Module<Options> = function (moduleOptions) {
-  // Usar this, this.options, this.nuxt
-  // Usar moduleOptions
+  // Use this, this.options, this.nuxt
+  // Use moduleOptions
 }
 
 export default myModule
 
-// NECESSÁRIO se publicar o módulo como pacote npm
+// NECESSÁRIO se publicar o módulo como um pacote npm
 // export const meta = require('./package.json')
 ```

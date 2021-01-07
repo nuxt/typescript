@@ -1,10 +1,13 @@
 ---
 position: 1
 title: ''
-menuTitle: Introduction
+menuTitle: Introdução
 fullscreen: true
 category: ''
-description: 'Suporte de Typescript para Nuxt.js'
+description: 'Suporte de TypeScript para Nuxt.js'
+heroImage: /assets/logo.svg
+actionText: Introdução →
+actionLink: /guide/
 footer: Distribuído sob a Licença MIT | Copyright © 2019-present Nuxt.js Team
 ---
 
@@ -15,7 +18,7 @@ footer: Distribuído sob a Licença MIT | Copyright © 2019-present Nuxt.js Team
 # Nuxt TypeScript
 
 <p class="text-xl">
-  Suporte de Typescript para Nuxt.js
+  Suporte de TypeScript para Nuxt.js
 </p>
 <a href="/pt/guide/introduction" class="rounded bg-primary-100 dark:bg-primary-900 text-primary-500 text-lg font-medium px-3 py-1 inline-block">
   Introdução →
@@ -27,8 +30,8 @@ footer: Distribuído sob a Licença MIT | Copyright © 2019-present Nuxt.js Team
 <div class="flex md:flex-row gap-4 flex-col">
 <div class="w-full">
 
-## Autocompletar de código
-Uma das maiores vantagens do TypeScript é autocompletar de código e o IntelliSense.  O IntelliSense fornece dicas ativas à medida que um código é adicionado.
+## Autocompletar o código
+Uma das maiores vantagens do TypeScript é autocompletar o código e o IntelliSense. O IntelliSense fornece dicas ativas à medida em que um código é adicionado.
 
 </div>
 <div class="w-full">
@@ -44,4 +47,3 @@ Os tipos têm uma capacidade comprovada de aprimorar a qualidade e a compreenç�
 
 </div>
 </div>
-

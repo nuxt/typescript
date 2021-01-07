@@ -1,7 +1,7 @@
 ---
 title: Configuração (Tempo de execução)
 position: 26
-description: 'Suporte de Typescript para Nuxt.js'
+description: 'Suporte de TypeScript para Nuxt.js'
 category: 'Cookbook'
 ---
 

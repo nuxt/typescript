@@ -1,7 +1,7 @@
 ---
 title: Plugins
 position: 24
-description: 'Suporte de Typescript para Nuxt.js'
+description: 'Suporte de TypeScript para Nuxt.js'
 category: 'Cookbook'
 ---
 
@@ -42,7 +42,7 @@ export default Vue.extend({
 </script>
 ```
 
-## II. Injetar no Nontexto
+## II. Injetar no contexto
 
 ### Plugin
 
@@ -62,7 +62,7 @@ const myPlugin: Plugin = (context) => {
 export default myPlugin
 ```
 
-### Usage
+### Uso
 
 ```html
 <script lang="ts">
@@ -70,13 +70,13 @@ import Vue from 'vue'
 
 export default Vue.extend({
   asyncData (context) {
-    context.$myInjectedFunction('funcionando em asyncData')
+    context.$myInjectedFunction('funciona no asyncData')
   }
 })
 </script>
 ```
 
-## III. Injeção Combinada
+## III. Injeção combinada
 
 ### Plugin
 
@@ -90,12 +90,18 @@ declare module 'vue/types/vue' {
 }
 
 declare module '@nuxt/types' {
+  // nuxtContext.app.$myInjectedFunction dentro de asyncData, fetch, plugins, middleware, nuxtServerInit
   interface NuxtAppOptions {
+    $myInjectedFunction(message: string): void
+  }
+  // nuxtContext.$myInjectedFunction
+  interface Context {
     $myInjectedFunction(message: string): void
   }
 }
 
 declare module 'vuex/types/index' {
+  // this.$myInjectedFunction dentro de stores Vuex 
   interface Store<S> {
     $myInjectedFunction(message: string): void
   }
