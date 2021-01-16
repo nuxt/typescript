@@ -119,7 +119,7 @@ if (config.dev) {
 
 That's it, you're all set to use TypeScript in your **layouts**, **components**, **plugins** and **middlewares**.
 
-You can check the [**CookBook**](../cookbook/components/) section to get some TypeScript recipes for your Nuxt project.
+You can check the [**CookBook**](/cookbook/components/) section to get some TypeScript recipes for your Nuxt project.
 
 ## Module options
 
