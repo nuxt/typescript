@@ -1,12 +1,12 @@
 ---
-title: Indtrodução
+title: Introdução
 position: 10
-description: 'Suporte de Typescript para Nuxt.js'
+description: 'Suporte de TypeScript para Nuxt.js'
 category: Guia
 fullscreen: true
 ---
 
-O suporte do Nuxt TypeScript, vem com 2 pacotes :
+O suporte do Nuxt TypeScript vem com 3 pacotes :
 
 <alert type="info">
 
@@ -17,7 +17,7 @@ O suporte do Nuxt TypeScript, vem com 2 pacotes :
 
 Contém as definições de tipo do Nuxt TypeScript.
 
-Eles são mantidos ao longo do código principal do Nuxt em [`nuxt/nuxt.js` repositório](https://github.com/nuxt/nuxt.js/tree/dev/packages/types).
+Eles são mantidos ao longo do código principal do Nuxt no [repositório `nuxt/nuxt.js`](https://github.com/nuxt/nuxt.js/tree/dev/packages/types).
 
 </alert>
 

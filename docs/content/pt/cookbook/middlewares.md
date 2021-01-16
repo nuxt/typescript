@@ -1,7 +1,7 @@
 ---
 title: Middlewares
 position: 23
-description: 'Suporte de Typescript para Nuxt.js'
+description: 'Suporte de TypeScript para Nuxt.js'
 category: 'Cookbook'
 ---
 
@@ -9,7 +9,7 @@ category: 'Cookbook'
 import { Middleware } from '@nuxt/types'
 
 const myMiddleware: Middleware = (context) => {
-  // Usar contexto
+  // Use o contexto
 }
 
 export default myMiddleware

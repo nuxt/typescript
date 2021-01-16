@@ -1,7 +1,7 @@
 ---
 title: Store
 position: 25
-description: 'Suporte de Typescript para Nuxt.js'
+description: 'Suporte de TypeScript para Nuxt.js'
 category: 'Cookbook'
 ---
 
@@ -40,7 +40,7 @@ Para uso com o Nuxt, existem poucas condições principais:
    }
    ```
 
-2. Se você quiser acessar a loja sem inicializá-la em cada componente, poderá fazê-lo usando um [plugin inicializador](https://github.com/championswimmer/vuex-module-decorators#accessing-modules-with-nuxtjs), por exemplo:
+2. Se você quiser acessar o store sem inicializá-lo em cada componente, poderá fazê-lo usando um [plugin inicializador](https://github.com/championswimmer/vuex-module-decorators#accessing-modules-with-nuxtjs), por exemplo:
    ```ts{}[store/index.ts]
    import { Store } from 'vuex'
    import { initialiseStores } from '~/utils/store-accessor'
@@ -62,6 +62,8 @@ Para uso com o Nuxt, existem poucas condições principais:
 
    export default accessor
    ```
+
+   Não se esqueça de adicionar o plugin para seu arquivo `nuxt.config.js`.
 
    ```ts{}[utils/api.ts]
    import { NuxtAxiosInstance } from '@nuxtjs/axios'
@@ -95,7 +97,7 @@ Para uso com o Nuxt, existem poucas condições principais:
 
      @Action
      async getUsers() {
-       const users = $axios.$get('/users')
+       const users = await $axios.$get('/users')
        this.setUsers(users)
      }
    }
@@ -103,20 +105,20 @@ Para uso com o Nuxt, existem poucas condições principais:
 
 ### `vuex-class-component`
 
-[`vuex-class-component`](https://github.com/michaelolof/vuex-class-component) é uma abordagem baseada em classe muito promissora para o Nuxt store, e a sintaxe é muito semelhante ao `vuex-module-decorators`. Ele acaba de lançar uma nova API, embora ainda não seja compatível em sua totalidade com nuxt. A solução alternativa é definir módulos com um decorador:
+[`vuex-class-component`](https://github.com/michaelolof/vuex-class-component) é uma abordagem baseada em classe muito promissora para o Nuxt store, e a sintaxe é muito semelhante ao `vuex-module-decorators`. Ele acaba de lançar uma nova API, embora ainda não seja compatível totalmente com o Nuxt. A solução alternativa é definir módulos com um decorador:
 
 ```ts
 @Module({ namespacedPath: 'foo' })
 export default class extends VuexModule {}
 ```
 
-Consulte [está  issue](https://github.com/michaelolof/vuex-class-component/issues/43) para obter o status atual do problema de compatibilidade com o Nuxt.
+Consulte [esse  issue](https://github.com/michaelolof/vuex-class-component/issues/43) para obter o status atual do problema de compatibilidade com o Nuxt.
 
 ## Vanilla
 
-### Tipos básico
+### Tipagem básica
 
-A Vuex fornece tipos muito básicos para uso na store. Você pode usá-los para ajudar a definir seu store. Por exemplo:
+O Vuex fornece tipos muito básicos para uso no store. Você pode usá-los para ajudar a definir seu store. Por exemplo:
 
 ```ts{}[store/index.ts]
 import { GetterTree, ActionTree, MutationTree } from 'vuex'
@@ -140,7 +142,7 @@ export const actions: ActionTree<RootState, RootState> = {
   fetchThings({ commit }) {
     const things = this.$axios.$get('/things')
     console.log(things)
-    commit('CHANGE_NAME', 'New name')
+    commit('CHANGE_NAME', 'Novo nome')
   },
 }
 ```

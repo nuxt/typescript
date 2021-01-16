@@ -16,7 +16,7 @@ export default theme({
       { iso: 'en-US', code: 'en', name: 'English', file: 'en-US.js' },
       { iso: 'ja-JP', code: 'ja', name: '日本語', file: 'ja_JP.js' },
       { iso: 'es-ES', code: 'es', name: 'Español', file: 'es-ES.js' },
-      { iso: 'pt', code: 'pt', name: 'Portuguese' },
+      { iso: 'pt', code: 'pt', name: 'Português' },
       { iso: 'zh-Hant', code: 'zh-Hant', name: '繁體中文', file: 'zh-CN.js' },
       { iso: 'zh-Hans', code: 'zh-Hans', name: '简体中文', file: 'zh-CN.js' }
     ],
