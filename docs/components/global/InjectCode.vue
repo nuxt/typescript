@@ -7,12 +7,12 @@ export default {
   props: {
     query: { type: String, required: true }
   },
-  async fetch () {
-    this.page = await this.$content(this.query).fetch()
-  },
   data: () => ({
     page: []
-  })
+  }),
+  async fetch () {
+    this.page = await this.$content(this.query).fetch()
+  }
 }
 </script>
 
