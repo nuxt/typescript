@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "nuxt": "latest",
+    "vue-class-component": "latest",
     "vue-property-decorator": "latest"
   },
   "scripts": {
