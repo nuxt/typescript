@@ -5,12 +5,6 @@ import { Options as TsLoaderOptions } from 'ts-loader'
 import { ForkTsCheckerWebpackPluginOptions as TsCheckerOptions } from 'fork-ts-checker-webpack-plugin/lib/ForkTsCheckerWebpackPluginOptions'
 import { RuleSetUseItem } from 'webpack'
 
-declare module '@nuxt/types' {
-  interface NuxtOptions {
-    typescript: Options
-  }
-}
-
 export interface Options {
   ignoreNotFoundWarnings?: boolean
   loaders?: {
@@ -18,6 +12,12 @@ export interface Options {
     tsx?: Partial<TsLoaderOptions>
   }
   typeCheck?: TsCheckerOptions | boolean
+}
+
+declare module '@nuxt/types' {
+  interface NuxtOptions {
+    typescript: Options
+  }
 }
 
 const defaults: Options = {
