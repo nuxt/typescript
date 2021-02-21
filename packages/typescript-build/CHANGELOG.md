@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.5](https://github.com/nuxt/typescript/compare/@nuxt/typescript-build@2.0.4...@nuxt/typescript-build@2.0.5) (2021-02-21)
+
+
+### Bug Fixes
+
+* **typescript-build:** wrong path for dependency ([#464](https://github.com/nuxt/typescript/issues/464)) ([b300e6a](https://github.com/nuxt/typescript/commit/b300e6a18759cf57264abc57018e37f51e01031c)), closes [#145](https://github.com/nuxt/typescript/issues/145)
+
+
+
+
+
 ## [2.0.4](https://github.com/nuxt/typescript/compare/@nuxt/typescript-build@2.0.3...@nuxt/typescript-build@2.0.4) (2021-01-16)
 
 **Note:** Version bump only for package @nuxt/typescript-build
