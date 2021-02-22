@@ -29,7 +29,11 @@ export default defineComponent({
       counter.value--
     }
 
-    return { counter, increment, decrement }
+    return {
+      counter,
+      increment,
+      decrement
+    }
   }
 })
 </script>
