@@ -21,13 +21,8 @@ export default defineComponent({
   setup () {
     const counter = ref(0)
 
-    function increment () {
-      counter.value++
-    }
-
-    function decrement () {
-      counter.value--
-    }
+    const increment = () => counter.value++
+    const decrement = () => counter.value--
 
     return {
       counter,
