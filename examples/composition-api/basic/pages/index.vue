@@ -15,7 +15,6 @@ import Vue from 'vue'
 import { defineComponent, ref } from '@vue/composition-api'
 
 export default defineComponent({
-  name: 'CompositionAPICounter',
   setup () {
     const counter = ref(0)
 
