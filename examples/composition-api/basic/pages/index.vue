@@ -12,9 +12,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import VueCompositionApi, { defineComponent, ref } from '@vue/composition-api'
-
-Vue.use(VueCompositionApi)
+import { defineComponent, ref } from '@vue/composition-api'
 
 export default defineComponent({
   name: 'CompositionAPICounter',
