@@ -20,11 +20,11 @@ export default Vue.extend({
     }
   },
   methods: {
-    increment () {
-      return this.counter++
+    increment (): void {
+      this.counter++
     },
-    decrement () {
-      return this.counter--
+    decrement (): void {
+      this.counter--
     }
   }
 })
