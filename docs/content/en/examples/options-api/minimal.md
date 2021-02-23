@@ -1,5 +1,5 @@
 ---
-title: Options API
+title: Options API (minimal)
 position: 30
 description: TypeScript Support for Nuxt.js
 category: Examples

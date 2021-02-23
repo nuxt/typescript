@@ -1,10 +1,10 @@
 ---
-title: Composition API (minimal)
-position: 38
+title: Class API (basic)
+position: 35
 description: TypeScript Support for Nuxt.js
 category: Examples
 fullscreen: true
 ---
 
 
-<Example name="composition-api/minimal" />
+<Example name="class-api/basic" />
