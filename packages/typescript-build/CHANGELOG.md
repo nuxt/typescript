@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/nuxt/typescript/compare/@nuxt/typescript-build@2.0.6...@nuxt/typescript-build@2.1.0) (2021-03-07)
+
+**Note:** Version bump only for package @nuxt/typescript-build
+
+
+
+
+
 ## [2.0.6](https://github.com/nuxt/typescript/compare/@nuxt/typescript-build@2.0.4...@nuxt/typescript-build@2.0.6) (2021-02-23)
 
 
