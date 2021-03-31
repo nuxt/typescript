@@ -40,10 +40,10 @@ All you need to do is update your **package.json** file:
 
 ```json{2-5}
 "scripts": {
-  "dev": "nuxt-ts",
-  "build": "nuxt-ts build",
-  "generate": "nuxt-ts generate",
-  "start": "nuxt-ts start"
+  "dev": "nuxt",
+  "build": "nuxt build",
+  "generate": "nuxt generate",
+  "start": "nuxt start"
 },
 "dependencies": {
   "@nuxt/typescript-runtime": "latest",
@@ -54,12 +54,6 @@ All you need to do is update your **package.json** file:
   "@nuxt/typescript-build": "latest"
 }
 ```
-
-<alert type="info">
-
-**nuxt-ts** also works if you're using edge version of Nuxt.js (**nuxt-edge**).
-
-</alert>
 
 You can now use TypeScript for **nuxt.config** file, local **modules** and **serverMiddlewares**.
 
