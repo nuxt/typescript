@@ -81,7 +81,8 @@ const tsModule: Module<Options> = function (moduleOptions) {
             vue: true
           }
         },
-        logger: consola.withScope('nuxt:typescript')
+        // FIXME: options for fork-ts-checker-webpack-plugin should be JSON stringify-able
+        // logger: consola.withScope('nuxt:typescript')
       } as TsCheckerOptions, options.typeCheck)))
     }
   })
