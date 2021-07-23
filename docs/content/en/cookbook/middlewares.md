@@ -8,7 +8,7 @@ category: Cookbook
 ```ts
 import { Middleware } from '@nuxt/types'
 
-const myMiddleware: Middleware = (context) => {
+const myMiddleware: Middleware = async (context) => {
   // Use context
 }
 
