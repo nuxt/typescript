@@ -82,8 +82,9 @@ Notice that **ES2018** target is needed to be able to use [**Optional Chaining**
 You will also need to provide types for Vue files by adding the following type declaration:
 
 ```js{}[vue-shim.d.ts]
+import Vue from 'vue'
+
 declare module "*.vue" {
-  import Vue from 'vue'
   export default Vue
 }
 ```
