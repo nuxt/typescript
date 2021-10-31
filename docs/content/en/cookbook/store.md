@@ -121,7 +121,7 @@ See [this issue](https://github.com/michaelolof/vuex-class-component/issues/43) 
 Vuex supplies very basic types for use with the store. You can use these to help define your store. For example:
 
 ```ts{}[store/index.ts]
-import { GetterTree, ActionTree, MutationTree } from 'vuex'
+import { GetterTree, ActionTree, MutationTree } from 'vuex/types'
 
 export const state = () => ({
   things: [] as string[],
@@ -151,7 +151,7 @@ You would do exactly the same for a module. For example:
 
 `~/store/anotherModule.ts`:
 ```ts
-import { GetterTree, ActionTree, MutationTree } from 'vuex'
+import { GetterTree, ActionTree, MutationTree } from 'vuex/types'
 import { RootState } from '~/store'
 
 export const state = () => ({
