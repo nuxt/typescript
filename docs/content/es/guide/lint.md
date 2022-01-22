@@ -17,11 +17,22 @@ Si usted esta usando `@nuxtjs/eslint-config`, eliminelo de sus dependencias, la 
 
 </alert>
 
+<code-group>
+<code-block label="Yarn" active>
+
 ```sh
-npm i -D @nuxtjs/eslint-config-typescript
-# OR
-yarn add -D @nuxtjs/eslint-config-typescript
+yarn add --dev @nuxtjs/eslint-config-typescript
 ```
+
+</code-block>
+<code-block label="NPM">
+
+```sh
+npm i --save-dev @nuxtjs/eslint-config-typescript
+```
+
+</code-block>
+</code-group>
 
 Luego, cree o edite su configuración de ESLint `.eslintrc.js` para que extienda de `@nuxtjs/eslint-config-typescript` :
 ```js
