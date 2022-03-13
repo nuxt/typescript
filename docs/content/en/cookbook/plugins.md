@@ -95,10 +95,6 @@ declare module '@nuxt/types' {
   interface NuxtAppOptions {
     $myInjectedFunction(message: string): void
   }
-  // nuxtContext.$myInjectedFunction
-  interface Context {
-    $myInjectedFunction(message: string): void
-  }
 }
 
 declare module 'vuex/types/index' {
