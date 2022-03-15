@@ -26,8 +26,8 @@ Vue.prototype.$myInjectedFunction = (message: string) => console.log(message)
 ```html
 <template>
   <div>
-    <button @click="$myInjectedFunction()">Clique em mim !</button>
-    <button @click="someMethod">Clique em mim !</button>
+    <button @click="$myInjectedFunction()">Clique em mim!</button>
+    <button @click="someMethod">Clique em mim!</button>
   </div>
 </template>
 
@@ -36,7 +36,7 @@ import Vue from 'vue'
 
 export default Vue.extend({
   mounted () {
-    this.$myInjectedFunction('funciondo em mounted')
+    this.$myInjectedFunction('funcionando em mounted')
   }
 })
 </script>
@@ -70,7 +70,7 @@ import Vue from 'vue'
 
 export default Vue.extend({
   asyncData (context) {
-    context.$myInjectedFunction('funciona no asyncData')
+    context.$myInjectedFunction('funcionando em asyncData')
   }
 })
 </script>
@@ -125,7 +125,7 @@ export default Vue.extend({
     this.$myInjectedFunction('funcionando em mounted')
   },
   asyncData (context) {
-    context.app.$myInjectedFunction('funcioando em asyncData')
+    context.app.$myInjectedFunction('funcionando em asyncData')
   }
 })
 </script>
