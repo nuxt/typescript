@@ -21,14 +21,14 @@ Se você já estiver usando `@nuxtjs/eslint-config`, o remova de suas dependênc
 <code-block label="Yarn" active>
 
 ```sh
-yarn add -D @nuxtjs/eslint-config-typescript
+yarn add --dev @nuxtjs/eslint-config-typescript
 ```
 
 </code-block>
 <code-block label="NPM">
 
 ```sh
-npm i -D @nuxtjs/eslint-config-typescript
+npm i --save-dev @nuxtjs/eslint-config-typescript
 ```
 
 </code-block>
