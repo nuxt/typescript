@@ -122,14 +122,14 @@ export default class extends VuexModule {}
 当你在使用 store 时，Vuex 提供了非常基本的类型。你可以使用它们为你的 store 定义提供帮助。例如:
 
 ```ts{}[store/index.ts]
-import { GetterTree, ActionTree, MutationTree } from 'vuex'
+import { GetterTree, ActionTree, MutationTree, Store } from 'vuex'
 
 export const state = () => ({
   things: [] as string[],
   name: 'Me',
 })
 
-export type RootState = ReturnType<typeof state>
+export type RootState = Store<ReturnType<typeof state>>
 
 export const getters: GetterTree<RootState, RootState> = {
   name: state => state.name,

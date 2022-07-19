@@ -119,14 +119,14 @@ Ver [este reporte](https://github.com/michaelolof/vuex-class-component/issues/43
 Vuex suministra tipos muy básicos para usar con la tienda. Puede usarlos para ayudar a definir su store. Por ejemplo:
 
 ```ts{}[store/index.ts]
-import { GetterTree, ActionTree, MutationTree } from 'vuex'
+import { GetterTree, ActionTree, MutationTree, Store } from 'vuex'
 
 export const state = () => ({
   things: [] as string[],
   name: 'Me',
 })
 
-export type RootState = ReturnType<typeof state>
+export type RootState = Store<ReturnType<typeof state>>
 
 export const getters: GetterTree<RootState, RootState> = {
   name: state => state.name,

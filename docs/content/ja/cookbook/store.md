@@ -121,14 +121,14 @@ Nuxt との互換性問題の現在の状態については、[このイシュ�
 Vuex はストアを使用するために非常に基本的な型を提供しています。これらを使用してストアを定義することができます。例：
 
 ```ts{}[store/index.ts]
-import { GetterTree, ActionTree, MutationTree } from 'vuex'
+import { GetterTree, ActionTree, MutationTree, Store } from 'vuex'
 
 export const state = () => ({
   things: [] as string[],
   name: 'Me',
 })
 
-export type RootState = ReturnType<typeof state>
+export type RootState = Store<ReturnType<typeof state>>
 
 export const getters: GetterTree<RootState, RootState> = {
   name: state => state.name,
