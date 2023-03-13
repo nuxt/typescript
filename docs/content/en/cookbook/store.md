@@ -50,8 +50,43 @@ For use with Nuxt, there are few key provisions:
    export const plugins = [initializer]
    export * from '~/utils/store-accessor'
    ```
+   
+3. You then simply need to add your modules to your store-accessor
+   ```ts{}[utils/store-accessor.ts]
+    import { Store } from 'vuex'
+    import { getModule } from 'vuex-module-decorators'
+    import example from '~/store/example'
 
-3. If you want to access the Nuxt app instance, you will need to do something similar with a plugin, for example:
+    let exampleStore: example
+
+    function initialiseStores(store: Store<any>): void {
+      exampleStore = getModule(example, store)
+    }
+    export { initialiseStores, exampleStore }
+   ```
+   
+4. Now you can access stores in a type-safe way by doing the following from a component or page - no extra initialization required.
+   ```ts
+    import { exampleStore } from '~/store'
+      //for state
+      get() {
+        return exampleStore.exampleState
+      }
+      // for getters
+      someMethod() {
+        return exampleStore.exampleGetter
+      }
+      // for Mutations
+      someMethod() {
+        return exampleStore.exampleMutation(payload)
+      }
+      // for Actions
+      someMethod() {
+        return exampleStore.exampleAction(payload)
+      }
+   ```
+   
+5. If you want to access the Nuxt app instance, you will need to do something similar with a plugin, for example:
    ```ts{}[plugins/axios-accessor.ts]
    import { Plugin } from '@nuxt/types'
    import { initializeAxios } from '~/utils/api'
