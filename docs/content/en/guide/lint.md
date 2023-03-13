@@ -15,20 +15,22 @@ All you need is to install `@nuxtjs/eslint-config-typescript`:
 
 If you're already using `@nuxtjs/eslint-config`, remove it from your dependencies, the Nuxt TypeScript ESLint config includes it.
 
+If you have not yet done so, you must install ESLint separately.
+
 </alert>
 
 <code-group>
 <code-block label="Yarn" active>
 
 ```sh
-yarn add --dev @nuxtjs/eslint-config-typescript
+yarn add --dev @nuxtjs/eslint-config-typescript eslint
 ```
 
 </code-block>
 <code-block label="NPM">
 
 ```sh
-npm i --save-dev @nuxtjs/eslint-config-typescript
+npm i --save-dev @nuxtjs/eslint-config-typescript eslint
 ```
 
 </code-block>
