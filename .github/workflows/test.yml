@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
 
-      - uses: actions/cache@v1
+      - uses: actions/cache@v3
         id: cache
         with:
           path: "node_modules"
