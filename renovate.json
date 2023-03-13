@@ -11,5 +11,21 @@
   "ignoreDeps": [
     "@nuxt/types",
     "typescript"
+  ],
+  "packageRules": [
+    {
+      "groupName": "Docs dependencies",
+      "matchFiles": ["docs/package.json"],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "lockFileMaintenance": {
+        "enabled": true,
+        "extends": [
+          "schedule:weekly"
+        ]
+      }
+    }
   ]
 }
