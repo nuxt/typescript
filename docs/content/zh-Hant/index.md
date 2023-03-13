@@ -4,7 +4,7 @@ title: ''
 menuTitle: Introduction
 fullscreen: true
 category: ''
-description: 'Nuxt.js 的 Typescript 支援'
+description: 'Nuxt 2 的 Typescript 支援'
 footer: MIT Licensed | Copyright © 2019-present Nuxt.js Team
 ---
 
@@ -15,7 +15,7 @@ footer: MIT Licensed | Copyright © 2019-present Nuxt.js Team
 # Nuxt TypeScript
 
 <p class="text-xl">
-  Nuxt.js 的 Typescript 支援
+  Nuxt 2 的 Typescript 支援
 </p>
 <a href="/zh-Hant/guide/introduction" class="rounded bg-primary-100 dark:bg-primary-900 text-primary-500 text-lg font-medium px-3 py-1 inline-block">
   快速入門 →

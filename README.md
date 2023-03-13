@@ -11,6 +11,8 @@
 
 # Nuxt Typescript
 
+Build and runtime support for Typescript in Nuxt 2.
+
 Documentation: https://typescript.nuxtjs.org
 
 ## 📑 License
