@@ -47,10 +47,10 @@ npm install @nuxt/typescript-runtime
 },
 "dependencies": {
   "@nuxt/typescript-runtime": "latest",
-  "nuxt": "latest"
+  "nuxt": "2.x"
 },
 "devDependencies": {
-  "@nuxt/types": "latest",
+  "@nuxt/types": "2.x",
   "@nuxt/typescript-build": "latest"
 }
 ```

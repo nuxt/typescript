@@ -4,7 +4,7 @@ title: ''
 menuTitle: Introduction
 fullscreen: true
 category: ''
-description: 'Nuxt.js 向け TypeScript サポート'
+description: 'Nuxt 2 向け TypeScript サポート'
 footer: MIT Licensed | Copyright © 2019-present Nuxt.js Team
 ---
 
@@ -15,7 +15,7 @@ footer: MIT Licensed | Copyright © 2019-present Nuxt.js Team
 # Nuxt TypeScript
 
 <p class="text-xl">
-  Nuxt.js 向け TypeScript サポート
+  Nuxt 2 向け TypeScript サポート
 </p>
 <a href="/ja/guide/introduction" class="rounded bg-primary-100 dark:bg-primary-900 text-primary-500 text-lg font-medium px-3 py-1 inline-block">
   はじめる →

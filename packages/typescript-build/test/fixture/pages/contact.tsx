@@ -3,6 +3,7 @@ import Vue from 'vue'
 export default Vue.extend({
   name: 'Contact',
   data () {
+    // eslint-disable-next-line @typescript-eslint/no-inferrable-types
     const text: string = 'Contact Page'
     return { text }
   },

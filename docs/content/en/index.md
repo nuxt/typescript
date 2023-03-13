@@ -4,7 +4,7 @@ title: ''
 menuTitle: Introduction
 fullscreen: true
 category: ''
-description: TypeScript Support for Nuxt.js
+description: TypeScript Support for Nuxt 2
 heroImage: /assets/logo.svg
 actionText: Get Started →
 actionLink: /guide/
@@ -19,7 +19,7 @@ footer: MIT Licensed | Copyright © 2019-present Nuxt.js Team
 # Nuxt TypeScript
 
 <p class="text-xl">
-  TypeScript Support for Nuxt.js
+  TypeScript Support for Nuxt 2
 </p>
 <a href="/guide/introduction" class="rounded bg-primary-100 dark:bg-primary-900 text-primary-500 text-lg font-medium px-3 py-1 inline-block">
   Get Started →

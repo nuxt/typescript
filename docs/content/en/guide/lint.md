@@ -23,14 +23,14 @@ If you have not yet done so, you must install ESLint separately.
 <code-block label="Yarn" active>
 
 ```sh
-yarn add -D @nuxtjs/eslint-config-typescript eslint
+yarn add --dev @nuxtjs/eslint-config-typescript eslint
 ```
 
 </code-block>
 <code-block label="NPM">
 
 ```sh
-npm i -D @nuxtjs/eslint-config-typescript eslint
+npm i --save-dev @nuxtjs/eslint-config-typescript eslint
 ```
 
 </code-block>

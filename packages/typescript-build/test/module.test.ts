@@ -1,8 +1,7 @@
-
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin'
-import { Nuxt } from '@nuxt/core-edge'
-import { Builder } from '@nuxt/builder-edge'
-import { BundleBuilder } from '@nuxt/webpack-edge'
+import { Nuxt } from '@nuxt/core'
+import { Builder } from '@nuxt/builder'
+import { BundleBuilder } from '@nuxt/webpack'
 import { Configuration as WebpackConfiguration, RuleSetLoader } from 'webpack'
 import { NuxtConfig, NuxtOptions } from '@nuxt/types'
 import { Options as TsLoaderOptions } from 'ts-loader'

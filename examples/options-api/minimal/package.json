@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "nuxt": "latest"
+    "nuxt": "2.x"
   },
   "scripts": {
     "dev": "nuxt",
@@ -13,7 +13,7 @@
     "post-update": "yarn upgrade --latest"
   },
   "devDependencies": {
-    "@nuxt/types": "latest",
+    "@nuxt/types": "2.x",
     "@nuxt/typescript-build": "latest"
   }
 }

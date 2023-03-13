@@ -73,6 +73,7 @@ const tsModule: Module<Options> = function (moduleOptions) {
     ))
 
     if (options.typeCheck && isClient && !isModern) {
+      // eslint-disable-next-line @typescript-eslint/no-var-requires
       const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
       config.plugins!.push(new ForkTsCheckerWebpackPlugin(Object.assign({
         typescript: {
