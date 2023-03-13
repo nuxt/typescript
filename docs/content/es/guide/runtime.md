@@ -47,10 +47,10 @@ Todo lo que necesitas es actualizar tu archivo **package.json**:
 },
 "dependencies": {
   "@nuxt/typescript-runtime": "latest",
-  "nuxt": "latest",
+  "nuxt": "2.x",
 },
 "devDependencies": {
-  "@nuxt/types": "latest",
+  "@nuxt/types": "2.x",
   "@nuxt/typescript-build": "latest"
 }
 ```

@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@vue/composition-api": "latest",
-    "nuxt": "latest"
+    "@vue/composition-api": "^1.7.1",
+    "nuxt": "2.x"
   },
   "scripts": {
     "dev": "nuxt",
@@ -14,7 +14,7 @@
     "post-update": "yarn upgrade --latest"
   },
   "devDependencies": {
-    "@nuxt/types": "latest",
+    "@nuxt/types": "2.x",
     "@nuxt/typescript-build": "latest"
   }
 }
