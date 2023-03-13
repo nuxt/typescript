@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "nuxt": "latest",
-    "vue-class-component": "latest",
-    "vue-property-decorator": "latest"
+    "nuxt": "2.x",
+    "vue-class-component": "^7.2.6",
+    "vue-property-decorator": "^9.1.2"
   },
   "scripts": {
     "dev": "nuxt",
@@ -15,7 +15,7 @@
     "post-update": "yarn upgrade --latest"
   },
   "devDependencies": {
-    "@nuxt/types": "latest",
+    "@nuxt/types": "2.x",
     "@nuxt/typescript-build": "latest"
   }
 }

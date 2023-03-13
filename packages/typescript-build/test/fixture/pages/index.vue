@@ -7,6 +7,7 @@ import Vue from 'vue'
 
 export default Vue.extend({
   data () {
+    // eslint-disable-next-line @typescript-eslint/no-inferrable-types
     const text: string = 'Index Page'
     return { text }
   }
