@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
     "target": "ES6",
-    "lib": ["DOM", "ESNext"],
+    "lib": [
+      "DOM",
+      "ESNext"
+    ],
     "module": "CommonJS",
     "moduleResolution": "Node",
     "esModuleInterop": true,
@@ -9,6 +13,11 @@
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
     "stripInternal": true,
-    "noUnusedLocals": true
+    "noUnusedLocals": true,
+    "paths": {
+      "webpack-dev-middleware": [
+        "./stub.d.ts"
+      ]
+    }
   }
 }

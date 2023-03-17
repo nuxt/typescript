@@ -28,6 +28,9 @@ jobs:
       - name: Run tests
         run: yarn test
 
+      - name: Build project
+        run: yarn build
+
       - name: Coverage
         run: yarn codecov
         env:
