@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/nuxt/typescript/compare/@nuxt/typescript-build@2.1.0...@nuxt/typescript-build@3.0.0) (2023-03-17)
+
+
+### Bug Fixes
+
+* make typescript a peer dependency ([#563](https://github.com/nuxt/typescript/issues/563)) ([6ba1937](https://github.com/nuxt/typescript/commit/6ba193742b29d7da3bf12793734f0fd80881c83f))
+
+
+
+
+
 # [2.1.0](https://github.com/nuxt/typescript/compare/@nuxt/typescript-build@2.0.6...@nuxt/typescript-build@2.1.0) (2021-03-07)
 
 **Note:** Version bump only for package @nuxt/typescript-build
