@@ -76,7 +76,7 @@ const tsModule: Module<Options> = function (moduleOptions) {
       const logger = consola.withTag('nuxt:typescript')
       const loggerInterface: TsCheckerLogger = {
         log (message) { logger.log(message) },
-        info () {},
+        info (message) { logger.info(message) },
         error (message) { logger.error(message) }
       }
       config.plugins!.push(new ForkTsCheckerWebpackPlugin(defu(options.typeCheck, {
@@ -87,7 +87,6 @@ const tsModule: Module<Options> = function (moduleOptions) {
           }
         },
         logger: {
-          infrastructure: loggerInterface,
           issues: loggerInterface
         }
       } as TsCheckerOptions)))
