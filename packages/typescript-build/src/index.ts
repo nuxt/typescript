@@ -4,6 +4,7 @@ import consola from 'consola'
 import { Module } from '@nuxt/types'
 import { Options as TsLoaderOptions } from 'ts-loader'
 import { ForkTsCheckerWebpackPluginOptions as TsCheckerOptions } from 'fork-ts-checker-webpack-plugin/lib/ForkTsCheckerWebpackPluginOptions'
+import TsCheckerLogger from 'fork-ts-checker-webpack-plugin/lib/logger/Logger'
 import { RuleSetUseItem } from 'webpack'
 
 export interface Options {
@@ -72,6 +73,12 @@ const tsModule: Module<Options> = function (moduleOptions) {
     if (options.typeCheck && isClient && !isModern) {
       // eslint-disable-next-line @typescript-eslint/no-var-requires
       const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
+      const logger = consola.withTag('nuxt:typescript')
+      const loggerInterface: TsCheckerLogger = {
+        log (message) { logger.log(message) },
+        info () {},
+        error (message) { logger.error(message) }
+      }
       config.plugins!.push(new ForkTsCheckerWebpackPlugin(defu(options.typeCheck, {
         typescript: {
           configFile: path.resolve(this.options.rootDir!, 'tsconfig.json'),
@@ -79,7 +86,10 @@ const tsModule: Module<Options> = function (moduleOptions) {
             vue: true
           }
         },
-        logger: consola.withScope('nuxt:typescript')
+        logger: {
+          infrastructure: loggerInterface,
+          issues: loggerInterface
+        }
       } as TsCheckerOptions)))
     }
   })
