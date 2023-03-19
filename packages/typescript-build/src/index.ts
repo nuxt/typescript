@@ -74,6 +74,7 @@ const tsModule: Module<Options> = function (moduleOptions) {
       // eslint-disable-next-line @typescript-eslint/no-var-requires
       const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
       const logger = consola.withTag('nuxt:typescript')
+      /* istanbul ignore next */
       const loggerInterface: TsCheckerLogger = {
         log (message) { logger.log(message) },
         info (message) { logger.info(message) },
