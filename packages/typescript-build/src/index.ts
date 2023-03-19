@@ -1,11 +1,11 @@
 import path from 'path'
 import { defu } from 'defu'
 import consola from 'consola'
-import { Module } from '@nuxt/types'
-import { Options as TsLoaderOptions } from 'ts-loader'
-import { ForkTsCheckerWebpackPluginOptions as TsCheckerOptions } from 'fork-ts-checker-webpack-plugin/lib/ForkTsCheckerWebpackPluginOptions'
-import TsCheckerLogger from 'fork-ts-checker-webpack-plugin/lib/logger/Logger'
-import { RuleSetUseItem } from 'webpack'
+import type { Module } from '@nuxt/types'
+import type { Options as TsLoaderOptions } from 'ts-loader'
+import type { ForkTsCheckerWebpackPluginOptions as TsCheckerOptions } from 'fork-ts-checker-webpack-plugin/lib/ForkTsCheckerWebpackPluginOptions'
+import type TsCheckerLogger from 'fork-ts-checker-webpack-plugin/lib/logger/Logger'
+import type { RuleSetUseItem } from 'webpack'
 
 export interface Options {
   ignoreNotFoundWarnings?: boolean
