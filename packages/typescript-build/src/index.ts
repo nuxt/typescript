@@ -1,4 +1,3 @@
-import path from 'path'
 import { defu } from 'defu'
 import consola from 'consola'
 import { Module } from '@nuxt/types'
