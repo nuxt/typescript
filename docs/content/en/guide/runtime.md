@@ -5,6 +5,12 @@ description: TypeScript Support for Nuxt.js
 category: Guide
 ---
 
+<alert type="warning">
+
+**Nuxt 2.15** and above comes with runtime TypeScript support built-in so usage of this package is no longer needed nor recommended in those versions.
+
+</alert>
+
 TypeScript runtime is needed for files not compiled by Webpack, such as **nuxt.config** file, local **modules** and **serverMiddlewares**.
 
 Nuxt.js has created a TypeScript runtime wrapper under a dedicated package **`@nuxt/typescript-runtime`**. The wrapper is a binary named **nuxt-ts** that registers [**ts-node**](https://github.com/TypeStrong/ts-node) behind the scenes before running.

@@ -5,9 +5,9 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { defineComponent } from 'vue'
 
-export default Vue.extend({
+export default defineComponent({
   data () {
     // eslint-disable-next-line @typescript-eslint/no-inferrable-types
     const message: string = 'This is a message'

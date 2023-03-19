@@ -1,7 +1,7 @@
-import { Configuration } from '@nuxt/types'
+import type { NuxtConfig } from '@nuxt/types'
 import logger from './serverMiddlewares/logger'
 
-const config: Configuration = {
+const config: NuxtConfig = {
   buildModules: [
     '@nuxt/typescript-build'
   ],

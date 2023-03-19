@@ -54,7 +54,7 @@ export default config
 
 また、以下の型宣言を追加し Vue ファイルの型を提供する必要があります：
 
-```js{}[vue-shim.d.ts]
+```js {}[vue-shim.d.ts]
 declare module "*.vue" {
   import Vue from 'vue'
   export default Vue
@@ -63,13 +63,13 @@ declare module "*.vue" {
 
 <alert type="info">
 
-このファイルはプロジェクトのルートディレクトリか `types` という名前のディレクトリに配置できます。カスタムディレクトリにも配置できますが、その場合は `tsconfig.json` ファイルに [`typeRoots`](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html#types-typeroots-and-types) を設定する必要があります。
+このファイルはプロジェクトのルートディレクトリか `types` という名前のディレクトリに配置できます。カスタムディレクトリにも配置できますが、その場合は `tsconfig.json` ファイルに [`typeRoots`](https://www.typescriptlang.org/tsconfig#typeRoots) を設定する必要があります。
 
 </alert>
 
 <alert type="info">
 
-さまざまなコンパイラオプションについては、公式の [TypeScript ドキュメント](https://www.typescriptlang.org/docs/handbook/compiler-options.html)を確認してください。
+さまざまなコンパイラオプションについては、公式の [TypeScript ドキュメント](https://www.typescriptlang.org/tsconfig)を確認してください。
 
 </alert>
 

@@ -15,14 +15,14 @@ Here are the guidelines to install & configure them.
 <code-block label="Yarn" active>
 
 ```sh
-yarn add --dev @nuxt/typescript-build @nuxt/types
+yarn add --dev @nuxt/typescript-build @nuxt/types typescript@4
 ```
 
 </code-block>
 <code-block label="NPM">
 
 ```sh
-npm install --save-dev @nuxt/typescript-build @nuxt/types
+npm install --save-dev @nuxt/typescript-build @nuxt/types typescript@4
 ```
 
 </code-block>
@@ -79,13 +79,13 @@ and create a **`tsconfig.json`** file :
 
 <alert type="info">
 
-Notice that **ES2018** target is needed to be able to use [**Optional Chaining**](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#optional-chaining) and [**Nullish Coalescing**](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#nullish-coalescing), as **ESNext** target doesn't seem to support these features for now.
+Notice that **ES2018** or later `target` is needed to be able to use [**Optional Chaining**](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#optional-chaining) and [**Nullish Coalescing**](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#nullish-coalescing).
 
 </alert>
 
 You will also need to provide types for Vue files by adding the following type declaration:
 
-```js{}[vue-shim.d.ts]
+```js {}[vue-shim.d.ts]
 declare module "*.vue" {
   import Vue from 'vue'
   export default Vue
@@ -94,13 +94,13 @@ declare module "*.vue" {
 
 <alert type="info">
 
-You can place this file in the root directory of your project or a directory named `types`. You can place it in a custom directory, but you'll need to configure [`typeRoots`](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html#types-typeroots-and-types) in the `tsconfig.json` file.
+You can place this file in the root directory of your project or a directory named `types`. You can place it in a custom directory, but you'll need to configure [`typeRoots`](https://www.typescriptlang.org/tsconfig#typeRoots) in the `tsconfig.json` file.
 
 </alert>
 
 <alert type="info">
 
-Check official [TypeScript documentation](https://www.typescriptlang.org/docs/handbook/compiler-options.html) to learn about the different compiler options.
+Check official [TypeScript documentation](https://www.typescriptlang.org/tsconfig) to learn about the different compiler options.
 
 </alert>
 
@@ -121,7 +121,7 @@ if (config.dev) {
 
 </alert>
 
-That's it, you're all set to use TypeScript in your **layouts**, **components**, **plugins** and **middlewares**.
+That's it, you're all set to use TypeScript in your **pages**, **layouts**, **components**, **plugins** and **middlewares**.
 
 You can check the [**CookBook**](/cookbook/components) section to get some TypeScript recipes for your Nuxt project.
 

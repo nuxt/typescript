@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { defineComponent } from 'vue'
 
 interface Test {
   attributes: {
@@ -11,7 +11,7 @@ interface Test {
   }
 }
 
-export default Vue.extend({
+export default defineComponent({
   data () {
     const test: Test = {
       attributes: {

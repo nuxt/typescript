@@ -18,7 +18,7 @@ Nuxt で使用するために重要な条件がいくつかあります：
 
 1. モジュールは `stateFactory: true` で装飾する必要があるため、以下のようにします:
 
-   ```ts{}[store/mymodule.ts]
+   ```ts {}[store/mymodule.ts]
    import { Module, VuexModule, Mutation } from 'vuex-module-decorators'
 
    @Module({
@@ -41,7 +41,7 @@ Nuxt で使用するために重要な条件がいくつかあります：
    ```
 
 2. 各コンポーネントで初期化せずにストアにアクセスした場合は、[initialiser plugin](https://github.com/championswimmer/vuex-module-decorators#accessing-modules-with-nuxtjs) を使用してアクセスすることができます。例：
-   ```ts{}[store/index.ts]
+   ```ts {}[store/index.ts]
    import { Store } from 'vuex'
    import { initialiseStores } from '~/utils/store-accessor'
 
@@ -52,7 +52,7 @@ Nuxt で使用するために重要な条件がいくつかあります：
    ```
 
 3. Nuxt アプリケーションインスタンスにアクセスしたい場合は、プラグインと同様に設定を行う必要があります。例：
-   ```ts{}[plugins/axios-accessor.ts]
+   ```ts {}[plugins/axios-accessor.ts]
    import { Plugin } from '@nuxt/types'
    import { initializeAxios } from '~/utils/api'
 
@@ -65,7 +65,7 @@ Nuxt で使用するために重要な条件がいくつかあります：
 
    プラグインを忘れずに `nuxt.config.js` ファイルに追加してください。
 
-   ```ts{}[utils/api.ts]
+   ```ts {}[utils/api.ts]
    import { NuxtAxiosInstance } from '@nuxtjs/axios'
 
    let $axios: NuxtAxiosInstance
@@ -73,11 +73,11 @@ Nuxt で使用するために重要な条件がいくつかあります：
    export function initializeAxios(axiosInstance: NuxtAxiosInstance) {
      $axios = axiosInstance
    }
-   
+
    export { $axios }
    ```
 
-   ```ts{}[store/users.ts]
+   ```ts {}[store/users.ts]
    import { Module, VuexModule, Action, Mutation } from 'vuex-module-decorators'
    import { $axios } from '~/utils/api'
    import { User } from '~/types'
@@ -120,7 +120,7 @@ Nuxt との互換性問題の現在の状態については、[このイシュ�
 
 Vuex はストアを使用するために非常に基本的な型を提供しています。これらを使用してストアを定義することができます。例：
 
-```ts{}[store/index.ts]
+```ts {}[store/index.ts]
 import { GetterTree, ActionTree, MutationTree } from 'vuex'
 
 export const state = () => ({
@@ -184,7 +184,7 @@ Vuex はアプリケーションからストアへアクセスするための便
 
 もう1つの方法としては、使用時に自前の型を提供することができます。
 
-```ts{}[components/MyComponent.vue]
+```ts {}[components/MyComponent.vue]
 <script lang="ts">
 
 import { Component, Vue } from 'nuxt-property-decorator'

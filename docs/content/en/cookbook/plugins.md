@@ -32,9 +32,9 @@ Vue.prototype.$myInjectedFunction = (message: string) => console.log(message)
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { defineComponent } from 'vue'
 
-export default Vue.extend({
+export default defineComponent({
   mounted () {
     this.$myInjectedFunction('works in mounted')
   }
@@ -66,9 +66,9 @@ export default myPlugin
 
 ```html
 <script lang="ts">
-import Vue from 'vue'
+import { defineComponent } from 'vue'
 
-export default Vue.extend({
+export default defineComponent({
   asyncData (context) {
     context.$myInjectedFunction('works in asyncData')
   }
@@ -119,9 +119,9 @@ export default myPlugin
 
 ```html
 <script lang="ts">
-import Vue from 'vue'
+import { defineComponent } from 'vue'
 
-export default Vue.extend({
+export default defineComponent({
   mounted () {
     this.$myInjectedFunction('works in mounted')
   },
@@ -131,9 +131,3 @@ export default Vue.extend({
 })
 </script>
 ```
-
-<alert type="info">
-
-Please note that `inject` doesn't inject in `context` but in `context.app`. 
-
-</alert>

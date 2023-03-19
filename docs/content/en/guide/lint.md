@@ -72,7 +72,7 @@ If you need to edit/override TypeScript ESLint rules, You can find [here](https:
 
 If you want to have runtime lint (having ESLint running after a file has been saved), you can enable the `eslint` feature of [fork-ts-checker-webpack-plugin](https://github.com/TypeStrong/fork-ts-checker-webpack-plugin) by configuring the `typeCheck` module option
 
-```ts{}[nuxt.config.js]
+```ts {}[nuxt.config.js]
 export default {
   typescript: {
     typeCheck: {

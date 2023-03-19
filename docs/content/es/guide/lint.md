@@ -70,7 +70,7 @@ Si usted necesita editar/sobreescribir las reglas de TypeScript ESLint, Usted pu
 
 Si usted desea tener una runtime lint (teniendo ESLint corriendo despues de que una archivo es guardado), usted debe activar la opción `eslint` del [fork-ts-checker-webpack-plugin](https://github.com/TypeStrong/fork-ts-checker-webpack-plugin) configurando la opción `typeCheck` del módulo
 
-```ts{}[nuxt.config.js]
+```ts {}[nuxt.config.js]
 export default {
   typescript: {
     typeCheck: {

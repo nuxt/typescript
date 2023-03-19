@@ -18,7 +18,7 @@ Para uso com o Nuxt, existem poucas condições principais:
 
 1. Seus módulos devem ser decorados com `stateFactory: true`, por exemplo:
 
-   ```ts{}[store/mymodule.ts]
+   ```ts {}[store/mymodule.ts]
    import { Module, VuexModule, Mutation } from 'vuex-module-decorators'
 
    @Module({
@@ -41,7 +41,7 @@ Para uso com o Nuxt, existem poucas condições principais:
    ```
 
 2. Se você quiser acessar o store sem inicializá-lo em cada componente, poderá fazê-lo usando um [plugin inicializador](https://github.com/championswimmer/vuex-module-decorators#accessing-modules-with-nuxtjs), por exemplo:
-   ```ts{}[store/index.ts]
+   ```ts {}[store/index.ts]
    import { Store } from 'vuex'
    import { initialiseStores } from '~/utils/store-accessor'
 
@@ -52,7 +52,7 @@ Para uso com o Nuxt, existem poucas condições principais:
    ```
 
 3. Se você deseja acessar a instância do aplicativo Nuxt, precisará fazer algo semelhante com um plug-in, por exemplo:
-   ```ts{}[plugins/axios-accessor.ts]
+   ```ts {}[plugins/axios-accessor.ts]
    import { Plugin } from '@nuxt/types'
    import { initializeAxios } from '~/utils/api'
 
@@ -65,7 +65,7 @@ Para uso com o Nuxt, existem poucas condições principais:
 
    Não se esqueça de adicionar o plugin para seu arquivo `nuxt.config.js`.
 
-   ```ts{}[utils/api.ts]
+   ```ts {}[utils/api.ts]
    import { NuxtAxiosInstance } from '@nuxtjs/axios'
 
    let $axios: NuxtAxiosInstance
@@ -73,11 +73,11 @@ Para uso com o Nuxt, existem poucas condições principais:
    export function initializeAxios(axiosInstance: NuxtAxiosInstance) {
      $axios = axiosInstance
    }
-   
+
    export { $axios }
    ```
 
-   ```ts{}[store/users.ts]
+   ```ts {}[store/users.ts]
    import { Module, VuexModule, Action, Mutation } from 'vuex-module-decorators'
    import { $axios } from '~/utils/api'
    import { User } from '~/types'
@@ -120,7 +120,7 @@ Consulte [esse  issue](https://github.com/michaelolof/vuex-class-component/issue
 
 O Vuex fornece tipos muito básicos para uso no store. Você pode usá-los para ajudar a definir seu store. Por exemplo:
 
-```ts{}[store/index.ts]
+```ts {}[store/index.ts]
 import { GetterTree, ActionTree, MutationTree } from 'vuex'
 
 export const state = () => ({
@@ -186,7 +186,7 @@ Há um novo projeto, o [`nuxt-typed-vuex`](https://github.com/danielroe/nuxt-typ
 
 Alternativamente, você pode fornecer seus próprios tipos no ponto de uso.
 
-```ts{}[components/MyComponent.vue]
+```ts {}[components/MyComponent.vue]
 <script lang="ts">
 
 import { Component, Vue } from 'nuxt-property-decorator'
