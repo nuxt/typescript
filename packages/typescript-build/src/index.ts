@@ -1,4 +1,5 @@
 import path from 'path'
+import { defu } from 'defu'
 import consola from 'consola'
 import { Module } from '@nuxt/types'
 import { Options as TsLoaderOptions } from 'ts-loader'
@@ -27,11 +28,7 @@ const defaults: Options = {
 
 const tsModule: Module<Options> = function (moduleOptions) {
   // Combine options
-  const options = Object.assign(
-    defaults,
-    this.options.typescript,
-    moduleOptions
-  )
+  const options = defu(this.options.typescript, moduleOptions, defaults)
 
   // Change color of CLI banner
   this.options.cli.bannerColor = 'blue'
@@ -75,7 +72,7 @@ const tsModule: Module<Options> = function (moduleOptions) {
     if (options.typeCheck && isClient && !isModern) {
       // eslint-disable-next-line @typescript-eslint/no-var-requires
       const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
-      config.plugins!.push(new ForkTsCheckerWebpackPlugin(Object.assign({
+      config.plugins!.push(new ForkTsCheckerWebpackPlugin(defu(options.typeCheck, {
         typescript: {
           configFile: path.resolve(this.options.rootDir!, 'tsconfig.json'),
           extensions: {
@@ -83,7 +80,7 @@ const tsModule: Module<Options> = function (moduleOptions) {
           }
         },
         logger: consola.withScope('nuxt:typescript')
-      } as TsCheckerOptions, options.typeCheck)))
+      } as TsCheckerOptions)))
     }
   })
 }
