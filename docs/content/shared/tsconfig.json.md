@@ -1,4 +1,4 @@
-```json{}[tsconfig.json]
+```json {}[tsconfig.json]
 {
   "compilerOptions": {
     "target": "ES2018",
@@ -24,8 +24,9 @@
       ]
     },
     "types": [
-      "@types/node",
       "@nuxt/types"
+      "@nuxt/typescript-build",
+      "@types/node",
     ]
   },
   "exclude": [

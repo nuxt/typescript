@@ -32,10 +32,14 @@ npm install --save-dev @nuxt/typescript-build @nuxt/types
 
 必要なことは、**`nuxt.config.js`** 内の **`buildModules`** に **`@nuxt/typescript-build`** を追加することです。
 
-```js{}[nuxt.config.js]
-export default {
+```ts {}[nuxt.config.ts]
+import type { NuxtConfig } from '@nuxt/types'
+
+const config: NuxtConfig = {
   buildModules: ['@nuxt/typescript-build']
 }
+
+export default config
 ```
 
 そして、**`tsconfig.json`** ファイルを作成します：
@@ -125,13 +129,21 @@ if (config.dev) {
 
 TypeScript loader をさらにカスタマイズする必要がある場合は、`loaders.ts` および `loaders.tsx` モジュールのオプションを使用して `ts` と `tsx` ファイルの両方をカスタマイズできます：
 
-```ts
-loaders: {
-  ts: {
-    silent: true
-  },
-  tsx: {
-    silent: true
+```ts {}[nuxt.config.ts]
+import type { NuxtConfig } from '@nuxt/types'
+
+const config: NuxtConfig = {
+  typescript: {
+    loaders: {
+      ts: {
+        silent: true
+      },
+      tsx: {
+        silent: true
+      }
+    }
   }
 }
+
+export default config
 ```

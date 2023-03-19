@@ -54,10 +54,14 @@ El versionamiento de los types coincide con el versionamiento de Nuxt desde la v
 
 Todo lo que necesitas es agregar **`@nuxt/typescript-build`** a tus **`buildModules`** en **`nuxt.config.js`**
 
-```js{}[nuxt.config.js]
-export default {
+```ts {}[nuxt.config.ts]
+import type { NuxtConfig } from '@nuxt/types'
+
+const config: NuxtConfig = {
   buildModules: ['@nuxt/typescript-build']
 }
+
+export default config
 ```
 
 y crear un archivo **`tsconfig.json`** :
@@ -137,7 +141,7 @@ Usted puede usar un `Object` para reemplazar las opciones del plugins or asignar
 Cuando esta activado, puedes suprimir las advertencias  `export ... was not found ...`.
 
 Puedes ver los antecedentes [aqui](https://github.com/TypeStrong/ts-loader/issues/653).
- 
+
 **Advertencia:** Esta propiedad puede suprimir las advertencias que desea ver. Tenga cuidado como lo configura.
 
 ### loaders
@@ -148,13 +152,19 @@ Puedes ver los antecedentes [aqui](https://github.com/TypeStrong/ts-loader/issue
 
 Si necesita customizar el loader de Typescript, puedes customizar ambos archivos `ts` & `tsx` mediante las opciones del módulo: `loaders.ts` & `loaders.tsx`:
 
-```ts
-loaders: {
-  ts: {
-    silent: true
-  },
-  tsx: {
-    silent: true
+```ts {}[nuxt.config.ts]
+import type { NuxtConfig } from '@nuxt/types'
+
+const config: NuxtConfig = {
+  typescript: {
+    loaders: {
+      ts: {
+        silent: true
+      },
+      tsx: {
+        silent: true
+      }
+    }
   }
 }
 ```

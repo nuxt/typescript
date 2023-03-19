@@ -63,10 +63,14 @@ O versionamento dos tipos corresponde ao versionamento do Nuxt desde [2.13.0](ht
 
 Tudo o que você precisa é adicionar **`@nuxt/typescript-build`** ao seu **`buildModules`**  no arquivo **`nuxt.config.js`**
 
-```js{}[nuxt.config.js]
-export default {
+```ts {}[nuxt.config.ts]
+import type { NuxtConfig } from '@nuxt/types'
+
+const config: NuxtConfig = {
   buildModules: ['@nuxt/typescript-build']
 }
+
+export default config
 ```
 
 e criar um arquivo **`tsconfig.json`** :
@@ -155,13 +159,21 @@ Veja também as informações de fundo [aqui](https://github.com/TypeStrong/ts-l
 
 Se você precisar de personalização extra do TypeScript loader, você pode personalizá-lo para ambos os arquivos `ts` & `tsx` através de opções de módulo `loaders.ts` & `loaders.tsx`:
 
-```ts
-loaders: {
-  ts: {
-    silent: true
-  },
-  tsx: {
-    silent: true
+```ts {}[nuxt.config.ts]
+import type { NuxtConfig } from '@nuxt/types'
+
+const config: NuxtConfig = {
+  typescript: {
+    loaders: {
+      ts: {
+        silent: true
+      },
+      tsx: {
+        silent: true
+      }
+    }
   }
 }
+
+export default config
 ```
