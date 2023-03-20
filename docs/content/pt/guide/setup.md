@@ -85,7 +85,7 @@ Note que o target **ES2018** é necessário para que seja possível o uso de [**
 
 Você também vai precisar fornecer tipos para arquivos Vue adicionando a seguinte declaração de tipos:
 
-```js{}[vue-shim.d.ts]
+```js {}[vue-shim.d.ts]
 declare module "*.vue" {
   import Vue from 'vue'
   export default Vue
@@ -94,13 +94,13 @@ declare module "*.vue" {
 
 <alert type="info">
 
-Você pode colocar esse arquivo na pasta raiz do seu projeto ou em uma pasta chamada `types`. Você pode colocá-lo em uma pasta customizada, mas você vai precisar configurar [`typeRoots`](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html#types-typeroots-and-types) no arquivo `tsconfig.json`.
+Você pode colocar esse arquivo na pasta raiz do seu projeto ou em uma pasta chamada `types`. Você pode colocá-lo em uma pasta customizada, mas você vai precisar configurar [`typeRoots`](https://www.typescriptlang.org/tsconfig#typeRoots) no arquivo `tsconfig.json`.
 
 </alert>
 
 <alert type="info">
 
-Verifique a documentação oficial do [TypeScript](https://www.typescriptlang.org/docs/handbook/compiler-options.html) para saber mais sobre as diferentes opções do compilador.
+Verifique a documentação oficial do [TypeScript](https://www.typescriptlang.org/tsconfig) para saber mais sobre as diferentes opções do compilador.
 
 </alert>
 

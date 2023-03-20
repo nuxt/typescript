@@ -18,11 +18,11 @@ aside > div > ul {
 }
 
 .prose {
-  pre code::after {
+  & pre code::after {
     @apply absolute;
   }
 
-  img[src*="img.shields.io"] {
+  & img[src*="img.shields.io"] {
     display: inline !important;
   }
 }

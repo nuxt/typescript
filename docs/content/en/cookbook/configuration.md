@@ -5,7 +5,7 @@ description: TypeScript Support for Nuxt.js
 category: Cookbook
 ---
 
-```ts
+```ts {}[nuxt.config.ts]
 import { NuxtConfig } from '@nuxt/types'
 
 const config: NuxtConfig = {

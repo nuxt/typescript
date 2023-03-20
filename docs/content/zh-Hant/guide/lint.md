@@ -70,7 +70,7 @@ module.exports = {
 
 如果你想要在 runtime 時進行校驗 (存檔後立刻執行 ESLint)，你可以在 `typeCheck` 模組選項中設定並啟用 [fork-ts-checker-webpack-plugin](https://github.com/TypeStrong/fork-ts-checker-webpack-plugin)。
 
-```ts{}[nuxt.config.js]
+```ts {}[nuxt.config.js]
 export default {
   typescript: {
     typeCheck: {

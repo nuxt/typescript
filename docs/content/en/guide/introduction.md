@@ -28,7 +28,7 @@ They are maintained along Nuxt core code on [`nuxt/nuxt.js` repository](https://
 ![Version](https://img.shields.io/npm/v/@nuxt/typescript-build?color=%23007ACC&style=flat-square)
 ![Downloads](https://img.shields.io/npm/dm/@nuxt/typescript-build?style=flat-square)
 
-Nuxt module to use TypeScript in **layouts**, **components**, **plugins** and **middlewares**.
+Nuxt module to use TypeScript in **pages**, **layouts**, **components**, **plugins** and **middlewares**.
 
 </alert>
 
@@ -40,6 +40,13 @@ Nuxt module to use TypeScript in **layouts**, **components**, **plugins** and **
 ![Downloads](https://img.shields.io/npm/dm/@nuxt/typescript-runtime?style=flat-square)
 
 Nuxt wrapper binary to provide TypeScript runtime support for **nuxt.config** file, local **modules** and **serverMiddlewares**.
+
+
+<alert type="warning">
+
+**Nuxt 2.15** and above comes with runtime TypeScript support built-in so usage of this package is no longer needed nor recommended in those versions.
+
+</alert>
 
 </alert>
 

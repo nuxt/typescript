@@ -76,7 +76,7 @@ Notese que el target **ES2018** es necesario para usar el [**Optional Chaining**
 
 Usted tambien debe proveer los types para los archivos de Vue añadiendo la siguiente declaracion de types:
 
-```js{}[vue-shim.d.ts]
+```js {}[vue-shim.d.ts]
 declare module "*.vue" {
   import Vue from 'vue'
   export default Vue
@@ -85,13 +85,13 @@ declare module "*.vue" {
 
 <alert type="info">
 
-Usted puede poner este archivo en el directorio raiz de tu proyecto o en una carpeta llamada `types`. Usted tambien puede poner en un directorio personalizado, pero va tener que configurar el [`typeRoots`](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html#types-typeroots-and-types) en el archivo `tsconfig.json`.
+Usted puede poner este archivo en el directorio raiz de tu proyecto o en una carpeta llamada `types`. Usted tambien puede poner en un directorio personalizado, pero va tener que configurar el [`typeRoots`](https://www.typescriptlang.org/tsconfig#typeRoots) en el archivo `tsconfig.json`.
 
 </alert>
 
 <alert type="info">
 
-Revisar la [documentación oficial de TypeScript](https://www.typescriptlang.org/docs/handbook/compiler-options.html) para aprender acerca de las diferentes opciones del compilador.
+Revisar la [documentación oficial de TypeScript](https://www.typescriptlang.org/tsconfig) para aprender acerca de las diferentes opciones del compilador.
 
 </alert>
 

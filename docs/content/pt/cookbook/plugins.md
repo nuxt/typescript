@@ -32,9 +32,9 @@ Vue.prototype.$myInjectedFunction = (message: string) => console.log(message)
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { defineComponent } from 'vue'
 
-export default Vue.extend({
+export default defineComponent({
   mounted () {
     this.$myInjectedFunction('funcionando em mounted')
   }
@@ -66,9 +66,9 @@ export default myPlugin
 
 ```html
 <script lang="ts">
-import Vue from 'vue'
+import { defineComponent } from 'vue'
 
-export default Vue.extend({
+export default defineComponent({
   asyncData (context) {
     context.$myInjectedFunction('funcionando em asyncData')
   }
@@ -101,7 +101,7 @@ declare module '@nuxt/types' {
 }
 
 declare module 'vuex/types/index' {
-  // this.$myInjectedFunction dentro de stores Vuex 
+  // this.$myInjectedFunction dentro de stores Vuex
   interface Store<S> {
     $myInjectedFunction(message: string): void
   }
@@ -118,9 +118,9 @@ export default myPlugin
 
 ```html
 <script lang="ts">
-import Vue from 'vue'
+import { defineComponent } from 'vue'
 
-export default Vue.extend({
+export default defineComponent({
   mounted () {
     this.$myInjectedFunction('funcionando em mounted')
   },
@@ -130,9 +130,3 @@ export default Vue.extend({
 })
 </script>
 ```
-
-<alert type="info">
-
-Por favor note que o `inject` não injeta no` context`, mas no `context.app`.
-
-</alert>

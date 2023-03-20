@@ -54,7 +54,7 @@ export default config
 
 你也需要加入下方的类型声明文件来为 Vue 提供类型
 
-```js{}[vue-shim.d.ts]
+```js {}[vue-shim.d.ts]
 declare module "*.vue" {
   import Vue from 'vue'
   export default Vue
@@ -63,7 +63,7 @@ declare module "*.vue" {
 
 <alert type="info">
 
-查看 [TypeScript 文档](https://www.typescriptlang.org/docs/handbook/compiler-options.html) 来了解编译器的更多选项。
+查看 [TypeScript 文档](https://www.typescriptlang.org/tsconfig) 来了解编译器的更多选项。
 
 </alert>
 

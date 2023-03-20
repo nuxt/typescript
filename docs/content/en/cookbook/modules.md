@@ -25,4 +25,4 @@ export default myModule
 // export const meta = require('./package.json')
 ```
 
-Read more about [modules property](https://nuxtjs.org/docs/configuration-glossary/configuration-modules/), [modules dir](https://nuxtjs.org/docs/directory-structure/modules/). 
+Read more about [modules property](https://nuxtjs.org/docs/configuration-glossary/configuration-modules/), [modules dir](https://nuxtjs.org/docs/directory-structure/modules/).

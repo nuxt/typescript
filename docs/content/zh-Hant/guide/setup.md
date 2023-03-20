@@ -54,7 +54,7 @@ export default config
 
 你也需要加入下方的 型別聲明檔 來為 Vue 提供 型別
 
-```js{}[vue-shim.d.ts]
+```js {}[vue-shim.d.ts]
 declare module "*.vue" {
   import Vue from 'vue'
   export default Vue
@@ -63,7 +63,7 @@ declare module "*.vue" {
 
 <alert type="info">
 
-查看 [TypeScript 文件](https://www.typescriptlang.org/docs/handbook/compiler-options.html) 來得知 編譯器 的更多選項。
+查看 [TypeScript 文件](https://www.typescriptlang.org/tsconfig) 來得知 編譯器 的更多選項。
 
 </alert>
 

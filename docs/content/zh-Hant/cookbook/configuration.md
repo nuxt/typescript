@@ -5,7 +5,7 @@ description: 'Nuxt.js 的 Typescript 支援'
 category: '更多使用方式'
 ---
 
-```ts
+```ts {}[nuxt.config.ts]
 import { NuxtConfig } from '@nuxt/types'
 
 const config: NuxtConfig = {
