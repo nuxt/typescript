@@ -1,10 +1,11 @@
 import path from 'path'
 import { defu } from 'defu'
 import consola from 'consola'
-import { Module } from '@nuxt/types'
-import { Options as TsLoaderOptions } from 'ts-loader'
-import { ForkTsCheckerWebpackPluginOptions as TsCheckerOptions } from 'fork-ts-checker-webpack-plugin/lib/ForkTsCheckerWebpackPluginOptions'
-import { RuleSetUseItem } from 'webpack'
+import type { Module } from '@nuxt/types'
+import type { Options as TsLoaderOptions } from 'ts-loader'
+import type { ForkTsCheckerWebpackPluginOptions as TsCheckerOptions } from 'fork-ts-checker-webpack-plugin/lib/ForkTsCheckerWebpackPluginOptions'
+import type TsCheckerLogger from 'fork-ts-checker-webpack-plugin/lib/logger/Logger'
+import type { RuleSetUseItem } from 'webpack'
 
 export interface Options {
   ignoreNotFoundWarnings?: boolean
@@ -72,6 +73,13 @@ const tsModule: Module<Options> = function (moduleOptions) {
     if (options.typeCheck && isClient && !isModern) {
       // eslint-disable-next-line @typescript-eslint/no-var-requires
       const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
+      const logger = consola.withTag('nuxt:typescript')
+      /* istanbul ignore next */
+      const loggerInterface: TsCheckerLogger = {
+        log (message) { logger.log(message) },
+        info (message) { logger.info(message) },
+        error (message) { logger.error(message) }
+      }
       config.plugins!.push(new ForkTsCheckerWebpackPlugin(defu(options.typeCheck, {
         typescript: {
           configFile: path.resolve(this.options.rootDir!, 'tsconfig.json'),
@@ -79,7 +87,9 @@ const tsModule: Module<Options> = function (moduleOptions) {
             vue: true
           }
         },
-        logger: consola.withScope('nuxt:typescript')
+        logger: {
+          issues: loggerInterface
+        }
       } as TsCheckerOptions)))
     }
   })
