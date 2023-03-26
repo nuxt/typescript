@@ -30,7 +30,7 @@ npm install --save-dev @nuxt/typescript-build @nuxt/types
 
 ## 设置
 
-你只需在 **`nuxt.config.js`** 中的 **`buildModules`** 中加入 **`@nuxt/typescript-build`**
+你只需在 **`nuxt.config.ts`** 中的 **`buildModules`** 中加入 **`@nuxt/typescript-build`**
 
 ```ts {}[nuxt.config.ts]
 import type { NuxtConfig } from '@nuxt/types'

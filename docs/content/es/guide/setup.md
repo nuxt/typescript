@@ -52,7 +52,7 @@ El versionamiento de los types coincide con el versionamiento de Nuxt desde la v
 
 ## Configuración
 
-Todo lo que necesitas es agregar **`@nuxt/typescript-build`** a tus **`buildModules`** en **`nuxt.config.js`**
+Todo lo que necesitas es agregar **`@nuxt/typescript-build`** a tus **`buildModules`** en **`nuxt.config.ts`**
 
 ```ts {}[nuxt.config.ts]
 import type { NuxtConfig } from '@nuxt/types'
