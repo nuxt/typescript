@@ -21,7 +21,7 @@
     "nuxt": "2.x",
     "sass": "^1.59.3",
     "ts-jest": "^29.0.5",
-    "typescript": "^4.9.5",
+    "typescript": "^5.0.2",
     "vue-property-decorator": "^9.1.2"
   }
 }
