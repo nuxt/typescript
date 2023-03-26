@@ -30,7 +30,7 @@ npm install --save-dev @nuxt/typescript-build @nuxt/types
 
 ## 設定
 
-必要なことは、**`nuxt.config.js`** 内の **`buildModules`** に **`@nuxt/typescript-build`** を追加することです。
+必要なことは、**`nuxt.config.ts`** 内の **`buildModules`** に **`@nuxt/typescript-build`** を追加することです。
 
 ```ts {}[nuxt.config.ts]
 import type { NuxtConfig } from '@nuxt/types'

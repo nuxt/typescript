@@ -61,7 +61,7 @@ Types versioning match Nuxt versioning since [2.13.0](https://github.com/nuxt/nu
 
 ## Configuration
 
-All you need to do is add **`@nuxt/typescript-build`** to your **`buildModules`** in **`nuxt.config.js`**
+All you need to do is add **`@nuxt/typescript-build`** to your **`buildModules`** in **`nuxt.config.ts`**
 
 ```ts {}[nuxt.config.ts]
 import type { NuxtConfig } from '@nuxt/types'
