@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.1](https://github.com/nuxt/typescript/compare/@nuxt/typescript-build@3.0.0...@nuxt/typescript-build@3.0.1) (2023-03-28)
+
+
+### Bug Fixes
+
+* deep merge user's module options ([#578](https://github.com/nuxt/typescript/issues/578)) ([d95453e](https://github.com/nuxt/typescript/commit/d95453e48cb86dae40eaf89832326ebe65ea8cbf))
+* extend typescript peer dependency range to include 5.x ([#587](https://github.com/nuxt/typescript/issues/587)) ([6e5a51b](https://github.com/nuxt/typescript/commit/6e5a51b6fd84b198d34ab69472a7190f521d0120))
+* **typescript-build:** set logger instance correctly ([#580](https://github.com/nuxt/typescript/issues/580)) ([96d84f1](https://github.com/nuxt/typescript/commit/96d84f1719c93f5c9fe552848df902172695856e))
+
+
+
+
+
 # [3.0.0](https://github.com/nuxt/typescript/compare/@nuxt/typescript-build@2.1.0...@nuxt/typescript-build@3.0.0) (2023-03-17)
 
 
