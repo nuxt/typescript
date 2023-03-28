@@ -2,6 +2,7 @@
   "extends": [
     "@nuxtjs"
   ],
+  "rangeStrategy": "auto",
   "lockFileMaintenance": {
     "enabled": true,
     "branchTopic": "lock-file-maintenance-{{packageFile}}",
