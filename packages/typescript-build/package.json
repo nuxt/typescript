@@ -15,7 +15,7 @@
     "compile": "tsc"
   },
   "dependencies": {
-    "consola": "^2.15.3",
+    "consola": "^3.0.0",
     "defu": "^6.0.0",
     "fork-ts-checker-webpack-plugin": "6.5.3",
     "ts-loader": "8.4.0"
