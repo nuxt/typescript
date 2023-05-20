@@ -132,11 +132,126 @@ You can check the [**CookBook**](/cookbook/components) section to get some TypeS
 > Enables TypeScript type checking on a separate process.
 
 - Type: `Boolean` or `Object`
-- Default: `true`
+- Default:
+  ```ts
+  {
+    typescript: {
+      configFile: '~~/tsconfig.json',
+      extensions: {
+        vue: true
+      }
+    },
+    logger: {
+      issues: loggerInterface
+    }
+  }
+  ```
 
 When enabled, Nuxt.js uses [fork-ts-checker-webpack-plugin](https://github.com/TypeStrong/fork-ts-checker-webpack-plugin) to provide type checking.
 
+<alert type="warning">
+
+Note that `script setup` is not supported by this webpack plugin so you won't get any type errors when using it. In that case it might be better to disable the `typecheck` option and rely on external type checking through [`vue-tsc`](https://www.npmjs.com/package/vue-tsc), for example.
+
+</alert>
+
 You can use an `Object` to override plugin options or set it to `false` to disable it.
+
+When passing a custom object, the passed values are merged with default values.
+
+These are all the options supported by `fork-ts-checker-webpack-plugin`:
+
+```ts
+interface ForkTsCheckerWebpackPluginOptions {
+  async: boolean
+  typescript: TypeScriptReporterOptions
+  eslint: EsLintReporterOptions
+  formatter: FormatterOptions
+  issue: IssueOptions,
+  logger: LoggerOptions
+}
+
+type TypeScriptReporterOptions =
+  | boolean
+  | {
+      // Enable TypeScript reporter.
+      enabled?: boolean;
+      // Memory limit for TypeScript reporter process.
+      memoryLimit?: number;
+      // Path to tsconfig.json.
+      configFile?: string;
+      configOverwrite?: TypeScriptConfigurationOverwrite;
+      // The base path for finding files specified in the tsconfig.json. Same as context option from the ts-loader.
+      context?: string;
+      // The equivalent of the `--build` flag from the `tsc`.
+      build?: boolean;
+      // `readonly` keeps all emitted files in memory,
+      // `write-tsbuildinfo` which writes only .tsbuildinfo files,
+      // `write-dts` writes .tsbuildinfo and type definition files,
+      // and `write-references` which writes both .tsbuildinfo and referenced projects output
+      mode?: 'readonly' | 'write-tsbuildinfo' | 'write-dts' | 'write-references';
+      // Types of diagnostics to be reported.
+      diagnosticOptions?: Partial<TypeScriptDiagnosticsOptions>;
+      extensions?: {
+        vue?: TypeScriptVueExtensionOptions;
+      };
+      profile?: boolean;
+      typescriptPath?: string;
+    };
+interface TypeScriptDiagnosticsOptions {
+  syntactic: boolean;
+  semantic: boolean;
+  declaration: boolean;
+  global: boolean;
+}
+type TypeScriptVueExtensionOptions =
+  | boolean
+  | {
+      // Enable TypeScript Vue extension.
+      enabled?: boolean;
+      // Custom vue-template-compiler package.
+      compiler?: string;
+    };
+
+type EsLintReporterOptions = {
+  files: string | string[];
+  enabled?: boolean;
+  memoryLimit?: number;
+  options?: CLIEngineOptions;
+};
+
+type FormatterOptions = FormatterType | ComplexFormatterPreferences;
+type FormatterType = NotConfigurableFormatterType | ConfigurableFormatterType;
+type NotConfigurableFormatterType = undefined | 'basic' | Formatter;
+type ConfigurableFormatterType = 'codeframe';
+type Formatter = (issue: Issue) => string;
+type ComplexFormatterPreferences<T extends FormatterType = FormatterType> = {
+  type: T;
+  options?: ConfigurableFormatterType<T>;
+};
+
+interface IssueOptions {
+  include?: IssuePredicateOption;
+  exclude?: IssuePredicateOption;
+}
+type IssuePredicateOption = IssuePredicate | IssueMatch | (IssuePredicate | IssueMatch)[];
+type IssuePredicate = (issue: Issue) => boolean;
+type IssueMatch = Partial<Pick<Issue, 'origin' | 'severity' | 'code' | 'file'>>;
+interface Issue {
+  origin: string;
+  severity: IssueSeverity;
+  code: string;
+  message: string;
+  file?: string;
+  location?: IssueLocation;
+}
+
+type LoggerOptions = {
+  infrastructure?: LoggerType | Logger;
+  issues?: LoggerType | Logger;
+  devServer?: boolean;
+};
+```
 
 ### ignoreNotFoundWarnings
 
