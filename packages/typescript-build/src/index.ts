@@ -1,6 +1,8 @@
 import path from 'path'
 import { defu } from 'defu'
 import consola from 'consola'
+import { Observable } from 'rxjs'
+import { tap } from 'rxjs/operators'
 import type { Module } from '@nuxt/types'
 import type { Options as TsLoaderOptions } from 'ts-loader'
 import type { ForkTsCheckerWebpackPluginOptions as TsCheckerOptions } from 'fork-ts-checker-webpack-plugin/lib/ForkTsCheckerWebpackPluginOptions'
@@ -80,7 +82,8 @@ const tsModule: Module<Options> = function (moduleOptions) {
         info (message) { logger.info(message) },
         error (message) { logger.error(message) }
       }
-      config.plugins!.push(new ForkTsCheckerWebpackPlugin(defu(options.typeCheck, {
+      
+      const forkTsCheckerOptions = defu(options.typeCheck, {
         typescript: {
           configFile: path.resolve(this.options.rootDir!, 'tsconfig.json'),
           extensions: {
@@ -90,7 +93,9 @@ const tsModule: Module<Options> = function (moduleOptions) {
         logger: {
           issues: loggerInterface
         }
-      } as TsCheckerOptions)))
+      } as TsCheckerOptions)
+
+      config.plugins!.push(new ForkTsCheckerWebpackPlugin(forkTsCheckerOptions))
     }
   })
 }
