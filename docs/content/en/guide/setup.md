@@ -151,7 +151,7 @@ When enabled, Nuxt.js uses [fork-ts-checker-webpack-plugin](https://github.com/T
 
 <alert type="warning">
 
-Note that `script setup` is not supported by this webpack plugin so you won't get any type errors when using it. In that case it might be better to disable the `typecheck` option and rely on external type checking through [`vue-tsc`](https://www.npmjs.com/package/vue-tsc), for example.
+Note that `script setup` is not supported by this webpack plugin so you won't get any type errors when using it. In that case it might be better to disable the `typeCheck` option and rely on external type checking through [`vue-tsc`](https://www.npmjs.com/package/vue-tsc), for example.
 
 </alert>
 
