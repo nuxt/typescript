@@ -19,7 +19,7 @@
     "compile": "tsc"
   },
   "dependencies": {
-    "ts-node": "9.1.1"
+    "ts-node": "10.9.1"
   },
   "peerDependencies": {
     "@nuxt/types": ">=2.13.1",
