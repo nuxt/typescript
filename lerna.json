@@ -1,18 +1,12 @@
 {
+  "$schema": "node_modules/lerna/schemas/lerna-schema.json",
   "version": "independent",
   "npmClient": "yarn",
-  "useWorkspaces": true,
   "conventionalCommits": true,
   "exact": true,
-  "packages": [
-    "packages/*"
-  ],
   "command": {
     "publish": {
       "npmClient": "npm"
-    },
-    "init": {
-      "exact": true
     }
   }
 }
