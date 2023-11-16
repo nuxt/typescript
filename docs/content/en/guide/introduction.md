@@ -53,6 +53,6 @@ Nuxt wrapper binary to provide TypeScript runtime support for **nuxt.config** fi
 
 <alert type="warning">
 
-These packages are intended to only be used with **Nuxt 2.10** or **above**.
+These packages are intended to only be used with Nuxt 2, from **Nuxt 2.10** or **above**.
 
 </alert>
