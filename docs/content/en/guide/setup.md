@@ -15,14 +15,14 @@ Here are the guidelines to install & configure them.
 <code-block label="Yarn" active>
 
 ```sh
-yarn add --dev @nuxt/typescript-build @nuxt/types typescript@4
+yarn add --dev @nuxt/typescript-build @nuxt/types typescript
 ```
 
 </code-block>
 <code-block label="NPM">
 
 ```sh
-npm install --save-dev @nuxt/typescript-build @nuxt/types typescript@4
+npm install --save-dev @nuxt/typescript-build @nuxt/types typescript
 ```
 
 </code-block>
