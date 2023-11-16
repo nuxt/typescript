@@ -6,13 +6,13 @@
   },
   "devDependencies": {
     "@nuxt/content-theme-docs": "0.11.1",
-    "nuxt": "2.15.8",
+    "nuxt": "2.17.2",
     "vue": "^2.7.14",
     "vue-server-renderer": "^2.7.14",
     "vue-tabs-component": "^1.5.0",
     "vue-template-compiler": "^2.7.14"
   },
   "resolutions": {
-    "@babel/preset-env": "7.20.2"
+    "@babel/preset-env": "7.23.3"
   }
 }
