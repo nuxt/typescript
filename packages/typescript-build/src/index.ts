@@ -6,6 +6,7 @@ import type { Options as TsLoaderOptions } from 'ts-loader'
 import type { ForkTsCheckerWebpackPluginOptions as TsCheckerOptions } from 'fork-ts-checker-webpack-plugin/lib/ForkTsCheckerWebpackPluginOptions'
 import type TsCheckerLogger from 'fork-ts-checker-webpack-plugin/lib/logger/Logger'
 import type { RuleSetUseItem } from 'webpack'
+import { NormalModuleReplacementPlugin } from 'webpack'
 
 export interface Options {
   ignoreNotFoundWarnings?: boolean
@@ -53,23 +54,35 @@ const tsModule: Module<Options> = function (moduleOptions) {
     const jsxRuleLoaders = config.module!.rules.find(r => (r.test as RegExp).test('.jsx'))!.use as RuleSetUseItem[]
     const babelLoader = jsxRuleLoaders[jsxRuleLoaders.length - 1]
 
-    config.module!.rules.push(...(['ts', 'tsx'] as const).map(ext =>
-      ({
-        test: new RegExp(`\\.${ext}$`, 'i'),
-        use: [
-          babelLoader,
-          {
-            loader: 'ts-loader',
-            options: {
-              transpileOnly: true,
-              appendTsxSuffixTo: ext === 'tsx' ? [/\.vue$/] : [],
-              ...(options.loaders && options.loaders[ext])
-            }
+    config.module!.rules.push(...(['ts', 'tsx'] as const).map(ext => ({
+      test: new RegExp(`\\.${ext}$`),
+      use: [
+        babelLoader,
+        {
+          loader: 'ts-loader',
+          options: {
+            transpileOnly: true,
+            appendTsxSuffixTo: ext === 'tsx' ? [/.vue$/] : [],
+            ...(options.loaders && options.loaders[ext])
           }
-        ]
-      })
+        }
+      ]
+    })
     ))
-
+    // Fix paths not resolving in async imports
+    // https://github.com/nuxt/typescript/issues/520
+    if (this.nuxt.options.alias) {
+      const aliases = Object.keys(this.nuxt.options.alias)
+      config.plugins!.push(new NormalModuleReplacementPlugin(
+        new RegExp(aliases.join('|')),
+        (resource: any) => {
+          const alias = aliases.find(alias => resource.request.startsWith(alias))
+          if (alias) {
+            resource.request = resource.request.replace(alias, this.nuxt.options.alias[alias])
+          }
+        }
+      ))
+    }
     if (options.typeCheck && isClient && !isModern) {
       // eslint-disable-next-line @typescript-eslint/no-var-requires
       const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')

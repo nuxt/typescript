@@ -11,6 +11,9 @@ module.exports = function (api) {
             node: 'current'
           }
         }]
+      ],
+      plugins: [
+        '@babel/plugin-transform-runtime'
       ]
     }
   }
