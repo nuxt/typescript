@@ -28,3 +28,6 @@ coverage
 .DS_Store
 .AppleDouble
 .LSOverride
+
+GEMINI.md
+commit_message.txt

@@ -4,21 +4,20 @@ import consola from 'consola'
 import type { Module } from '@nuxt/types'
 import type { Options as TsLoaderOptions } from 'ts-loader'
 import type { ForkTsCheckerWebpackPluginOptions as TsCheckerOptions } from 'fork-ts-checker-webpack-plugin/lib/ForkTsCheckerWebpackPluginOptions'
-import type TsCheckerLogger from 'fork-ts-checker-webpack-plugin/lib/logger/Logger'
 import type { RuleSetUseItem } from 'webpack'
 
 export interface Options {
-  ignoreNotFoundWarnings?: boolean
+  ignoreNotFoundWarnings?: boolean;
   loaders?: {
-    ts?: Partial<TsLoaderOptions>
-    tsx?: Partial<TsLoaderOptions>
-  }
-  typeCheck?: TsCheckerOptions | boolean
+    ts?: Partial<TsLoaderOptions>;
+    tsx?: Partial<TsLoaderOptions>;
+  };
+  typeCheck?: TsCheckerOptions | boolean;
 }
 
 declare module '@nuxt/types' {
   interface NuxtOptions {
-    typescript: Options
+    typescript: Options;
   }
 }
 
@@ -42,55 +41,68 @@ const tsModule: Module<Options> = function (moduleOptions) {
   this.options.build.additionalExtensions = ['ts', 'tsx']
 
   if (options.ignoreNotFoundWarnings) {
-    this.options.build.warningIgnoreFilters!.push(warn =>
-      warn.name === 'ModuleDependencyWarning' && /export .* was not found in /.test(warn.message)
+    this.options.build.warningIgnoreFilters!.push(
+      warn =>
+        warn.name === 'ModuleDependencyWarning' &&
+        /export .* was not found in /.test(warn.message)
     )
   }
 
   this.extendBuild((config, { isClient, isModern }) => {
     config.resolve!.extensions!.push('.ts', '.tsx')
 
-    const jsxRuleLoaders = config.module!.rules.find(r => (r.test as RegExp).test('.jsx'))!.use as RuleSetUseItem[]
+    // Add alias for @babel/runtime/helpers
+    // https://github.com/nuxt/typescript/issues/645
+    try {
+      config.resolve!.alias = {
+        ...config.resolve!.alias,
+        '@babel/runtime/helpers': path.resolve(
+          this.options.rootDir!,
+          'node_modules/@babel/runtime/helpers'
+        )
+      }
+    } catch (e) {
+      // @babel/runtime may not be present
+    }
+
+    const jsxRuleLoaders = config.module!.rules.find(r =>
+      (r.test as RegExp).test('.jsx')
+    )!.use as RuleSetUseItem[]
     const babelLoader = jsxRuleLoaders[jsxRuleLoaders.length - 1]
 
-    config.module!.rules.push(...(['ts', 'tsx'] as const).map(ext =>
-      ({
-        test: new RegExp(`\\.${ext}$`, 'i'),
+    config.module!.rules.push(
+      ...(['ts', 'tsx'] as const).map(ext => ({
+        test: new RegExp(`\\.${ext}$`),
         use: [
           babelLoader,
           {
             loader: 'ts-loader',
             options: {
               transpileOnly: true,
-              appendTsxSuffixTo: ext === 'tsx' ? [/\.vue$/] : [],
+              appendTsxSuffixTo: ext === 'tsx' ? [/.vue$/] : [],
               ...(options.loaders && options.loaders[ext])
             }
           }
         ]
-      })
-    ))
+      }))
+    )
 
     if (options.typeCheck && isClient && !isModern) {
       // eslint-disable-next-line @typescript-eslint/no-var-requires
       const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
-      const logger = consola.withTag('nuxt:typescript')
-      /* istanbul ignore next */
-      const loggerInterface: TsCheckerLogger = {
-        log (message) { logger.log(message) },
-        info (message) { logger.info(message) },
-        error (message) { logger.error(message) }
-      }
-      config.plugins!.push(new ForkTsCheckerWebpackPlugin(defu(options.typeCheck, {
-        typescript: {
-          configFile: path.resolve(this.options.rootDir!, 'tsconfig.json'),
-          extensions: {
-            vue: true
-          }
-        },
-        logger: {
-          issues: loggerInterface
-        }
-      } as TsCheckerOptions)))
+      config.plugins!.push(
+        new ForkTsCheckerWebpackPlugin(
+          defu(options.typeCheck, {
+            typescript: {
+              configFile: path.resolve(this.options.rootDir!, 'tsconfig.json'),
+              extensions: {
+                vue: true
+              }
+            },
+            logger: consola
+          } as TsCheckerOptions)
+        )
+      )
     }
   })
 }
