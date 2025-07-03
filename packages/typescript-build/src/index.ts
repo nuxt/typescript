@@ -43,7 +43,9 @@ const tsModule: Module<Options> = function (moduleOptions) {
 
   if (options.ignoreNotFoundWarnings) {
     this.options.build.warningIgnoreFilters!.push(warn =>
-      warn.name === 'ModuleDependencyWarning' && /export .* was not found in /.test(warn.message)
+
+      // eslint-disable-next-line no-useless-escape
+    warn.name === 'ModuleDependencyWarning' && /export .* was not found in /.test(warn.message)
     )
   }
 
