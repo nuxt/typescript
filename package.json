@@ -18,7 +18,7 @@
     "eslint": "8.53.0",
     "jest": "29.7.0",
     "lerna": "7.4.2",
-    "nuxt": "2.x",
+    "nuxt": "4.x",
     "sass": "1.69.5",
     "ts-jest": "29.1.1",
     "typescript": "5.0.2",
