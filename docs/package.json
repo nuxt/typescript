@@ -13,6 +13,6 @@
     "vue-template-compiler": "^2.7.14"
   },
   "resolutions": {
-    "@babel/preset-env": "7.20.2"
+    "@babel/preset-env": "7.29.7"
   }
 }
